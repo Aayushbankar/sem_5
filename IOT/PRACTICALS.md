@@ -2,24 +2,24 @@
 
 Suggested Course Practical List from GTU syllabus (DI05016071, w.e.f. 2026-27).
 
-**Progress: 0 / 14 practicals (0 hrs / 30 hrs)**
+**Progress: 14/14 practicals — writeups & guides ready (0 hrs / 30 hrs run on hardware)**
 
-| Sr. | Practical Outcome (PrO) | Unit | Hrs | Status | Date | Remarks |
-|-----|-------------------------|------|-----|--------|------|---------|
-| 1 | Study the 4-layer IoT architecture and analyse real-world applications like Smart Homes and Industrial IoT. | 1 | 2 | [ ] | | |
-| 2 | Compare hardware platforms (Arduino UNO, ESP32 and Raspberry Pi) and Study of the ESP32 pinout, dual-core architecture, and GPIO capabilities. | 2 | 2 | [ ] | | |
-| 3 | Write a Study Practical on Configuration of the Arduino IDE for ESP32 and install necessary drivers. | 2 | 2 | [ ] | | |
-| 4 | Write and execute a program to toggle an external LED (Digital Output) to understand the setup() and loop() structure. | 2 | 2 | [ ] | | |
-| 5 | Develop and test interfacing of a PIR Motion Sensor (Digital Input) and an LDR Sensor (Analog Input) with the ESP32, and read their values. | 3 | 2 | [ ] | | |
-| 6 | Write and execute a program to interface the DHT11/DHT22 (Temperature and Humidity) sensor with the ESP32 using specific sensor libraries. | 3 | 2 | [ ] | | |
-| 7 | Write and execute a program to interface an Ultrasonic Sensor (Distance) with the ESP32 using specific sensor libraries. | 3 | 2 | [ ] | | |
-| 8 | Develop an IoT application using ESP32 as an MQTT client to publish real-time temperature and humidity data to a public MQTT broker. | 4 | 2 | [ ] | | |
-| 9 | Write and execute a program to subscribe the ESP32 to an MQTT topic so that an external client (like a smartphone or PC) can remotely control an onboard LED or Relay over the internet. | 4 | 2 | [ ] | | |
-| 10 | Write and execute a program using HTTP GET/POST API methods to send ESP32 Temperature sensor data to the cloud platform for storage and graphical visualization. | 5 | 2 | [ ] | | |
-| 11 | Develop an IoT application to integrate ESP32 Ultrasonic Sensor (Distance) with the cloud platform. | 5 | 2 | [ ] | | |
-| 12 | Develop a cloud based two-way mobile dashboard to monitor live sensor data and control physical actuators using virtual buttons. | 5 | 2 | [ ] | | |
-| 13 | (a) Write and execute a program to interface soil moisture and DHT sensors with ESP32 and Read real-time sensor data and process it in the microcontroller. Display the values on the Serial Monitor for verification. (b) Write and execute a program to connect ESP32 to Wi-Fi, send temperature, humidity, and soil moisture data to the cloud at regular intervals, visualize the data on a dashboard, and define threshold values. | 5 | 2 | [ ] | | |
-| 14 | Develop and demonstrate an IoT-based mini project by designing a smart application such as Smart Home Automation, Smart Agriculture, Smart Health Monitoring, Smart Parking, Smart City Service, Smart Street Lighting, Waste Management, or Environmental Monitoring using suitable sensors, ESP32, cloud platform, and remote monitoring/control features. | 5 | 4 | [ ] | | |
-| | **Total** | | **30** | | | |
+| Sr. | Practical Outcome (PrO) | Unit | Hrs | Status | Date | Remarks | Solution | Code |
+|-----|-------------------------|------|-----|--------|------|---------|----------|------|
+| 1 | Study the 4-layer IoT architecture and analyse real-world applications like Smart Homes and Industrial IoT. | 1 | 2 | [ ] | | | [P01](./practicals/writeups/P01_iot_architecture_layers.md) | — |
+| 2 | Compare hardware platforms (Arduino UNO, ESP32 and Raspberry Pi) and Study of the ESP32 pinout, dual-core architecture, and GPIO capabilities. | 2 | 2 | [ ] | | | [P02](./practicals/writeups/P02_compare_hardware_platforms_esp32_pinout.md) | — |
+| 3 | Write a Study Practical on Configuration of the Arduino IDE for ESP32 and install necessary drivers. | 2 | 2 | [ ] | | | [P03](./practicals/writeups/P03_arduino_ide_setup_esp32.md) | — |
+| 4 | Write and execute a program to toggle an external LED (Digital Output) to understand the setup() and loop() structure. | 2 | 2 | [ ] | | | [P04](./practicals/writeups/P04_external_led_blink_toggle.md) | [p04](./practicals/code/p04_external_led_blink.ino) |
+| 5 | Develop and test interfacing of a PIR Motion Sensor (Digital Input) and an LDR Sensor (Analog Input) with the ESP32, and read their values. | 3 | 2 | [ ] | | | [P05](./practicals/writeups/P05_pir_ldr_sensor_interface.md) | [p05](./practicals/code/p05_pir_ldr_sensor.ino) |
+| 6 | Write and execute a program to interface the DHT11/DHT22 (Temperature and Humidity) sensor with the ESP32 using specific sensor libraries. | 3 | 2 | [ ] | | | [P06](./practicals/writeups/P06_dht_temperature_humidity_sensor.md) | [p06](./practicals/code/p06_dht_sensor.ino) |
+| 7 | Write and execute a program to interface an Ultrasonic Sensor (Distance) with the ESP32 using specific sensor libraries. | 3 | 2 | [ ] | | | [P07](./practicals/writeups/P07_ultrasonic_distance_sensor.md) | [p07](./practicals/code/p07_ultrasonic_distance.ino) |
+| 8 | Develop an IoT application using ESP32 as an MQTT client to publish real-time temperature and humidity data to a public MQTT broker. | 4 | 2 | [ ] | | | [P08](./practicals/writeups/P08_esp32_mqtt_publisher.md) | [p08](./practicals/code/p08_mqtt_publish_dht.ino) |
+| 9 | Write and execute a program to subscribe the ESP32 to an MQTT topic so that an external client (like a smartphone or PC) can remotely control an onboard LED or Relay over the internet. | 4 | 2 | [ ] | | | [P09](./practicals/writeups/P09_esp32_mqtt_subscriber_remote_control.md) | [p09](./practicals/code/p09_mqtt_subscribe_led.ino) |
+| 10 | Write and execute a program using HTTP GET/POST API methods to send ESP32 Temperature sensor data to the cloud platform for storage and graphical visualization. | 5 | 2 | [ ] | | | [P10](./practicals/writeups/P10_thingspeak_http_temperature.md) | [p10](./practicals/code/p10_thingspeak_http_temperature.ino) |
+| 11 | Develop an IoT application to integrate ESP32 Ultrasonic Sensor (Distance) with the cloud platform. | 5 | 2 | [ ] | | | [P11](./practicals/writeups/P11_ultrasonic_thingspeak_cloud.md) | [p11](./practicals/code/p11_thingspeak_http_ultrasonic.ino) |
+| 12 | Develop a cloud based two-way mobile dashboard to monitor live sensor data and control physical actuators using virtual buttons. | 5 | 2 | [ ] | | | [P12](./practicals/writeups/P12_blynk_two_way_dashboard.md) | [p12](./practicals/code/p12_blynk_two_way_dashboard.ino) |
+| 13 | (a) Write and execute a program to interface soil moisture and DHT sensors with ESP32 and Read real-time sensor data and process it in the microcontroller. Display the values on the Serial Monitor for verification. (b) Write and execute a program to connect ESP32 to Wi-Fi, send temperature, humidity, and soil moisture data to the cloud at regular intervals, visualize the data on a dashboard, and define threshold values. | 5 | 2 | [ ] | | | [P13](./practicals/writeups/P13_soil_moisture_dht_cloud_thresholds.md) | [p13a](./practicals/code/p13a_soil_moisture_dht_serial.ino) + [p13b](./practicals/code/p13b_soil_dht_cloud_threshold.ino) |
+| 14 | Develop and demonstrate an IoT-based mini project by designing a smart application such as Smart Home Automation, Smart Agriculture, Smart Health Monitoring, Smart Parking, Smart City Service, Smart Street Lighting, Waste Management, or Environmental Monitoring using suitable sensors, ESP32, cloud platform, and remote monitoring/control features. | 5 | 4 | [ ] | | | [P14](./practicals/writeups/P14_mini_project_smart_agriculture_guide.md) | [p14](./practicals/code/p14_smart_agriculture_project.ino) |
+| | **Total** | | **30** | | | | | |
 
-> Note: More Practical Exercises can be designed and offered by the respective course teacher to develop the industry relevant skills/outcomes to match the COs. The above table is only a suggestive list.
+> Note: More Practical Exercises can be designed and offered by the respective course teacher to develop the industry relevant skills/outcomes to match the COs. The above table is only a suggestive list. Hardware execution pending — complete the "Verify on hardware" checklist in each writeup.

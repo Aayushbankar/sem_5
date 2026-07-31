@@ -1,0 +1,17 @@
+# Base image: official Python 3 image (Alpine = tiny ~50MB)
+FROM python:3-alpine
+
+# Author / metadata
+LABEL maintainer="CDCT Lab"
+
+# Working directory inside the container
+WORKDIR /usr/share/app
+
+# Copy our static site into the image
+COPY p10_site/ ./p10_site/
+
+# Expose port 80 (the default HTTP port)
+EXPOSE 80
+
+# Run a simple HTTP server on port 80
+CMD ["python", "-m", "http.server", "80", "--directory", "p10_site"]

@@ -1,0 +1,35 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": ["arn:aws:iam::*:user/read-only-user"]
+      },
+      "Action": [
+        "s3:GetObject",
+        "s3:GetBucketLocation"
+      ],
+      "Resource": [
+        "arn:aws:s3:::cdct-documents/*",
+        "arn:aws:s3:::cdct-documents"
+      ]
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": ["arn:aws:iam::*:user/admin-user"]
+      },
+      "Action": [
+        "s3:PutObject",
+        "s3:GetObject",
+        "s3:DeleteObject",
+        "s3:ListBucket"
+      ],
+      "Resource": [
+        "arn:aws:s3:::cdct-documents",
+        "arn:aws:s3:::cdct-documents/*"
+      ]
+    }
+  ]
+}
