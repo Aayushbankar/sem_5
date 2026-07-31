@@ -1,8 +1,38 @@
 # 📝 Past Papers (PYQ)
 
-Official GTU previous-year question papers, mapped question-by-question inside the unit notes of **FOB** and **CDCT**.
+Official GTU previous-year question papers, mapped question-by-question inside the unit notes of **FOB** and **CDCT**. Tick off papers as you solve them — your progress is saved on this device.
 
-## FBC — Foundation of Blockchain
+<div class="check-grid" markdown>
+
+<div class="check-card sub-fob" markdown>
+<h3>FBC — Foundation of Blockchain</h3>
+<ul class="task-list" data-progress="pyq-fbc" markdown>
+- [ ] [Summer 2024](fbc/s_24.pdf)
+- [ ] [Winter 2024](fbc/w_24.pdf)
+- [ ] [Summer 2025](fbc/s_25.pdf)
+- [ ] [Winter 2025](fbc/w_25.pdf)
+- [ ] [Summer 2026](fbc/s_26.pdf)
+</ul>
+<div class="progress-bar mini" data-progress-for="pyq-fbc"><i></i></div>
+</div>
+
+<div class="check-card sub-cdct" markdown>
+<h3>CDCT — Cloud and Data Center Technology</h3>
+<ul class="task-list" data-progress="pyq-cdct" markdown>
+- [ ] [Summer 2024](cdct/s_24.pdf)
+- [ ] [Winter 2024](cdct/w_24.pdf)
+- [ ] [Summer 2025](cdct/s_25.pdf)
+- [ ] [Winter 2025](cdct/w_25.pdf)
+- [ ] [Summer 2026](cdct/s_26.pdf)
+</ul>
+<div class="progress-bar mini" data-progress-for="pyq-cdct"><i></i></div>
+</div>
+
+</div>
+
+## 📖 Full papers
+
+### FBC — Foundation of Blockchain
 
 | Paper | Download |
 |---|---|
@@ -12,7 +42,7 @@ Official GTU previous-year question papers, mapped question-by-question inside t
 | Winter 2025 | [Download PDF](fbc/w_25.pdf) |
 | Summer 2026 | [Download PDF](fbc/s_26.pdf) |
 
-## CDCT — Cloud and Data Center Technology
+### CDCT — Cloud and Data Center Technology
 
 | Paper | Download |
 |---|---|

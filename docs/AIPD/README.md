@@ -1,13 +1,53 @@
-# AIPD — AI Product Design (DI05016021)
+<div class="dash-header sub-aipd" markdown>
 
-> **w.e.f. 2026-27** · GTU Diploma Engineering · Information Technology
+<div class="dash-title">
+<h1>💡 AI Product Design</h1>
+<p class="dash-code">DI05016021 · w.e.f. 2026-27 · GTU Diploma IT · Sem 5</p>
+</div>
 
-Complete study kit: solved practicals (with reusable templates), theory notes, and curated resources.
+<div class="dash-stats">
+<div class="stat"><b>6</b><span>Units</span></div>
+<div class="stat"><b>12</b><span>Practicals</span></div>
+<div class="stat"><b>45h</b><span>Theory hrs</span></div>
+</div>
+
+</div>
 
 > 🧪 **The running example:** every practical builds one continuous product story — **StudyMate, an AI Study Assistant** for diploma students. Each write-up contains a *filled* template (StudyMate), a *blank* template (in [`practicals/code/`](./practicals/code/)), and field-by-field explanations so you can redo the whole kit for your own idea.
 
-## 📊 Progress
-- Practicals: **[tracker](./PRACTICALS.md)**
+<div class="check-grid" markdown>
+<div class="check-card sub-aipd" markdown>
+<h3>📚 Theory units</h3>
+<ul class="task-list" data-progress="aipd-units" markdown>
+- [ ] [UNIT 1 — Fundamentals of AI Products & Emerging AI Systems](./notes/UNIT_1_Fundamentals_of_AI_Products.md) <span class="badge">18% (8h)</span>
+- [ ] [UNIT 2 — Design Thinking & Human-Centred AI](./notes/UNIT_2_Design_Thinking_and_Human_Centred_AI.md) <span class="badge">16% (7h)</span>
+- [ ] [UNIT 3 — AI Product Strategy & OpenAI Integration](./notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration.md) <span class="badge">18% (8h)</span>
+- [ ] [UNIT 4 — AI in Social Media & Digital Experience](./notes/UNIT_4_AI_in_Social_Media_and_Digital_Experience.md) <span class="badge">22% (10h)</span>
+- [ ] [UNIT 5 — Privacy, Data Governance & Responsible AI](./notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI.md) <span class="badge">13% (6h)</span>
+- [ ] [UNIT 6 — AI Threats & Mitigation Strategies](./notes/UNIT_6_AI_Threats_and_Mitigation_Strategies.md) <span class="badge">13% (6h)</span>
+</ul>
+<div class="progress-bar mini" data-progress-for="aipd-units"><i></i></div>
+</div>
+
+<div class="check-card sub-aipd" markdown>
+<h3>🧪 Practicals</h3>
+<ul class="task-list" data-progress="aipd-practicals" markdown>
+- [ ] [P01 — Product idea, problem statement, target users & 3+ core features](./practicals/writeups/P01_product_idea_problem_statement.md)
+- [ ] [P02 — Conceptual AI system architecture (Data · Model · Interface · Feedback)](./practicals/writeups/P02_ai_system_architecture.md)
+- [ ] [P03 — Data components: inventory, classification & risk identification](./practicals/writeups/P03_data_components.md)
+- [ ] [P04 — User Persona + Empathy Map + Customer Journey Map](./practicals/writeups/P04_persona_empathy_journey.md)
+- [ ] [P05 — AI interaction flow + basic UI wireframes](./practicals/writeups/P05_interaction_flow_wireframe.md)
+- [ ] [P06 — MVP features + feature prioritization matrix](./practicals/writeups/P06_mvp_feature_prioritization.md)
+- [ ] [P07 — Business Model Canvas + AI monetization strategy](./practicals/writeups/P07_business_model_canvas.md)
+- [ ] [P08 — AI integration plan: API usage, cost & security](./practicals/writeups/P08_ai_integration_plan.md)
+- [ ] [P09 — AI social-media campaign + promotional content](./practicals/writeups/P09_social_media_campaign.md)
+- [ ] [P10 — No-code prototype (Glide) + 2–3 min demo video storyboard](./practicals/writeups/P10_no_code_prototype_demo_video.md)
+- [ ] [P11 — Data Protection Plan + AI Ethical Usage Policy](./practicals/writeups/P11_data_protection_ethics_policy.md)
+- [ ] [P12 — AI risk assessment + mitigation strategy](./practicals/writeups/P12_ai_risk_assessment.md)
+</ul>
+<div class="progress-bar mini" data-progress-for="aipd-practicals"><i></i></div>
+</div>
+</div>
 
 ## 🧪 Practicals (12)
 | # | Practical | Solution | Template |
@@ -25,9 +65,9 @@ Complete study kit: solved practicals (with reusable templates), theory notes, a
 | P11 | Data Protection Plan + AI Ethical Usage Policy | [P11](./practicals/writeups/P11_data_protection_ethics_policy.md) | [p11](./practicals/code/p11_data_protection_ethics_template.md) |
 | P12 | AI risk assessment + mitigation strategy | [P12](./practicals/writeups/P12_ai_risk_assessment.md) | [p12](./practicals/code/p12_risk_matrix_template.md) |
 
-## 📚 Theory Notes (per unit)
+## 📚 Units & weightage
 | Unit | Title | Weightage | Notes |
-|------|-------|-----------|-------|
+|---|---|---|---|
 | 1 | Fundamentals of AI Products & Emerging AI Systems | 18% (8h) | [UNIT_1](./notes/UNIT_1_Fundamentals_of_AI_Products.md) |
 | 2 | Design Thinking & Human-Centred AI | 16% (7h) | [UNIT_2](./notes/UNIT_2_Design_Thinking_and_Human_Centred_AI.md) |
 | 3 | AI Product Strategy & OpenAI Integration | 18% (8h) | [UNIT_3](./notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration.md) |

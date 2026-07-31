@@ -1,99 +1,120 @@
-# 🎓 Semester 5 — GTU IT Study Kit
+<div class="hero" markdown>
 
-Everything for your five subjects in one place: **gold-standard unit notes, solved practicals with runnable code, past-paper (PYQ) maps with model answers, and a video study guide in every unit.**
+<p class="hero-eyebrow">🎓 GTU · Diploma IT · Semester 5</p>
 
-> Built from the official GTU syllabi (w.e.f. 2026-27) · Diploma Engineering · Information Technology
+<h1 class="hero-title">Your complete <span class="grad">Sem 5 study kit</span></h1>
 
----
+<p class="hero-sub">Gold-standard unit notes with past-paper (PYQ) maps and solved model answers, 48 practical writeups with runnable code, and official syllabus + previous-year PDFs — designed for revision, not just reference.</p>
+
+<div class="hero-ctas">
+<a class="btn btn-primary" href="FOB/">Start studying →</a>
+<a class="btn btn-ghost" href="pyq/">Browse past papers</a>
+</div>
+
+<div class="hero-stats">
+<div class="stat"><b>5</b><span>Subjects</span></div>
+<div class="stat"><b>27</b><span>Unit notes</span></div>
+<div class="stat"><b>48</b><span>Practicals</span></div>
+<div class="stat"><b>10</b><span>PYQ papers</span></div>
+<div class="stat"><b>73</b><span>Diagrams</span></div>
+</div>
+
+</div>
 
 ## 📚 Your Subjects
 
-<div class="grid cards" markdown>
+Each subject has its own color — open a card, tick off units and practicals as you finish them, and your progress bar fills up.
 
-- **🏛️ FOB — Foundation of Blockchain**
+<div class="subjects">
 
-    ---
+<a class="sub-card sub-fob" href="FOB/">
+<div class="sub-head"><span class="sub-icon">🏛️</span><h3>Foundation of Blockchain</h3></div>
+<p>Decentralization, Bitcoin PoW, Ethereum, enterprise chains, security & green energy — with real PYQ maps and a Solidity token practical.</p>
+<div class="sub-chips"><span>5 units</span><span>10 practicals</span><span>30 hrs</span></div>
+<span class="sub-go">Open subject</span>
+</a>
 
-    Unit notes (PYQ maps + solved answers) · 10 solved practicals incl. Python PoW/BIP39 + Solidity token
-    [Open FOB →](FOB/README.md)
+<a class="sub-card sub-iot" href="IOT/">
+<div class="sub-head"><span class="sub-icon">🌐</span><h3>Hands on Practice using IoT</h3></div>
+<p>ESP32 + Arduino IDE, sensors and actuators, MQTT, ThingSpeak and Blynk — 14 practicals with real wiring diagrams and .ino code.</p>
+<div class="sub-chips"><span>5 units</span><span>14 practicals</span><span>30 hrs</span></div>
+<span class="sub-go">Open subject</span>
+</a>
 
-- **🌐 IOT — Hands on Practice using IoT**
+<a class="sub-card sub-aipe" href="AIPE/">
+<div class="sub-head"><span class="sub-icon">🤖</span><h3>AI with Prompt Engineering</h3></div>
+<p>LLMs, prompt techniques, agentic AI — 12 practicals including a working sentiment model, API chatbot and RAG Q&amp;A scripts.</p>
+<div class="sub-chips"><span>5 units</span><span>12 practicals</span><span>45 hrs</span></div>
+<span class="sub-go">Open subject</span>
+</a>
 
-    ---
+<a class="sub-card sub-aipd" href="AIPD/">
+<div class="sub-head"><span class="sub-icon">💡</span><h3>AI Product Design</h3></div>
+<p>Design thinking, product strategy, responsible AI — 12 template-based practicals from persona and BMC to risk assessment.</p>
+<div class="sub-chips"><span>6 units</span><span>12 practicals</span><span>45 hrs</span></div>
+<span class="sub-go">Open subject</span>
+</a>
 
-    ESP32/Arduino walkthroughs · 14 practicals · MQTT + cloud dashboard guides
-    [Open IOT →](IOT/README.md)
-
-- **🤖 AIPE — Artificial Intelligence with Prompt Engineering**
-
-    ---
-
-    LLM & prompting notes · 12 practicals incl. working sentiment, chatbot & RAG scripts
-    [Open AIPE →](AIPE/README.md)
-
-- **💡 AIPD — AI Product Design**
-
-    ---
-
-    Product-thinking notes · 12 template-based practicals (persona → BMC → risk)
-    [Open AIPD →](AIPD/README.md)
-
-- **☁️ CDCT — Cloud and Data Center Technology**
-
-    ---
-
-    Virtualization → containers · 10 practicals (Mininet, MinIO, Docker) · real PYQ maps
-    [Open CDCT →](CDCT/README.md)
+<a class="sub-card sub-cdct" href="CDCT/">
+<div class="sub-head"><span class="sub-icon">☁️</span><h3>Cloud and Data Center Technology</h3></div>
+<p>Virtualization, data centers, cloud storage, security — 10 practicals (Mininet, MinIO, Docker) with solved PYQ maps.</p>
+<div class="sub-chips"><span>6 units</span><span>10 practicals</span><span>45 hrs</span></div>
+<span class="sub-go">Open subject</span>
+</a>
 
 </div>
-
-## 📈 What's Inside
-
-| Unit notes | Practical writeups | Past-paper questions mapped | Mermaid diagrams |
-|---|---|---|---|
-| 27 gold chapters | 48 with runnable code | ~90 across FOB + CDCT | 73 diagrams |
-
-- **📚 Notes** — every chapter has a roadmap, star-rated exam topics, deep-dive topics, practice problems with hidden answers, glossary, curated resources, and a 🎥 YouTube study guide.
-- **🧪 Practicals** — writeups split into `writeups/` (theory + explanation + output) and `code/` (runnable files).
-- **📝 Past Papers** — mapped question-by-question to the units they test, with solved model answers.
 
 ## 📄 Official Documents
 
-<div class="grid cards" markdown>
+<div class="subjects">
 
-- **All 6 syllabus PDFs**
+<a class="sub-card sub-aipe" href="syllabus/">
+<div class="sub-head"><span class="sub-icon">📄</span><h3>All 6 syllabi (PDF)</h3></div>
+<p>Official GTU syllabus PDFs for every subject — the same ones linked from each subject overview.</p>
+<div class="sub-chips"><span>6 PDFs</span></div>
+<span class="sub-go">Open syllabi</span>
+</a>
 
-    ---
+<a class="sub-card sub-fob" href="pyq/#fbc-foundation-of-blockchain">
+<div class="sub-head"><span class="sub-icon">📝</span><h3>FBC past papers</h3></div>
+<p>Summer 2024 → Summer 2026. Every question is mapped unit-by-unit inside the FOB notes with model answers.</p>
+<div class="sub-chips"><span>5 papers</span></div>
+<span class="sub-go">Open PYQs</span>
+</a>
 
-    FOB, IOT, AIPE, AIPD, CDCT, SBT
-    [Open syllabus →](syllabus/selected/)
-
-- **FBC past papers (Winter 2024 → Summer 2026)**
-
-    ---
-
-    5 PDFs, every question mapped in the FOB unit notes
-    [Open PYQs →](pyq/fbc/)
-
-- **CDCT past papers (Winter 2024 → Summer 2026)**
-
-    ---
-
-    5 PDFs, every question mapped in the CDCT unit notes
-    [Open PYQs →](pyq/cdct/)
+<a class="sub-card sub-cdct" href="pyq/#cdct-cloud-and-data-center-technology">
+<div class="sub-head"><span class="sub-icon">📝</span><h3>CDCT past papers</h3></div>
+<p>Summer 2024 → Summer 2026. Every question is mapped unit-by-unit inside the CDCT notes with model answers.</p>
+<div class="sub-chips"><span>5 papers</span></div>
+<span class="sub-go">Open PYQs</span>
+</a>
 
 </div>
 
-## 🚀 How to Use This Site
+## 🚀 How to Study with This Kit
 
-1. **Pick a subject** from the cards above — start with the *Overview*.
-2. **Revise a unit** from its notes chapter, then close the loop with the **Practice Problems** (answers hidden — try before peeking).
-3. **Practise hands-on** — run the code in `code/` folders; every Python script was executed before publishing.
-4. **Before exams** — use the **📝 Past Papers (PYQ)** tab and grind the solved model answers.
+<div class="subjects">
+
+<div class="sub-card sub-aipe">
+<div class="sub-head"><span class="sub-icon">1️⃣</span><h3>Pick a subject</h3></div>
+<p>Land on the subject dashboard — see the stats, syllabus weightage, and your progress at a glance.</p>
+</div>
+
+<div class="sub-card sub-iot">
+<div class="sub-head"><span class="sub-icon">2️⃣</span><h3>Revise a unit</h3></div>
+<p>Every unit has a roadmap, star-rated topics, deep dives, and a 🎥 video study guide. Close the loop with practice problems — answers hidden, try before peeking.</p>
+</div>
+
+<div class="sub-card sub-fob">
+<div class="sub-head"><span class="sub-icon">3️⃣</span><h3>Practise & tick off</h3></div>
+<p>Run the code in the practicals, then tick units and practicals off the checklist — progress is saved on your device.</p>
+</div>
+
+</div>
 
 !!! tip "Made for video learners too"
     Every unit ends with a **🎥 Video Study Guide** — copy the YouTube search keywords straight into the search bar. Keywords and channel names only (links rot, keywords don't).
 
 ---
 
-> *“Consistency is the key to success.”* — keep the streak alive.
+> *"Consistency is the key to success."* — keep the streak alive.

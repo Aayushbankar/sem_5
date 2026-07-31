@@ -1,11 +1,48 @@
-# FOB — Foundation of Blockchain (DI05016051)
+<div class="dash-header sub-fob" markdown>
 
-> **w.e.f. 2026-27** · GTU Diploma Engineering · Information Technology
+<div class="dash-title">
+<h1>🏛️ Foundation of Blockchain</h1>
+<p class="dash-code">DI05016051 · w.e.f. 2026-27 · GTU Diploma IT · Sem 5</p>
+</div>
 
-Complete study kit: solved practicals, theory notes, and curated resources.
+<div class="dash-stats">
+<div class="stat"><b>5</b><span>Units</span></div>
+<div class="stat"><b>10</b><span>Practicals</span></div>
+<div class="stat"><b>45h</b><span>Theory hrs</span></div>
+</div>
 
-## 📊 Progress
-- Practicals: **[tracker](./PRACTICALS.md)**
+</div>
+
+<div class="check-grid" markdown>
+<div class="check-card sub-fob" markdown>
+<h3>📚 Theory units</h3>
+<ul class="task-list" data-progress="fob-units" markdown>
+- [ ] [UNIT 1 — Foundations of Decentralization](./notes/UNIT_1_Foundations_of_Decentralization.md) <span class="badge">20% (10h)</span>
+- [ ] [UNIT 2 — Bitcoin & The Proof-of-Work Era](./notes/UNIT_2_Bitcoin_and_PoW.md) <span class="badge">15% (8h)</span>
+- [ ] [UNIT 3 — Ethereum & Smart Contracts](./notes/UNIT_3_Ethereum_and_Smart_Contracts.md) <span class="badge">30% (12h)</span>
+- [ ] [UNIT 4 — Enterprise & Private Blockchains](./notes/UNIT_4_Enterprise_and_Private_Blockchains.md) <span class="badge">20% (7h)</span>
+- [ ] [UNIT 5 — Security, Emerging Trends & Green Energy](./notes/UNIT_5_Security_Emerging_Trends_Green_Energy.md) <span class="badge">15% (8h)</span>
+</ul>
+<div class="progress-bar mini" data-progress-for="fob-units"><i></i></div>
+</div>
+
+<div class="check-card sub-fob" markdown>
+<h3>🧪 Practicals</h3>
+<ul class="task-list" data-progress="fob-practicals" markdown>
+- [ ] [P01 — Cryptographic hash functions & Avalanche Effect](./practicals/writeups/P01_cryptographic_hash_avalanche.md)
+- [ ] [P02 — Public/private keys & digital signatures](./practicals/writeups/P02_public_private_keys_digital_signatures.md)
+- [ ] [P03 — Basic blockchain structure in Python](./practicals/writeups/P03_basic_blockchain_python.md)
+- [ ] [P04 — Simplified Merkle tree](./practicals/writeups/P04_merkle_tree.md)
+- [ ] [P05 — Nonce & mining difficulty (PoW)](./practicals/writeups/P05_nonce_mining_difficulty.md)
+- [ ] [P06 — Wallets: keys from mnemonic (BIP39)](./practicals/writeups/P06_wallets_mnemonic_bip39.md)
+- [ ] [P07 — Smart contract on the EVM](./practicals/writeups/P07_smart_contract_evm.md)
+- [ ] [P08 — ERC-20 token (Remix)](./practicals/writeups/P08_erc20_token.md)
+- [ ] [P09 — Case Study 1: Public vs Private + Hyperledger Fabric](./practicals/writeups/P09_case_study_public_vs_private_hyperledger.md)
+- [ ] [P10 — Case Study 2: Security + Green Energy DAO](./practicals/writeups/P10_case_study_security_green_energy_dao.md)
+</ul>
+<div class="progress-bar mini" data-progress-for="fob-practicals"><i></i></div>
+</div>
+</div>
 
 ## 🧪 Practicals (10)
 | # | Practical | Solution | Code |
@@ -21,9 +58,9 @@ Complete study kit: solved practicals, theory notes, and curated resources.
 | P09 | Case Study 1: Public vs Private + Hyperledger Fabric | [P09](./practicals/writeups/P09_case_study_public_vs_private_hyperledger.md) | — |
 | P10 | Case Study 2: Security + Green Energy DAO | [P10](./practicals/writeups/P10_case_study_security_green_energy_dao.md) | — |
 
-## 📚 Theory Notes (per unit)
+## 📚 Units & weightage
 | Unit | Title | Weightage | Notes |
-|------|-------|-----------|-------|
+|---|---|---|---|
 | 1 | Foundations of Decentralization | 20% (10h) | [UNIT_1](./notes/UNIT_1_Foundations_of_Decentralization.md) |
 | 2 | Bitcoin & The Proof-of-Work Era | 15% (8h) | [UNIT_2](./notes/UNIT_2_Bitcoin_and_PoW.md) |
 | 3 | Ethereum & Smart Contracts | 30% (12h) | [UNIT_3](./notes/UNIT_3_Ethereum_and_Smart_Contracts.md) |

@@ -1,11 +1,50 @@
-# AIPE — Artificial Intelligence with Prompt Engineering (DI05016011)
+<div class="dash-header sub-aipe" markdown>
 
-> **w.e.f. 2026-27** · GTU Diploma Engineering · Information Technology · Sem 5
+<div class="dash-title">
+<h1>🤖 Artificial Intelligence with Prompt Engineering</h1>
+<p class="dash-code">DI05016011 · w.e.f. 2026-27 · GTU Diploma IT · Sem 5</p>
+</div>
 
-Complete study kit: solved practicals (with runnable code), 5 gold theory chapters, and curated resources.
+<div class="dash-stats">
+<div class="stat"><b>5</b><span>Units</span></div>
+<div class="stat"><b>12</b><span>Practicals</span></div>
+<div class="stat"><b>45h</b><span>Theory hrs</span></div>
+</div>
 
-## 📊 Progress
-- Practicals: **[tracker](./PRACTICALS.md)** · 12 practicals / 30 hrs
+</div>
+
+<div class="check-grid" markdown>
+<div class="check-card sub-aipe" markdown>
+<h3>📚 Theory units</h3>
+<ul class="task-list" data-progress="aipe-units" markdown>
+- [ ] [UNIT 1 — Foundations of Artificial Intelligence & Generative AI](./notes/UNIT_1_Foundations_of_AI_and_Generative_AI.md) <span class="badge">15% (6h)</span>
+- [ ] [UNIT 2 — Basics of Large Language Models (LLMs)](./notes/UNIT_2_Basics_of_Large_Language_Models.md) <span class="badge">15% (6h)</span>
+- [ ] [UNIT 3 — Prompt Engineering Fundamentals](./notes/UNIT_3_Prompt_Engineering_Fundamentals.md) <span class="badge">20% (9h)</span>
+- [ ] [UNIT 4 — Prompt Engineering Techniques](./notes/UNIT_4_Prompt_Engineering_Techniques.md) <span class="badge">20% (9h)</span>
+- [ ] [UNIT 5 — AI Application Development: Generative AI, Agentic AI](./notes/UNIT_5_AI_Application_Development_Agentic_AI.md) <span class="badge">30% (15h)</span>
+</ul>
+<div class="progress-bar mini" data-progress-for="aipe-units"><i></i></div>
+</div>
+
+<div class="check-card sub-aipe" markdown>
+<h3>🧪 Practicals</h3>
+<ul class="task-list" data-progress="aipe-practicals" markdown>
+- [ ] [P01 — Use Generative AI tools for different task types & domains](./practicals/writeups/P01_genai_tools_tasks_and_domains.md)
+- [ ] [P02 — Sentiment analysis & text classification with Python](./practicals/writeups/P02_sentiment_analysis_text_classification.md)
+- [ ] [P03 — LLM behavior: prompt variation, context, consistency](./practicals/writeups/P03_llm_behavior_analysis.md)
+- [ ] [P04 — LLM capabilities & limitations, hallucination ID](./practicals/writeups/P04_llm_capabilities_limitations_hallucinations.md)
+- [ ] [P05 — Design & refine prompts (email, concept)](./practicals/writeups/P05_prompt_design_and_refinement.md)
+- [ ] [P06 — Zero-shot, few-shot, role-based prompting](./practicals/writeups/P06_zero_shot_few_shot_role_based.md)
+- [ ] [P07 — Chain-of-thought & prompt chaining](./practicals/writeups/P07_chain_of_thought_prompt_chaining.md)
+- [ ] [P08 — Task-based prompt engineering (summary/blog/code)](./practicals/writeups/P08_task_based_prompt_engineering.md)
+- [ ] [P09 — AI tools for software development (gen/debug/explain)](./practicals/writeups/P09_ai_tools_for_software_development.md)
+- [ ] [P10 — AI chatbot via API (OpenAI/Gemini) with Python](./practicals/writeups/P10_ai_chatbot_api_python.md)
+- [ ] [P11 — Document-based Q&A (basic RAG)](./practicals/writeups/P11_document_qa_basic_rag.md)
+- [ ] [P12 — Build an AI application (Study Assistant)](./practicals/writeups/P12_ai_study_assistant.md)
+</ul>
+<div class="progress-bar mini" data-progress-for="aipe-practicals"><i></i></div>
+</div>
+</div>
 
 ## 🧪 Practicals (12)
 | # | Practical | Solution | Code |
@@ -23,9 +62,9 @@ Complete study kit: solved practicals (with runnable code), 5 gold theory chapte
 | P11 | Document-based Q&A (basic RAG) | [P11](./practicals/writeups/P11_document_qa_basic_rag.md) | [p11_rag_document_qa.py](./practicals/code/p11_rag_document_qa.py) + [sample doc](./practicals/code/p11_sample_document.txt) |
 | P12 | Build an AI application (Study Assistant) | [P12](./practicals/writeups/P12_ai_study_assistant.md) | [p12_study_assistant.py](./practicals/code/p12_study_assistant.py) |
 
-## 📚 Theory Notes (per unit)
+## 📚 Units & weightage
 | Unit | Title | Weightage | Notes |
-|------|-------|-----------|-------|
+|---|---|---|---|
 | 1 | Foundations of Artificial Intelligence & Generative AI | 15% (6h) | [UNIT_1](./notes/UNIT_1_Foundations_of_AI_and_Generative_AI.md) |
 | 2 | Basics of Large Language Models (LLMs) | 15% (6h) | [UNIT_2](./notes/UNIT_2_Basics_of_Large_Language_Models.md) |
 | 3 | Prompt Engineering Fundamentals | 20% (9h) | [UNIT_3](./notes/UNIT_3_Prompt_Engineering_Fundamentals.md) |

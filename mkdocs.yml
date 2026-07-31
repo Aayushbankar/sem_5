@@ -8,6 +8,7 @@ theme:
   language: en
   features:
   - navigation.tabs
+  - navigation.sections
   - navigation.top
   - navigation.indexes
   - navigation.footer
@@ -17,21 +18,27 @@ theme:
   - content.code.copy
   - content.code.annotate
   palette:
-  - media: '(prefers-color-scheme: light)'
-    scheme: default
-    toggle:
-      icon: material/brightness-7
-      name: Switch to dark mode
   - media: '(prefers-color-scheme: dark)'
     scheme: slate
+    primary: custom
+    accent: custom
     toggle:
       icon: material/brightness-4
       name: Switch to light mode
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    primary: custom
+    accent: custom
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
   icon:
     logo: material/school
     repo: fontawesome/brands/github
+  favicon: assets/favicon.svg
 repo_url: https://github.com/Aayushbankar/sem_5
 repo_name: Aayushbankar/sem_5
+copyright: © 2026 · Made for GTU Diploma IT — Semester 5 · <em>Consistency is the key to success.</em>
 plugins:
 - search
 markdown_extensions:
@@ -55,9 +62,13 @@ markdown_extensions:
     anchor_linenums: true
 - pymdownx.inlinehilite
 - pymdownx.snippets
+- pymdownx.tasklist:
+    custom_checkbox: true
+    clickable_checkbox: true
 - pymdownx.emoji
 extra_javascript:
 - https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js
+- javascripts/study-progress.js
 extra_css:
 - stylesheets/extra.css
 exclude_docs: |
@@ -65,7 +76,7 @@ exclude_docs: |
 nav:
 - Home: index.md
 - FOB:
-  - Overview: FOB/README.md
+  - FOB — Foundation of Blockchain: FOB/README.md
   - Practical Tracker: FOB/PRACTICALS.md
   - 📚 Notes:
     - UNIT 1 — Foundations of Decentralization 🏛️: FOB/notes/UNIT_1_Foundations_of_Decentralization.md
@@ -87,7 +98,7 @@ nav:
   - 🔗 Resources: FOB/notes/RESOURCES.md
   - 📄 Syllabus (PDF): FOB/DI05016051-FOB.pdf
 - IOT:
-  - Overview: IOT/README.md
+  - IOT — Hands on Practice using IoT: IOT/README.md
   - Practical Tracker: IOT/PRACTICALS.md
   - 📚 Notes:
     - UNIT 1 — Introduction to IoT 🌐: IOT/notes/UNIT_1_Introduction_to_IoT.md
@@ -113,7 +124,7 @@ nav:
   - 🔗 Resources: IOT/notes/RESOURCES.md
   - 📄 Syllabus (PDF): IOT/DI05016071-IOT.pdf
 - AIPE:
-  - Overview: AIPE/README.md
+  - AIPE — Artificial Intelligence with Prompt Engineering: AIPE/README.md
   - Practical Tracker: AIPE/PRACTICALS.md
   - 📚 Notes:
     - UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖: AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI.md
@@ -137,7 +148,7 @@ nav:
   - 🔗 Resources: AIPE/notes/RESOURCES.md
   - 📄 Syllabus (PDF): AIPE/DI05016011-AIPE.pdf
 - AIPD:
-  - Overview: AIPD/README.md
+  - AIPD — AI Product Design: AIPD/README.md
   - Practical Tracker: AIPD/PRACTICALS.md
   - 📚 Notes:
     - UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖: AIPD/notes/UNIT_1_Fundamentals_of_AI_Products.md
@@ -162,7 +173,7 @@ nav:
   - 🔗 Resources: AIPD/notes/RESOURCES.md
   - 📄 Syllabus (PDF): AIPD/DI05016021-AIPD.pdf
 - CDCT:
-  - Overview: CDCT/README.md
+  - CDCT — Cloud and Data Center Technology: CDCT/README.md
   - Practical Tracker: CDCT/PRACTICALS.md
   - 📚 Notes:
     - UNIT 1 — Introduction to Cloud Computing ☁️: CDCT/notes/UNIT_1_Introduction_to_Cloud_Computing.md
@@ -185,7 +196,7 @@ nav:
   - 🔗 Resources: CDCT/notes/RESOURCES.md
   - 📄 Syllabus (PDF): CDCT/DI05016031-CDCT.pdf
 - 📄 All Syllabi (PDF):
-  - Overview: syllabus/index.md
+  - All Syllabi: syllabus/index.md
   - syllabus/selected/AI_Product_Design.pdf
   - syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf
   - syllabus/selected/Cloud_and_Data_Center_Technology.pdf
@@ -193,7 +204,7 @@ nav:
   - syllabus/selected/Hands_on_Practice_using_IoT.pdf
   - syllabus/selected/Skill_Based_Training.pdf
 - 📝 Past Papers (PYQ):
-  - Overview: pyq/index.md
+  - All Papers: pyq/index.md
   - pyq/fbc/s_24.pdf
   - pyq/fbc/s_25.pdf
   - pyq/fbc/s_26.pdf

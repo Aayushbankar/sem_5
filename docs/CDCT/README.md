@@ -1,14 +1,51 @@
-# CDCT — Cloud and Data Center Technology (DI05016031)
+<div class="dash-header sub-cdct" markdown>
 
-> **w.e.f. 2026-27** · GTU Diploma Engineering · Information Technology
+<div class="dash-title">
+<h1>☁️ Cloud and Data Center Technology</h1>
+<p class="dash-code">DI05016031 · w.e.f. 2026-27 · GTU Diploma IT · Sem 5</p>
+</div>
 
-Complete study kit: 10 solved practicals (writeups + code), 6 gold theory notes with real PYQs, and curated resources.
+<div class="dash-stats">
+<div class="stat"><b>6</b><span>Units</span></div>
+<div class="stat"><b>10</b><span>Practicals</span></div>
+<div class="stat"><b>45h</b><span>Theory hrs</span></div>
+</div>
 
-## 📊 Progress
-- Practicals: **[tracker](./PRACTICALS.md)** — 10/10 solved · P09 & P10 **ran for real** in Docker (output captured)
-- Notes: 6/6 units, all with **real PYQ solved answers** from Summer-24 → Summer-26 papers
+</div>
 
-## 🧪 Practicals (10 · 30 hrs)
+<div class="check-grid" markdown>
+<div class="check-card sub-cdct" markdown>
+<h3>📚 Theory units</h3>
+<ul class="task-list" data-progress="cdct-units" markdown>
+- [ ] [UNIT 1 — Introduction to Cloud Computing](./notes/UNIT_1_Introduction_to_Cloud_Computing.md) <span class="badge">8% (4h)</span>
+- [ ] [UNIT 2 — Virtualization and Hypervisors](./notes/UNIT_2_Virtualization_and_Hypervisors.md) <span class="badge">20% (9h)</span>
+- [ ] [UNIT 3 — Data Center Architecture](./notes/UNIT_3_Data_Center_Architecture.md) <span class="badge">20% (9h)</span>
+- [ ] [UNIT 4 — Cloud Storage and Database Services](./notes/UNIT_4_Cloud_Storage_and_Database_Services.md) <span class="badge">20% (9h)</span>
+- [ ] [UNIT 5 — Cloud Security and Compliance](./notes/UNIT_5_Cloud_Security_and_Compliance.md) <span class="badge">14% (6h)</span>
+- [ ] [UNIT 6 — Emerging Technologies with Cloud Computing](./notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing.md) <span class="badge">18% (8h)</span>
+</ul>
+<div class="progress-bar mini" data-progress-for="cdct-units"><i></i></div>
+</div>
+
+<div class="check-card sub-cdct" markdown>
+<h3>🧪 Practicals</h3>
+<ul class="task-list" data-progress="cdct-practicals" markdown>
+- [ ] [P01 — OpenStack architecture & entities](./practicals/writeups/P01_openstack_architecture.md)
+- [ ] [P02 — Cloud org with RBAC (AWS IAM)](./practicals/writeups/P02_cloud_organization_rbac.md)
+- [ ] [P03 — Install VirtualBox + Linux/Windows VM](./practicals/writeups/P03_install_virtualbox_linux_vm.md)
+- [ ] [P04 — Chrome Remote Desktop virtualization](./practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop.md)
+- [ ] [P05 — Mininet virtual SDN lab (2sw-4host)](./practicals/writeups/P05_mininet_virtual_sdn_lab.md)
+- [ ] [P06 — Cloud database comparison](./practicals/writeups/P06_cloud_databases_comparison.md)
+- [ ] [P07 — Cloud storage comparison](./practicals/writeups/P07_cloud_storage_comparison.md)
+- [ ] [P08 — CloudSim secure file sharing](./practicals/writeups/P08_cloudsim_secure_file_sharing.md)
+- [ ] [P09 — MinIO secure object storage (SSE + IAM)](./practicals/writeups/P09_minio_secure_object_storage.md)
+- [ ] [P10 — First Docker container](./practicals/writeups/P10_docker_first_container.md)
+</ul>
+<div class="progress-bar mini" data-progress-for="cdct-practicals"><i></i></div>
+</div>
+</div>
+
+## 🧪 Practicals (10)
 | # | Practical | Solution | Code | Ran? |
 |---|-----------|----------|------|------|
 | P01 | OpenStack architecture & entities | [P01](./practicals/writeups/P01_openstack_architecture.md) | — | 📄 |
@@ -21,12 +58,11 @@ Complete study kit: 10 solved practicals (writeups + code), 6 gold theory notes 
 | P08 | CloudSim secure file sharing | [P08](./practicals/writeups/P08_cloudsim_secure_file_sharing.md) | [p08_cloudsim_secure_file_sharing.java](./practicals/code/p08_cloudsim_secure_file_sharing.java) | 📄* |
 | P09 | MinIO secure object storage (SSE + IAM) | [P09](./practicals/writeups/P09_minio_secure_object_storage.md) | [compose + policies + setup.sh](./practicals/code/) | ✅ **RAN** |
 | P10 | First Docker container | [P10](./practicals/writeups/P10_docker_first_container.md) | [Dockerfile + site](./practicals/code/) | ✅ **RAN** |
-
 ✅ = executed for real, output captured · 📄 = documented (expected output provided) · \* = requires hardware/environment not available here (VirtualBox/Windows, Mininet, CloudSim jars)
 
-## 📚 Theory Notes (per unit — real PYQ map + solved answers inside)
+## 📚 Units & weightage
 | Unit | Title | Weightage | Notes |
-|------|-------|-----------|-------|
+|---|---|---|---|
 | 1 | Introduction to Cloud Computing | 8% (4h) | [UNIT_1](./notes/UNIT_1_Introduction_to_Cloud_Computing.md) |
 | 2 | Virtualization and Hypervisors | 20% (9h) | [UNIT_2](./notes/UNIT_2_Virtualization_and_Hypervisors.md) |
 | 3 | Data Center Architecture | 20% (9h) | [UNIT_3](./notes/UNIT_3_Data_Center_Architecture.md) |

@@ -1,11 +1,52 @@
-# IOT — Hands on Practice using IoT (DI05016071)
+<div class="dash-header sub-iot" markdown>
 
-> **w.e.f. 2026-27** · GTU Diploma Engineering · Information Technology
+<div class="dash-title">
+<h1>🌐 Hands on Practice using IoT</h1>
+<p class="dash-code">DI05016071 · w.e.f. 2026-27 · GTU Diploma IT · Sem 5</p>
+</div>
 
-Complete study kit: solved practicals, theory notes, and curated resources.
+<div class="dash-stats">
+<div class="stat"><b>5</b><span>Units</span></div>
+<div class="stat"><b>14</b><span>Practicals</span></div>
+<div class="stat"><b>30h</b><span>Theory hrs</span></div>
+</div>
 
-## 📊 Progress
-- Practicals: **[tracker](./PRACTICALS.md)**
+</div>
+
+<div class="check-grid" markdown>
+<div class="check-card sub-iot" markdown>
+<h3>📚 Theory units</h3>
+<ul class="task-list" data-progress="iot-units" markdown>
+- [ ] [UNIT 1 — Introduction to IoT](./notes/UNIT_1_Introduction_to_IoT.md) <span class="badge">10% (4h)</span>
+- [ ] [UNIT 2 — IoT Sensors, Actuators and Hardware Platforms](./notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms.md) <span class="badge">25% (6h)</span>
+- [ ] [UNIT 3 — Introduction to ESP32 & Development with Arduino IDE](./notes/UNIT_3_ESP32_and_Arduino_IDE_Development.md) <span class="badge">35% (9h)</span>
+- [ ] [UNIT 4 — IoT Communication Protocols and Networking](./notes/UNIT_4_IoT_Communication_Protocols_and_Networking.md) <span class="badge">10% (4h)</span>
+- [ ] [UNIT 5 — IoT Cloud Platforms and Applications of IoT](./notes/UNIT_5_IoT_Cloud_Platforms_and_Applications.md) <span class="badge">20% (7h)</span>
+</ul>
+<div class="progress-bar mini" data-progress-for="iot-units"><i></i></div>
+</div>
+
+<div class="check-card sub-iot" markdown>
+<h3>🧪 Practicals</h3>
+<ul class="task-list" data-progress="iot-practicals" markdown>
+- [ ] [P01 — Study the 4-layer IoT architecture (Smart Home & Industrial IoT)](./practicals/writeups/P01_iot_architecture_layers.md)
+- [ ] [P02 — Compare Arduino UNO, ESP32 & Raspberry Pi + ESP32 pinout/dual-core](./practicals/writeups/P02_compare_hardware_platforms_esp32_pinout.md)
+- [ ] [P03 — Study: Arduino IDE configuration for ESP32 + driver install](./practicals/writeups/P03_arduino_ide_setup_esp32.md)
+- [ ] [P04 — Toggle an external LED (Digital Output), setup()/loop()](./practicals/writeups/P04_external_led_blink_toggle.md)
+- [ ] [P05 — PIR (Digital Input) + LDR (Analog Input) interface](./practicals/writeups/P05_pir_ldr_sensor_interface.md)
+- [ ] [P06 — DHT11/DHT22 temperature & humidity with DHT library](./practicals/writeups/P06_dht_temperature_humidity_sensor.md)
+- [ ] [P07 — Ultrasonic (HC-SR04) distance sensor](./practicals/writeups/P07_ultrasonic_distance_sensor.md)
+- [ ] [P08 — ESP32 as MQTT client publishing DHT data to a public broker](./practicals/writeups/P08_esp32_mqtt_publisher.md)
+- [ ] [P09 — ESP32 MQTT subscriber: remote LED/relay control](./practicals/writeups/P09_esp32_mqtt_subscriber_remote_control.md)
+- [ ] [P10 — HTTP GET/POST to ThingSpeak (temperature graphing)](./practicals/writeups/P10_thingspeak_http_temperature.md)
+- [ ] [P11 — Ultrasonic distance to ThingSpeak (fill-level dashboard)](./practicals/writeups/P11_ultrasonic_thingspeak_cloud.md)
+- [ ] [P12 — Two-way mobile dashboard (Blynk) with virtual-button control](./practicals/writeups/P12_blynk_two_way_dashboard.md)
+- [ ] [P13 — (a) Soil moisture + DHT on Serial · (b) Cloud upload with thresholds](./practicals/writeups/P13_soil_moisture_dht_cloud_thresholds.md)
+- [ ] [P14 — Mini-project: Smart Agriculture (BOM, wiring, full sketch, dashboards)](./practicals/writeups/P14_mini_project_smart_agriculture_guide.md)
+</ul>
+<div class="progress-bar mini" data-progress-for="iot-practicals"><i></i></div>
+</div>
+</div>
 
 ## 🧪 Practicals (14)
 | # | Practical | Solution | Code |
@@ -25,9 +66,9 @@ Complete study kit: solved practicals, theory notes, and curated resources.
 | P13 | (a) Soil moisture + DHT on Serial · (b) Cloud upload with thresholds | [P13](./practicals/writeups/P13_soil_moisture_dht_cloud_thresholds.md) | [p13a](./practicals/code/p13a_soil_moisture_dht_serial.ino) + [p13b](./practicals/code/p13b_soil_dht_cloud_threshold.ino) |
 | P14 | Mini-project: Smart Agriculture (BOM, wiring, full sketch, dashboards) | [P14](./practicals/writeups/P14_mini_project_smart_agriculture_guide.md) | [p14_smart_agriculture_project.ino](./practicals/code/p14_smart_agriculture_project.ino) |
 
-## 📚 Theory Notes (per unit)
+## 📚 Units & weightage
 | Unit | Title | Weightage | Notes |
-|------|-------|-----------|-------|
+|---|---|---|---|
 | 1 | Introduction to IoT | 10% (4h) | [UNIT_1](./notes/UNIT_1_Introduction_to_IoT.md) |
 | 2 | IoT Sensors, Actuators and Hardware Platforms | 25% (6h) | [UNIT_2](./notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms.md) |
 | 3 | Introduction to ESP32 & Development with Arduino IDE | 35% (9h) | [UNIT_3](./notes/UNIT_3_ESP32_and_Arduino_IDE_Development.md) |
