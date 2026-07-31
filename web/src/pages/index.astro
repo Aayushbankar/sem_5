@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { HeroSection } from '../components/HeroSection.tsx';
+---
+
+<Layout title="Igloo.inc - Sem 5 Academic Platform">
+  <main class="min-h-screen relative overflow-hidden flex flex-col items-center justify-center p-4">
+    <div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.1)_0,transparent_50%)] pointer-events-none"></div>
+    <HeroSection client:load />
+  </main>
+</Layout>
