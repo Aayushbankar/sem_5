@@ -30,7 +30,6 @@ theme:
   icon:
     logo: material/school
     repo: fontawesome/brands/github
-  favicon: https://fav.farm/📚
 repo_url: https://github.com/Aayushbankar/sem_5
 repo_name: Aayushbankar/sem_5
 plugins:
@@ -38,10 +37,12 @@ plugins:
 markdown_extensions:
 - tables
 - attr_list
+- md_in_html
 - admonition
 - footnotes
 - toc:
     permalink: true
+    toc_depth: 2
 - pymdownx.details
 - pymdownx.tabbed:
     alternate_style: true
@@ -57,7 +58,6 @@ markdown_extensions:
 - pymdownx.emoji
 extra_javascript:
 - https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js
-- javascripts/mermaid-init.js
 extra_css:
 - stylesheets/extra.css
 exclude_docs: |
@@ -185,6 +185,7 @@ nav:
   - 🔗 Resources: CDCT/notes/RESOURCES.md
   - 📄 Syllabus (PDF): CDCT/DI05016031-CDCT.pdf
 - 📄 All Syllabi (PDF):
+  - Overview: syllabus/index.md
   - syllabus/selected/AI_Product_Design.pdf
   - syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf
   - syllabus/selected/Cloud_and_Data_Center_Technology.pdf
@@ -192,6 +193,7 @@ nav:
   - syllabus/selected/Hands_on_Practice_using_IoT.pdf
   - syllabus/selected/Skill_Based_Training.pdf
 - 📝 Past Papers (PYQ):
+  - Overview: pyq/index.md
   - pyq/fbc/s_24.pdf
   - pyq/fbc/s_25.pdf
   - pyq/fbc/s_26.pdf

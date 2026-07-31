@@ -69,7 +69,7 @@ sequenceDiagram
     App->>F: HTTP event (no server pre-provisioned)
     F->>F: Function starts on demand (cold/warm)
     F->>DB: Process + store
-    F-->>App: Response; instance scales to zero
+    F-->>App: Response — instance scales to zero
 ```
 
 ## 6.4 Edge and Fog Computing ⭐⭐

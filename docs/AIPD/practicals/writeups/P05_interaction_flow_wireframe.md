@@ -21,7 +21,7 @@ flowchart TD
     B -- No --> F[Type a question in Chat]
     F --> G{Question answerable<br/>from uploaded docs?}
     G -- Yes --> H[Answer + citation to page/chapter]
-    G -- No --> I[Honest fallback: "Not in your notes.<br/>Want a general explanation?"]
+    G -- No --> I["Honest fallback: \"Not in your notes.<br/>Want a general explanation?\""]
     E --> J[Try quiz?]
     H --> K[Rate helpful? 👍/👎]
     I --> K

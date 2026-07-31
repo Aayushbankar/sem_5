@@ -94,7 +94,7 @@ Result: a statistical model where "the most likely next word" is usually the *ri
 
 ```mermaid
 flowchart LR
-    T1["king"] --> E[Embedding space<br/>(high-dimensional vectors)]
+    T1["king"] --> E["Embedding space<br/>(high-dimensional vectors)"]
     T2["queen"] --> E
     T3["royal"] --> E
     T4["apple"] --> E

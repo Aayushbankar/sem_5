@@ -223,12 +223,12 @@ Hashing all transactions together is wasteful: to prove *one* transaction belong
 
 ```mermaid
 flowchart TB
-    R[Merkle Root = H(h01 + h23)] --> h01[H01 = H(h0 + h1)]
-    R --> h23[H23 = H(h2 + h3)]
-    h01 --> h0[H0 = SHA256(tx0)]
-    h01 --> h1[H1 = SHA256(tx1)]
-    h23 --> h2[H2 = SHA256(tx2)]
-    h23 --> h3[H3 = SHA256(tx3)]
+    R["Merkle Root = H(h01 + h23)"] --> h01["H01 = H(h0 + h1)"]
+    R --> h23["H23 = H(h2 + h3)"]
+    h01 --> h0["H0 = SHA256(tx0)"]
+    h01 --> h1["H1 = SHA256(tx1)"]
+    h23 --> h2["H2 = SHA256(tx2)"]
+    h23 --> h3["H3 = SHA256(tx3)"]
 ```
 
 **Why it's brilliant:**

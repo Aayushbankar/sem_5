@@ -23,7 +23,7 @@
 
 ```mermaid
 flowchart TB
-    Root[Organization root<br/>(management account)] --> OrgA[Org Unit: IT]
+    Root["Organization root<br/>(management account)"] --> OrgA[Org Unit: IT]
     Root --> OrgB[Org Unit: Developers]
     OrgA --> A1[CloudAdmin user]
     OrgA --> A2[NetworkAdmin user]
