@@ -1,0 +1,191 @@
+/* ==========================================================================
+   Semester 5 — Obsidian Vault Theme Snippet
+   Matches the website's violet/indigo palette
+   ========================================================================== */
+
+/* ── Design Tokens ─────────────────────────────────────────────────── */
+
+body {
+  --brand-1: #6366f1;
+  --brand-2: #8b5cf6;
+  --brand-3: #a855f7;
+  --sub-fob: #f59e0b;
+  --sub-iot: #2dd4bf;
+  --sub-aipe: #a78bfa;
+  --sub-aipd: #fb7185;
+  --sub-cdct: #38bdf8;
+}
+
+/* ── Typography ────────────────────────────────────────────────────── */
+
+.markdown-preview-view,
+.markdown-source-view {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3 {
+  font-family: "Space Grotesk", "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+code, .cm-s-obsidian .cm-inline-code {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+}
+
+/* ── Heading Colors ────────────────────────────────────────────────── */
+
+.markdown-preview-view h1,
+.cm-header-1 {
+  color: var(--brand-1) !important;
+}
+
+.markdown-preview-view h2,
+.cm-header-2 {
+  color: var(--brand-2) !important;
+}
+
+/* ── Custom Callouts (per-subject) ─────────────────────────────────── */
+
+.callout[data-callout="fob"] {
+  --callout-color: 245, 158, 11;
+  --callout-icon: lucide-link;
+}
+
+.callout[data-callout="iot"] {
+  --callout-color: 45, 212, 191;
+  --callout-icon: lucide-cpu;
+}
+
+.callout[data-callout="aipe"] {
+  --callout-color: 167, 139, 250;
+  --callout-icon: lucide-brain;
+}
+
+.callout[data-callout="aipd"] {
+  --callout-color: 251, 113, 133;
+  --callout-icon: lucide-lightbulb;
+}
+
+.callout[data-callout="cdct"] {
+  --callout-color: 56, 189, 248;
+  --callout-icon: lucide-cloud;
+}
+
+/* ── Tag Styling ───────────────────────────────────────────────────── */
+
+.tag {
+  background-color: rgba(139, 92, 246, 0.15);
+  color: var(--brand-2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 0.78em;
+  font-weight: 600;
+}
+
+/* ── Checkboxes ────────────────────────────────────────────────────── */
+
+input[type="checkbox"]:checked {
+  accent-color: var(--brand-2);
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked {
+  background-color: var(--brand-2);
+  border-color: var(--brand-2);
+}
+
+/* ── Dataview Tables ───────────────────────────────────────────────── */
+
+.dataview.table-view-table th {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 0.78em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: rgba(99, 102, 241, 0.1);
+}
+
+.dataview.table-view-table tr:hover {
+  background-color: rgba(139, 92, 246, 0.05);
+}
+
+/* ── Table Styling ─────────────────────────────────────────────────── */
+
+.markdown-preview-view table {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.markdown-preview-view th {
+  font-family: "Space Grotesk", "Inter", sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background-color: rgba(99, 102, 241, 0.08);
+}
+
+.markdown-preview-view tr:hover td {
+  background-color: rgba(139, 92, 246, 0.04);
+}
+
+/* ── Code Blocks ───────────────────────────────────────────────────── */
+
+.markdown-preview-view pre {
+  border-radius: 0.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+/* ── Links ─────────────────────────────────────────────────────────── */
+
+a.internal-link {
+  color: var(--brand-2);
+}
+
+a.internal-link:hover {
+  color: var(--brand-3);
+}
+
+a.internal-link.is-unresolved {
+  color: rgba(251, 113, 133, 0.7);
+}
+
+/* ── Graph View Colors ─────────────────────────────────────────────── */
+
+.graph-view.color-fill-tag {
+  color: var(--brand-2);
+}
+
+/* ── Blockquotes ───────────────────────────────────────────────────── */
+
+.markdown-preview-view blockquote {
+  border-left-color: var(--brand-2);
+  background-color: rgba(139, 92, 246, 0.05);
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.5rem 1rem;
+}
+
+/* ── Selection ─────────────────────────────────────────────────────── */
+
+::selection {
+  background-color: rgba(139, 92, 246, 0.3);
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────── */
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(139, 92, 246, 0.3);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(139, 92, 246, 0.5);
+}
+
+/* ── Frontmatter in Source Mode ────────────────────────────────────── */
+
+.cm-s-obsidian .cm-hmd-frontmatter {
+  color: rgba(167, 139, 250, 0.7);
+}

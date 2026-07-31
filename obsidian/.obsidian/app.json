@@ -1,0 +1,16 @@
+{
+  "strictLineBreaks": true,
+  "showFrontmatter": false,
+  "defaultViewMode": "preview",
+  "attachmentFolderPath": "_attachments",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "_inbox",
+  "useMarkdownLinks": false,
+  "showLineNumber": true,
+  "spellcheck": true,
+  "readableLineLength": true,
+  "livePreview": true,
+  "foldHeading": true,
+  "foldIndent": true,
+  "showInlineTitle": true
+}
