@@ -1,0 +1,6694 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.">
+      
+      
+      
+        <link rel="canonical" href="https://aayushbankar.github.io/sem_5/CDCT/notes/UNIT_3_Data_Center_Architecture/">
+      
+      
+        <link rel="prev" href="../UNIT_2_Virtualization_and_Hypervisors/">
+      
+      
+        <link rel="next" href="../UNIT_4_Cloud_Storage_and_Database_Services/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://fav.farm/📚">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNIT 3 — Data Center Architecture 🏢 - Semester 5 — GTU IT Study Kit 🎓</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-3-data-center-architecture" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-header__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Semester 5 — GTU IT Study Kit 🎓
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UNIT 3 — Data Center Architecture 🏢
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../FOB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FOB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../IOT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IOT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPD/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPD
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CDCT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📄 All Syllabi (PDF)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pyq/fbc/s_24.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📝 Past Papers (PYQ)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-nav__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Semester 5 — GTU IT Study Kit 🎓
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FOB/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FOB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_1_Foundations_of_Decentralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_2_Bitcoin_and_PoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_3_Ethereum_and_Smart_Contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Ethereum & Smart Contracts 🟣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_4_Enterprise_and_Private_Blockchains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Enterprise & Private Blockchains 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_5_Security_Emerging_Trends_Green_Energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Cryptographic Hash Functions & the Avalanche Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P02_public_private_keys_digital_signatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Public/Private Key Pair & Digital Signatures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P03_basic_blockchain_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Basic Blockchain Structure in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P04_merkle_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Simplified Merkle Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P05_nonce_mining_difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — The "Nonce" & Mining Difficulty (Proof-of-Work)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P06_wallets_mnemonic_bip39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P07_smart_contract_evm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Write, Compile & Deploy a Smart Contract on the EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P08_erc20_token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Tokenization: Deploying a Basic ERC-20 Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P09_case_study_public_vs_private_hyperledger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P10_case_study_security_green_energy_dao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/DI05016051-FOB.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../IOT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IOT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IOT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_1_Introduction_to_IoT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to IoT 🌐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_3_ESP32_and_Arduino_IDE_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — IoT Communication Protocols & Networking 📡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P01_iot_architecture_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P02_compare_hardware_platforms_esp32_pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P03_arduino_ide_setup_esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P04_external_led_blink_toggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Toggle an External LED (Digital Output)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P05_pir_ldr_sensor_interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P06_dht_temperature_humidity_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — DHT11/DHT22 Temperature & Humidity Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P07_ultrasonic_distance_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P08_esp32_mqtt_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — ESP32 as MQTT Publisher (Temperature & Humidity)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P09_esp32_mqtt_subscriber_remote_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P10_thingspeak_http_temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P11_ultrasonic_thingspeak_cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Ultrasonic Distance to Cloud (ThingSpeak)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P12_blynk_two_way_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P14_mini_project_smart_agriculture_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P14 — Mini-Project: Smart Agriculture System (walkthrough guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/DI05016071-IOT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPE/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_2_Basics_of_Large_Language_Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Basics of Large Language Models (LLMs) 🧠
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Prompt Engineering Fundamentals 🎯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_4_Prompt_Engineering_Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Prompt Engineering Techniques 🧩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Generative AI Tools for Different Task Types & Applications Across Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P02_sentiment_analysis_text_classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Sentiment Analysis & Text Classification with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P03_llm_behavior_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P05_prompt_design_and_refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Design & Refine Prompts: Email Writing & Concept Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Zero-Shot, Few-Shot & Role-Based Prompting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P08_task_based_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P09_ai_tools_for_software_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P10_ai_chatbot_api_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P11_document_qa_basic_rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Document-Based Q&A (Basic RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P12_ai_study_assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Build an AI Application: Study Assistant (with design docs for 3 more)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/DI05016011-AIPE.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPD/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_1_Fundamentals_of_AI_Products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Design Thinking & Human-Centred AI 🎨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — AI Product Strategy & OpenAI Integration 🧭
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — AI in Social Media & Digital Experience 📱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — AI Threats & Mitigation Strategies 🚨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P01_product_idea_problem_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Product Idea, Problem Statement, Target Users & Core Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P02_ai_system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P03_data_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Data Components: Inventory, Classification & Risk Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P04_persona_empathy_journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — User Personas, Empathy Map & Customer Journey Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P05_interaction_flow_wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — AI Interaction Flow & Basic UI Wireframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P06_mvp_feature_prioritization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — MVP Features & Feature Prioritization Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P07_business_model_canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Business Model Canvas & AI Monetization Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P08_ai_integration_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — AI Integration Plan: API Usage, Cost Awareness & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P09_social_media_campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Social-Media Campaign & Promotional Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P10_no_code_prototype_demo_video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P11_data_protection_ethics_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Data Protection Plan & AI Ethical Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P12_ai_risk_assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — AI Risk Assessment & Mitigation Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/DI05016021-AIPD.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDCT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CDCT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_1_Introduction_to_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to Cloud Computing ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_2_Virtualization_and_Hypervisors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Virtualization and Hypervisors 🖥️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-data-center-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Data Center Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Data Center Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-definition-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Definition &amp; evolution ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-key-components-w_24-q3-a-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Key components (w_24 Q.3-a-alt) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-data-center-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Data Center Networking ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Data Center Networking ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-network-topologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 Network topologies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-sdn-software-defined-networking-in-the-data-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 SDN (Software-Defined Networking) in the data center ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-data-center-automation-and-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Data Center Automation and Scaling ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Data Center Automation and Scaling ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-automation-in-data-centers-s_24-q3-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 Automation in data centers (s_24 Q.3-b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-infrastructure-as-code-iac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 Infrastructure as Code (IaC) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-scalability-and-elasticity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 Scalability and elasticity ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-sdn-the-full-packet-inpacket-out-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: SDN — the full packet-in/packet-out story
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-leaf-spine-oversubscription-maths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Leaf-Spine oversubscription maths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-iac-imperative-vs-declarative-which-to-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: IaC imperative vs declarative — which to answer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-d-vendor-lock-in-s_24-q3-b-alt-a-4-mark-justify-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive D: Vendor lock-in (s_24 Q.3-b-alt) — a 4-mark "justify" classic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-3-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 3 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 3 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_4_Cloud_Storage_and_Database_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Cloud Storage and Database Services 💾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_5_Cloud_Security_and_Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Cloud Security and Compliance 🔐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_6_Emerging_Technologies_with_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P01_openstack_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P02_cloud_organization_rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Cloud Organization with RBAC (AWS IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P03_install_virtualbox_linux_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Install VirtualBox + Linux VM on Windows 8+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Desktop Virtualization with Chrome Remote Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P05_mininet_virtual_sdn_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Virtual SDN Lab with Mininet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P06_cloud_databases_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Cloud Databases: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P07_cloud_storage_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Cloud Storage: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P08_cloudsim_secure_file_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Simulate Secure File Sharing with CloudSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P09_minio_secure_object_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Secure Object Storage with MinIO (Access Control + SSE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P10_docker_first_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Creating & Executing Your First Container (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DI05016031-CDCT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 All Syllabi (PDF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📄 All Syllabi (PDF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Cloud_and_Data_Center_Technology.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Foundation_of_Blockchain.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Hands_on_Practice_using_IoT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Skill_Based_Training.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Past Papers (PYQ)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Past Papers (PYQ)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#31-data-center-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Data Center Fundamentals
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 Data Center Fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311-definition-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 Definition &amp; evolution ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312-key-components-w_24-q3-a-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 Key components (w_24 Q.3-a-alt) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-data-center-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Data Center Networking ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Data Center Networking ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-network-topologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 Network topologies
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-sdn-software-defined-networking-in-the-data-center" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 SDN (Software-Defined Networking) in the data center ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-data-center-automation-and-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Data Center Automation and Scaling ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Data Center Automation and Scaling ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-automation-in-data-centers-s_24-q3-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 Automation in data centers (s_24 Q.3-b)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-infrastructure-as-code-iac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 Infrastructure as Code (IaC) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-scalability-and-elasticity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 Scalability and elasticity ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-sdn-the-full-packet-inpacket-out-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: SDN — the full packet-in/packet-out story
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-leaf-spine-oversubscription-maths" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Leaf-Spine oversubscription maths
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-iac-imperative-vs-declarative-which-to-answer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: IaC imperative vs declarative — which to answer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-d-vendor-lock-in-s_24-q3-b-alt-a-4-mark-justify-classic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive D: Vendor lock-in (s_24 Q.3-b-alt) — a 4-mark "justify" classic
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-3-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 3 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 3 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 3)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-3-data-center-architecture">UNIT 3 — Data Center Architecture 🏢<a class="headerlink" href="#unit-3-data-center-architecture" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Cloud and Data Center Technology (DI05016031)</strong> · <strong>9 hrs · 20% weightage</strong>
+<strong>Covers syllabus sections:</strong> 3.1 Data Center Fundamentals · 3.2 Data Center Networking (topologies + SDN) · 3.3 Data Center Automation &amp; Scaling (automation, IaC, scalability/elasticity)
+<strong>Related practicals:</strong> <a href="../../practicals/writeups/P05_mininet_virtual_sdn_lab/">P05</a></p>
+</blockquote>
+<hr />
+<h2 id="chapter-roadmap">🧭 Chapter Roadmap<a class="headerlink" href="#chapter-roadmap" title="Permanent link">&para;</a></h2>
+<p>This unit (20%) is where the "<strong>Data Center</strong>" half of the subject name lives. Two mega-topics dominate the PYQs: <strong>SDN architecture</strong> (a 7-mark favourite in every single paper) and <strong>data center network topologies</strong>. P05 (Mininet SDN lab) gives you a hands-on SDN topology.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th>Exam importance</th>
+<th>Related</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>DC fundamentals: evolution + key components</td>
+<td>★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>DC network topologies (Fat-Tree, Leaf-Spine, ToR)</td>
+<td>★★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>SDN in the data center</td>
+<td>★★★★★</td>
+<td>P05</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Automation &amp; IaC (Terraform, Ansible)</td>
+<td>★★★★</td>
+<td>P02 (cloud org automation)</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Scalability vs elasticity</td>
+<td>★★★★</td>
+<td>Unit 1</td>
+</tr>
+</tbody>
+</table>
+<h3 id="learning-outcomes-after-this-unit-you-can">Learning outcomes — after this unit you can:<a class="headerlink" href="#learning-outcomes-after-this-unit-you-can" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define a data center, trace its evolution, and list its key components.</li>
+<li>Explain the main data center network topologies (ToR, Leaf-Spine/Fat-Tree, Clos) and pick one.</li>
+<li>Explain <strong>SDN</strong> architecture (control/data/application planes) with a diagram — and its pros/cons.</li>
+<li>Explain data center <strong>automation</strong> and <strong>Infrastructure as Code (IaC)</strong> with tools (Terraform, Ansible, Puppet).</li>
+<li>Differentiate <strong>scalability</strong> and <strong>elasticity</strong>.</li>
+</ol>
+<hr />
+<h2 id="31-data-center-fundamentals">3.1 Data Center Fundamentals<a class="headerlink" href="#31-data-center-fundamentals" title="Permanent link">&para;</a></h2>
+<h3 id="311-definition-evolution">3.1.1 Definition &amp; evolution ⭐<a class="headerlink" href="#311-definition-evolution" title="Permanent link">&para;</a></h3>
+<p>A <strong>data center</strong> is a <strong>facility (or cluster of facilities) that houses computer systems, storage systems, and associated networking equipment</strong> along with supporting infrastructure (power, cooling, physical security) to run an organization's IT workloads reliably and at scale.</p>
+<p><strong>Evolution:</strong>
+| Era | Milestone |
+|---|---|
+| 1940s–60s | Huge single mainframes in a room (the original "computer room") |
+| 1970s–80s | Client–server + racks of servers; enterprise data centers appear |
+| 1990s | Internet/commercial data centers; dot-com server farms |
+| 2000s | <strong>Virtualization</strong> → server consolidation, blade servers |
+| 2010s–now | <strong>Hyper-scale clouds</strong> (Google, AWS, Azure): tens/hundreds of MW, automated, software-defined |</p>
+<h3 id="312-key-components-w_24-q3-a-alt">3.1.2 Key components (w_24 Q.3-a-alt) ⭐<a class="headerlink" href="#312-key-components-w_24-q3-a-alt" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Compute</strong></td>
+<td>Rack servers, blades, CPUs, GPUs, virtualization hosts</td>
+</tr>
+<tr>
+<td><strong>Storage</strong></td>
+<td>SAN/NAS, direct-attached disks, object storage nodes (P07)</td>
+</tr>
+<tr>
+<td><strong>Networking</strong></td>
+<td>Switches (ToR/aggregation/core), routers, load balancers, firewalls, cabling (fiber)</td>
+</tr>
+<tr>
+<td><strong>Power</strong></td>
+<td>Redundant UPS, diesel/gas generators, dual power feeds (N+1/2N)</td>
+</tr>
+<tr>
+<td><strong>Cooling</strong></td>
+<td>CRAC/CRAH units, cold/hot aisle containment, liquid cooling</td>
+</tr>
+<tr>
+<td><strong>Management &amp; security</strong></td>
+<td>DCIM, monitoring, CCTV, biometric access, fire suppression, environmental sensors</td>
+</tr>
+</tbody>
+</table>
+<h2 id="32-data-center-networking">3.2 Data Center Networking ⭐⭐<a class="headerlink" href="#32-data-center-networking" title="Permanent link">&para;</a></h2>
+<h3 id="321-network-topologies">3.2.1 Network topologies<a class="headerlink" href="#321-network-topologies" title="Permanent link">&para;</a></h3>
+<p>Data centers connect thousands of servers; topology decides <strong>bandwidth, redundancy, cost, and manageability</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Topology</th>
+<th>Structure</th>
+<th>Pros</th>
+<th>Cons</th>
+<th>Used in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Traditional 3-tier</strong></td>
+<td>Core → Aggregation → Access switches</td>
+<td>Simple, familiar</td>
+<td>Oversubscription, SPOF at core, limited east-west bandwidth</td>
+<td>Legacy DCs</td>
+</tr>
+<tr>
+<td><strong>Top-of-Rack (ToR)</strong></td>
+<td>1 switch per rack; servers → ToR → core</td>
+<td>Short cabling, simple</td>
+<td>ToR = per-rack SPOF</td>
+<td>Common hybrid</td>
+</tr>
+<tr>
+<td><strong>Leaf-Spine (Clos/Fat-Tree)</strong></td>
+<td>Every leaf connects to <strong>every</strong> spine (full mesh); equal paths</td>
+<td><strong>Scale-out</strong>, predictable latency, load balancing via ECMP</td>
+<td>More switches/ports cost</td>
+<td>Modern &amp; hyper-scale DCs</td>
+</tr>
+</tbody>
+</table>
+<p><pre class="mermaid"><code>flowchart TB
+    subgraph SPINE[Spine layer - 4 switches]
+        SP1 &amp; SP2
+    end
+    subgraph LEAF[Leaf layer]
+        L1 &amp; L2 &amp; L3
+    end
+    subgraph SERVERS[Server racks]
+        R1[rack 1] &amp; R2[rack 2] &amp; R3[rack 3]
+    end
+    SP1 --- L1 --- R1
+    SP1 --- L2 --- R2
+    SP1 --- L3 --- R3
+    SP2 --- L1
+    SP2 --- L2
+    SP2 --- L3</code></pre>
+<strong>Why Leaf-Spine:</strong> any server reaches any other in at most <em>2 hops</em>; adding capacity = add another spine/leaf (scale-out); no single congestion point; east-west (server-to-server) traffic is as fast as north-south.</p>
+<h3 id="322-sdn-software-defined-networking-in-the-data-center">3.2.2 SDN (Software-Defined Networking) in the data center ⭐⭐⭐<a class="headerlink" href="#322-sdn-software-defined-networking-in-the-data-center" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> SDN <strong>decouples the control plane (decision-making brain) from the data plane (packet forwarding hardware)</strong>. A centralized <strong>SDN controller</strong> programs network switches via a southbound protocol (<strong>OpenFlow</strong>), while applications talk to the controller via northbound APIs.</p>
+<pre class="mermaid"><code>flowchart TB
+    A[Application layer&lt;br/&gt;Apps: firewall, LB, network monitoring]
+    N[N'BOUND API&lt;br/&gt;REST]
+    C[Control layer&lt;br/&gt;SDN Controller&lt;br/&gt;- global network view&lt;br/&gt;- decides paths]
+    S[S'BOUND protocol&lt;br/&gt;OpenFlow]
+    D[Data layer&lt;br/&gt;SDN switches - only forward]
+    A --&gt; N --&gt; C --&gt; S --&gt; D</code></pre>
+<p><strong>The 3 planes:</strong>
+| Plane | Function | Devices |
+|---|---|---|
+| <strong>Application plane</strong> | Business logic via apps (security, routing policies) | Northbound APIs (REST) |
+| <strong>Control plane</strong> | Global view; computes routes; pushes flow rules | SDN controller (OpenDaylight, ONOS, Ryu, POX) |
+| <strong>Data plane</strong> | Matches &amp; forwards packets per flow table | OpenFlow switches (Open vSwitch — P05!) |</p>
+<p><strong>How a packet flows (P05 proof):</strong> switch gets unknown flow → sends packet-in to controller → controller computes path → installs flow rules on switches → subsequent packets forwarded in hardware at line-rate. In P05, <code>s1 dpctl dump-flows</code> shows the installed flows.</p>
+<p><strong>Advantages (w_25 Q.3-b):</strong> central visibility, programmable automation (no CLI-by-CLI config), vendor-neutral hardware, fast path changes (live traffic engineering), easier multi-tenancy/isolation in clouds.
+<strong>Disadvantages:</strong> controller = new single point of failure (need clusters), OpenFlow maturity, skill gap, security of the controller plane itself, performance overhead for exotic features.</p>
+<h2 id="33-data-center-automation-and-scaling">3.3 Data Center Automation and Scaling ⭐⭐<a class="headerlink" href="#33-data-center-automation-and-scaling" title="Permanent link">&para;</a></h2>
+<h3 id="331-automation-in-data-centers-s_24-q3-b">3.3.1 Automation in data centers (s_24 Q.3-b)<a class="headerlink" href="#331-automation-in-data-centers-s_24-q3-b" title="Permanent link">&para;</a></h3>
+<p><strong>Why important:</strong> manual racking/cabling/OS installs cannot scale to thousands of servers; human error causes outages; operators need <em>speed, consistency, repeatability</em>.
+<strong>What gets automated:</strong> server provisioning (PXE/images), configuration, patching, monitoring/alerting, scaling policies, VM lifecycle (Unit 2), and failover.</p>
+<blockquote>
+<p>→ <strong>Link:</strong> OpenStack (P01) is the automation <em>control plane</em> for a data center's virtual resources.</p>
+</blockquote>
+<h3 id="332-infrastructure-as-code-iac">3.3.2 Infrastructure as Code (IaC) ⭐⭐<a class="headerlink" href="#332-infrastructure-as-code-iac" title="Permanent link">&para;</a></h3>
+<p><strong>Definition:</strong> managing and provisioning IT infrastructure <strong>through machine-readable definition files</strong> (code) instead of manual configuration. The same code creates dev/staging/prod consistently and is version-controlled (Git).</p>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Model</th>
+<th>Tools</th>
+<th>Example workflow</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Imperative (procedural)</strong></td>
+<td>"Do these steps in order"</td>
+<td>Ansible, Chef, Puppet, shell scripts</td>
+<td><code>apt install nginx</code> → copy config → restart service</td>
+</tr>
+<tr>
+<td><strong>Declarative (desired state)</strong></td>
+<td>"Make it look like this"</td>
+<td>Terraform, CloudFormation, Puppet DSL</td>
+<td><code>resource "aws_instance" "web" { ami = "…" }</code></td>
+</tr>
+</tbody>
+</table>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Terraform (declarative IaC) - create one cloud VM</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="kr">resource</span><span class="w"> </span><span class="nc">&quot;aws_instance&quot;</span><span class="w"> </span><span class="nv">&quot;web&quot;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="na">ami</span><span class="w">           </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;ami-0abcdef1234567890&quot;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="na">instance_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;t2.micro&quot;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nb">tags</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="na">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;cdct-web&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</code></pre></div>
+<strong>Benefits:</strong> repeatability, versioning, auditability, speed, drift detection, disaster recovery (rebuild in minutes). → <em>Terraform/Ansible/CloudFormation are the "popular automation tools" the PYQs ask about.</em></p>
+<h3 id="333-scalability-and-elasticity">3.3.3 Scalability and elasticity ⭐⭐<a class="headerlink" href="#333-scalability-and-elasticity" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Scalability</th>
+<th>Elasticity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What it is</td>
+<td>Ability to <em>handle growth</em> by adding resources</td>
+<td>Ability to <em>automatically</em> match resources to current demand (up <em>and</em> down)</td>
+</tr>
+<tr>
+<td>Direction</td>
+<td>Scale <strong>up</strong> (bigger machine) or scale <strong>out</strong> (more machines)</td>
+<td>Reactive: shrink/grow based on load</td>
+</tr>
+<tr>
+<td>Automation</td>
+<td>Usually planned/manual (capacity planning)</td>
+<td><strong>Automatic</strong> via autoscaling policies/metrics</td>
+</tr>
+<tr>
+<td>Time horizon</td>
+<td>Long-term capacity</td>
+<td>Short-term fluctuation handling</td>
+</tr>
+<tr>
+<td>Analogy</td>
+<td>A road made wider to handle more cars</td>
+<td>A toll booth that opens/closes lanes as traffic changes</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Add a 32-core server to a cluster</td>
+<td>Autoscale web tier 2→10→2 instances during a festival</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Exam one-liner:</strong> <em>Scalability is the capacity to grow; elasticity is the automation of that growth (and shrink) in real time.</em> A system can be scalable but not elastic (manual scaling); elastic implies scalable.</p>
+</blockquote>
+<hr />
+<h2 id="deep-dive-topics">🧠 Deep-Dive Topics<a class="headerlink" href="#deep-dive-topics" title="Permanent link">&para;</a></h2>
+<h3 id="deep-dive-a-sdn-the-full-packet-inpacket-out-story">Deep Dive A: SDN — the full packet-in/packet-out story<a class="headerlink" href="#deep-dive-a-sdn-the-full-packet-inpacket-out-story" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Host A sends its first packet to switch S1.</li>
+<li>S1's flow table has no match → S1 sends <strong>OFPT_PACKET_IN</strong> (header + buffer) to the controller.</li>
+<li>Controller consults its global topology view → decides path A→B → installs <strong>flow entries</strong> on all switches along the path (match: dst IP; action: forward out port X).</li>
+<li>S1 now forwards A's buffered packet; subsequent packets match the flow rule and are forwarded <strong>without</strong> contacting the controller.
+This is exactly what P05's <code>pingAll</code> demonstrates — the first ping triggers learning, the rest are forwarded by flows.</li>
+</ol>
+<h3 id="deep-dive-b-leaf-spine-oversubscription-maths">Deep Dive B: Leaf-Spine oversubscription maths<a class="headerlink" href="#deep-dive-b-leaf-spine-oversubscription-maths" title="Permanent link">&para;</a></h3>
+<p>With <em>k</em> spine switches and <em>k</em> leaves, total uplinks = k×k; each leaf serves N servers. <strong>Oversubscription ratio</strong> = server bandwidth ÷ uplink bandwidth. A ratio of 1:1 (full bisection) is expensive; 3:1 is common. This ratio is what "performance" comparisons of DC fabrics really mean.</p>
+<h3 id="deep-dive-c-iac-imperative-vs-declarative-which-to-answer">Deep Dive C: IaC imperative vs declarative — which to answer<a class="headerlink" href="#deep-dive-c-iac-imperative-vs-declarative-which-to-answer" title="Permanent link">&para;</a></h3>
+<p>If the PYQ says "IaC with its <strong>different approaches</strong>" (s_24/w_25 Q.3-c-alt) → give <strong>imperative vs declarative</strong> + tools. If it says "<strong>popular automation tools</strong>" (w_24 Q.3-c-alt) → list <strong>Terraform, Ansible, CloudFormation, Puppet, Chef</strong> with one line each.</p>
+<h3 id="deep-dive-d-vendor-lock-in-s_24-q3-b-alt-a-4-mark-justify-classic">Deep Dive D: Vendor lock-in (s_24 Q.3-b-alt) — a 4-mark "justify" classic<a class="headerlink" href="#deep-dive-d-vendor-lock-in-s_24-q3-b-alt-a-4-mark-justify-classic" title="Permanent link">&para;</a></h3>
+<p>Why it's a major problem: proprietary APIs (AWS vs GCP), data <strong>egress fees</strong>, managed services that don't port (DynamoDB vs Spanner), IAM/policy differences, and retraining cost → <em>switching clouds = migration cost + lock-in risk</em>. Mitigations: open standards (S3 API, OpenStack), containers (Unit 6), multi-cloud strategies, IaC to rebuild anywhere.</p>
+<hr />
+<h2 id="beyond-the-textbook-what-most-classes-wont-tell-you">🚀 Beyond the Textbook (what most classes won't tell you)<a class="headerlink" href="#beyond-the-textbook-what-most-classes-wont-tell-you" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>East-west vs north-south traffic</strong> — modern DCs are dominated by server-to-server (east-west) traffic; this is <em>why</em> Leaf-Spine replaced the 3-tier tree. Examiners love this as "why do we need better topologies".</li>
+<li><strong>ECMP</strong> (Equal-Cost Multi-Path) — Leaf-Spine uses all parallel paths simultaneously; without ECMP the extra links would sit idle. A great "beyond syllabus" sentence.</li>
+<li><strong>SDN isn't only OpenFlow</strong> — modern "SDN" includes VXLAN/EVPN overlays and controllers like VMware NSX/OpenDaylight; the control/data separation is the exam-visible part.</li>
+<li><strong>DCIM + PUE</strong> — power usage effectiveness (PUE = total power / IT power, ideal 1.0) is the headline green metric of data centers — a strong bonus point in "key components".</li>
+<li><strong>Hyperscale DCs run at ~40–45% of top-500 supercomputer performance with commodity hardware</strong> — the whole <em>data center = software-defined commodity hardware</em> story behind Unit 3.</li>
+</ol>
+<hr />
+<h2 id="pyq-map-unit-3-all-available-papers">📝 PYQ Map — UNIT 3 (all available papers)<a class="headerlink" href="#pyq-map-unit-3-all-available-papers" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Paper</th>
+<th>Q.</th>
+<th>Topic</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Summer 2024</strong></td>
+<td>Q.3(a)</td>
+<td>Define Data Center; list types</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)</td>
+<td>Why is data centre automation important?</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)</td>
+<td>Explain SDN architecture</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(a)-alt</td>
+<td>Define: Cloud Elasticity, Cloud Scalability</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)-alt</td>
+<td>Vendor lock-in is a major problem</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)-alt</td>
+<td>IaC with its different approaches</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Winter 2024</strong></td>
+<td>Q.3(a)</td>
+<td>Define DC; describe any two types</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)</td>
+<td>Scalability vs elasticity in cloud data center</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)</td>
+<td>SDN in data center with diagram</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(a)-alt</td>
+<td>Identify &amp; describe key components of a DC</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)-alt</td>
+<td>List DC network topologies; explain one</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)-alt</td>
+<td>IaC with its popular automation tools</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Summer 2025</strong></td>
+<td>Q.3(b)</td>
+<td>Define DC; types; explain one</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)-alt</td>
+<td>Cloud scalability in detail</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.4(c)</td>
+<td>Data center network topologies</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.4(c)-alt</td>
+<td>SDN architecture</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(a)</td>
+<td>Explain IaC in detail</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(a)-alt</td>
+<td>Automation in data centers</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Winter 2025</strong></td>
+<td>Q.3(a)</td>
+<td>Define DC; list types</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)</td>
+<td>Advantages &amp; disadvantages of SDN</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)</td>
+<td>SDN architecture</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(a)-alt</td>
+<td>List DC network topologies; explain one</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)-alt</td>
+<td>Scalability vs elasticity</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)-alt</td>
+<td>IaC with its different approaches</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Summer 2026</strong></td>
+<td>Q.3(a)</td>
+<td>Define DC; why are DCs important?</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)</td>
+<td>Types of data center services</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)</td>
+<td>SDN architecture</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(a)-alt</td>
+<td>Differentiate scalability and elasticity</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(b)-alt</td>
+<td>Explain IaC</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)-alt</td>
+<td>Data center network topologies</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="solved-pyq-answers-unit-3">✅ Solved PYQ answers (UNIT 3)<a class="headerlink" href="#solved-pyq-answers-unit-3" title="Permanent link">&para;</a></h3>
+<p><strong>Q. (s_24 Q.3a / w_25 Q.3a, 3 marks) — Define Data Center. List types.</strong></p>
+<blockquote>
+<p>A <strong>data center</strong> is a facility that houses an organization's <strong>computer systems, storage systems, and networking equipment</strong>, together with supporting power, cooling, and physical security, to reliably run its IT workloads at scale. <strong>Types:</strong> (1) <strong>Enterprise/on-premise data center</strong> — built and run by the organization for its own workloads; (2) <strong>Colocation data center</strong> — third-party facility where an organization rents racks/space; (3) <strong>Managed services / hosting data center</strong> — facility where the provider also manages the infrastructure (IaaS/PaaS style); (4) <strong>Cloud/hyperscale data center</strong> — large provider facilities powering public clouds (AWS, Google, Azure); (5) <strong>Edge data center</strong> — small facilities placed near users to cut latency (Unit 6).</p>
+</blockquote>
+<p><strong>Q. (w_24 Q.3b / s_26 Q.3a-alt, 3–4 marks) — Scalability vs elasticity in cloud data center</strong></p>
+<blockquote>
+<p><strong>Scalability</strong> is the ability of a system to <strong>handle growing workload</strong> by adding resources — scaling <em>up</em> (larger VM) or <em>out</em> (more instances); it is typically a <em>planned, long-term</em> capacity decision. <strong>Elasticity</strong> is the ability to <strong>automatically provision and release resources to match current demand</strong> in real time — scaling out during a traffic spike and back down when it ends, driven by autoscaling policies and metrics. Scalability answers <em>"can it grow?"</em>, elasticity answers <em>"does it grow (and shrink) by itself?"</em>. A system can be scalable without being elastic (manual addition); an elastic system is always scalable. Example: a web tier manually adding a server = scalable; AWS Auto Scaling doubling instances at 70% CPU and halving at 30% = elastic.</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.3c / w_24 Q.3c, 7 marks) — Explain SDN architecture with diagram</strong></p>
+<blockquote>
+<p>SDN (<strong>Software-Defined Networking</strong>) separates the <strong>control plane</strong> from the <strong>data plane</strong> and centralizes the brain of the network in a <strong>controller</strong>. It has three planes: <strong>(1) Application plane</strong> — network applications (security policies, load balancing, monitoring) express <em>what</em> the network must do through <strong>northbound REST APIs</strong>; <strong>(2) Control plane</strong> — the <strong>SDN controller</strong> (OpenDaylight, ONOS, Ryu, POX) keeps a <strong>global view of the topology</strong>, computes routes, and installs <strong>flow rules</strong>; it talks down via the <strong>southbound protocol OpenFlow</strong>; <strong>(3) Data plane</strong> — <strong>SDN switches</strong> (e.g., Open vSwitch) only <strong>match packets against their flow tables and forward</strong>, with no routing logic. <em>Diagram:</em> applications → northbound API → controller → southbound OpenFlow → switches. <strong>Benefits:</strong> centralized visibility, programmability, vendor-neutral hardware, fast network-wide changes. <strong>Risks:</strong> controller becomes a single point of failure and a security target.</p>
+</blockquote>
+<p><strong>Q. (w_24 Q.3c-alt, 7 marks) — Explain Infrastructure as Code (IaC) with its popular automation tools</strong></p>
+<blockquote>
+<p><strong>IaC</strong> means managing and provisioning infrastructure (servers, VMs, networks, storage) using <strong>machine-readable definition files</strong> (code) rather than manual configuration; the code is version-controlled (Git) so the whole environment is repeatable, auditable, and testable. <strong>Approaches:</strong> <em>imperative/procedural</em> (step-by-step scripts — <strong>Ansible, Chef, Puppet</strong>, shell) vs <em>declarative/desired-state</em> (describe the end state — <strong>Terraform, AWS CloudFormation, Pulumi</strong>). <strong>Popular tools:</strong> <strong>Terraform</strong> — declarative, multi-cloud provisioning (e.g., <code>resource "aws_instance" …</code>); <strong>Ansible</strong> — agentless, YAML playbooks for configuration management; <strong>Puppet/Chef</strong> — mature configuration management with agents; <strong>CloudFormation</strong> — AWS-native templates. <strong>Benefits:</strong> consistency (same code = same infra), speed, versioning, rollback, drift detection, and disaster recovery — rebuild the environment from code in minutes.</p>
+</blockquote>
+<p><strong>Q. (s_25 Q.4c / s_26 Q.3c-alt, 7 marks) — Explain data center network topologies</strong></p>
+<blockquote>
+<p>DC topologies describe how servers and switches connect. <strong>(1) Traditional 3-tier:</strong> Core → Aggregation → Access (campus-style); simple but has oversubscription and a core bottleneck. <strong>(2) Top-of-Rack (ToR):</strong> each rack has its own switch connecting to aggregation/core; short cabling, but the ToR switch is a per-rack single point of failure. <strong>(3) Leaf-Spine (Clos / Fat-Tree):</strong> every <strong>leaf</strong> switch (rack layer) connects to <strong>every spine</strong> switch (core fabric), forming a full mesh; any two servers are at most <strong>two hops</strong> apart, east-west traffic is fast, and capacity grows by adding spines/leaves (<strong>scale-out</strong>). Load balancing across equal paths uses ECMP. <strong>Modern hyperscale DCs use Leaf-Spine</strong> because it delivers predictable latency, no single congestion point, and horizontal scalability. (Draw the diagram from §3.2.1.)</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.3b, 4 marks) — Why is data centre automation important?</strong></p>
+<blockquote>
+<p>Manual data-center operations cannot scale: provisioning one server by hand takes hours-days, and every manual change risks human error. <strong>Automation is important because</strong> it (1) provides <strong>speed</strong> — software can provision thousands of servers/VMs in minutes via APIs and image templates; (2) gives <strong>consistency/repeatability</strong> — the same scripted steps produce identical results every time; (3) <strong>reduces errors and outages</strong> caused by manual configuration; (4) enables <strong>elasticity</strong> — autoscaling policies react to load automatically; (5) supports <strong>IaC</strong> — infrastructure defined as versioned code; (6) automates <strong>monitoring, patching, backup and failover</strong>, lowering operational cost and improving availability.</p>
+</blockquote>
+<hr />
+<h2 id="practice-problems-self-test-answers-hidden">✍️ Practice Problems (self-test — answers hidden)<a class="headerlink" href="#practice-problems-self-test-answers-hidden" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Define data center and list 5 key component groups.</li>
+<li>Draw and label the three planes of SDN. What protocol is southbound?</li>
+<li>Compare the 3-tier and Leaf-Spine topologies on: hops, east-west traffic, scalability.</li>
+<li>Differentiate scalability and elasticity with an autoscaling example.</li>
+<li>IaC: name the declarative and imperative approaches with one tool each.</li>
+<li>Why is vendor lock-in a "major problem"? Give one mitigation.</li>
+</ol>
+<details>
+<summary>📌 Model solutions</summary>
+
+1. Compute, storage, networking, power, cooling, management/security.
+2. Application (northbound REST) → Control (SDN controller, global view) → Data (OpenFlow switches). Southbound = OpenFlow.
+3. 3-tier: up to 3+ hops, poor east-west, limited scale (core bottleneck). Leaf-Spine: ≤2 hops, excellent east-west, scale-out by adding spines/leaves.
+4. Scalability = ability to grow (up/out); elasticity = automatic grow+shrink on demand. AWS Auto Scaling (70% CPU → +2, 30% → −2) is elasticity; adding a bigger DB server is scalability.
+5. Declarative: Terraform / CloudFormation. Imperative: Ansible / Chef / Puppet.
+6. Proprietary APIs, egress fees, non-portable managed services, retraining. Mitigations: open standards (S3 API), containers, multi-cloud, IaC.
+</details>
+
+<hr />
+<h2 id="glossary-of-key-terms">📖 Glossary of Key Terms<a class="headerlink" href="#glossary-of-key-terms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data center</strong></td>
+<td>Facility housing compute, storage, networking + power/cooling/security</td>
+</tr>
+<tr>
+<td><strong>PUE</strong></td>
+<td>Power Usage Effectiveness (total power ÷ IT power)</td>
+</tr>
+<tr>
+<td><strong>ToR</strong></td>
+<td>Top-of-Rack switch per rack</td>
+</tr>
+<tr>
+<td><strong>Leaf-Spine / Clos</strong></td>
+<td>Full-mesh two-layer fabric; every leaf ↔ every spine</td>
+</tr>
+<tr>
+<td><strong>Oversubscription</strong></td>
+<td>Ratio of server bandwidth to uplink bandwidth</td>
+</tr>
+<tr>
+<td><strong>ECMP</strong></td>
+<td>Equal-Cost Multi-Path load balancing</td>
+</tr>
+<tr>
+<td><strong>SDN</strong></td>
+<td>Software-Defined Networking (control/data separation)</td>
+</tr>
+<tr>
+<td><strong>Control plane</strong></td>
+<td>The "brain" (controller) deciding where packets go</td>
+</tr>
+<tr>
+<td><strong>Data plane</strong></td>
+<td>The "muscle" (switches) forwarding packets</td>
+</tr>
+<tr>
+<td><strong>OpenFlow</strong></td>
+<td>Southbound protocol between controller and switches</td>
+</tr>
+<tr>
+<td><strong>Northbound API</strong></td>
+<td>Interface between apps and the controller (REST)</td>
+</tr>
+<tr>
+<td><strong>Automation</strong></td>
+<td>Scripted/programmatic provisioning &amp; ops</td>
+</tr>
+<tr>
+<td><strong>IaC</strong></td>
+<td>Infrastructure as Code — infra defined in files</td>
+</tr>
+<tr>
+<td><strong>Imperative / Declarative</strong></td>
+<td>Step-by-step vs desired-state configuration</td>
+</tr>
+<tr>
+<td><strong>Terraform / Ansible</strong></td>
+<td>Declarative multi-cloud IaC / agentless YAML config mgmt</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Ability to grow (scale up/out)</td>
+</tr>
+<tr>
+<td><strong>Elasticity</strong></td>
+<td>Automatic scale up/down with demand</td>
+</tr>
+<tr>
+<td><strong>Vendor lock-in</strong></td>
+<td>Hard-to-migrate dependency on one provider</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="curated-resources-per-concept">🔗 Curated Resources (per concept)<a class="headerlink" href="#curated-resources-per-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Data center fundamentals</strong>
+- Uptime Institute (tiers, PUE): https://uptimeinstitute.com/tiers
+- NIST data center energy: https://www.nist.gov/programs-projects/data-center-optimization</p>
+<p><strong>Networking &amp; SDN</strong>
+- Open Networking Foundation (SDN/OpenFlow): https://opennetworking.org
+- OpenDaylight docs: https://docs.opendaylight.org
+- Leaf-spine architecture (Cisco): https://www.cisco.com/c/en/us/products/collateral/switches/nexus-9000-series-switches/white-paper-c11-737022.html</p>
+<p><strong>IaC / automation</strong>
+- Terraform docs: https://developer.hashicorp.com/terraform/docs
+- Ansible docs: https://docs.ansible.com
+- AWS CloudFormation: https://docs.aws.amazon.com/cloudformation/</p>
+<p><strong>Mininet (P05)</strong>
+- Mininet: http://mininet.org
+- Mininet wiki: https://github.com/mininet/mininet/wiki</p>
+<p><strong>Books (GTU syllabus)</strong>
+- Wu &amp; Buyya, <em>Cloud Data Centers and Cost Modeling</em> (Elsevier, ISBN 978-0-12-801413-4)
+- Buyya, Vecchiola &amp; Selvi, <em>Mastering Cloud Computing</em> — data center chapter</p>
+<p><strong>Videos (high yield)</strong>
+- <em>What is SDN?</em> — TechField / David Bombal
+- <em>Data center topologies: ToR, Leaf-Spine</em> — IBM Cloud / TechTarget
+- <em>Terraform explained</em> — TechWorld with Nana</p>
+<hr />
+<h2 id="video-study-guide-youtube">🎥 Video Study Guide (YouTube)<a class="headerlink" href="#video-study-guide-youtube" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Search keywords + trusted channels, in watching order.</p>
+</blockquote>
+<h3 id="step-0-pick-your-learning-style">🧑‍🎓 Step 0 — Pick your learning style<a class="headerlink" href="#step-0-pick-your-learning-style" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>You learn best by</th>
+<th>Your path through this unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎧 <strong>Listener</strong></td>
+<td>short explainers</td>
+<td>1 video per topic (4–10 min each)</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Builder</strong></td>
+<td>doing it</td>
+<td>Run <a href="../../practicals/writeups/P05_mininet_virtual_sdn_lab/">P05</a> in the lab VM</td>
+</tr>
+<tr>
+<td>🧠 <strong>Deep Diver</strong></td>
+<td>the "why"</td>
+<td>Watch SDN internals + data center architecture tours</td>
+</tr>
+<tr>
+<td>🎓 <strong>Academic</strong></td>
+<td>exam marks</td>
+<td>Master the SDN diagram + topology tables from the PYQ map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-1-watch-by-topic">🎬 Step 1 — Watch by topic<a class="headerlink" href="#step-1-watch-by-topic" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>YouTube search keywords</th>
+<th>Best channels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DC fundamentals</td>
+<td><code>what is a data center tour</code> · <code>data center components explained</code></td>
+<td>Google Cloud Tech, Level1Techs</td>
+</tr>
+<tr>
+<td>Topologies</td>
+<td><code>leaf spine vs 3 tier architecture</code> · <code>data center network topologies</code></td>
+<td>IBM Cloud, David Bombal, TechTarget</td>
+</tr>
+<tr>
+<td>SDN intro</td>
+<td><code>what is software defined networking</code> · <code>sdn explained simply</code></td>
+<td>TechField, PowerCert</td>
+</tr>
+<tr>
+<td>SDN deep</td>
+<td><code>sdn architecture control plane data plane</code> · <code>openflow explained</code></td>
+<td>David Bombal, SDxCentral</td>
+</tr>
+<tr>
+<td>Mininet demo</td>
+<td><code>mininet tutorial sdn</code> · <code>mininet ping topology</code></td>
+<td>Open Networking Foundation demos, David Bombal</td>
+</tr>
+<tr>
+<td>IaC</td>
+<td><code>terraform vs ansible</code> · <code>infrastructure as code explained</code></td>
+<td>TechWorld with Nana, IBM Cloud</td>
+</tr>
+<tr>
+<td>Scalability/elasticity</td>
+<td><code>scalability vs elasticity cloud</code> · <code>auto scaling explained</code></td>
+<td>ByteByteGo, AWS Online Tech Talks</td>
+</tr>
+<tr>
+<td>Revision (exam)</td>
+<td><code>data center unit 3 diploma</code> · <code>sdn 10 minute recap</code></td>
+<td>Gate Smashers, Neso Academy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-full-playlists-deep-divers-academics">🎬 Step 2 — Full playlists (Deep Divers &amp; Academics)<a class="headerlink" href="#step-2-full-playlists-deep-divers-academics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><em>Data Center Networking</em> — David Bombal (SDN/OpenFlow deep dive).</li>
+<li><em>Infrastructure as Code</em> — TechWorld with Nana Terraform course.</li>
+<li>NPTEL <em>Cloud Computing</em> (data center unit): https://archive.nptel.ac.in/courses/106/105/106105167/</li>
+</ol>
+<h3 id="step-3-proof-you-got-it-5-min">🎬 Step 3 — Proof you got it (5 min)<a class="headerlink" href="#step-3-proof-you-got-it-5-min" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Draw the 3-plane SDN diagram from memory and label OpenFlow.</li>
+<li>Explain why Leaf-Spine beats 3-tier for east-west traffic.</li>
+<li>Give one example each of scalability and elasticity from a real cloud.</li>
+</ul>
+<hr />
+<p><em>Next: <a href="../UNIT_4_Cloud_Storage_and_Database_Services/">UNIT 4 — Cloud Storage and Database Services</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../UNIT_2_Virtualization_and_Hypervisors/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UNIT 2 — Virtualization and Hypervisors 🖥️">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                UNIT 2 — Virtualization and Hypervisors 🖥️
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../UNIT_4_Cloud_Storage_and_Database_Services/" class="md-footer__link md-footer__link--next" aria-label="Next: UNIT 4 — Cloud Storage and Database Services 💾">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                UNIT 4 — Cloud Storage and Database Services 💾
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

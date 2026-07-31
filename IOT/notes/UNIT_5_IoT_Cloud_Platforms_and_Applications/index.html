@@ -1,0 +1,6708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.">
+      
+      
+      
+        <link rel="canonical" href="https://aayushbankar.github.io/sem_5/IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications/">
+      
+      
+        <link rel="prev" href="../UNIT_4_IoT_Communication_Protocols_and_Networking/">
+      
+      
+        <link rel="next" href="../../practicals/writeups/P01_iot_architecture_layers/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://fav.farm/📚">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️ - Semester 5 — GTU IT Study Kit 🎓</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-5-iot-cloud-platforms-applications-of-iot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-header__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Semester 5 — GTU IT Study Kit 🎓
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../FOB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FOB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IOT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPD/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPD
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CDCT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CDCT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📄 All Syllabi (PDF)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pyq/fbc/s_24.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📝 Past Papers (PYQ)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-nav__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Semester 5 — GTU IT Study Kit 🎓
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FOB/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FOB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_1_Foundations_of_Decentralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_2_Bitcoin_and_PoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_3_Ethereum_and_Smart_Contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Ethereum & Smart Contracts 🟣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_4_Enterprise_and_Private_Blockchains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Enterprise & Private Blockchains 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_5_Security_Emerging_Trends_Green_Energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Cryptographic Hash Functions & the Avalanche Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P02_public_private_keys_digital_signatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Public/Private Key Pair & Digital Signatures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P03_basic_blockchain_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Basic Blockchain Structure in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P04_merkle_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Simplified Merkle Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P05_nonce_mining_difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — The "Nonce" & Mining Difficulty (Proof-of-Work)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P06_wallets_mnemonic_bip39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P07_smart_contract_evm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Write, Compile & Deploy a Smart Contract on the EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P08_erc20_token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Tokenization: Deploying a Basic ERC-20 Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P09_case_study_public_vs_private_hyperledger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P10_case_study_security_green_energy_dao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/DI05016051-FOB.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IOT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IOT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_1_Introduction_to_IoT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to IoT 🌐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_3_ESP32_and_Arduino_IDE_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — IoT Communication Protocols & Networking 📡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-introduction-to-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Introduction to Cloud Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-role-of-cloud-in-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Role of Cloud in IoT ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-iot-cloud-platforms-the-three-syllabus-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 IoT Cloud Platforms ⭐⭐⭐ (the three syllabus platforms)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 IoT Cloud Platforms ⭐⭐⭐ (the three syllabus platforms)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-thingspeak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 ThingSpeak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-blynk-iot-blynk-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Blynk IoT (Blynk 2.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-arduino-iot-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 Arduino IoT Cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-categories-of-iot-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Categories of IoT Applications ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-smart-home-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Smart Home Automation ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-smart-agriculture-system-this-is-p14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Smart Agriculture System ⭐⭐⭐ (this is P14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-smart-health-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Smart Health Monitoring ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-smart-parking-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Smart Parking System ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-smart-city-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Smart City Applications ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9 Smart City Applications ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#591-smart-street-lighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.1 Smart street lighting 💡
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#592-waste-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.2 Waste management 🗑️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593-environmental-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.3 Environmental monitoring 🌦️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-the-thingspeak-field1-pipeline-p10p13-memorise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: The ThingSpeak "field1" pipeline (P10–P13, memorise)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-blynks-two-way-virtual-pins-p12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Blynk's two-way virtual pins (P12)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-edge-vs-cloud-decisions-p13p14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Edge vs Cloud decisions (P13/P14)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-yield-exam-topics-likely-gtu-style-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 High-Yield Exam Topics (likely GTU-style questions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 High-Yield Exam Topics (likely GTU-style questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-model-answers-highest-yield" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved model answers (highest-yield)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P01_iot_architecture_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P02_compare_hardware_platforms_esp32_pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P03_arduino_ide_setup_esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P04_external_led_blink_toggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Toggle an External LED (Digital Output)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P05_pir_ldr_sensor_interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P06_dht_temperature_humidity_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — DHT11/DHT22 Temperature & Humidity Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P07_ultrasonic_distance_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P08_esp32_mqtt_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — ESP32 as MQTT Publisher (Temperature & Humidity)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P09_esp32_mqtt_subscriber_remote_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P10_thingspeak_http_temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P11_ultrasonic_thingspeak_cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Ultrasonic Distance to Cloud (ThingSpeak)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P12_blynk_two_way_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P14_mini_project_smart_agriculture_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P14 — Mini-Project: Smart Agriculture System (walkthrough guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DI05016071-IOT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPE/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_2_Basics_of_Large_Language_Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Basics of Large Language Models (LLMs) 🧠
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Prompt Engineering Fundamentals 🎯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_4_Prompt_Engineering_Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Prompt Engineering Techniques 🧩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Generative AI Tools for Different Task Types & Applications Across Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P02_sentiment_analysis_text_classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Sentiment Analysis & Text Classification with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P03_llm_behavior_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P05_prompt_design_and_refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Design & Refine Prompts: Email Writing & Concept Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Zero-Shot, Few-Shot & Role-Based Prompting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P08_task_based_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P09_ai_tools_for_software_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P10_ai_chatbot_api_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P11_document_qa_basic_rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Document-Based Q&A (Basic RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P12_ai_study_assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Build an AI Application: Study Assistant (with design docs for 3 more)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/DI05016011-AIPE.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPD/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_1_Fundamentals_of_AI_Products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Design Thinking & Human-Centred AI 🎨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — AI Product Strategy & OpenAI Integration 🧭
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — AI in Social Media & Digital Experience 📱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — AI Threats & Mitigation Strategies 🚨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P01_product_idea_problem_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Product Idea, Problem Statement, Target Users & Core Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P02_ai_system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P03_data_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Data Components: Inventory, Classification & Risk Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P04_persona_empathy_journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — User Personas, Empathy Map & Customer Journey Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P05_interaction_flow_wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — AI Interaction Flow & Basic UI Wireframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P06_mvp_feature_prioritization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — MVP Features & Feature Prioritization Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P07_business_model_canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Business Model Canvas & AI Monetization Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P08_ai_integration_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — AI Integration Plan: API Usage, Cost Awareness & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P09_social_media_campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Social-Media Campaign & Promotional Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P10_no_code_prototype_demo_video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P11_data_protection_ethics_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Data Protection Plan & AI Ethical Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P12_ai_risk_assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — AI Risk Assessment & Mitigation Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/DI05016021-AIPD.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CDCT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDCT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CDCT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_1_Introduction_to_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to Cloud Computing ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_2_Virtualization_and_Hypervisors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Virtualization and Hypervisors 🖥️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_3_Data_Center_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_4_Cloud_Storage_and_Database_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Cloud Storage and Database Services 💾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_5_Cloud_Security_and_Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Cloud Security and Compliance 🔐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P01_openstack_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P02_cloud_organization_rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Cloud Organization with RBAC (AWS IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P03_install_virtualbox_linux_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Install VirtualBox + Linux VM on Windows 8+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Desktop Virtualization with Chrome Remote Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P05_mininet_virtual_sdn_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Virtual SDN Lab with Mininet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P06_cloud_databases_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Cloud Databases: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P07_cloud_storage_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Cloud Storage: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P08_cloudsim_secure_file_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Simulate Secure File Sharing with CloudSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P09_minio_secure_object_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Secure Object Storage with MinIO (Access Control + SSE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P10_docker_first_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Creating & Executing Your First Container (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/DI05016031-CDCT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 All Syllabi (PDF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📄 All Syllabi (PDF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Cloud_and_Data_Center_Technology.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Foundation_of_Blockchain.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Hands_on_Practice_using_IoT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Skill_Based_Training.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Past Papers (PYQ)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Past Papers (PYQ)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-introduction-to-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Introduction to Cloud Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-role-of-cloud-in-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Role of Cloud in IoT ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-iot-cloud-platforms-the-three-syllabus-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 IoT Cloud Platforms ⭐⭐⭐ (the three syllabus platforms)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 IoT Cloud Platforms ⭐⭐⭐ (the three syllabus platforms)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-thingspeak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 ThingSpeak
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-blynk-iot-blynk-20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 Blynk IoT (Blynk 2.0)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-arduino-iot-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 Arduino IoT Cloud
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-categories-of-iot-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Categories of IoT Applications ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-smart-home-automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Smart Home Automation ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-smart-agriculture-system-this-is-p14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Smart Agriculture System ⭐⭐⭐ (this is P14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-smart-health-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Smart Health Monitoring ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-smart-parking-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Smart Parking System ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-smart-city-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Smart City Applications ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.9 Smart City Applications ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#591-smart-street-lighting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.1 Smart street lighting 💡
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#592-waste-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.2 Waste management 🗑️
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#593-environmental-monitoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9.3 Environmental monitoring 🌦️
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-the-thingspeak-field1-pipeline-p10p13-memorise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: The ThingSpeak "field1" pipeline (P10–P13, memorise)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-blynks-two-way-virtual-pins-p12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Blynk's two-way virtual pins (P12)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-edge-vs-cloud-decisions-p13p14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Edge vs Cloud decisions (P13/P14)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-yield-exam-topics-likely-gtu-style-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 High-Yield Exam Topics (likely GTU-style questions)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎯 High-Yield Exam Topics (likely GTU-style questions)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-model-answers-highest-yield" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved model answers (highest-yield)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-5-iot-cloud-platforms-applications-of-iot">UNIT 5 — IoT Cloud Platforms &amp; Applications of IoT ☁️<a class="headerlink" href="#unit-5-iot-cloud-platforms-applications-of-iot" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Hands on Practice using IoT (DI05016071)</strong> · <strong>7 hrs · 20% weightage</strong>
+<strong>Covers syllabus sections:</strong> 5.1 Cloud Computing (concept, public/private/hybrid) · 5.2 Role of Cloud in IoT · 5.3 Cloud Platforms (ThingSpeak, Blynk IoT, Arduino IoT Cloud) · 5.4 Categories of Applications (Consumer, Commercial, Industrial, Infrastructure, Medical) · 5.5 Smart Home · 5.6 Smart Agriculture · 5.7 Smart Health Monitoring · 5.8 Smart Parking · 5.9 Smart City (street lighting, waste, environmental monitoring)
+<strong>Related practicals:</strong> <a href="../../practicals/writeups/P10_thingspeak_http_temperature/">P10</a>, <a href="../../practicals/writeups/P11_ultrasonic_thingspeak_cloud/">P11</a>, <a href="../../practicals/writeups/P12_blynk_two_way_dashboard/">P12</a>, <a href="../../practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/">P13</a>, <a href="../../practicals/writeups/P14_mini_project_smart_agriculture_guide/">P14</a></p>
+</blockquote>
+<hr />
+<h2 id="chapter-roadmap">🧭 Chapter Roadmap<a class="headerlink" href="#chapter-roadmap" title="Permanent link">&para;</a></h2>
+<p>20% weightage and <strong>five practicals (P10–P14)</strong> — the cloud unit is where the course turns from "sensors on a desk" into real IoT products. The exam loves the platform names, the application categories, and one specific smart application described end-to-end.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>UNIT 5: Cloud Platforms &amp; IoT Applications
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── 5.1 Introduction to Cloud Computing            ⭐⭐ (public/private/hybrid)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── 5.2 Role of Cloud in IoT                       ⭐⭐ (the 4 reasons)
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── 5.3 IoT Cloud Platforms                        ⭐⭐⭐ (ThingSpeak · Blynk · Arduino IoT Cloud)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│     └── 5.3.1 Features + basic implementation (channel/datastream/widget)
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── 5.4 Categories of IoT Applications             ⭐⭐⭐ (5 categories table)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── 5.5 Smart Home Automation                      ⭐⭐⭐
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── 5.6 Smart Agriculture System                   ⭐⭐⭐ (the P14 project!)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── 5.7 Smart Health Monitoring                    ⭐⭐
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── 5.8 Smart Parking System                       ⭐⭐
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>└── 5.9 Smart City Applications                    ⭐⭐ (street lighting · waste · environment)
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      └── 5.9.1-5.9.3 the three smart-city systems
+</code></pre></div>
+<h3 id="learning-outcomes-after-this-unit-you-can">Learning outcomes — after this unit you can:<a class="headerlink" href="#learning-outcomes-after-this-unit-you-can" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define <strong>cloud computing</strong>, name the <strong>three deployment types</strong>, and state the <strong>role of cloud in IoT</strong>.</li>
+<li>Compare <strong>ThingSpeak, Blynk IoT and Arduino IoT Cloud</strong> and describe the basic implementation flow of each.</li>
+<li>Classify IoT applications into the <strong>five categories</strong> (Consumer/Commercial/Industrial/Infrastructure/Medical).</li>
+<li>Describe <strong>Smart Home, Smart Agriculture, Smart Health, Smart Parking</strong> end-to-end (sensors → cloud → app).</li>
+<li>Describe the three <strong>Smart City</strong> systems: street lighting, waste management, environmental monitoring.</li>
+</ol>
+<hr />
+<h2 id="51-introduction-to-cloud-computing">5.1 Introduction to Cloud Computing ⭐⭐<a class="headerlink" href="#51-introduction-to-cloud-computing" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Definition (memorize):</strong> Cloud computing delivers <strong>computing resources — servers, storage, databases, analytics, software — over the internet on demand</strong>, paying only for what you use ("utility" computing).</p>
+</blockquote>
+<p><strong>Three deployment types (the exam table):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Who owns/manages it</th>
+<th>Access</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Public cloud</strong></td>
+<td>A cloud provider (AWS, Azure, Google)</td>
+<td>Open to anyone on the internet</td>
+<td>ThingSpeak public channel</td>
+</tr>
+<tr>
+<td><strong>Private cloud</strong></td>
+<td>A single organisation, dedicated</td>
+<td>Only that organisation</td>
+<td>A hospital's private patient-data cloud</td>
+</tr>
+<tr>
+<td><strong>Hybrid cloud</strong></td>
+<td>Mix of public + private</td>
+<td>Sensitive data on-premise, bursts to public</td>
+<td>Bank: private ledger + public analytics</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Link to Unit 1 (CAP/architecture):</strong> the public cloud is a <em>centralised</em> system — the "Data Processing" layer of the 4-layer architecture (P01) lives here.</p>
+</blockquote>
+<h2 id="52-role-of-cloud-in-iot">5.2 Role of Cloud in IoT ⭐⭐<a class="headerlink" href="#52-role-of-cloud-in-iot" title="Permanent link">&para;</a></h2>
+<p>Why the ESP32 cannot be the whole system:</p>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What the cloud adds</th>
+<th>Practical evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Storage</strong></td>
+<td>Stores years of sensor history</td>
+<td>ThingSpeak fields (P10–P13)</td>
+</tr>
+<tr>
+<td><strong>Processing/analytics</strong></td>
+<td>Rules, ML, dashboards run there</td>
+<td>Threshold React apps (P13)</td>
+</tr>
+<tr>
+<td><strong>Visualization</strong></td>
+<td>Graphs &amp; dashboards accessible anywhere</td>
+<td>ThingSpeak/Blynk widgets (P10–P12)</td>
+</tr>
+<tr>
+<td><strong>Control/actuation</strong></td>
+<td>Commands routed back to devices</td>
+<td>Blynk virtual button (P12), MQTT control (P09)</td>
+</tr>
+<tr>
+<td><strong>Scalability</strong></td>
+<td>Millions of devices with one dashboard</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart TD
+    ESP[ESP32 nodes] -- MQTT / HTTP --&gt; CLOUD[Cloud platform]
+    CLOUD --&gt; STORE[(Sensor database)]
+    CLOUD --&gt; GRAPH[Charts &amp; dashboards]
+    CLOUD --&gt; RULE[Threshold rules]
+    RULE --&gt; ALERT[Alerts]
+    PHONE[Mobile app] &lt;-- data + commands --&gt; CLOUD
+    PHONE -- command --&gt; ESP</code></pre>
+<h2 id="53-iot-cloud-platforms-the-three-syllabus-platforms">5.3 IoT Cloud Platforms ⭐⭐⭐ (the three syllabus platforms)<a class="headerlink" href="#53-iot-cloud-platforms-the-three-syllabus-platforms" title="Permanent link">&para;</a></h2>
+<h3 id="531-thingspeak">5.3.1 ThingSpeak<a class="headerlink" href="#531-thingspeak" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>MathWorks</strong> analytics platform; channel-based (up to <strong>8 fields</strong>), free tier.</li>
+<li>Data in via <strong>HTTP GET/POST</strong> (<code>/update?api_key=KEY&amp;field1=value</code>) or <strong>MQTT</strong> (<code>mqtt.thingspeak.com</code>).</li>
+<li><strong>Rate limit:</strong> one update per <strong>15 s</strong> (free).</li>
+<li><strong>Extra tools:</strong> React (threshold-triggered alerts), MATLAB Analysis, public/private channels.</li>
+<li><strong>Implementation flow (P10/P11):</strong> create channel → copy Write API Key → ESP32 sends <code>field1=temp</code> every 20 s → dashboard graphs appear.</li>
+</ul>
+<h3 id="532-blynk-iot-blynk-20">5.3.2 Blynk IoT (Blynk 2.0)<a class="headerlink" href="#532-blynk-iot-blynk-20" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Mobile-first IoT platform with a <strong>web console + mobile app</strong>.</li>
+<li><strong>Template → Datastreams (virtual pins V0, V1…) → Devices → Widgets</strong> (Gauge, Switch, Slider).</li>
+<li>Two-way by design: <code>Blynk.virtualWrite(V0, value)</code> up; <code>BLYNK_WRITE(V1)</code> down (P12).</li>
+<li>Firmware uses the <strong>Blynk library</strong> with <code>BLYNK_TEMPLATE_ID</code> / <code>BLYNK_AUTH_TOKEN</code>.</li>
+</ul>
+<h3 id="533-arduino-iot-cloud">5.3.3 Arduino IoT Cloud<a class="headerlink" href="#533-arduino-iot-cloud" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Official Arduino platform; auto-generates <strong>code from a dashboard</strong>, based on <strong>Thing Properties</strong> (like Blynk datastreams).</li>
+<li>Device registered via the <strong>Arduino IoT Cloud</strong> web console; sketch built on the ESP32 core with <code>ArduinoIoTCloud</code> + <code>Arduino_ConnectionHandler</code> libraries.</li>
+<li>Great for people already at home in the Arduino IDE — you define properties, the IDE generates the connection skeleton.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>ThingSpeak</th>
+<th>Blynk IoT</th>
+<th>Arduino IoT Cloud</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Focus</td>
+<td>Analytics &amp; graphing</td>
+<td>Two-way mobile control</td>
+<td>Arduino-centric device cloud</td>
+</tr>
+<tr>
+<td>Data input</td>
+<td>HTTP / MQTT</td>
+<td>MQTT (library)</td>
+<td>MQTT (auto-generated)</td>
+</tr>
+<tr>
+<td>Key concept</td>
+<td>Channel/field</td>
+<td>Template/datastream/widget</td>
+<td>Thing/property</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Graphs &amp; analysis (P10–P13)</td>
+<td>Phone control (P12, P14)</td>
+<td>Beginners in Arduino ecosystem</td>
+</tr>
+<tr>
+<td>Free tier</td>
+<td>15 s updates, 8 fields</td>
+<td>Limited devices/datastreams</td>
+<td>Limited properties</td>
+</tr>
+</tbody>
+</table>
+<h2 id="54-categories-of-iot-applications">5.4 Categories of IoT Applications ⭐⭐⭐<a class="headerlink" href="#54-categories-of-iot-applications" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>What it covers</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Consumer IoT</strong></td>
+<td>Personal/domestic devices</td>
+<td>Smart watches, smart speakers, smart-home lights</td>
+</tr>
+<tr>
+<td><strong>Commercial IoT</strong></td>
+<td>Business/retail/office</td>
+<td>Smart vending machines, retail analytics, office HVAC</td>
+</tr>
+<tr>
+<td><strong>Industrial IoT (IIoT)</strong></td>
+<td>Factories/plants</td>
+<td>Predictive maintenance, SCADA, robotic assembly</td>
+</tr>
+<tr>
+<td><strong>Infrastructure IoT</strong></td>
+<td>Cities &amp; public utilities</td>
+<td>Smart street lighting, water/waste grids</td>
+</tr>
+<tr>
+<td><strong>Medical IoT</strong></td>
+<td>Healthcare &amp; wearables</td>
+<td>Heart-rate monitors, connected infusion pumps, hospital asset tracking</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Viva link:</strong> the P14 mini-project categories — Smart Home (consumer), Smart Agriculture (commercial/industrial), Smart Health (medical), Smart Parking + Smart City (infrastructure). Point at which category your project belongs to.</p>
+</blockquote>
+<h2 id="55-smart-home-automation">5.5 Smart Home Automation ⭐⭐⭐<a class="headerlink" href="#55-smart-home-automation" title="Permanent link">&para;</a></h2>
+<p><strong>Goal:</strong> comfort, security and energy savings in a home via automated sensing + remote control.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>PIR (motion) ─┐
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>LDR (light) ──┼─► ESP32 ──► Blynk/cloud ──► phone app
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>DHT (climate) ┘                    │
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                                   ▼
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>              &quot;motion + dark&quot; rule ──► relay ──► lights ON
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>              phone button ──────────► relay ──► fan/AC ON
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Device</th>
+<th>Practical basis</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Occupancy</td>
+<td>PIR sensor</td>
+<td>P05</td>
+</tr>
+<tr>
+<td>Ambient light</td>
+<td>LDR</td>
+<td>P05</td>
+</tr>
+<tr>
+<td>Climate</td>
+<td>DHT11/22</td>
+<td>P06</td>
+</tr>
+<tr>
+<td>Actuation</td>
+<td>Relay-module lights/fan</td>
+<td>P09, P12</td>
+</tr>
+<tr>
+<td>Control/dash</td>
+<td>Blynk app</td>
+<td>P12</td>
+</tr>
+</tbody>
+</table>
+<h2 id="56-smart-agriculture-system-this-is-p14">5.6 Smart Agriculture System ⭐⭐⭐ (this is P14)<a class="headerlink" href="#56-smart-agriculture-system-this-is-p14" title="Permanent link">&para;</a></h2>
+<p><strong>Goal:</strong> efficient irrigation — water only when the soil is actually dry.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Soil moisture ─┐
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>DHT temp/hum ──┼─► ESP32 ──► ThingSpeak/Blynk ──► farm dashboard
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Ultrasonic (tank) ┘        │
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>              soil &lt; 2000 ─┴──► relay ──► water pump ON (auto + manual override)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sensing</td>
+<td>Soil moisture (GPIO 34), DHT (GPIO 4), optional ultrasonic tank level</td>
+</tr>
+<tr>
+<td>Decision</td>
+<td>Threshold + hysteresis in the ESP32 (edge processing)</td>
+</tr>
+<tr>
+<td>Actuation</td>
+<td>Relay → water pump; manual override from phone (MQTT/Blynk)</td>
+</tr>
+<tr>
+<td>Cloud</td>
+<td>ThingSpeak graphs + alerts; Blynk for control</td>
+</tr>
+<tr>
+<td>Benefits</td>
+<td>~30% water saved, remote farm monitoring</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Exam one-liner:</strong> "Smart Agriculture closes the loop — sensor detects dry soil, the controller starts the pump, and the farmer watches it all from a phone." (Full walkthrough in <a href="../../practicals/writeups/P14_mini_project_smart_agriculture_guide/">P14</a>.)</p>
+</blockquote>
+<h2 id="57-smart-health-monitoring">5.7 Smart Health Monitoring ⭐⭐<a class="headerlink" href="#57-smart-health-monitoring" title="Permanent link">&para;</a></h2>
+<p><strong>Goal:</strong> continuous vital-sign tracking with alerts instead of periodic manual checks.</p>
+<ul>
+<li><strong>Sensors:</strong> heart-rate/SpO2 (MAX30100/MAX30102), body temp (DHT22/MLX90614), motion (PIR/accelerometer).</li>
+<li><strong>Device:</strong> wearable ESP32/BLE node → cloud.</li>
+<li><strong>Cloud:</strong> stores vitals, triggers alerts when HR &gt; threshold; doctor sees trends.</li>
+<li><strong>Examples:</strong> smart watches, elderly fall detection, connected insulin pumps, hospital patient monitoring.</li>
+</ul>
+<h2 id="58-smart-parking-system">5.8 Smart Parking System ⭐⭐<a class="headerlink" href="#58-smart-parking-system" title="Permanent link">&para;</a></h2>
+<p><strong>Goal:</strong> show real-time free/occupied slots and guide drivers, reducing traffic circling.</p>
+<ul>
+<li><strong>Sensing:</strong> HC-SR04 or inductive loop per slot — <code>distance &lt; threshold → occupied</code> (P07/P11 logic).</li>
+<li><strong>Device:</strong> ESP32 per slot (or multi-slot node) → cloud.</li>
+<li><strong>Cloud/app:</strong> map of the lot with green/red slots; automated barrier and payment.</li>
+<li><strong>Exam point:</strong> "occupancy = distance below threshold" is a direct reuse of P11.</li>
+</ul>
+<h2 id="59-smart-city-applications">5.9 Smart City Applications ⭐⭐<a class="headerlink" href="#59-smart-city-applications" title="Permanent link">&para;</a></h2>
+<h3 id="591-smart-street-lighting">5.9.1 Smart street lighting 💡<a class="headerlink" href="#591-smart-street-lighting" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>LDR</strong> detects dusk → lights ON; <strong>PIR</strong> dims lights when nobody is nearby (P05 sensors!).</li>
+<li>LED lights + central dashboard per-strip; <strong>saves up to 50% energy</strong>.</li>
+</ul>
+<h3 id="592-waste-management">5.9.2 Waste management 🗑️<a class="headerlink" href="#592-waste-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Ultrasonic</strong> inside each bin measures fill level (P11).</li>
+<li>When fill &gt; 80% → alert topic → municipal dashboard lists bins needing pickup → optimised routes.</li>
+</ul>
+<h3 id="593-environmental-monitoring">5.9.3 Environmental monitoring 🌦️<a class="headerlink" href="#593-environmental-monitoring" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Weather nodes:</strong> DHT22, rain sensor, air-quality sensor (MQ-135), LDR.</li>
+<li>Continuous upload to ThingSpeak → <strong>predictive alerts</strong> (high AQI, flooding risk, heat wave).</li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+    ST[Street light&lt;br/&gt;LDR + PIR] --&gt; C[City cloud]
+    WM[Waste bin&lt;br/&gt;ultrasonic level] --&gt; C
+    ENV[Env node&lt;br/&gt;DHT + AQI] --&gt; C
+    C --&gt; DASH[City dashboard]
+    C --&gt; ALERT[Alerts to officials]</code></pre>
+<hr />
+<h2 id="deep-dive-topics">🧠 Deep-Dive Topics<a class="headerlink" href="#deep-dive-topics" title="Permanent link">&para;</a></h2>
+<h3 id="deep-dive-a-the-thingspeak-field1-pipeline-p10p13-memorise">Deep Dive A: The ThingSpeak "field1" pipeline (P10–P13, memorise)<a class="headerlink" href="#deep-dive-a-the-thingspeak-field1-pipeline-p10p13-memorise" title="Permanent link">&para;</a></h3>
+<p><code>ESP32 → HTTP GET http://api.thingspeak.com/update?api_key=KEY&amp;field1=27.4 → ThingSpeak stores + graphs → dashboard widget</code>. The 15-second rate limit forces <code>INTERVAL = 20000</code> in the sketches; HTTP code 200 + entry-id confirms a successful write; <code>-1</code> means bad key/network. This pipeline appears in P10, P11 and P13 — describe it once, reuse it three times.</p>
+<h3 id="deep-dive-b-blynks-two-way-virtual-pins-p12">Deep Dive B: Blynk's two-way virtual pins (P12)<a class="headerlink" href="#deep-dive-b-blynks-two-way-virtual-pins-p12" title="Permanent link">&para;</a></h3>
+<p>Datastream V0 = sensor values <strong>up</strong> (<code>Blynk.virtualWrite(V0, t)</code>), datastream V1 = phone switch <strong>down</strong> (<code>BLYNK_WRITE(V1)</code> → <code>param.asInt()</code> → <code>digitalWrite</code>). This up/down split is <em>the</em> exam answer for "what makes a dashboard two-way?" — and the same pattern reappears in P14's pump control.</p>
+<h3 id="deep-dive-c-edge-vs-cloud-decisions-p13p14">Deep Dive C: Edge vs Cloud decisions (P13/P14)<a class="headerlink" href="#deep-dive-c-edge-vs-cloud-decisions-p13p14" title="Permanent link">&para;</a></h3>
+<p>Thresholds live in <strong>two places</strong>: on the ESP32 (instant, works offline — P13's <code>ALERT: Soil DRY</code>) and in the cloud (ThingSpeak React apps, works for all devices at once). Smart design puts <em>fast safety-critical</em> decisions at the edge and <em>analytics</em> in the cloud — a great "role of cloud" extension answer.</p>
+<hr />
+<h2 id="beyond-the-textbook">🚀 Beyond the Textbook<a class="headerlink" href="#beyond-the-textbook" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>All three platforms speak MQTT underneath.</strong> ThingSpeak, Blynk and Arduino IoT Cloud are <em>clients</em> of MQTT brokers (or their own); the ESP32's <code>PubSubClient</code> (P08/P09) is the common substrate.</li>
+<li><strong>Public brokers vs managed clouds:</strong> <code>broker.emqx.io</code> is open (anyone can read your topics); ThingSpeak/Blynk add authentication and storage on top. That's the security difference between P09 and P10.</li>
+<li><strong>The free tiers are the limit, not the hardware.</strong> ThingSpeak's 15 s cap and Blynk's datastream limits are <em>platform</em> constraints — the ESP32 can publish far faster. Know which layer imposes the limit.</li>
+<li><strong>Green IoT is a real angle:</strong> LDR street lights, threshold-based irrigation and low-power deep-sleep nodes all cut energy — a strong line for any "challenges/sustainability" question.</li>
+<li><strong>Digital twins</strong> (a live virtual copy of the device state) are the industry extension of a dashboard — ThingSpeak/Blynk are tiny prototypes of that idea.</li>
+</ol>
+<hr />
+<h2 id="high-yield-exam-topics-likely-gtu-style-questions">🎯 High-Yield Exam Topics (likely GTU-style questions)<a class="headerlink" href="#high-yield-exam-topics-likely-gtu-style-questions" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Define <strong>cloud computing</strong> and explain <strong>public, private, hybrid</strong> clouds. (4–7 m) ⭐⭐⭐</li>
+<li>Explain the <strong>role of cloud in IoT</strong>. (4 m) ⭐⭐⭐</li>
+<li>Short note: <strong>ThingSpeak</strong> — channel, fields, API key, implementation. (7 m) ⭐⭐⭐ (≈ P10/P11)</li>
+<li>Short note: <strong>Blynk IoT</strong> — template, datastreams, virtual pins, two-way control. (7 m) ⭐⭐⭐ (≈ P12)</li>
+<li>Compare <strong>ThingSpeak, Blynk and Arduino IoT Cloud</strong>. (4 m) ⭐⭐</li>
+<li>Short note: <strong>categories of IoT applications</strong> (five categories). (4 m) ⭐⭐⭐</li>
+<li>Describe a <strong>Smart Home Automation</strong> system end-to-end. (7 m) ⭐⭐⭐</li>
+<li>Describe a <strong>Smart Agriculture</strong> system end-to-end. (7 m) ⭐⭐⭐ (≈ P14)</li>
+<li>Short note: <strong>Smart Health Monitoring</strong>. (4–7 m) ⭐⭐</li>
+<li>Short note: <strong>Smart Parking System</strong>. (4 m) ⭐⭐</li>
+<li>Short note: <strong>Smart City applications</strong> (street lighting, waste management, environmental monitoring). (7 m) ⭐⭐⭐</li>
+<li>Why is the cloud needed when the ESP32 can already process data? (3–4 m) ⭐⭐</li>
+</ol>
+<h3 id="solved-model-answers-highest-yield">✅ Solved model answers (highest-yield)<a class="headerlink" href="#solved-model-answers-highest-yield" title="Permanent link">&para;</a></h3>
+<p><strong>Q1. (4–7 m) — Cloud computing: concept + types.</strong></p>
+<blockquote>
+<p>Cloud computing delivers computing resources — servers, storage, databases, analytics, software — <strong>over the internet on demand</strong>, billed like a utility. <strong>Public cloud</strong> is owned and operated by a provider (AWS, Azure, Google) and shared by many tenants; <strong>private cloud</strong> is dedicated to a single organisation, giving more control and compliance; <strong>hybrid cloud</strong> combines both — sensitive workloads stay private while elastic workloads run in the public cloud. In IoT, the cloud forms the <strong>data-processing and application layers</strong> of the architecture: it stores sensor history, runs analytics and serves dashboards that the low-power ESP32 node cannot host itself.</p>
+</blockquote>
+<p><strong>Q3. (7 m) — Short note: ThingSpeak with implementation.</strong></p>
+<blockquote>
+<p>ThingSpeak is a free <strong>IoT analytics platform</strong> from MathWorks built around <strong>channels</strong>, each holding up to <strong>8 fields</strong>. Implementation flow (used in P10/P11/P13): (1) create a channel and enable the required fields (e.g., Field 1 = Temperature); (2) copy the <strong>Write API Key</strong> from the API Keys tab; (3) the ESP32 uploads data via HTTP GET — <code>http://api.thingspeak.com/update?api_key=KEY&amp;field1=27.4</code> — every 20 s (free tier allows one update per 15 s); (4) ThingSpeak stores each value and plots it on the field's chart; (5) extra features: <strong>React apps</strong> fire alerts when a value crosses a threshold, <strong>MATLAB Analysis</strong> runs custom computations, and channels can be made public or private. A successful write returns HTTP 200 with an entry id; a <code>-1</code> response indicates a bad key or throttling.</p>
+</blockquote>
+<p><strong>Q7. (8 m) — Smart Home Automation end-to-end.</strong></p>
+<blockquote>
+<p>A smart home senses its environment, automates responses and allows remote control. <strong>Sensing:</strong> a PIR detects presence, an LDR measures ambient light, and a DHT11 tracks temperature/humidity — all read by an ESP32 (P05/P06). <strong>Processing/decision:</strong> the ESP32 applies rules such as "if motion AND light level low → turn on the light" (threshold logic). <strong>Actuation:</strong> a relay module switches the light/fan (P09/P12). <strong>Cloud &amp; app:</strong> the ESP32 uploads readings to Blynk/ThingSpeak; the user sees a live dashboard and presses a virtual switch to control the appliance from anywhere (P12). <strong>Benefits:</strong> energy saving (lights off when nobody is home), comfort (climate control), and security (motion alerts). This is the <strong>Consumer IoT</strong> category of applications.</p>
+</blockquote>
+<hr />
+<h2 id="practice-problems-self-test-answers-hidden">✍️ Practice Problems (self-test — answers hidden)<a class="headerlink" href="#practice-problems-self-test-answers-hidden" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Public, private, hybrid cloud — one line each with an IoT example.</li>
+<li>List four roles the cloud plays in an IoT system.</li>
+<li>What is the ThingSpeak free-tier rate limit and how does it shape the sketch's <code>INTERVAL</code>?</li>
+<li>Name the key concept of each platform: ThingSpeak <strong><em>, Blynk </em></strong>, Arduino IoT Cloud ___.</li>
+<li>Which category of IoT does each P14 alternative fall into: smart parking, smart health, smart street lighting?</li>
+<li>Describe Smart Agriculture in four steps (sense → decide → act → show).</li>
+<li>How does a Blynk virtual button control a GPIO? Name the two Blynk API calls.</li>
+<li>Give one sensor + one action for each smart-city system (lighting, waste, environment).</li>
+</ol>
+<details>
+<summary>📌 Model solutions</summary>
+
+1. Public — provider-owned, open (ThingSpeak public channel); Private — single organisation (hospital records); Hybrid — mix (bank private ledger + public analytics).
+2. Storage, processing/analytics, visualization/dashboards, remote control/actuation, scalability.
+3. One update per 15 s (free) → practical sketches use `INTERVAL = 20000` (20 s) to stay legal.
+4. ThingSpeak → **channel/field**; Blynk → **template/datastream/widget**; Arduino IoT Cloud → **thing/property**.
+5. Smart parking — infrastructure; smart health — medical; smart street lighting — infrastructure.
+6. Sense (soil moisture + DHT) → decide (threshold + hysteresis on ESP32) → act (relay → pump) → show (ThingSpeak/Blynk dashboard + remote override).
+7. `Blynk.virtualWrite(V0, value)` pushes sensor data up; `BLYNK_WRITE(V1)` + `param.asInt()` receives the button state down and calls `digitalWrite()`.
+8. Lighting — LDR detects dusk → lights ON; Waste — ultrasonic fill level > 80% → pickup alert; Environment — DHT/AQI node → predictive alert.
+</details>
+
+<hr />
+<h2 id="glossary-of-key-terms">📖 Glossary of Key Terms<a class="headerlink" href="#glossary-of-key-terms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cloud computing</strong></td>
+<td>On-demand delivery of computing resources over the internet</td>
+</tr>
+<tr>
+<td><strong>Public cloud</strong></td>
+<td>Provider-owned, multi-tenant services (AWS, Azure)</td>
+</tr>
+<tr>
+<td><strong>Private cloud</strong></td>
+<td>Dedicated cloud for one organisation</td>
+</tr>
+<tr>
+<td><strong>Hybrid cloud</strong></td>
+<td>Combination of public + private</td>
+</tr>
+<tr>
+<td><strong>ThingSpeak</strong></td>
+<td>MathWorks IoT analytics platform (channels, 8 fields)</td>
+</tr>
+<tr>
+<td><strong>Write API Key</strong></td>
+<td>Secret that authenticates uploads to a channel</td>
+</tr>
+<tr>
+<td><strong>Channel</strong></td>
+<td>ThingSpeak container for up to 8 data fields</td>
+</tr>
+<tr>
+<td><strong>React app</strong></td>
+<td>ThingSpeak rule that triggers alerts on thresholds</td>
+</tr>
+<tr>
+<td><strong>Blynk IoT</strong></td>
+<td>Mobile-first two-way IoT platform (templates, datastreams)</td>
+</tr>
+<tr>
+<td><strong>Datastream</strong></td>
+<td>Blynk virtual pin (V0, V1…) with type/unit</td>
+</tr>
+<tr>
+<td><strong><code>BLYNK_WRITE(Vn)</code></strong></td>
+<td>Callback for commands arriving from the cloud</td>
+</tr>
+<tr>
+<td><strong><code>virtualWrite()</code></strong></td>
+<td>ESP32 → cloud value push</td>
+</tr>
+<tr>
+<td><strong>Auth token</strong></td>
+<td>Per-device secret for Blynk/Arduino IoT Cloud</td>
+</tr>
+<tr>
+<td><strong>Arduino IoT Cloud</strong></td>
+<td>Official Arduino platform (things, properties)</td>
+</tr>
+<tr>
+<td><strong>Consumer IoT</strong></td>
+<td>Personal/domestic devices</td>
+</tr>
+<tr>
+<td><strong>Commercial IoT</strong></td>
+<td>Retail/office/business systems</td>
+</tr>
+<tr>
+<td><strong>Industrial IoT</strong></td>
+<td>Factory/plant automation</td>
+</tr>
+<tr>
+<td><strong>Infrastructure IoT</strong></td>
+<td>City utilities and public systems</td>
+</tr>
+<tr>
+<td><strong>Medical IoT</strong></td>
+<td>Healthcare devices and wearables</td>
+</tr>
+<tr>
+<td><strong>Smart Agriculture</strong></td>
+<td>Sensor-driven irrigation/farming (P14)</td>
+</tr>
+<tr>
+<td><strong>Smart Parking</strong></td>
+<td>Occupancy detection for parking lots</td>
+</tr>
+<tr>
+<td><strong>Smart street lighting</strong></td>
+<td>LDR/PIR-based energy-saving lights</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="curated-resources-per-concept">🔗 Curated Resources (per concept)<a class="headerlink" href="#curated-resources-per-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Cloud computing</strong>
+- Cloud computing basics (AWS): https://aws.amazon.com/what-is-cloud-computing/
+- Public/private/hybrid (Google Cloud): https://cloud.google.com/learn/what-is-cloud-computing</p>
+<p><strong>ThingSpeak (official)</strong>
+- ThingSpeak: https://thingspeak.com/
+- ThingSpeak docs: https://docs.thingspeak.com/en/
+- HTTP API reference: https://docs.thingspeak.com/en/reference/http/</p>
+<p><strong>Blynk (official)</strong>
+- Blynk IoT: https://blynk.io/
+- Blynk docs (quickstart): https://docs.blynk.io/en/
+- Blynk library: https://github.com/blynkkk/blynk-library</p>
+<p><strong>Arduino IoT Cloud (official)</strong>
+- Arduino IoT Cloud: https://cloud.arduino.cc/
+- Arduino IoT Cloud docs: https://docs.arduino.cc/arduino-cloud/</p>
+<p><strong>Applications (Smart Home / City / Health)</strong>
+- Smart agriculture systems (FAO/WMO): https://www.fao.org/3/ca6407en/ca6407en.pdf
+- Smart city use cases: https://www.ibm.com/topics/smart-cities
+- Digital health/IoMT: https://www.who.int/health-topics/health-and-digital-technologies</p>
+<p><strong>Tutorials</strong>
+- ESP32 + ThingSpeak: https://randomnerdtutorials.com/esp32-thingspeak/
+- ESP32 + Blynk: https://randomnerdtutorials.com/esp32-blynk-iot/
+- ESP32 + Arduino IoT Cloud: https://randomnerdtutorials.com/esp32-arduino-iot-cloud/</p>
+<p><strong>Books (from GTU syllabus)</strong>
+- David Hanes, <em>IoT Fundamentals: Networking Technologies, Protocols and Use Cases</em>, Cisco Press, 2017 — Part on IoT use cases &amp; cloud.
+- Arshdeep Bahga &amp; Vijay Madisetti, <em>Internet of Things: A Hands-on Approach</em>, 2015 — cloud chapters.
+- Adrian McEwen &amp; Hakim Cassimally, <em>Designing the Internet of Things</em>, Wiley, 2014.</p>
+<p><strong>Videos (high yield)</strong>
+- Random Nerd Tutorials ThingSpeak/Blynk playlists · edureka! IoT cloud tutorials · Simply Explained cloud computing.</p>
+<hr />
+<h2 id="video-study-guide-youtube">🎥 Video Study Guide (YouTube)<a class="headerlink" href="#video-study-guide-youtube" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Don't like reading? Me neither. This is your <strong>structured video path</strong> for the whole unit — better than the syllabus because it tells you <em>exactly what to search</em> and <em>what to watch first</em>, in a sensible order. Everything below is search keywords (they never rot like links do) + channels you can trust.</p>
+</blockquote>
+<h3 id="step-0-pick-your-learning-style">🧑🎓 Step 0 — Pick your learning style<a class="headerlink" href="#step-0-pick-your-learning-style" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>You learn best by</th>
+<th>Your path through this unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎧 <strong>Listener</strong></td>
+<td>short, clear explainers</td>
+<td>Watch 1 explainer per topic from the table below (3–8 min each)</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Builder</strong></td>
+<td>wiring things yourself</td>
+<td>Watch the ThingSpeak/Blynk build-alongs → run <a href="../../practicals/writeups/P10_thingspeak_http_temperature/">P10</a>–<a href="../../practicals/writeups/P12_blynk_two_way_dashboard/">P12</a></td>
+</tr>
+<tr>
+<td>🔧 <strong>Tinkerer</strong></td>
+<td>experimenting &amp; demos</td>
+<td>Watch demo videos → create your own channel/widgets and push values</td>
+</tr>
+<tr>
+<td>🧠 <strong>Deep Diver</strong></td>
+<td>full theory, "why"</td>
+<td>Watch the whole-unit playlists at the bottom (university-level depth)</td>
+</tr>
+<tr>
+<td>🧭 <strong>Explorer</strong></td>
+<td>breadth &amp; curiosity</td>
+<td>Watch the "smart city / smart home" case-study videos first, then follow your curiosity</td>
+</tr>
+<tr>
+<td>🎓 <strong>Academic</strong></td>
+<td>exam marks</td>
+<td>Watch the revision/GTU-style videos, then grind the High-Yield questions above</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-1-watch-by-topic-search-these-on-youtube">🎬 Step 1 — Watch by topic (search these on YouTube)<a class="headerlink" href="#step-1-watch-by-topic-search-these-on-youtube" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>YouTube search keywords (copy-paste ready)</th>
+<th>Best channels</th>
+<th>Style served</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cloud computing basics</td>
+<td><code>cloud computing explained simply</code> · <code>public private hybrid cloud</code> · <code>what is the cloud</code></td>
+<td>Simply Explained, IBM Technology, PowerCert</td>
+<td>🎧 + 🧭</td>
+</tr>
+<tr>
+<td>Cloud + IoT</td>
+<td><code>role of cloud in iot</code> · <code>iot cloud architecture</code> · <code>why does iot need cloud</code></td>
+<td>edureka!, IBM Technology</td>
+<td>🎧 + 🎓</td>
+</tr>
+<tr>
+<td>ThingSpeak hands-on</td>
+<td><code>thingspeak tutorial esp32</code> · <code>thingspeak channel setup api key</code> · <code>send sensor data to thingspeak</code></td>
+<td>Random Nerd Tutorials, DroneBot Workshop, Core Electronics</td>
+<td>🛠️ Builder</td>
+</tr>
+<tr>
+<td>ThingSpeak React &amp; MATLAB</td>
+<td><code>thingspeak react app tutorial</code> · <code>thingspeak matlab analysis</code></td>
+<td>MathWorks, Paul McWhorter</td>
+<td>🔧 + 🧠</td>
+</tr>
+<tr>
+<td>Blynk IoT hands-on</td>
+<td><code>blynk iot setup tutorial</code> · <code>esp32 blynk two way control</code> · <code>blynk virtual pin v1 switch</code></td>
+<td>Random Nerd Tutorials, Core Electronics, Blynk</td>
+<td>🛠️ Builder</td>
+</tr>
+<tr>
+<td>Arduino IoT Cloud</td>
+<td><code>arduino iot cloud tutorial esp32</code> · <code>arduino cloud things properties</code></td>
+<td>Random Nerd Tutorials, Arduino</td>
+<td>🛠️ Builder</td>
+</tr>
+<tr>
+<td>IoT application categories</td>
+<td><code>iot application domains</code> · <code>consumer industrial iot examples</code> · <code>types of iot applications</code></td>
+<td>edureka!, IBM Technology</td>
+<td>🎧 + 🎓</td>
+</tr>
+<tr>
+<td>Smart home &amp; agriculture</td>
+<td><code>smart home automation explained</code> · <code>smart agriculture iot system</code> · <code>iot irrigation system project</code></td>
+<td>edureka!, TechTerms, Random Nerd Tutorials</td>
+<td>🧭 Explorer</td>
+</tr>
+<tr>
+<td>Smart city systems</td>
+<td><code>smart city explained</code> · <code>smart street lighting system</code> · <code>smart waste management iot</code> · <code>smart parking system iot</code></td>
+<td>edureka!, TechTerms, Intellipaat</td>
+<td>🧭 + 🎓</td>
+</tr>
+<tr>
+<td>Whole-unit revision (exam mode)</td>
+<td><code>iot cloud platforms unit notes</code> · <code>thingspeak blynk comparison</code> · <code>iot applications full lecture</code></td>
+<td>Neso Academy, Gate Smashers, edureka!</td>
+<td>🎓 Academic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-full-playlists-for-deep-divers-academics">🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)<a class="headerlink" href="#step-2-full-playlists-for-deep-divers-academics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>"edureka! — IoT Full Course / IoT in 10 hours"</strong> — covers cloud, platforms and every application category at university depth.</li>
+<li><strong>"Random Nerd Tutorials — ESP32 with ThingSpeak &amp; Blynk playlists"</strong> — the exact hands-on flow of P10–P14, step by step.</li>
+<li><strong>"MathWorks — ThingSpeak tutorials"</strong> — official channel, MATLAB Analysis and React apps for the extra-marks tools.</li>
+</ol>
+<h3 id="step-3-proof-you-got-it-5-min">🎬 Step 3 — Proof you got it (5 min)<a class="headerlink" href="#step-3-proof-you-got-it-5-min" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Describe Smart Agriculture in exactly four steps (sense → decide → act → show) without notes.</li>
+<li>Log into ThingSpeak, create a channel, and push one value with a browser URL — if the graph plots, the platform is yours.</li>
+<li>Name the five IoT application categories and put the P14 alternatives into them.</li>
+</ul>
+<hr />
+<p><em>Back to: <a href="../UNIT_1_Introduction_to_IoT/">UNIT 1 — Introduction to IoT</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UNIT 4 — IoT Communication Protocols &amp; Networking 📡">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                UNIT 4 — IoT Communication Protocols & Networking 📡
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../practicals/writeups/P01_iot_architecture_layers/" class="md-footer__link md-footer__link--next" aria-label="Next: P01 — Study: 4-Layer IoT Architecture &amp; Real-World Applications">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

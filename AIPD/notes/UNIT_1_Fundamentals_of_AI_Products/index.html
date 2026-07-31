@@ -1,0 +1,6561 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.">
+      
+      
+      
+        <link rel="canonical" href="https://aayushbankar.github.io/sem_5/AIPD/notes/UNIT_1_Fundamentals_of_AI_Products/">
+      
+      
+        <link rel="prev" href="../../PRACTICALS/">
+      
+      
+        <link rel="next" href="../UNIT_2_Design_Thinking_and_Human_Centred_AI/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://fav.farm/📚">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖 - Semester 5 — GTU IT Study Kit 🎓</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-1-fundamentals-of-ai-products-emerging-ai-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-header__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Semester 5 — GTU IT Study Kit 🎓
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../FOB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FOB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../IOT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IOT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPD
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CDCT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CDCT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📄 All Syllabi (PDF)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pyq/fbc/s_24.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📝 Past Papers (PYQ)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-nav__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Semester 5 — GTU IT Study Kit 🎓
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FOB/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FOB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_1_Foundations_of_Decentralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_2_Bitcoin_and_PoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_3_Ethereum_and_Smart_Contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Ethereum & Smart Contracts 🟣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_4_Enterprise_and_Private_Blockchains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Enterprise & Private Blockchains 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_5_Security_Emerging_Trends_Green_Energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Cryptographic Hash Functions & the Avalanche Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P02_public_private_keys_digital_signatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Public/Private Key Pair & Digital Signatures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P03_basic_blockchain_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Basic Blockchain Structure in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P04_merkle_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Simplified Merkle Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P05_nonce_mining_difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — The "Nonce" & Mining Difficulty (Proof-of-Work)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P06_wallets_mnemonic_bip39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P07_smart_contract_evm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Write, Compile & Deploy a Smart Contract on the EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P08_erc20_token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Tokenization: Deploying a Basic ERC-20 Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P09_case_study_public_vs_private_hyperledger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P10_case_study_security_green_energy_dao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/DI05016051-FOB.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../IOT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IOT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IOT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_1_Introduction_to_IoT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to IoT 🌐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_3_ESP32_and_Arduino_IDE_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — IoT Communication Protocols & Networking 📡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P01_iot_architecture_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P02_compare_hardware_platforms_esp32_pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P03_arduino_ide_setup_esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P04_external_led_blink_toggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Toggle an External LED (Digital Output)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P05_pir_ldr_sensor_interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P06_dht_temperature_humidity_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — DHT11/DHT22 Temperature & Humidity Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P07_ultrasonic_distance_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P08_esp32_mqtt_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — ESP32 as MQTT Publisher (Temperature & Humidity)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P09_esp32_mqtt_subscriber_remote_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P10_thingspeak_http_temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P11_ultrasonic_thingspeak_cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Ultrasonic Distance to Cloud (ThingSpeak)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P12_blynk_two_way_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P14_mini_project_smart_agriculture_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P14 — Mini-Project: Smart Agriculture System (walkthrough guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/DI05016071-IOT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPE/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_2_Basics_of_Large_Language_Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Basics of Large Language Models (LLMs) 🧠
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Prompt Engineering Fundamentals 🎯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_4_Prompt_Engineering_Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Prompt Engineering Techniques 🧩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Generative AI Tools for Different Task Types & Applications Across Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P02_sentiment_analysis_text_classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Sentiment Analysis & Text Classification with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P03_llm_behavior_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P05_prompt_design_and_refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Design & Refine Prompts: Email Writing & Concept Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Zero-Shot, Few-Shot & Role-Based Prompting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P08_task_based_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P09_ai_tools_for_software_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P10_ai_chatbot_api_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P11_document_qa_basic_rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Document-Based Q&A (Basic RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P12_ai_study_assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Build an AI Application: Study Assistant (with design docs for 3 more)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/DI05016011-AIPE.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-introduction-to-ai-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Introduction to AI Products
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-ai-tool-vs-ai-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 AI Tool vs AI Product ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-components-of-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Components of AI Systems ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-overview-of-generative-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Overview of Generative AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-introduction-to-large-language-models-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Introduction to Large Language Models (LLMs) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-types-of-ai-models-conceptual-overview-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Types of AI Models (conceptual overview only) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-generative-ai-vs-analytical-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Generative AI vs Analytical AI ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-ai-model-selection-for-product-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 AI Model Selection for Product Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-introduction-to-multi-agent-ai-basic-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Introduction to Multi-Agent AI (basic idea)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-human-in-the-loop-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Human-in-the-Loop Systems ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-basic-ai-system-architecture-conceptual-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Basic AI System Architecture (conceptual diagram) ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-why-probabilistic-output-changes-product-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Why "probabilistic output" changes product design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-tokens-embeddings-and-rag-in-one-story-unit-1-p08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Tokens, embeddings and RAG in one story (Unit 1 ↔ P08)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-generative-vs-analytical-on-the-same-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Generative vs Analytical on the same product
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 High-Yield Exam Topics (no PYQ papers exist for this new subject — these are the likely GTU-style questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Design Thinking & Human-Centred AI 🎨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_3_AI_Product_Strategy_and_OpenAI_Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — AI Product Strategy & OpenAI Integration 🧭
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — AI in Social Media & Digital Experience 📱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_5_Privacy_Data_Governance_and_Responsible_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — AI Threats & Mitigation Strategies 🚨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P01_product_idea_problem_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Product Idea, Problem Statement, Target Users & Core Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P02_ai_system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P03_data_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Data Components: Inventory, Classification & Risk Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P04_persona_empathy_journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — User Personas, Empathy Map & Customer Journey Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P05_interaction_flow_wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — AI Interaction Flow & Basic UI Wireframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P06_mvp_feature_prioritization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — MVP Features & Feature Prioritization Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P07_business_model_canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Business Model Canvas & AI Monetization Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P08_ai_integration_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — AI Integration Plan: API Usage, Cost Awareness & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P09_social_media_campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Social-Media Campaign & Promotional Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P10_no_code_prototype_demo_video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P11_data_protection_ethics_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Data Protection Plan & AI Ethical Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P12_ai_risk_assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — AI Risk Assessment & Mitigation Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DI05016021-AIPD.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CDCT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDCT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CDCT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_1_Introduction_to_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to Cloud Computing ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_2_Virtualization_and_Hypervisors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Virtualization and Hypervisors 🖥️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_3_Data_Center_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_4_Cloud_Storage_and_Database_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Cloud Storage and Database Services 💾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_5_Cloud_Security_and_Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Cloud Security and Compliance 🔐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P01_openstack_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P02_cloud_organization_rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Cloud Organization with RBAC (AWS IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P03_install_virtualbox_linux_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Install VirtualBox + Linux VM on Windows 8+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Desktop Virtualization with Chrome Remote Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P05_mininet_virtual_sdn_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Virtual SDN Lab with Mininet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P06_cloud_databases_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Cloud Databases: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P07_cloud_storage_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Cloud Storage: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P08_cloudsim_secure_file_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Simulate Secure File Sharing with CloudSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P09_minio_secure_object_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Secure Object Storage with MinIO (Access Control + SSE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P10_docker_first_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Creating & Executing Your First Container (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/DI05016031-CDCT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 All Syllabi (PDF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📄 All Syllabi (PDF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Cloud_and_Data_Center_Technology.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Foundation_of_Blockchain.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Hands_on_Practice_using_IoT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Skill_Based_Training.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Past Papers (PYQ)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Past Papers (PYQ)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-introduction-to-ai-products" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Introduction to AI Products
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-ai-tool-vs-ai-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 AI Tool vs AI Product ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-components-of-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Components of AI Systems ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-overview-of-generative-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Overview of Generative AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-introduction-to-large-language-models-llms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Introduction to Large Language Models (LLMs) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-types-of-ai-models-conceptual-overview-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Types of AI Models (conceptual overview only) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-generative-ai-vs-analytical-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Generative AI vs Analytical AI ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-ai-model-selection-for-product-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 AI Model Selection for Product Use
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-introduction-to-multi-agent-ai-basic-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Introduction to Multi-Agent AI (basic idea)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-human-in-the-loop-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Human-in-the-Loop Systems ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-basic-ai-system-architecture-conceptual-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Basic AI System Architecture (conceptual diagram) ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-why-probabilistic-output-changes-product-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Why "probabilistic output" changes product design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-tokens-embeddings-and-rag-in-one-story-unit-1-p08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Tokens, embeddings and RAG in one story (Unit 1 ↔ P08)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-generative-vs-analytical-on-the-same-product" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Generative vs Analytical on the same product
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 High-Yield Exam Topics (no PYQ papers exist for this new subject — these are the likely GTU-style questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-1-fundamentals-of-ai-products-emerging-ai-systems">UNIT 1 — Fundamentals of AI Products &amp; Emerging AI Systems 🤖<a class="headerlink" href="#unit-1-fundamentals-of-ai-products-emerging-ai-systems" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>AI Product Design (DI05016021)</strong> · <strong>8 hrs · 18% weightage</strong>
+<strong>Covers syllabus sections:</strong> 1.1 AI products · 1.2 AI tool vs AI product · 1.3 System components (Data/Model/Interface/Feedback) · 1.4 Generative AI · 1.5 LLMs · 1.6 Model types · 1.7 GenAI vs Analytical AI · 1.8 Model selection · 1.9 Multi-agent AI · 1.10 Human-in-the-loop · 1.11 Basic architecture
+<strong>Related practicals:</strong> <a href="../../practicals/writeups/P01_product_idea_problem_statement/">P01</a>, <a href="../../practicals/writeups/P02_ai_system_architecture/">P02</a>, <a href="../../practicals/writeups/P03_data_components/">P03</a></p>
+</blockquote>
+<hr />
+<h2 id="chapter-roadmap">🧭 Chapter Roadmap<a class="headerlink" href="#chapter-roadmap" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>UNIT 1 — Fundamentals of AI Products
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── 1.1 What is an AI product?              ★★★
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── 1.2 AI tool  vs  AI product             ★★★★   ← classic 4-mark short note
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── 1.3 The 4 system components             ★★★★★  ← P02 architecture
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│     ├── Data · Model · Interface
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│     └── Feedback loop
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── 1.4 Overview of Generative AI           ★★★★
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── 1.5 Large Language Models (LLMs)        ★★★★
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── 1.6 Types of AI models                  ★★★    ← Text/Image/Speech/Embeddings
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>├── 1.7 GenAI vs Analytical AI              ★★★★   ← favourite comparison table
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>├── 1.8 AI model selection                  ★★★
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>├── 1.9 Multi-agent AI                      ★★★
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>├── 1.10 Human-in-the-loop                  ★★★★
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>└── 1.11 Basic AI system architecture       ★★★★★  ← guaranteed diagram question
+</code></pre></div>
+<h3 id="learning-outcomes-after-this-unit-you-can">Learning outcomes — after this unit you can:<a class="headerlink" href="#learning-outcomes-after-this-unit-you-can" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define an <strong>AI product</strong> and separate it cleanly from an <strong>AI tool</strong>.</li>
+<li>Name and explain the <strong>4 components</strong> of any AI system (Data, Model, Interface, Feedback loop).</li>
+<li>Describe <strong>generative AI</strong> and <strong>LLMs</strong> in plain words with real examples.</li>
+<li>Classify AI models by <strong>input/output type</strong> (text, image, speech, embeddings).</li>
+<li>Compare <strong>generative vs analytical</strong> AI and justify a model choice for a product.</li>
+<li>Explain <strong>multi-agent</strong> and <strong>human-in-the-loop</strong> systems with an application.</li>
+<li>Draw a <strong>basic AI system architecture</strong> diagram (this is a guaranteed exam diagram).</li>
+</ol>
+<hr />
+<h2 id="11-introduction-to-ai-products">1.1 Introduction to AI Products<a class="headerlink" href="#11-introduction-to-ai-products" title="Permanent link">&para;</a></h2>
+<p>An <strong>AI product</strong> is a software product that uses <strong>artificial intelligence</strong> (machine learning, deep learning, LLMs) to deliver its core value. The AI is not an add-on — it <em>is</em> the reason the product exists.</p>
+<p><strong>Examples you should be able to rattle off:</strong>
+- <strong>Recommendation</strong> — Netflix, YouTube, Amazon (suggest what you'll like).
+- <strong>Language</strong> — ChatGPT, Google Translate, Grammarly, StudyMate's summariser.
+- <strong>Vision</strong> — Google Lens, Face ID unlock, automatic photo tagging.
+- <strong>Speech</strong> — Alexa, Siri, voice-to-text keyboards.
+- <strong>Generative media</strong> — Midjourney (images), Suno (music), Synthesia (talking avatars).</p>
+<blockquote>
+<p>💡 <strong>Key idea for exams:</strong> the <em>input is messy</em> (unstructured text, images, speech) and the <em>output is probabilistic</em> (the system can be wrong). Traditional apps always do exactly what you code; AI apps <em>predict</em> what to do. That single difference drives every other topic in this unit (feedback loops, hallucinations, human-in-the-loop).</p>
+</blockquote>
+<h2 id="12-ai-tool-vs-ai-product">1.2 AI Tool vs AI Product ⭐⭐<a class="headerlink" href="#12-ai-tool-vs-ai-product" title="Permanent link">&para;</a></h2>
+<p>The most asked short-note in Unit 1. Memorise this table.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th><strong>AI Tool</strong></th>
+<th><strong>AI Product</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scope</strong></td>
+<td>One narrow task (e.g., summarise this text)</td>
+<td>An end-to-end solution for a user's whole job</td>
+</tr>
+<tr>
+<td><strong>User focus</strong></td>
+<td>Generic — anyone, any context</td>
+<td>Designed for a <strong>specific persona</strong> with a specific need</td>
+</tr>
+<tr>
+<td><strong>Context/data</strong></td>
+<td>Stateless — no memory of you</td>
+<td><strong>Persistent</strong> — remembers user, history, preferences</td>
+</tr>
+<tr>
+<td><strong>Feedback loop</strong></td>
+<td>None — output is final</td>
+<td>Closes the loop — user reaction improves future output</td>
+</tr>
+<tr>
+<td><strong>Business model</strong></td>
+<td>Often free / pay-per-use</td>
+<td>Monetised (subscription, freemium — Unit 3)</td>
+</tr>
+<tr>
+<td><strong>Support/servicing</strong></td>
+<td>Minimal</td>
+<td>Onboarding, privacy, reliability, updates</td>
+</tr>
+<tr>
+<td><strong>Example</strong></td>
+<td>ChatGPT answering one prompt</td>
+<td>StudyMate — a study assistant with accounts, uploads, progress tracking and pricing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The one-line exam answer:</strong> <em>A tool does one AI task for anyone; a product wraps AI into a complete, user-centred, monetisable solution with data and a feedback loop.</em></p>
+<blockquote>
+<p>⚠️ <strong>Exam trap:</strong> ChatGPT itself is a product (it has accounts, memory, pricing). A single prompt you paste into it is "using a tool". Don't say "ChatGPT is a tool" without qualification.</p>
+</blockquote>
+<h2 id="13-components-of-ai-systems">1.3 Components of AI Systems ⭐⭐⭐<a class="headerlink" href="#13-components-of-ai-systems" title="Permanent link">&para;</a></h2>
+<p>Every AI system — simple or giant — has these <strong>4 blocks</strong> (this is the backbone of P02):</p>
+<pre class="mermaid"><code>flowchart LR
+    D[1. DATA&lt;br/&gt;what the model learns/uses] --&gt; M[2. MODEL&lt;br/&gt;the AI brain]
+    M --&gt; I[3. INTERFACE&lt;br/&gt;where user meets AI]
+    I --&gt; F[4. FEEDBACK LOOP&lt;br/&gt;reactions improve system]
+    F --&gt; D
+    F -.-&gt; M</code></pre>
+<table>
+<thead>
+<tr>
+<th>Block</th>
+<th>What it is</th>
+<th>Example (StudyMate)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data</strong></td>
+<td>Training data (how the model learned) + inference data (what it processes at run-time)</td>
+<td>Public web corpus (training); the student's uploaded PDFs, chat and quiz history (inference)</td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>The algorithm/neural network that maps input → output</td>
+<td>An LLM that reads a chapter and produces a summary/quiz</td>
+</tr>
+<tr>
+<td><strong>Interface</strong></td>
+<td>The screens/APIs where human and machine interact</td>
+<td>Upload page, chat box, results screen</td>
+</tr>
+<tr>
+<td><strong>Feedback loop</strong></td>
+<td>The mechanism that captures user reactions and feeds them back</td>
+<td>Quiz scores → "weak topics" tags → future quizzes target them</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Exam phrasing:</strong> "Data feeds the Model, the Model powers the Interface, and the Feedback Loop returns the Interface's outcomes back to Data/Model — making the system learn from use." That sentence is worth full marks for the conceptual-architecture question.</p>
+</blockquote>
+<h2 id="14-overview-of-generative-ai">1.4 Overview of Generative AI<a class="headerlink" href="#14-overview-of-generative-ai" title="Permanent link">&para;</a></h2>
+<p><strong>Generative AI (GenAI)</strong> creates <strong>new content</strong> — text, images, audio, code, video — that did not exist before, by learning the <em>patterns</em> of training data and sampling from them.</p>
+<ul>
+<li><strong>How it works (conceptual):</strong> a neural network is trained on massive amounts of content; it learns the statistical structure ("after 'The capital of India is' usually comes 'New Delhi'"); at generation time it predicts the next token again and again.</li>
+<li><strong>Key models:</strong> GPT / Gemini / Claude (text), DALL·E / Midjourney / Stable Diffusion (images), Suno (music), Veo / Runway (video).</li>
+<li><strong>Applications:</strong> chatbots, content creation (Unit 4), code generation, design, study tools (our StudyMate summariser/quiz generator).</li>
+</ul>
+<pre class="mermaid"><code>flowchart LR
+    A[Training data&lt;br/&gt;texts · images · audio] --&gt; B[Neural network learns patterns]
+    B --&gt; C[Model weights]
+    C --&gt; D[At run-time: given a prompt]
+    D --&gt; E[Generate NEW content&lt;br/&gt;token by token]</code></pre>
+<blockquote>
+<p>💡 <strong>Beyond the textbook:</strong> generation is <em>sampling, not retrieval</em>. The model doesn't "look up" an answer — it rolls a weighted die over likely next tokens. That's why outputs are fresh, but also why <strong>hallucination</strong> (confidently wrong answers) happens (Unit 6).</p>
+</blockquote>
+<h2 id="15-introduction-to-large-language-models-llms">1.5 Introduction to Large Language Models (LLMs) ⭐<a class="headerlink" href="#15-introduction-to-large-language-models-llms" title="Permanent link">&para;</a></h2>
+<p>An <strong>LLM</strong> is a generative AI model trained on <strong>enormous amounts of text</strong> to predict the next word/token. "Large" = billions of parameters.</p>
+<p><strong>Key facts to memorise:</strong>
+- <strong>Architecture:</strong> Transformer-based (introduced in the 2017 paper <em>"Attention Is All You Need"</em>). Attention lets the model weigh which earlier words matter most.
+- <strong>Token:</strong> the unit of text the model reads/writes (~3–4 characters of English, or ~¾ of a word). <em>Billing is per token</em> (Unit 3).
+- <strong>Training:</strong> pre-training on general text → fine-tuning for a specific task/domain.
+- <strong>Inference:</strong> the run-time use of the trained model (what a product pays for).
+- <strong>Capabilities:</strong> chat, summarisation, translation, coding, question-answering, reasoning (CoT).
+- <strong>Limitations:</strong> hallucination, outdated knowledge (cut-off), no real "understanding", cost/latency, bias in training data.</p>
+<p><strong>Products:</strong> ChatGPT, Gemini, Claude, and our running example <strong>StudyMate</strong>, which grounds an LLM in a student's <em>own</em> documents (RAG — see P02/P08).</p>
+<blockquote>
+<p>⚠️ <strong>Exam trap:</strong> "LLM understands language" is wrong — it predicts tokens. It <em>mimics</em> understanding. Say "the model has no memory between sessions" and "it can't verify facts" — those are the two standard limitations asked.</p>
+</blockquote>
+<h2 id="16-types-of-ai-models-conceptual-overview-only">1.6 Types of AI Models (conceptual overview only) ⭐<a class="headerlink" href="#16-types-of-ai-models-conceptual-overview-only" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Input → Output</th>
+<th>Example models</th>
+<th>Product uses</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text</strong></td>
+<td>Text → text (classify, summarise, translate, chat)</td>
+<td>GPT, Gemini, Claude, BERT</td>
+<td>Chatbots, StudyMate summariser</td>
+</tr>
+<tr>
+<td><strong>Image</strong></td>
+<td>Image → label/box/description (vision), or text → image (generation)</td>
+<td>ResNet (classify), YOLO (detect), DALL·E / Stable Diffusion (generate)</td>
+<td>Google Lens, face unlock, Canva AI art</td>
+</tr>
+<tr>
+<td><strong>Speech</strong></td>
+<td>Audio → text (ASR), text → audio (TTS), speech → label</td>
+<td>Whisper (transcribe), ElevenLabs (voice)</td>
+<td>Voice assistants, captions, audiobooks</td>
+</tr>
+<tr>
+<td><strong>Embeddings</strong></td>
+<td>Anything → a list of numbers (a "vector") capturing meaning</td>
+<td>text-embedding-3-small, CLIP</td>
+<td>Search, recommendations, RAG retrieval (P08)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Embeddings made simple:</strong> an embedding turns <em>meaning</em> into <em>math</em>. Similar sentences get similar numbers, so you can search "documents about Kirchhoff's law" even if the exact words differ. This is the engine behind StudyMate's "find the right page of your notes" step.</p>
+</blockquote>
+<h2 id="17-generative-ai-vs-analytical-ai">1.7 Generative AI vs Analytical AI ⭐⭐<a class="headerlink" href="#17-generative-ai-vs-analytical-ai" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th><strong>Generative AI</strong></th>
+<th><strong>Analytical (predictive) AI</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Goal</strong></td>
+<td>Create <strong>new</strong> content</td>
+<td>Analyse data to <strong>predict/classify</strong></td>
+</tr>
+<tr>
+<td><strong>Output</strong></td>
+<td>Text, images, audio, video (open-ended)</td>
+<td>A label, score, or number (closed)</td>
+</tr>
+<tr>
+<td><strong>Typical task</strong></td>
+<td>"Write an essay", "make a poster"</td>
+<td>"Will this customer churn?", "is this email spam?"</td>
+</tr>
+<tr>
+<td><strong>Underlying model</strong></td>
+<td>LLMs, diffusion models</td>
+<td>Regression, decision trees, classifiers</td>
+</tr>
+<tr>
+<td><strong>Right/wrong</strong></td>
+<td>Subjective (quality of content)</td>
+<td>Objective (accuracy of prediction)</td>
+</tr>
+<tr>
+<td><strong>Product example</strong></td>
+<td>StudyMate quiz generator, Canva AI</td>
+<td>YouTube recommendation score, credit-risk score</td>
+</tr>
+<tr>
+<td><strong>Risk</strong></td>
+<td>Hallucination, misuse (deepfakes)</td>
+<td>Bias in predictions, unfair decisions</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Exam one-liner:</strong> <em>Generative AI invents the answer; analytical AI decides between answers.</em> Many products use both (a recommendation system is analytical; the personalised email it writes about the recommendation is generative).</p>
+</blockquote>
+<h2 id="18-ai-model-selection-for-product-use">1.8 AI Model Selection for Product Use<a class="headerlink" href="#18-ai-model-selection-for-product-use" title="Permanent link">&para;</a></h2>
+<p>A product designer chooses a model by <strong>trade-offs</strong>, not hype. The exam asks you to <em>justify</em> a choice, so learn the 5 axes:</p>
+<table>
+<thead>
+<tr>
+<th>Axis</th>
+<th>Question to ask</th>
+<th>StudyMate example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Task type</strong></td>
+<td>Does the feature generate (GenAI) or predict (analytical)?</td>
+<td>Generation → LLM</td>
+</tr>
+<tr>
+<td><strong>2. Quality vs cost</strong></td>
+<td>How wrong can the output afford to be?</td>
+<td>Quizzes must be syllabus-accurate → quality matters</td>
+</tr>
+<tr>
+<td><strong>3. Latency</strong></td>
+<td>How fast must the answer come?</td>
+<td>Chat &lt; 3 s → a small fast model</td>
+</tr>
+<tr>
+<td><strong>4. Privacy &amp; hosting</strong></td>
+<td>Can data leave your servers? Where must it live?</td>
+<td>Student notes → vendor must not train on them (P08)</td>
+</tr>
+<tr>
+<td><strong>5. Cost per use</strong></td>
+<td>What does one request cost? (tokens!)</td>
+<td>Free tier needs a cheap model → gpt-4o-mini class (P08)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The decision is never "best model" — it's "best model for <em>this</em> user, <em>this</em> latency, <em>this</em> budget".</strong></p>
+<blockquote>
+<p>💡 <strong>Beyond the textbook:</strong> also consider <em>model drift</em> — providers update models and your quality/cost changes overnight (a risk we treat properly in P12). Pinning a version is part of a production plan.</p>
+</blockquote>
+<h2 id="19-introduction-to-multi-agent-ai-basic-idea">1.9 Introduction to Multi-Agent AI (basic idea)<a class="headerlink" href="#19-introduction-to-multi-agent-ai-basic-idea" title="Permanent link">&para;</a></h2>
+<p>A <strong>multi-agent system</strong> is a setup where several specialised AI "agents" <strong>collaborate</strong> to finish a task, each doing what it's good at.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>USER question
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   │
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>   ▼
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>┌────────────┐  ┌─────────────┐  ┌──────────────┐  ┌────────────┐
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>│ Planner    │→ │ Retriever   │→ │ Writer       │→ │ Reviewer   │
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>│ splits task│  │ finds notes │  │ drafts answer│  │ checks it  │
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>└────────────┘  └─────────────┘  └──────────────┘  └────────────┘
+</code></pre></div>
+<p><strong>Simple real example — a "study assistant team":</strong>
+- Agent 1 (Retriever): finds the right chapter in your notes.
+- Agent 2 (Quiz-master): generates questions from it.
+- Agent 3 (Tutor): explains any wrong answer step-by-step.
+- Agent 4 (Scheduler): builds the revision plan.</p>
+<p><strong>Why it matters:</strong> one giant prompt doing everything is messy and error-prone; specialised agents with clear roles are easier to control, evaluate, and fix. <strong>Trade-off:</strong> more moving parts, higher cost and latency — so multi-agent is an <em>architecture choice</em>, not a default.</p>
+<h2 id="110-human-in-the-loop-systems">1.10 Human-in-the-Loop Systems ⭐<a class="headerlink" href="#110-human-in-the-loop-systems" title="Permanent link">&para;</a></h2>
+<p><strong>Human-in-the-loop (HITL)</strong> = a person is <strong>inside</strong> the AI loop — reviewing, approving, or correcting AI output before it's final.</p>
+<pre class="mermaid"><code>flowchart LR
+    A[AI produces candidate output] --&gt; B{HUMAN reviews}
+    B -- approve --&gt; C[Final output]
+    B -- correct/reject --&gt; D[Feedback to model] --&gt; A</code></pre>
+<table>
+<thead>
+<tr>
+<th>Where</th>
+<th>Who</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Content moderation</strong></td>
+<td>Reviewer approves/rejects AI posts</td>
+<td>Safety, policy</td>
+</tr>
+<tr>
+<td><strong>StudyMate quiz answers</strong></td>
+<td>Teacher/student flags a wrong question</td>
+<td>Accuracy before it misleads</td>
+</tr>
+<tr>
+<td><strong>Medical/AI diagnosis</strong></td>
+<td>Doctor confirms</td>
+<td>Accountability, safety</td>
+</tr>
+<tr>
+<td><strong>Bank loan scoring</strong></td>
+<td>Analyst reviews before decision</td>
+<td>Fairness, appeal rights</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why the syllabus loves this topic:</strong> (1) it reduces harm from AI errors; (2) it produces <strong>training data</strong> (corrections become better prompts/models); (3) it satisfies <strong>accountability</strong> (Unit 5) — "a human is responsible". <strong>Cost:</strong> slower and expensive, so designers keep <em>only critical steps</em> in the loop.</p>
+<h2 id="111-basic-ai-system-architecture-conceptual-diagram">1.11 Basic AI System Architecture (conceptual diagram) ⭐⭐⭐<a class="headerlink" href="#111-basic-ai-system-architecture-conceptual-diagram" title="Permanent link">&para;</a></h2>
+<p>This is the "draw the diagram" favourite (P02 builds it in full). A minimal answer-sheet version:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>                 USER
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>                  │
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>                  ▼
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>          ┌───────────────┐
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>          │  INTERFACE    │  ← app screens / chat box
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>          └───────────────┘
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>                  │
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                  ▼
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>          ┌───────────────┐
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>          │   MODEL       │  ← AI brain (LLM/classifier)
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>          └───────────────┘
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>             ▲            │
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>             │            ▼
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>     ┌───────┴──────┐  ┌──────────────┐
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>     │    DATA      │  │ FEEDBACK LOOP│  ← scores/ratings
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>     └──────────────┘  └──────────────┘
+</code></pre></div>
+<p><strong>The 4-sentence explanation (memorise):</strong>
+1. The <strong>user</strong> interacts through the <strong>interface</strong>.
+2. The <strong>model</strong> receives the input and produces output (grounded in <strong>data</strong>).
+3. <strong>Data</strong> — training and run-time data — feeds the model.
+4. The <strong>feedback loop</strong> captures user reactions and returns them to Data/Model so the system improves over time.</p>
+<hr />
+<h2 id="deep-dive-topics">🧠 Deep-Dive Topics<a class="headerlink" href="#deep-dive-topics" title="Permanent link">&para;</a></h2>
+<h3 id="deep-dive-a-why-probabilistic-output-changes-product-design">Deep Dive A: Why "probabilistic output" changes product design<a class="headerlink" href="#deep-dive-a-why-probabilistic-output-changes-product-design" title="Permanent link">&para;</a></h3>
+<p>Classical apps: output is deterministic — same input → same result. AI: same input → <em>similar but different</em> output, sometimes <strong>wrong</strong>. Consequences a designer must handle: show confidence, allow retries/regeneration, cite sources, and keep a human in the loop for high-stakes output. Every one of these appears in Unit 2 (UX for AI) and Unit 6 (risks). One sentence connects the whole subject.</p>
+<h3 id="deep-dive-b-tokens-embeddings-and-rag-in-one-story-unit-1-p08">Deep Dive B: Tokens, embeddings and RAG in one story (Unit 1 ↔ P08)<a class="headerlink" href="#deep-dive-b-tokens-embeddings-and-rag-in-one-story-unit-1-p08" title="Permanent link">&para;</a></h3>
+<p>Your 40-page PDF can't fit in one prompt. So StudyMate: (1) <strong>chunks</strong> the text, (2) <strong>embeds</strong> each chunk into a vector, (3) at question time <strong>retrieves</strong> the most similar chunks, (4) asks the LLM to answer <em>using only those chunks</em>, with a citation. That's <strong>RAG</strong> — it reduces tokens (cheaper), reduces hallucination, and gives the "answer from YOUR notes" promise. It's the same pipeline drawn in P02's architecture.</p>
+<h3 id="deep-dive-c-generative-vs-analytical-on-the-same-product">Deep Dive C: Generative vs Analytical on the same product<a class="headerlink" href="#deep-dive-c-generative-vs-analytical-on-the-same-product" title="Permanent link">&para;</a></h3>
+<p>A credit-card issuer uses <strong>analytical AI</strong> to score whether you'll default (objective prediction) and <strong>generative AI</strong> to write your personalised offer letter (subjective creation). Knowing <em>which AI fits which stage</em> is the "model selection" skill of §1.8.</p>
+<hr />
+<h2 id="beyond-the-textbook-what-most-classes-wont-tell-you">🚀 Beyond the Textbook (what most classes won't tell you)<a class="headerlink" href="#beyond-the-textbook-what-most-classes-wont-tell-you" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>LLMs don't have a database of facts.</strong> They have <em>weights</em> that compress patterns. That's why they can't reliably answer "what happened yesterday" and why products bolt on retrieval (RAG).</li>
+<li><strong>"Attention is all you need" is the real birthday of modern AI.</strong> 2017 transformer paper → GPT → everything. If a viva asks "why 2017?", that's the answer.</li>
+<li><strong>Every generative AI call costs money and emits carbon.</strong> "Free" chatbots are subsidised; product designers must cost-model tokens (P08) and pick small models.</li>
+<li><strong>Embeddings make AI search possible.</strong> Without them, "find similar notes" would be literal word-matching; with them, it's semantic.</li>
+<li><strong>The feedback loop is also a risk surface.</strong> If you feed the loop bad signals (spam, trolls), the system learns to be bad. Feedback must be cleaned before it becomes data (see Unit 6).</li>
+<li><strong>Exam-hack memory aid for the 4 components:</strong> "<strong>D</strong>ata → <strong>M</strong>odel → <strong>I</strong>nterface → <strong>F</strong>eedback" = <strong>DMIF</strong> → remember "<strong>D</strong>o <strong>M</strong>y <strong>I</strong>ndian <strong>F</strong>riends… revise daily."</li>
+</ol>
+<hr />
+<h2 id="high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions">🎯 High-Yield Exam Topics (no PYQ papers exist for this new subject — these are the likely GTU-style questions)<a class="headerlink" href="#high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Likely questions (short notes / 4 marks):</strong>
+1. Define an AI product with two examples.
+2. Differentiate between an <strong>AI tool and an AI product</strong>.
+3. Explain the four components of an AI system.
+4. What is Generative AI? Give examples.
+5. What is an LLM? State two capabilities and two limitations.
+6. Differentiate between <strong>Generative AI and Analytical AI</strong>.
+7. What are embeddings? Where are they used?
+8. Explain <strong>Human-in-the-loop</strong> with an example.
+9. What is a multi-agent system? Give an application.
+10. List the types of AI models (text/image/speech/embeddings) with one use each.</p>
+<p><strong>Likely long questions (7 marks):</strong>
+11. Draw and explain a <strong>basic AI system architecture</strong> (Data, Model, Interface, Feedback loop) for any AI product.
+12. Explain the <strong>factors considered in AI model selection</strong> for a product.
+13. Explain tokens and how they relate to the cost of LLM-based products.</p>
+<p><strong>Solved model answers (exam style):</strong></p>
+<p><strong>Q. 7 marks — Differentiate between Generative AI and Analytical AI with examples.</strong></p>
+<blockquote>
+<p><strong>Generative AI</strong> creates new content (text, images, audio, video) by learning patterns from training data and sampling from them. Output is open-ended and subjective. Examples: ChatGPT writing an essay, DALL·E generating an image, StudyMate generating a quiz. <strong>Analytical (predictive) AI</strong> analyses existing data to make a prediction or classification; output is a fixed label or score and is judged by accuracy. Examples: YouTube recommending a video, a spam filter classifying email, a credit-risk model scoring a loan applicant. <strong>Key differences:</strong> purpose (create vs predict), output (open content vs closed decision), evaluation (subjective quality vs objective accuracy), and main risk (hallucination/misuse vs unfair bias). A real product often uses both — a recommendation engine (analytical) that writes its suggestion message with an LLM (generative).</p>
+</blockquote>
+<p><strong>Q. 4 marks — Explain the four components of an AI system.</strong></p>
+<blockquote>
+<p>(1) <strong>Data</strong> — the information the system learns from during training and processes at run-time; without data there is no AI. (2) <strong>Model</strong> — the trained algorithm that maps input to output (e.g., an LLM that summarises a chapter). (3) <strong>Interface</strong> — the surface where the user and the model interact (screens, chat box, API). (4) <strong>Feedback loop</strong> — the mechanism that captures user reactions (ratings, scores) and returns them to Data/Model so output improves over time. Example: in StudyMate, the student's PDF is Data, the LLM is the Model, the upload/chat screens are the Interface, and quiz scores that tag "weak topics" form the Feedback loop.</p>
+</blockquote>
+<p><strong>Q. 4 marks — What is an LLM? Two capabilities, two limitations.</strong></p>
+<blockquote>
+<p>A <strong>Large Language Model</strong> is a neural network trained on enormous text corpora to predict the next token. It is "large" in parameters (billions) and uses the Transformer architecture with attention. <strong>Capabilities:</strong> (1) generation — chat, summarisation, translation, code; (2) few-shot reasoning — it can solve unseen problems given examples. <strong>Limitations:</strong> (1) hallucination — it can produce confident but wrong content; (2) no persistent memory or real understanding — it predicts tokens and knows nothing outside its training cut-off. Because of this, products ground LLMs in user data (RAG) and keep humans in the loop for critical output.</p>
+</blockquote>
+<hr />
+<h2 id="practice-problems-self-test-answers-hidden">✍️ Practice Problems (self-test — answers hidden)<a class="headerlink" href="#practice-problems-self-test-answers-hidden" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Is "an app that lets you paste text into ChatGPT and copy the answer" a tool or a product? Justify.</li>
+<li>Draw the four-component diagram for <strong>YouTube</strong> (name each block in YouTube's own terms).</li>
+<li>For each model type (text/image/speech/embeddings), give one product you use daily.</li>
+<li>Your AI weather app generates a 50-word forecast. Is that generative or analytical AI? (Tricky — defend your answer.)</li>
+<li>A bank wants an AI to approve loans. Why must it keep a human in the loop?</li>
+<li>You must choose an LLM for a student chat feature. Name the 3 axes you'd weigh and how you'd trade them off.</li>
+</ol>
+<details>
+<summary>📌 Model solutions</summary>
+
+1. **A tool** — it's stateless, generic, single-task. The moment it has accounts, your history, persistence and pricing, it becomes a product.
+2. **Data:** videos + your watch history; **Model:** the recommendation algorithm; **Interface:** the home feed / search; **Feedback loop:** watch-time, likes, skips → re-rank recommendations.
+3. Text → spell-checker; Image → Face ID; Speech → Google voice typing; Embeddings → Google image search ("find similar images").
+4. **Analytical at heart** — generating text from fixed weather *data* is formatting a prediction; the model's judgment (rain/no-rain) is analytical. The wording is generative polish. The exam-safe answer: the *decision* is analytical; the *rendering* is generative.
+5. Accountability and fairness: a rejected applicant deserves a human-verifiable, explainable decision and an appeal channel; also the AI's errors need a responsible owner (HITL).
+6. Quality vs cost (wrong quiz answers vs token bill), latency (chat must feel instant), and privacy/hosting (notes must not train shared models). Typical trade: accept a small fast model for chat, spend more on retrieval to protect quality.
+</details>
+
+<hr />
+<h2 id="glossary-of-key-terms">📖 Glossary of Key Terms<a class="headerlink" href="#glossary-of-key-terms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI product</strong></td>
+<td>A software product whose core value comes from AI, built for a specific user with data + feedback loop</td>
+</tr>
+<tr>
+<td><strong>AI tool</strong></td>
+<td>A single-purpose, stateless AI capability usable by anyone</td>
+</tr>
+<tr>
+<td><strong>Data (component)</strong></td>
+<td>Training data + inference (run-time) data an AI system consumes</td>
+</tr>
+<tr>
+<td><strong>Model</strong></td>
+<td>The trained algorithm that maps input to output</td>
+</tr>
+<tr>
+<td><strong>Interface</strong></td>
+<td>The surface where user and AI interact (UI/API)</td>
+</tr>
+<tr>
+<td><strong>Feedback loop</strong></td>
+<td>The cycle that feeds user reactions back into Data/Model</td>
+</tr>
+<tr>
+<td><strong>Generative AI</strong></td>
+<td>AI that creates new content (text/image/audio/video)</td>
+</tr>
+<tr>
+<td><strong>Analytical AI</strong></td>
+<td>AI that predicts/classifies from data (labels, scores)</td>
+</tr>
+<tr>
+<td><strong>LLM</strong></td>
+<td>Large Language Model — a huge Transformer trained to predict the next token</td>
+</tr>
+<tr>
+<td><strong>Token</strong></td>
+<td>Unit of text the model reads/writes (~¾ word); basis of API billing</td>
+</tr>
+<tr>
+<td><strong>Transformer</strong></td>
+<td>2017 neural architecture using <em>attention</em>; the basis of modern LLMs</td>
+</tr>
+<tr>
+<td><strong>Embedding</strong></td>
+<td>A vector of numbers capturing meaning; enables semantic search</td>
+</tr>
+<tr>
+<td><strong>RAG</strong></td>
+<td>Retrieval-Augmented Generation — ground an LLM in retrieved documents</td>
+</tr>
+<tr>
+<td><strong>Multi-agent system</strong></td>
+<td>Several specialised AI agents collaborating on one task</td>
+</tr>
+<tr>
+<td><strong>Human-in-the-loop</strong></td>
+<td>A person reviews/approves/corrects AI output before it's final</td>
+</tr>
+<tr>
+<td><strong>Model selection</strong></td>
+<td>Choosing a model by task type, quality, latency, privacy, cost</td>
+</tr>
+<tr>
+<td><strong>Hallucination</strong></td>
+<td>Confidently wrong AI output</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="curated-resources-per-concept">🔗 Curated Resources (per concept)<a class="headerlink" href="#curated-resources-per-concept" title="Permanent link">&para;</a></h2>
+<p><strong>AI products &amp; systems</strong>
+- <em>Designing Machine Learning Systems</em> — Chip Huyen, Ch. 1 (the book is in your GTU syllabus)
+- Google People + AI Guidebook: https://pair.withgoogle.com
+- "State of AI" reports (annual): search <em>state of ai report air street capital</em></p>
+<p><strong>Generative AI &amp; LLMs</strong>
+- OpenAI GPT overview: https://openai.com/research/gpt
+- Hugging Face (models &amp; datasets): https://huggingface.co
+- "Attention Is All You Need" (2017 paper): https://arxiv.org/abs/1706.03762</p>
+<p><strong>Model types &amp; embeddings</strong>
+- Google Teachable Machine (build tiny models visually): https://teachablemachine.withgoogle.com
+- "Intro to embeddings" (OpenAI cookbook): https://cookbook.openai.com
+- YOLO / computer vision (conceptual): https://www.ultralytics.com</p>
+<p><strong>Human-in-the-loop &amp; agents</strong>
+- Human-AI interaction guidelines (Microsoft): https://www.microsoft.com/en-us/research/publication/guidelines-for-human-ai-interaction/
+- Multi-agent LLM overviews: search <em>multi agent llm architecture explained</em></p>
+<h2 id="video-study-guide-youtube">🎥 Video Study Guide (YouTube)<a class="headerlink" href="#video-study-guide-youtube" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Don't like reading? Me neither. This is your <strong>structured video path</strong> for the whole unit — better than the syllabus because it tells you <em>exactly what to search</em> and <em>what to watch first</em>, in a sensible order. Everything below is search keywords (they never rot like links do) + channels you can trust.</p>
+</blockquote>
+<h3 id="step-0-pick-your-learning-style">🧑‍🎓 Step 0 — Pick your learning style<a class="headerlink" href="#step-0-pick-your-learning-style" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>You learn best by</th>
+<th>Your path through this unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎧 <strong>Listener</strong></td>
+<td>short, clear explainers</td>
+<td>Watch 1 explainer per topic from the table below (3–8 min each)</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Builder</strong></td>
+<td>building/demoing things</td>
+<td>Do <a href="../../">P01–P03</a> first, then watch the "architecture" explainers</td>
+</tr>
+<tr>
+<td>🔧 <strong>Tinkerer</strong></td>
+<td>experimenting &amp; demos</td>
+<td>Try Teachable Machine + ChatGPT Playground while watching demo videos</td>
+</tr>
+<tr>
+<td>🧠 <strong>Deep Diver</strong></td>
+<td>full theory, "why"</td>
+<td>Watch the whole-unit playlists at the bottom, then the arXiv/paper explainers</td>
+</tr>
+<tr>
+<td>🧭 <strong>Explorer</strong></td>
+<td>breadth &amp; curiosity</td>
+<td>Watch the "how GPT works" classics first, then follow your curiosity</td>
+</tr>
+<tr>
+<td>🎓 <strong>Academic</strong></td>
+<td>exam marks</td>
+<td>Grind the High-Yield list above → watch revision videos → write the diagrams by hand</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-1-watch-by-topic-search-these-on-youtube">🎬 Step 1 — Watch by topic (search these on YouTube)<a class="headerlink" href="#step-1-watch-by-topic-search-these-on-youtube" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>YouTube search keywords (copy-paste ready)</th>
+<th>Best channels</th>
+<th>Style served</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>What is an AI product</td>
+<td><code>what is an ai product vs ai tool</code> · <code>ai product examples 2025</code> · <code>product vs tool difference</code></td>
+<td>Y Combinator, Lenny's Podcast, a16z</td>
+<td>🧭 Explorer</td>
+</tr>
+<tr>
+<td>Components of an AI system</td>
+<td><code>ai system architecture data model interface feedback loop</code> · <code>how does an ai product work under the hood</code></td>
+<td>ByteByteGo, Google Cloud Tech</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>Generative AI overview</td>
+<td><code>what is generative ai explained</code> · <code>generative ai for beginners</code> · <code>genai vs traditional ai</code></td>
+<td>IBM Technology, Google Cloud Tech</td>
+<td>🎧 Listener</td>
+</tr>
+<tr>
+<td>LLMs explained</td>
+<td><code>how large language models work</code> · <code>transformers explained attention</code> · <code>llm in 10 minutes</code></td>
+<td>3Blue1Brown, Andrej Karpathy, StatQuest</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>Embeddings</td>
+<td><code>what are embeddings in machine learning</code> · <code>word embeddings explained</code> · <code>vector search explained rag</code></td>
+<td>StatQuest, Luis Serrano, ByteByteGo</td>
+<td>🧠 + 🛠️</td>
+</tr>
+<tr>
+<td>Analytical vs Generative</td>
+<td><code>predictive vs generative ai difference</code> · <code>analytical ai examples</code></td>
+<td>IBM Technology, Dataiku</td>
+<td>🎓 Academic</td>
+</tr>
+<tr>
+<td>Multi-agent AI</td>
+<td><code>multi agent systems explained llm</code> · <code>ai agents what are they</code></td>
+<td>Andrej Karpathy, Cogent, Fireship</td>
+<td>🧠 + 🧭</td>
+</tr>
+<tr>
+<td>Human-in-the-loop</td>
+<td><code>human in the loop machine learning explained</code> · <code>hitl ai moderation</code></td>
+<td>Google Cloud Tech, AssemblyAI</td>
+<td>🎧 Listener</td>
+</tr>
+<tr>
+<td>Build a tiny AI (hands-on)</td>
+<td><code>teachable machine tutorial</code> · <code>first ml model google teachable machine</code></td>
+<td>Google for Education, freeCodeCamp</td>
+<td>🔧 + 🛠️</td>
+</tr>
+<tr>
+<td>Whole-unit revision</td>
+<td><code>ai fundamentals full course beginners</code> · <code>intro to generative ai complete course</code></td>
+<td>freeCodeCamp, Stanford Online, MIT OCW</td>
+<td>🎓 Academic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-full-playlists-for-deep-divers-academics">🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)<a class="headerlink" href="#step-2-full-playlists-for-deep-divers-academics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>"freeCodeCamp — AI / Machine Learning for Beginners full courses"</strong> — structured 1–4 hour build-ups; perfect for this unit's breadth.</li>
+<li><strong>"Andrej Karpathy — Neural Networks: Zero to Hero"</strong> — the definitive deep dive into how LLMs <em>actually</em> work (watch after the explainers).</li>
+<li><strong>"Stanford CS229 / CS25 — Transformers &amp; LLM lectures"</strong> — university depth on Transformers if you want the "Attention Is All You Need" maths.</li>
+</ol>
+<h3 id="step-3-proof-you-got-it-5-min">🎬 Step 3 — Proof you got it (5 min)<a class="headerlink" href="#step-3-proof-you-got-it-5-min" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Explain to a friend why "an app that just pastes into ChatGPT" is a <strong>tool</strong>, but StudyMate is a <strong>product</strong>.</li>
+<li>Draw the four-component diagram from memory, then label it with <em>StudyMate's</em> real blocks.</li>
+<li>Say out loud: "generative AI invents, analytical AI decides" — then give one product that uses both.</li>
+</ul>
+<hr />
+<p><em>Next: <a href="../UNIT_2_Design_Thinking_and_Human_Centred_AI/">UNIT 2 — Design Thinking &amp; Human-Centred AI</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../PRACTICALS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Practical Tracker">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Practical Tracker
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-footer__link md-footer__link--next" aria-label="Next: UNIT 2 — Design Thinking &amp; Human-Centred AI 🎨">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                UNIT 2 — Design Thinking & Human-Centred AI 🎨
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

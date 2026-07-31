@@ -1,0 +1,26 @@
+# MinIO single-node server for Practical P09
+# Secure object storage with access control and encryption
+services:
+  minio:
+    image: minio/minio:latest
+    container_name: p09-minio
+    command: server /data --console-address ":9001"
+    ports:
+      - "9000:9000"   # S3-compatible API
+      - "9001:9001"   # Web console
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin123
+      # Built-in single-key KMS (development): enables SSE-S3 / SSE-KMS
+      # Format: <key-name>:<base64-encoded-32-byte-AES-key>
+      MINIO_KMS_SECRET_KEY: cdct-sse-key:DmmyIITXQIeJIkCsjBiixxRnaZJMqN4VPAYNmJ7LYv4=
+    volumes:
+      - p09_minio_data:/data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  p09_minio_data:

@@ -1,0 +1,6493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.">
+      
+      
+      
+        <link rel="canonical" href="https://aayushbankar.github.io/sem_5/AIPD/notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI/">
+      
+      
+        <link rel="prev" href="../UNIT_4_AI_in_Social_Media_and_Digital_Experience/">
+      
+      
+        <link rel="next" href="../UNIT_6_AI_Threats_and_Mitigation_Strategies/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://fav.farm/📚">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️ - Semester 5 — GTU IT Study Kit 🎓</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-5-privacy-data-governance-responsible-ai" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-header__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Semester 5 — GTU IT Study Kit 🎓
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../FOB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FOB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../IOT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IOT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPD
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CDCT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CDCT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📄 All Syllabi (PDF)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pyq/fbc/s_24.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📝 Past Papers (PYQ)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-nav__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Semester 5 — GTU IT Study Kit 🎓
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FOB/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FOB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_1_Foundations_of_Decentralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_2_Bitcoin_and_PoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_3_Ethereum_and_Smart_Contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Ethereum & Smart Contracts 🟣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_4_Enterprise_and_Private_Blockchains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Enterprise & Private Blockchains 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_5_Security_Emerging_Trends_Green_Energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Cryptographic Hash Functions & the Avalanche Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P02_public_private_keys_digital_signatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Public/Private Key Pair & Digital Signatures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P03_basic_blockchain_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Basic Blockchain Structure in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P04_merkle_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Simplified Merkle Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P05_nonce_mining_difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — The "Nonce" & Mining Difficulty (Proof-of-Work)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P06_wallets_mnemonic_bip39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P07_smart_contract_evm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Write, Compile & Deploy a Smart Contract on the EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P08_erc20_token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Tokenization: Deploying a Basic ERC-20 Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P09_case_study_public_vs_private_hyperledger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P10_case_study_security_green_energy_dao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/DI05016051-FOB.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../IOT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IOT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IOT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_1_Introduction_to_IoT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to IoT 🌐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_3_ESP32_and_Arduino_IDE_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — IoT Communication Protocols & Networking 📡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P01_iot_architecture_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P02_compare_hardware_platforms_esp32_pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P03_arduino_ide_setup_esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P04_external_led_blink_toggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Toggle an External LED (Digital Output)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P05_pir_ldr_sensor_interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P06_dht_temperature_humidity_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — DHT11/DHT22 Temperature & Humidity Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P07_ultrasonic_distance_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P08_esp32_mqtt_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — ESP32 as MQTT Publisher (Temperature & Humidity)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P09_esp32_mqtt_subscriber_remote_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P10_thingspeak_http_temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P11_ultrasonic_thingspeak_cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Ultrasonic Distance to Cloud (ThingSpeak)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P12_blynk_two_way_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P14_mini_project_smart_agriculture_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P14 — Mini-Project: Smart Agriculture System (walkthrough guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/DI05016071-IOT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPE/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_2_Basics_of_Large_Language_Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Basics of Large Language Models (LLMs) 🧠
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Prompt Engineering Fundamentals 🎯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_4_Prompt_Engineering_Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Prompt Engineering Techniques 🧩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Generative AI Tools for Different Task Types & Applications Across Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P02_sentiment_analysis_text_classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Sentiment Analysis & Text Classification with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P03_llm_behavior_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P05_prompt_design_and_refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Design & Refine Prompts: Email Writing & Concept Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Zero-Shot, Few-Shot & Role-Based Prompting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P08_task_based_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P09_ai_tools_for_software_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P10_ai_chatbot_api_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P11_document_qa_basic_rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Document-Based Q&A (Basic RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P12_ai_study_assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Build an AI Application: Study Assistant (with design docs for 3 more)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/DI05016011-AIPE.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_1_Fundamentals_of_AI_Products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Design Thinking & Human-Centred AI 🎨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_3_AI_Product_Strategy_and_OpenAI_Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — AI Product Strategy & OpenAI Integration 🧭
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — AI in Social Media & Digital Experience 📱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-data-privacy-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Data Privacy Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-personal-vs-sensitive-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Personal vs Sensitive Data ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-data-lifecycle-in-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Data Lifecycle in AI Systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-data-minimisation-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Data Minimisation Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-data-anonymisation-basic-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Data Anonymisation (basic concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-transparency-and-user-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Transparency and User Consent ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-responsible-ai-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Responsible AI Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-overview-of-indian-data-protection-law-basic-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Overview of Indian Data Protection Law (basic idea) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-basic-ai-governance-organisational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Basic AI Governance (organisational level)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-re-identification-why-anonymised-isnt-safe-by-itself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Re-identification — why "anonymised" isn't safe by itself
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-consent-in-the-age-of-ai-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Consent in the age of AI inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-childrens-data-and-edtech-the-dpdp-detail-that-matters-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Children's data and EdTech (the DPDP detail that matters here)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 High-Yield Exam Topics (no PYQ papers exist for this new subject — these are the likely GTU-style questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — AI Threats & Mitigation Strategies 🚨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P01_product_idea_problem_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Product Idea, Problem Statement, Target Users & Core Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P02_ai_system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P03_data_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Data Components: Inventory, Classification & Risk Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P04_persona_empathy_journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — User Personas, Empathy Map & Customer Journey Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P05_interaction_flow_wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — AI Interaction Flow & Basic UI Wireframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P06_mvp_feature_prioritization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — MVP Features & Feature Prioritization Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P07_business_model_canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Business Model Canvas & AI Monetization Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P08_ai_integration_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — AI Integration Plan: API Usage, Cost Awareness & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P09_social_media_campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Social-Media Campaign & Promotional Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P10_no_code_prototype_demo_video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P11_data_protection_ethics_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Data Protection Plan & AI Ethical Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P12_ai_risk_assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — AI Risk Assessment & Mitigation Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DI05016021-AIPD.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CDCT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDCT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CDCT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_1_Introduction_to_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to Cloud Computing ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_2_Virtualization_and_Hypervisors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Virtualization and Hypervisors 🖥️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_3_Data_Center_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_4_Cloud_Storage_and_Database_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Cloud Storage and Database Services 💾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_5_Cloud_Security_and_Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Cloud Security and Compliance 🔐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P01_openstack_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P02_cloud_organization_rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Cloud Organization with RBAC (AWS IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P03_install_virtualbox_linux_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Install VirtualBox + Linux VM on Windows 8+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Desktop Virtualization with Chrome Remote Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P05_mininet_virtual_sdn_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Virtual SDN Lab with Mininet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P06_cloud_databases_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Cloud Databases: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P07_cloud_storage_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Cloud Storage: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P08_cloudsim_secure_file_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Simulate Secure File Sharing with CloudSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P09_minio_secure_object_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Secure Object Storage with MinIO (Access Control + SSE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P10_docker_first_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Creating & Executing Your First Container (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/DI05016031-CDCT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 All Syllabi (PDF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📄 All Syllabi (PDF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Cloud_and_Data_Center_Technology.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Foundation_of_Blockchain.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Hands_on_Practice_using_IoT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Skill_Based_Training.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Past Papers (PYQ)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Past Papers (PYQ)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-data-privacy-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Data Privacy Concepts
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-personal-vs-sensitive-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Personal vs Sensitive Data ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-data-lifecycle-in-ai-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Data Lifecycle in AI Systems
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-data-minimisation-principle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 Data Minimisation Principle
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#55-data-anonymisation-basic-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.5 Data Anonymisation (basic concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#56-transparency-and-user-consent" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.6 Transparency and User Consent ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#57-responsible-ai-principles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.7 Responsible AI Principles
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#58-overview-of-indian-data-protection-law-basic-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.8 Overview of Indian Data Protection Law (basic idea) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#59-basic-ai-governance-organisational-level" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.9 Basic AI Governance (organisational level)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-re-identification-why-anonymised-isnt-safe-by-itself" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Re-identification — why "anonymised" isn't safe by itself
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-consent-in-the-age-of-ai-inference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Consent in the age of AI inference
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-childrens-data-and-edtech-the-dpdp-detail-that-matters-here" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Children's data and EdTech (the DPDP detail that matters here)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 High-Yield Exam Topics (no PYQ papers exist for this new subject — these are the likely GTU-style questions)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-5-privacy-data-governance-responsible-ai">UNIT 5 — Privacy, Data Governance &amp; Responsible AI 🛡️<a class="headerlink" href="#unit-5-privacy-data-governance-responsible-ai" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>AI Product Design (DI05016021)</strong> · <strong>6 hrs · 13% weightage</strong>
+<strong>Covers syllabus sections:</strong> 5.1 Data privacy · 5.2 Personal vs sensitive data · 5.3 Data lifecycle · 5.4 Data minimisation · 5.5 Anonymisation · 5.6 Transparency &amp; consent · 5.7 Responsible AI principles · 5.8 Indian data protection law (DPDP) · 5.9 AI governance (organisational)
+<strong>Related practicals:</strong> <a href="../../practicals/writeups/P03_data_components/">P03</a>, <a href="../../practicals/writeups/P11_data_protection_ethics_policy/">P11</a></p>
+</blockquote>
+<hr />
+<h2 id="chapter-roadmap">🧭 Chapter Roadmap<a class="headerlink" href="#chapter-roadmap" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>UNIT 5 — Privacy, Data Governance &amp; Responsible AI
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── 5.1 Data privacy concepts                  ★★★★★
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── 5.2 Personal vs sensitive data             ★★★★★  ← classify first!
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── 5.3 Data lifecycle in AI systems           ★★★★
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── 5.4 Data minimisation principle            ★★★★
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>├── 5.5 Data anonymisation (basic)             ★★★★
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── 5.6 Transparency &amp; user consent            ★★★★★  ← P11
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── 5.7 Responsible AI principles              ★★★★
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>├── 5.8 Indian data protection law (DPDP)      ★★★★
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>└── 5.9 AI governance (organisational)         ★★★
+</code></pre></div>
+<h3 id="learning-outcomes-after-this-unit-you-can">Learning outcomes — after this unit you can:<a class="headerlink" href="#learning-outcomes-after-this-unit-you-can" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define <strong>data privacy</strong> and explain why AI intensifies the stakes.</li>
+<li>Classify <strong>personal vs sensitive</strong> data and apply the classification to a product.</li>
+<li>Describe the <strong>data lifecycle</strong> (collection → storage → use → sharing → deletion).</li>
+<li>Explain <strong>data minimisation</strong> and <strong>anonymisation</strong> with examples.</li>
+<li>Explain <strong>transparency</strong> and <strong>consent</strong> and draft plain-language consent copy.</li>
+<li>List the <strong>responsible AI principles</strong>.</li>
+<li>Give a basic overview of the <strong>Indian DPDP Act 2023</strong> (data fiduciary, consent, children's data, breach notice).</li>
+<li>Describe <strong>AI governance</strong> at the organisational level.</li>
+</ol>
+<hr />
+<h2 id="51-data-privacy-concepts">5.1 Data Privacy Concepts<a class="headerlink" href="#51-data-privacy-concepts" title="Permanent link">&para;</a></h2>
+<p><strong>Data privacy</strong> = the right of individuals to control <em>who</em> collects their data, <em>what</em> is collected, <em>how</em> it is used, and <em>when</em> it is deleted.</p>
+<p><strong>Why AI makes privacy harder (the exam paragraph):</strong>
+1. <strong>Volume</strong> — AI needs huge datasets (every chat, every upload, every click).
+2. <strong>Inference</strong> — AI can <em>derive</em> sensitive facts from non-sensitive ones (your study app predicts your exam performance; your browsing reveals your health).
+3. <strong>Reuse</strong> — data collected for one purpose gets re-purposed (your notes become training data).
+4. <strong>Third parties</strong> — AI products depend on API providers (P08), multiplying who touches the data.</p>
+<blockquote>
+<p>💡 <strong>Exam one-liner:</strong> <em>Privacy is not about hiding data — it's about control: the user decides what, why, and for how long.</em> A product that treats privacy as a legal checkbox, not a design principle, fails this unit.</p>
+</blockquote>
+<h2 id="52-personal-vs-sensitive-data">5.2 Personal vs Sensitive Data ⭐<a class="headerlink" href="#52-personal-vs-sensitive-data" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Definition</th>
+<th>Examples</th>
+<th>Protection level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Personal data</strong></td>
+<td>Any data identifying a natural person</td>
+<td>Name, email, roll number, phone, IP address</td>
+<td>Normal — still consent-based</td>
+</tr>
+<tr>
+<td><strong>Sensitive personal data</strong></td>
+<td>Personal data whose misuse causes serious harm</td>
+<td>Health data, financial data, biometrics, caste/religion/political views, <strong>children's data</strong></td>
+<td>High — special rules, stricter consent</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The DPDP Act 2023 framing (India):</strong>
+- <strong>Data principal</strong> — the person whose data it is (the student).
+- <strong>Data fiduciary</strong> — the entity deciding how/why data is processed (StudyMate's company).
+- <strong>Personal data</strong> vs <strong>sensitive personal data</strong> — DPDP gives <em>children's data</em> an important status: processing requires <strong>verifiable parental consent</strong> (relevant for an EdTech product serving 17–18-year-olds!).
+- <strong>Special duties</strong> on data fiduciaries for sensitive data: stricter consent and security obligations.</p>
+<p><strong>Why this matters for StudyMate (P03):</strong> a student's uploaded PDF is <em>usually</em> non-personal — but it can <em>contain</em> personal or sensitive details (IDs, medical certificates). So StudyMate must <strong>classify at upload time</strong> and treat the upload stream as "potentially sensitive."</p>
+<h2 id="53-data-lifecycle-in-ai-systems">5.3 Data Lifecycle in AI Systems<a class="headerlink" href="#53-data-lifecycle-in-ai-systems" title="Permanent link">&para;</a></h2>
+<p>Every dataset travels a lifecycle; governance means having a <em>policy at every stage</em> (this is the skeleton of P11).</p>
+<pre class="mermaid"><code>flowchart LR
+    A[1 Collection] --&gt; B[2 Storage]
+    B --&gt; C[3 Use / Processing]
+    C --&gt; D[4 Sharing / Transfer]
+    D --&gt; E[5 Retention]
+    E --&gt; F[6 Deletion / Destruction]
+    F -. audit &amp; consent .-&gt; A</code></pre>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Governance question</th>
+<th>StudyMate answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1. Collection</strong></td>
+<td>Do we need it? (minimisation)</td>
+<td>Only the PDF + profile, nothing else</td>
+</tr>
+<tr>
+<td><strong>2. Storage</strong></td>
+<td>Encrypted? Access-controlled?</td>
+<td>Encrypted at rest, per-user namespacing</td>
+</tr>
+<tr>
+<td><strong>3. Use</strong></td>
+<td>Only for stated purpose?</td>
+<td>Summaries/quizzes only — no selling</td>
+</tr>
+<tr>
+<td><strong>4. Sharing</strong></td>
+<td>Who sees it? (API vendors!)</td>
+<td>DPA with API provider; no training on user data</td>
+</tr>
+<tr>
+<td><strong>5. Retention</strong></td>
+<td>How long?</td>
+<td>6 months after last login (P11)</td>
+</tr>
+<tr>
+<td><strong>6. Deletion</strong></td>
+<td>Fully gone? (incl. indexes/derived data)</td>
+<td>Purge doc + index + cached summaries</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Exam favourite:</strong> "Data lifecycle" appears in two of your practicals (P03 inventory, P11 DPP) — learn the 6 stages cold.</p>
+</blockquote>
+<h2 id="54-data-minimisation-principle">5.4 Data Minimisation Principle<a class="headerlink" href="#54-data-minimisation-principle" title="Permanent link">&para;</a></h2>
+<p><strong>Data minimisation</strong> = collect and process <em>only the data necessary</em> for a stated purpose, for the shortest time needed.</p>
+<p><strong>The 4 rules:</strong>
+1. <strong>Purpose-before-data</strong> — decide the purpose first; data collection follows it.
+2. <strong>Collect less</strong> — StudyMate doesn't need location, contacts, or device ID to summarise notes.
+3. <strong>Keep shorter</strong> — delete what you don't need, when you don't need it (retention schedule).
+4. <strong>Share less</strong> — send only the necessary chunks to the API (RAG already does this: it sends relevant pages, not the whole library).</p>
+<blockquote>
+<p><strong>Why examiners love it:</strong> it's the <em>cheapest</em> and <em>strongest</em> privacy control — no data means no breach. "We collect less because we don't need more" is a full-marks sentence.</p>
+</blockquote>
+<h2 id="55-data-anonymisation-basic-concept">5.5 Data Anonymisation (basic concept)<a class="headerlink" href="#55-data-anonymisation-basic-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Anonymisation</strong> = removing/altering identifiers so an individual can <em>no longer be identified</em>, even with other data combined.</p>
+<table>
+<thead>
+<tr>
+<th>Technique (basic)</th>
+<th>What it does</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Removal / masking</strong></td>
+<td>Delete or hide identifiers</td>
+<td>Replace names with codes</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>Report only group statistics</td>
+<td>"72% of students scored &gt;60%" (no individuals)</td>
+</tr>
+<tr>
+<td><strong>Generalisation</strong></td>
+<td>Coarsen values</td>
+<td>Age 19 → "18–21 bracket"</td>
+</tr>
+<tr>
+<td><strong>Perturbation / noise</strong></td>
+<td>Add small random errors</td>
+<td>Off-by-±1 on counts</td>
+</tr>
+<tr>
+<td><strong>Pseudonymisation</strong></td>
+<td>Replace identifiers with random tokens (reversible)</td>
+<td>User 8472 instead of "Riya Patel"</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Exam trap — the key difference:</strong>
+- <strong>Anonymisation</strong> = irreversible — no re-identification possible → data is no longer "personal data".
+- <strong>Pseudonymisation</strong> = reversible with a key → STILL personal data (just harder to match).
+Also: <strong>anonymity can be defeated</strong> — "re-identification attacks" combine several anonymised datasets. So anonymisation is <em>risk reduction</em>, not a guarantee.</p>
+</blockquote>
+<h2 id="56-transparency-and-user-consent">5.6 Transparency and User Consent ⭐<a class="headerlink" href="#56-transparency-and-user-consent" title="Permanent link">&para;</a></h2>
+<p><strong>Transparency</strong> = telling users clearly <em>what</em> happens to their data, in plain language, at the moment it matters.
+<strong>Consent</strong> = their <em>active, informed, specific</em> agreement to that processing.</p>
+<p><strong>Consent rules (memorise):</strong>
+1. <strong>Informed</strong> — plain language a 17-year-old understands (no legalese).
+2. <strong>Specific</strong> — separate consent per purpose (analytics ≠ marketing ≠ improvement).
+3. <strong>Freely given</strong> — no bundled "accept everything" checkbox; no dark patterns.
+4. <strong>Revocable</strong> — as easy to withdraw as to give (a live toggle in Settings).
+5. <strong>Recorded</strong> — you must be able to <em>prove</em> consent was given.</p>
+<p><strong>StudyMate example (P11):</strong> a one-line notice before upload — <em>"We read your PDF only to answer you. We never sell it. We don't train models on it."</em> — plus separate toggles for analytics and marketing, all revocable in Settings (see P05 wireframe).</p>
+<blockquote>
+<p><strong>Exam one-liner:</strong> <em>Notice tells you what will happen; consent is your active agreement. An AI product needs both — and the consent must be revocable at every stage of the data lifecycle.</em></p>
+</blockquote>
+<h2 id="57-responsible-ai-principles">5.7 Responsible AI Principles<a class="headerlink" href="#57-responsible-ai-principles" title="Permanent link">&para;</a></h2>
+<p><strong>Responsible AI</strong> = building and operating AI in ways that are <em>fair, transparent, accountable, and safe</em>. The syllabus's principles (memorise with one action each — P11 turns these into a policy):</p>
+<table>
+<thead>
+<tr>
+<th>Principle</th>
+<th>Meaning</th>
+<th>Testable action (StudyMate)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fairness</strong></td>
+<td>No unfair bias; equal-quality service</td>
+<td>Quiz content from the student's <em>own</em> material; equal quality in Hindi/Gujarati</td>
+</tr>
+<tr>
+<td><strong>Transparency</strong></td>
+<td>Users know AI is involved and why</td>
+<td>"AI-generated" labels + citations on answers</td>
+</tr>
+<tr>
+<td><strong>Explainability</strong></td>
+<td>Decisions can be understood</td>
+<td>"This quiz targets your 3 weakest topics"</td>
+</tr>
+<tr>
+<td><strong>Accountability</strong></td>
+<td>A human owns the outcomes</td>
+<td>Named owner per AI surface; human review lane</td>
+</tr>
+<tr>
+<td><strong>Privacy &amp; security</strong></td>
+<td>Data protected by design</td>
+<td>Encryption, minimisation, deletion (this unit)</td>
+</tr>
+<tr>
+<td><strong>Safety / robustness</strong></td>
+<td>Works reliably, handles bad input</td>
+<td>Output moderation, honest fallbacks (Unit 6)</td>
+</tr>
+<tr>
+<td><strong>Human oversight</strong></td>
+<td>Humans can intervene/override</td>
+<td>Human-in-the-loop review (Unit 1)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>The unifying sentence:</strong> <em>Responsible AI is not one feature — it's the practice of treating every AI decision as if a human must answer for it.</em></p>
+</blockquote>
+<h2 id="58-overview-of-indian-data-protection-law-basic-idea">5.8 Overview of Indian Data Protection Law (basic idea) ⭐<a class="headerlink" href="#58-overview-of-indian-data-protection-law-basic-idea" title="Permanent link">&para;</a></h2>
+<p><strong>Digital Personal Data Protection (DPDP) Act 2023</strong> — India's main personal-data law. You need the <em>basic idea</em>, in these terms:</p>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Applies to</strong></td>
+<td>Processing of digital personal data in India (or of Indians)</td>
+</tr>
+<tr>
+<td><strong>Data principal</strong></td>
+<td>The individual whose data it is</td>
+</tr>
+<tr>
+<td><strong>Data fiduciary</strong></td>
+<td>The entity that decides purpose/means of processing (our startup)</td>
+</tr>
+<tr>
+<td><strong>Consent</strong></td>
+<td>The lawful basis for most processing — informed, specific, freely given, revocable</td>
+</tr>
+<tr>
+<td><strong>Notice</strong></td>
+<td>Fiduciary must inform the principal before collecting</td>
+</tr>
+<tr>
+<td><strong>Children's data</strong></td>
+<td>Processing requires <strong>verifiable parental consent</strong></td>
+</tr>
+<tr>
+<td><strong>Rights of the principal</strong></td>
+<td>Access, correction, erasure, grievance redressal</td>
+</tr>
+<tr>
+<td><strong>Breach notification</strong></td>
+<td>Fiduciary must notify the Board <strong>and affected principals</strong> on a data breach</td>
+</tr>
+<tr>
+<td><strong>Data Protection Board</strong></td>
+<td>The regulator that investigates and fines violations</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The exam-safe summary:</strong> <em>DPDP gives individuals rights over their personal data and puts duties on fiduciaries — notice, consent, security, breach notification, and special protection for children's data. For an AI product, that means designing consent flows and a breach runbook from day one, not as an afterthought.</em></p>
+<blockquote>
+<p>⚠️ <strong>Exam trap:</strong> don't quote <em>sections</em> or <em>numbers</em> you don't know. Say "basic idea" level facts (consent, children's data, breach notice, Data Protection Board) — accuracy beats fake precision.</p>
+</blockquote>
+<h2 id="59-basic-ai-governance-organisational-level">5.9 Basic AI Governance (organisational level)<a class="headerlink" href="#59-basic-ai-governance-organisational-level" title="Permanent link">&para;</a></h2>
+<p><strong>AI governance</strong> = the <em>structures and processes</em> an organisation puts in place to steer AI responsibly — who decides, who audits, who's accountable.</p>
+<table>
+<thead>
+<tr>
+<th>Governance element</th>
+<th>What it is</th>
+<th>Example at a StudyMate startup</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Policy</strong></td>
+<td>Written rules for AI use</td>
+<td>AI Ethical Usage Policy (P11)</td>
+</tr>
+<tr>
+<td><strong>Roles &amp; accountability</strong></td>
+<td>Named owners per AI system</td>
+<td>One owner per feature (summariser, chat, quiz)</td>
+</tr>
+<tr>
+<td><strong>Risk management</strong></td>
+<td>Ongoing assessment &amp; mitigation</td>
+<td>Risk matrix (P12), reviewed quarterly</td>
+</tr>
+<tr>
+<td><strong>Data governance</strong></td>
+<td>Who can access/change data</td>
+<td>Access control, audit logs (P08)</td>
+</tr>
+<tr>
+<td><strong>Review boards</strong></td>
+<td>A body that approves risky AI</td>
+<td>A 3-person ethics/review lane for flagged content</td>
+</tr>
+<tr>
+<td><strong>Audit &amp; monitoring</strong></td>
+<td>Evidence that controls work</td>
+<td>Logs, evaluations (P08/P12), annual review</td>
+</tr>
+<tr>
+<td><strong>Incident response</strong></td>
+<td>What happens when AI fails</td>
+<td>Breach + AI-failure runbooks (P11/P12)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Exam one-liner:</strong> <em>Governance is accountability made structural — if nobody owns an AI system, nobody can answer for it.</em></p>
+</blockquote>
+<hr />
+<h2 id="deep-dive-topics">🧠 Deep-Dive Topics<a class="headerlink" href="#deep-dive-topics" title="Permanent link">&para;</a></h2>
+<h3 id="deep-dive-a-re-identification-why-anonymised-isnt-safe-by-itself">Deep Dive A: Re-identification — why "anonymised" isn't safe by itself<a class="headerlink" href="#deep-dive-a-re-identification-why-anonymised-isnt-safe-by-itself" title="Permanent link">&para;</a></h3>
+<p>Take three "anonymised" datasets: quiz scores (by pseudonym), device analytics (by install ID), and a public college merit list. A join on timestamps + behaviour can <strong>re-identify</strong> a student. That's why anonymisation is graded as <em>risk reduction</em> and why strong products use <em>aggregation + access control + minimisation together</em>. This is the exact reasoning P03's risk table uses.</p>
+<h3 id="deep-dive-b-consent-in-the-age-of-ai-inference">Deep Dive B: Consent in the age of AI inference<a class="headerlink" href="#deep-dive-b-consent-in-the-age-of-ai-inference" title="Permanent link">&para;</a></h3>
+<p>The hard problem: you consent to "upload my notes to summarise them", but the <em>AI inference</em> (predicting your exam readiness, grouping you with similar students) is a new purpose. Governance answer: <strong>purpose limitation</strong> — the product must define purposes <em>before</em> collection and re-ask before any <em>new</em> purpose (new consent). StudyMate's "improve with my history" toggle exists precisely for this.</p>
+<h3 id="deep-dive-c-childrens-data-and-edtech-the-dpdp-detail-that-matters-here">Deep Dive C: Children's data and EdTech (the DPDP detail that matters here)<a class="headerlink" href="#deep-dive-c-childrens-data-and-edtech-the-dpdp-detail-that-matters-here" title="Permanent link">&para;</a></h3>
+<p>Diploma students are often 17–18. DPDP treats data of minors specially: <strong>verifiable parental consent</strong> for processing. An EdTech product must therefore: age-gate at signup, obtain/verify parent consent for under-18s, and avoid targeted advertising at children. This is the single most likely "application" question linking DPDP to our running product.</p>
+<hr />
+<h2 id="beyond-the-textbook-what-most-classes-wont-tell-you">🚀 Beyond the Textbook (what most classes won't tell you)<a class="headerlink" href="#beyond-the-textbook-what-most-classes-wont-tell-you" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Privacy-by-design isn't optional regulation — it's cheaper engineering.</strong> Fixing a breach after launch costs ~100× more than building minimisation in first. Examiners award this "business case" argument marks.</li>
+<li><strong>"Consent walls" are dying.</strong> Forcing "accept or leave" is a dark pattern; regulators treat it as coercion. Design consent <em>as a product feature</em> (easy, per-purpose, honest) and you also get better signup conversion.</li>
+<li><strong>The API layer is a governance blind spot.</strong> Your fancy policy can be defeated by a vendor clause that says "we train on your prompts." The vendor contract (P08) <em>is</em> part of your governance.</li>
+<li><strong>Anonymisation techniques have known failure modes.</strong> Masking + aggregation is strong; simple "delete the name" is weak (re-identification). Say the <em>technique</em>, not just the word "anonymised".</li>
+<li><strong>Regulation is converging globally.</strong> GDPR (EU), DPDP (India), and the EU AI Act all push the same direction: consent, explainability, human oversight. One sentence on convergence = a sophisticated answer.</li>
+<li><strong>Exam-hack memory aid for the 6 data-lifecycle stages:</strong> "<strong>C</strong>ollect, <strong>S</strong>tore, <strong>U</strong>se, <strong>S</strong>hare, <strong>R</strong>etain, <strong>D</strong>elete" → <strong>CSUSRD</strong> → "<strong>C</strong>areful <strong>S</strong>tudents <strong>U</strong>nderstand <strong>S</strong>trong <strong>R</strong>etention <strong>D</strong>uties."</li>
+</ol>
+<hr />
+<h2 id="high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions">🎯 High-Yield Exam Topics (no PYQ papers exist for this new subject — these are the likely GTU-style questions)<a class="headerlink" href="#high-yield-exam-topics-no-pyq-papers-exist-for-this-new-subject-these-are-the-likely-gtu-style-questions" title="Permanent link">&para;</a></h2>
+<p><strong>Likely questions (short notes / 4 marks):</strong>
+1. What is <strong>data privacy</strong>? Why is it harder for AI products?
+2. Differentiate <strong>personal vs sensitive personal data</strong> with examples.
+3. Explain the <strong>data lifecycle</strong> in an AI system.
+4. What is <strong>data minimisation</strong>? Give two examples.
+5. What is <strong>data anonymisation</strong>? Differentiate anonymisation vs pseudonymisation.
+6. Explain <strong>transparency and consent</strong> with an example of consent copy.
+7. List the <strong>responsible AI principles</strong> (any 5).
+8. Basic idea of the <strong>Indian DPDP Act 2023</strong> — key terms and duties.
+9. What is <strong>AI governance</strong> at the organisational level?
+10. Why is <strong>children's data</strong> protected specially?</p>
+<p><strong>Likely long questions (7 marks):</strong>
+11. Explain <strong>data privacy for an AI product</strong> — privacy concepts, personal vs sensitive data, minimisation and anonymisation, with StudyMate examples.
+12. Explain the <strong>DPDP Act 2023</strong> in basic terms and apply it to an AI study app (consent, children's data, breach notification).
+13. "Responsible AI + governance" — explain the principles and the organisational structures that enforce them.</p>
+<p><strong>Solved model answers (exam style):</strong></p>
+<p><strong>Q. 7 marks — Explain data privacy in AI systems with the DPDP framing.</strong></p>
+<blockquote>
+<p><strong>Data privacy</strong> is the right of individuals to control the collection, use, sharing and deletion of their data. <strong>Why AI intensifies privacy risk:</strong> (1) volume — AI needs huge datasets; (2) inference — AI derives sensitive facts from non-sensitive data; (3) reuse — collected data gets re-purposed (e.g., notes becoming training data); (4) third parties — AI products depend on API providers. Under the <strong>DPDP Act 2023</strong>, the <strong>data principal</strong> (the student) has rights over <strong>personal data</strong> (name, email) and <strong>sensitive personal data</strong> (health, financial, biometrics, children's data); the <strong>data fiduciary</strong> (our product) must give <strong>notice</strong>, obtain <strong>consent</strong> (specific, informed, revocable), secure the data, notify <strong>breaches</strong> within the legal timeline, and obtain <strong>verifiable parental consent</strong> for children's data. For StudyMate, this means a plain-language notice before upload, separate per-purpose consent toggles, encryption, a 6-month retention schedule, and a 72-hour breach-notification runbook.</p>
+</blockquote>
+<p><strong>Q. 4 marks — Differentiate personal vs sensitive data with examples, and minimisation.</strong></p>
+<blockquote>
+<p><strong>Personal data</strong> is any data that identifies a person — name, email, phone, roll number, IP address — and requires consent-based, secure processing. <strong>Sensitive personal data</strong> is personal data whose misuse causes serious harm — health records, financial data, biometrics, caste/religion/political views, and <strong>children's data</strong> — and is subject to stricter rules (stronger consent, higher security; parental consent for minors). Example: StudyMate's chat history is <em>personal</em>; a student's uploaded medical certificate would be <em>sensitive</em>. <strong>Data minimisation</strong> is the principle of collecting only what is necessary for a stated purpose: StudyMate collects only the PDF and a profile (not location or contacts), retains it 6 months, and sends only relevant chunks to the API — less data means less risk and lower breach impact.</p>
+</blockquote>
+<p><strong>Q. 4 marks — Explain transparency and consent with an example.</strong></p>
+<blockquote>
+<p><strong>Transparency</strong> means telling users, in plain language, what will happen to their data before processing; <strong>consent</strong> is their active, specific, informed and freely-given agreement, which must be <strong>revocable</strong> at any time. Rules: consent must be separate per purpose (analytics, marketing, improvement are different purposes), never buried in a bundled checkbox, and as easy to withdraw as to give. Example: before uploading notes, StudyMate shows — <em>"We read your PDF only to answer you. We never sell it. We don't train models on it."</em> — and Settings holds separate live toggles for analytics and marketing. This is transparency and consent <em>designed in</em>, not a link in a privacy policy footer.</p>
+</blockquote>
+<hr />
+<h2 id="practice-problems-self-test-answers-hidden">✍️ Practice Problems (self-test — answers hidden)<a class="headerlink" href="#practice-problems-self-test-answers-hidden" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Classify these as personal / sensitive / neither: (a) Aadhaar number, (b) exam roll number, (c) "student scored 8/10" with no name, (d) biometric fingerprint, (e) phone number.</li>
+<li>A user asks to delete their account. List the derived artifacts you must also delete for deletion to be honest.</li>
+<li>Why is pseudonymisation NOT anonymisation?</li>
+<li>Draft 2 sentences of consent copy for "we use your quiz history to improve question quality" — readable by a 17-year-old.</li>
+<li>StudyMate stores "student X studies between 10 pm and 1 am." How could this be <em>inferred</em> to be sensitive even though it's just "usage data"?</li>
+<li>Name 3 governance structures an organisation needs beyond writing a policy document.</li>
+</ol>
+<details>
+<summary>📌 Model solutions</summary>
+
+1. (a) Sensitive (official identifier — financial/identity harm); (b) personal (identifies); (c) neither (aggregated/non-personal); (d) sensitive (biometric); (e) personal.
+2. The account, uploaded PDFs, the document index/vector embeddings, cached summaries, chat history, quiz history, analytics rows tied to them, and backup copies — otherwise "deleted" data lives on in derived systems.
+3. Pseudonymisation replaces identifiers with random tokens but keeps a mapping key, so re-identification is possible — legally it remains personal data. Anonymisation is irreversible — no key, no re-identification (subject to re-identification-attack risk).
+4. Example: "We look at your quiz answers to make future questions better for you. You can switch this off anytime in Settings — it won't change your plan."
+5. Regular late-night usage, combined with course and repeated-failure patterns, could *infer* sleep deprivation / stress — AI turns "usage data" into health-adjacent inferences, which is exactly why purpose limitation and inference review matter.
+6. Named owners per AI system; a review board approving risky AI; access-control + audit logging; incident-response runbooks; a monitoring/evaluation cadence (audit evidence).
+</details>
+
+<hr />
+<h2 id="glossary-of-key-terms">📖 Glossary of Key Terms<a class="headerlink" href="#glossary-of-key-terms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Data privacy</strong></td>
+<td>User control over collection, use, sharing, deletion of data</td>
+</tr>
+<tr>
+<td><strong>Personal data</strong></td>
+<td>Data identifying a person (name, email, phone)</td>
+</tr>
+<tr>
+<td><strong>Sensitive personal data</strong></td>
+<td>Data whose misuse causes serious harm (health, finance, biometrics, children's data)</td>
+</tr>
+<tr>
+<td><strong>Data principal</strong></td>
+<td>The person whose data is processed</td>
+</tr>
+<tr>
+<td><strong>Data fiduciary</strong></td>
+<td>The entity that decides purpose/means of processing</td>
+</tr>
+<tr>
+<td><strong>Data lifecycle</strong></td>
+<td>Collect → Store → Use → Share → Retain → Delete</td>
+</tr>
+<tr>
+<td><strong>Data minimisation</strong></td>
+<td>Collect/keep/process only what a stated purpose needs</td>
+</tr>
+<tr>
+<td><strong>Anonymisation</strong></td>
+<td>Irreversible de-identification</td>
+</tr>
+<tr>
+<td><strong>Pseudonymisation</strong></td>
+<td>Reversible token replacement (still personal data)</td>
+</tr>
+<tr>
+<td><strong>Re-identification</strong></td>
+<td>Combining datasets to re-identify "anonymous" people</td>
+</tr>
+<tr>
+<td><strong>Aggregation</strong></td>
+<td>Reporting group statistics instead of individuals</td>
+</tr>
+<tr>
+<td><strong>Generalisation</strong></td>
+<td>Coarsening values (age 19 → 18–21)</td>
+</tr>
+<tr>
+<td><strong>Transparency</strong></td>
+<td>Clear plain-language notice about data handling</td>
+</tr>
+<tr>
+<td><strong>Consent</strong></td>
+<td>Specific, informed, freely-given, revocable agreement</td>
+</tr>
+<tr>
+<td><strong>Responsible AI</strong></td>
+<td>Fair, transparent, accountable, safe AI operation</td>
+</tr>
+<tr>
+<td><strong>DPDP Act 2023</strong></td>
+<td>India's personal-data law (notice, consent, children's data, breach notice)</td>
+</tr>
+<tr>
+<td><strong>Verifiable parental consent</strong></td>
+<td>DPDP requirement for processing children's data</td>
+</tr>
+<tr>
+<td><strong>AI governance</strong></td>
+<td>Structures/processes: policy, owners, risk, audit, review boards</td>
+</tr>
+<tr>
+<td><strong>Purpose limitation</strong></td>
+<td>Data used only for the purposes declared at collection</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="curated-resources-per-concept">🔗 Curated Resources (per concept)<a class="headerlink" href="#curated-resources-per-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Privacy concepts</strong>
+- "Privacy by Design" (original 7 principles, Ann Cavoukian): search <em>privacy by design 7 foundational principles</em>
+- Electronic Frontier Foundation privacy explainers: https://www.eff.org/issues/privacy</p>
+<p><strong>DPDP / India law</strong>
+- MeitY DPDP overview: https://www.meity.gov.in/data-protection-framework
+- DPDP explainers: search <em>dpdp act 2023 explained data principal data fiduciary consent children</em></p>
+<p><strong>Responsible AI</strong>
+- Google AI Principles: https://ai.google/responsibility/principles/
+- EU AI Act overview (official): https://artificialintelligenceact.eu
+- NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework
+- <em>The Alignment Problem</em> — Brian Christian (your syllabus book)</p>
+<p><strong>Governance &amp; practice</strong>
+- Google People + AI Guidebook (privacy chapter): https://pair.withgoogle.com
+- OWASP Privacy / data-protection guidance: search <em>owasp privacy principles data protection</em></p>
+<h2 id="video-study-guide-youtube">🎥 Video Study Guide (YouTube)<a class="headerlink" href="#video-study-guide-youtube" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Don't like reading? Me neither. This is your <strong>structured video path</strong> for the whole unit — better than the syllabus because it tells you <em>exactly what to search</em> and <em>what to watch first</em>, in a sensible order. Everything below is search keywords (they never rot like links do) + channels you can trust.</p>
+</blockquote>
+<h3 id="step-0-pick-your-learning-style">🧑‍🎓 Step 0 — Pick your learning style<a class="headerlink" href="#step-0-pick-your-learning-style" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>You learn best by</th>
+<th>Your path through this unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎧 <strong>Listener</strong></td>
+<td>short, clear explainers</td>
+<td>Watch 1 explainer per topic from the table below (3–8 min each)</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Builder</strong></td>
+<td>producing artifacts</td>
+<td>Draft the <a href="../../practicals/writeups/P11_data_protection_ethics_policy/">P11</a> DPP + ethics policy as you watch</td>
+</tr>
+<tr>
+<td>🔧 <strong>Tinkerer</strong></td>
+<td>applying to examples</td>
+<td>Take a real app (Instagram/WhatsApp) and classify its data per §5.2</td>
+</tr>
+<tr>
+<td>🧠 <strong>Deep Diver</strong></td>
+<td>full theory, "why"</td>
+<td>Watch the privacy-law and re-identification deep dives below</td>
+</tr>
+<tr>
+<td>🧭 <strong>Explorer</strong></td>
+<td>breadth &amp; curiosity</td>
+<td>Watch "data privacy in the age of AI" panel talks first</td>
+</tr>
+<tr>
+<td>🎓 <strong>Academic</strong></td>
+<td>exam marks</td>
+<td>Grind the High-Yield list above; write personal-vs-sensitive and DPDP terms from memory</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-1-watch-by-topic-search-these-on-youtube">🎬 Step 1 — Watch by topic (search these on YouTube)<a class="headerlink" href="#step-1-watch-by-topic-search-these-on-youtube" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>YouTube search keywords (copy-paste ready)</th>
+<th>Best channels</th>
+<th>Style served</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data privacy basics</td>
+<td><code>data privacy explained</code> · <code>what is data privacy vs security</code> · <code>privacy by design explained</code></td>
+<td>TED-Ed, IBM Technology, EFF</td>
+<td>🎧 Listener</td>
+</tr>
+<tr>
+<td>Personal vs sensitive data</td>
+<td><code>personal data vs sensitive data gdpr</code> · <code>sensitive personal data examples</code> · <code>special category data explained</code></td>
+<td>IT Governance, GDPR in a Nutshell, IBM</td>
+<td>🎓 Academic</td>
+</tr>
+<tr>
+<td>Data lifecycle</td>
+<td><code>data lifecycle management explained</code> · <code>data governance lifecycle stages</code></td>
+<td>IBM Technology, DataCamp</td>
+<td>🎧 Listener</td>
+</tr>
+<tr>
+<td>Anonymisation</td>
+<td><code>data anonymization explained</code> · <code>pseudonymization vs anonymization</code> · <code>re-identification attacks on anonymous data</code></td>
+<td>TED-Ed, Computerphile, StatQuest</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>Consent &amp; transparency</td>
+<td><code>what is consent gdpr</code> · <code>consent management best practices</code> · <code>dark patterns consent</code></td>
+<td>IT Governance, Dark Patterns, NN/g</td>
+<td>🧠 + 🎓</td>
+</tr>
+<tr>
+<td>Responsible AI</td>
+<td><code>responsible ai principles explained</code> · <code>fairness transparency accountability ai</code> · <code>trustworthy ai framework</code></td>
+<td>Google (official), IBM Technology, Microsoft</td>
+<td>🎧 Listener</td>
+</tr>
+<tr>
+<td>DPDP Act 2023 (India)</td>
+<td><code>dpdp act 2023 explained</code> · <code>india data protection law summary</code> · <code>digital personal data protection act simplified</code></td>
+<td>Cyble, Securiti, Lawful (Indian channels)</td>
+<td>🎓 Academic</td>
+</tr>
+<tr>
+<td>AI governance</td>
+<td><code>ai governance explained</code> · <code>corporate ai governance framework</code> · <code>who is accountable for ai decisions</code></td>
+<td>Stanford HAI, IBM Technology, World Economic Forum</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>Privacy in AI products</td>
+<td><code>privacy for ai products</code> · <code>privacy preserving ai</code> · <code>designing privacy into ml systems</code></td>
+<td>Google Cloud Tech, a16z, Stanford HAI</td>
+<td>🧠 + 🧭</td>
+</tr>
+<tr>
+<td>Whole-unit revision</td>
+<td><code>data protection full course</code> · <code>privacy and ai course</code> · <code>responsible ai full course</code></td>
+<td>freeCodeCamp, Stanford Online, MIT OCW</td>
+<td>🎓 Academic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-full-playlists-for-deep-divers-academics">🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)<a class="headerlink" href="#step-2-full-playlists-for-deep-divers-academics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>"GDPR / DPDP in practice — IT Governance &amp; Securiti playlists"</strong> — regulation turned into real checklists; short videos.</li>
+<li><strong>"Stanford HAI — Responsible AI / AI ethics lectures"</strong> — the academic depth on fairness, governance, and policy.</li>
+<li><strong>"freeCodeCamp — Data &amp; Privacy courses"</strong> — structured breadth if you want the whole field at once.</li>
+</ol>
+<h3 id="step-3-proof-you-got-it-5-min">🎬 Step 3 — Proof you got it (5 min)<a class="headerlink" href="#step-3-proof-you-got-it-5-min" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Classify 5 everyday data items (personal / sensitive / neither) in 60 seconds — and explain why "usage time" can become sensitive via inference.</li>
+<li>Recite the 6 data-lifecycle stages and the DPDP terms (principal, fiduciary, consent, children's data, breach notice) from memory.</li>
+<li>Explain to a friend why deleting an account must also delete the <em>index</em> and <em>cached summaries</em> — not just the row in a table.</li>
+</ul>
+<hr />
+<p><em>Next: <a href="../UNIT_6_AI_Threats_and_Mitigation_Strategies/">UNIT 6 — AI Threats &amp; Mitigation Strategies</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UNIT 4 — AI in Social Media &amp; Digital Experience 📱">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                UNIT 4 — AI in Social Media & Digital Experience 📱
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-footer__link md-footer__link--next" aria-label="Next: UNIT 6 — AI Threats &amp; Mitigation Strategies 🚨">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                UNIT 6 — AI Threats & Mitigation Strategies 🚨
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

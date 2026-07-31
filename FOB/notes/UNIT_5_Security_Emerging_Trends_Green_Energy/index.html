@@ -1,0 +1,6505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.">
+      
+      
+      
+        <link rel="canonical" href="https://aayushbankar.github.io/sem_5/FOB/notes/UNIT_5_Security_Emerging_Trends_Green_Energy/">
+      
+      
+        <link rel="prev" href="../UNIT_4_Enterprise_and_Private_Blockchains/">
+      
+      
+        <link rel="next" href="../../practicals/writeups/P01_cryptographic_hash_avalanche/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://fav.farm/📚">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱 - Semester 5 — GTU IT Study Kit 🎓</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-5-security-emerging-trends-green-energy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-header__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Semester 5 — GTU IT Study Kit 🎓
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FOB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../IOT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IOT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPD/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPD
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CDCT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CDCT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📄 All Syllabi (PDF)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pyq/fbc/s_24.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📝 Past Papers (PYQ)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-nav__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Semester 5 — GTU IT Study Kit 🎓
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FOB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_1_Foundations_of_Decentralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_2_Bitcoin_and_PoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_3_Ethereum_and_Smart_Contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Ethereum & Smart Contracts 🟣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_4_Enterprise_and_Private_Blockchains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Enterprise & Private Blockchains 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-blockchain-security-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Blockchain Security &amp; Risks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Blockchain Security &amp; Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-common-smart-contract-vulnerabilities-re-entrancy-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 Common Smart Contract Vulnerabilities — Re-entrancy Attacks ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-51-attacks-and-sybil-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 51% Attacks and Sybil Attacks ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-emerging-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Emerging Trends
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Emerging Trends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-decentralized-finance-defi-yield-farming-liquidity-pools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Decentralized Finance (DeFi): Yield Farming &amp; Liquidity Pools ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-nfts-the-metaverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 NFTs &amp; the Metaverse ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-daos-decentralized-autonomous-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 DAOs (Decentralized Autonomous Organizations) ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-blockchain-in-green-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Blockchain in Green Energy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Blockchain in Green Energy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-the-problem-of-greenwashing-tokenization-of-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 The Problem of Greenwashing &amp; Tokenization of Energy ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-the-oracle-problem-how-do-we-trust-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 The Oracle Problem: How Do We Trust the Data? ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-introduction-of-iot-oracles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 Introduction of IoT Oracles ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-re-entrancy-the-attack-explained-in-one-solidity-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Re-entrancy — the attack explained in one Solidity story
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-the-dao-hack-history-that-split-a-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: The DAO hack — history that split a chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-yield-farming-where-returns-actually-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Yield farming — where returns actually come from
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-d-the-oracle-problem-a-7-marker-in-three-acts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive D: The oracle problem — a 7-marker in three acts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-5-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 5 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 5 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-upside-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers upside-down)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Cryptographic Hash Functions & the Avalanche Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P02_public_private_keys_digital_signatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Public/Private Key Pair & Digital Signatures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P03_basic_blockchain_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Basic Blockchain Structure in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P04_merkle_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Simplified Merkle Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P05_nonce_mining_difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — The "Nonce" & Mining Difficulty (Proof-of-Work)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P06_wallets_mnemonic_bip39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P07_smart_contract_evm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Write, Compile & Deploy a Smart Contract on the EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P08_erc20_token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Tokenization: Deploying a Basic ERC-20 Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P09_case_study_public_vs_private_hyperledger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P10_case_study_security_green_energy_dao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DI05016051-FOB.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../IOT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IOT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IOT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_1_Introduction_to_IoT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to IoT 🌐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_3_ESP32_and_Arduino_IDE_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — IoT Communication Protocols & Networking 📡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P01_iot_architecture_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P02_compare_hardware_platforms_esp32_pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P03_arduino_ide_setup_esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P04_external_led_blink_toggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Toggle an External LED (Digital Output)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P05_pir_ldr_sensor_interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P06_dht_temperature_humidity_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — DHT11/DHT22 Temperature & Humidity Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P07_ultrasonic_distance_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P08_esp32_mqtt_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — ESP32 as MQTT Publisher (Temperature & Humidity)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P09_esp32_mqtt_subscriber_remote_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P10_thingspeak_http_temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P11_ultrasonic_thingspeak_cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Ultrasonic Distance to Cloud (ThingSpeak)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P12_blynk_two_way_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P14_mini_project_smart_agriculture_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P14 — Mini-Project: Smart Agriculture System (walkthrough guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/DI05016071-IOT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPE/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_2_Basics_of_Large_Language_Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Basics of Large Language Models (LLMs) 🧠
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Prompt Engineering Fundamentals 🎯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_4_Prompt_Engineering_Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Prompt Engineering Techniques 🧩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Generative AI Tools for Different Task Types & Applications Across Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P02_sentiment_analysis_text_classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Sentiment Analysis & Text Classification with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P03_llm_behavior_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P05_prompt_design_and_refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Design & Refine Prompts: Email Writing & Concept Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Zero-Shot, Few-Shot & Role-Based Prompting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P08_task_based_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P09_ai_tools_for_software_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P10_ai_chatbot_api_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P11_document_qa_basic_rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Document-Based Q&A (Basic RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P12_ai_study_assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Build an AI Application: Study Assistant (with design docs for 3 more)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/DI05016011-AIPE.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPD/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_1_Fundamentals_of_AI_Products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Design Thinking & Human-Centred AI 🎨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — AI Product Strategy & OpenAI Integration 🧭
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — AI in Social Media & Digital Experience 📱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — AI Threats & Mitigation Strategies 🚨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P01_product_idea_problem_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Product Idea, Problem Statement, Target Users & Core Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P02_ai_system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P03_data_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Data Components: Inventory, Classification & Risk Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P04_persona_empathy_journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — User Personas, Empathy Map & Customer Journey Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P05_interaction_flow_wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — AI Interaction Flow & Basic UI Wireframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P06_mvp_feature_prioritization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — MVP Features & Feature Prioritization Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P07_business_model_canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Business Model Canvas & AI Monetization Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P08_ai_integration_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — AI Integration Plan: API Usage, Cost Awareness & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P09_social_media_campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Social-Media Campaign & Promotional Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P10_no_code_prototype_demo_video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P11_data_protection_ethics_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Data Protection Plan & AI Ethical Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P12_ai_risk_assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — AI Risk Assessment & Mitigation Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/DI05016021-AIPD.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CDCT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDCT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CDCT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_1_Introduction_to_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to Cloud Computing ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_2_Virtualization_and_Hypervisors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Virtualization and Hypervisors 🖥️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_3_Data_Center_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_4_Cloud_Storage_and_Database_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Cloud Storage and Database Services 💾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_5_Cloud_Security_and_Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Cloud Security and Compliance 🔐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P01_openstack_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P02_cloud_organization_rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Cloud Organization with RBAC (AWS IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P03_install_virtualbox_linux_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Install VirtualBox + Linux VM on Windows 8+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Desktop Virtualization with Chrome Remote Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P05_mininet_virtual_sdn_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Virtual SDN Lab with Mininet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P06_cloud_databases_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Cloud Databases: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P07_cloud_storage_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Cloud Storage: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P08_cloudsim_secure_file_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Simulate Secure File Sharing with CloudSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P09_minio_secure_object_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Secure Object Storage with MinIO (Access Control + SSE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P10_docker_first_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Creating & Executing Your First Container (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/DI05016031-CDCT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 All Syllabi (PDF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📄 All Syllabi (PDF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Cloud_and_Data_Center_Technology.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Foundation_of_Blockchain.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Hands_on_Practice_using_IoT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Skill_Based_Training.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Past Papers (PYQ)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Past Papers (PYQ)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#51-blockchain-security-risks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 Blockchain Security &amp; Risks
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.1 Blockchain Security &amp; Risks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#511-common-smart-contract-vulnerabilities-re-entrancy-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.1 Common Smart Contract Vulnerabilities — Re-entrancy Attacks ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#512-51-attacks-and-sybil-attacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1.2 51% Attacks and Sybil Attacks ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#52-emerging-trends" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 Emerging Trends
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2 Emerging Trends">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-decentralized-finance-defi-yield-farming-liquidity-pools" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1 Decentralized Finance (DeFi): Yield Farming &amp; Liquidity Pools ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-nfts-the-metaverse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2 NFTs &amp; the Metaverse ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-daos-decentralized-autonomous-organizations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3 DAOs (Decentralized Autonomous Organizations) ⭐⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#53-blockchain-in-green-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 Blockchain in Green Energy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.3 Blockchain in Green Energy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#531-the-problem-of-greenwashing-tokenization-of-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.1 The Problem of Greenwashing &amp; Tokenization of Energy ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#532-the-oracle-problem-how-do-we-trust-the-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.2 The Oracle Problem: How Do We Trust the Data? ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#533-introduction-of-iot-oracles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3.3 Introduction of IoT Oracles ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-re-entrancy-the-attack-explained-in-one-solidity-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Re-entrancy — the attack explained in one Solidity story
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-the-dao-hack-history-that-split-a-chain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: The DAO hack — history that split a chain
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-yield-farming-where-returns-actually-come-from" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Yield farming — where returns actually come from
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-d-the-oracle-problem-a-7-marker-in-three-acts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive D: The oracle problem — a 7-marker in three acts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-5-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 5 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 5 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 5)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-upside-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers upside-down)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-5-security-emerging-trends-green-energy">UNIT 5 — Security, Emerging Trends &amp; Green Energy 🔐🌱<a class="headerlink" href="#unit-5-security-emerging-trends-green-energy" title="Permanent link">&para;</a></h1>
+<p><strong>Syllabus weightage:</strong> 8 hrs / 15% | <strong>Related practicals:</strong> <a href="../../practicals/writeups/P08_erc20_token/">P08</a>, <a href="../../practicals/writeups/P10_case_study_security_green_energy_dao/">P10</a>
+<strong>Star guide:</strong> ⭐ = likely · ⭐⭐ = very likely · ⭐⭐⭐ = practically guaranteed in some form</p>
+<hr />
+<h2 id="chapter-roadmap">🧭 Chapter Roadmap<a class="headerlink" href="#chapter-roadmap" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>UNIT 5: Security, Emerging Trends &amp; Green Energy
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── 5.1 Blockchain Security &amp; Risks
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│     ├── 5.1.1 Smart-contract vulnerabilities (Re-entrancy)  ⭐⭐
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│     └── 5.1.2 51% &amp; Sybil attacks                           ⭐⭐⭐ (51% = 7-marker staple)
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>├── 5.2 Emerging Trends
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│     ├── 5.2.1 DeFi: Yield Farming &amp; Liquidity Pools         ⭐⭐
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│     ├── 5.2.2 NFTs &amp; the Metaverse                          ⭐
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│     └── 5.2.3 DAOs                                          ⭐⭐⭐ (DAO vs Traditional org asked 3×)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>└── 5.3 Blockchain in Green Energy
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      ├── 5.3.1 Greenwashing &amp; Tokenization of Energy         ⭐
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>      ├── 5.3.2 The Oracle Problem                            ⭐⭐
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>      └── 5.3.3 IoT Oracles                                   ⭐
+</code></pre></div>
+<h3 id="learning-outcomes-after-this-unit-you-can">Learning outcomes — after this unit you can:<a class="headerlink" href="#learning-outcomes-after-this-unit-you-can" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Explain <strong>re-entrancy</strong>, <strong>51%</strong> and <strong>Sybil</strong> attacks with examples (and the fix for each)</li>
+<li>Describe DeFi's yield farming &amp; liquidity pools, NFTs, and the Metaverse</li>
+<li>Define a <strong>DAO</strong>, contrast it with traditional organizations, and list its pros/cons</li>
+<li>Explain greenwashing, energy tokenization, and the <strong>oracle problem</strong> (how to trust off-chain data)</li>
+</ul>
+<hr />
+<h2 id="51-blockchain-security-risks">5.1 Blockchain Security &amp; Risks<a class="headerlink" href="#51-blockchain-security-risks" title="Permanent link">&para;</a></h2>
+<h3 id="511-common-smart-contract-vulnerabilities-re-entrancy-attacks">5.1.1 Common Smart Contract Vulnerabilities — Re-entrancy Attacks ⭐⭐<a class="headerlink" href="#511-common-smart-contract-vulnerabilities-re-entrancy-attacks" title="Permanent link">&para;</a></h3>
+<p>A <strong>re-entrancy attack</strong> exploits a contract that updates its state <em>after</em> calling an external contract — the external contract <strong>re-enters</strong> the function before the state is saved, draining funds repeatedly.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1. Attacker&#39;s contract calls victim.withdraw()
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2. Victim transfers ETH to attacker  ← state NOT yet updated
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>3. Attacker&#39;s receive()  calls victim.withdraw() AGAIN
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>4. Victim checks &quot;balance &gt;= amount&quot; — still true (old state!)
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>5. Repeat until victim&#39;s balance is drained
+</code></pre></div>
+<p><strong>The DAO hack (2016)</strong> — attackers drained ~3.6M ETH (then ~$60M) via exactly this bug, forcing Ethereum's historic hard fork.</p>
+<p><strong>Fixes:</strong>
+1. <strong>Checks-Effects-Interactions</strong> — update state (balance = 0) <em>before</em> the external call.
+2. <strong>Re-entrancy guard</strong> — a <code>bool locked</code> modifier that rejects re-entry.
+3. Use <code>transfer</code> (2300 gas stipend) instead of <code>call</code> — historically used to starve re-entry.</p>
+<h3 id="512-51-attacks-and-sybil-attacks">5.1.2 51% Attacks and Sybil Attacks ⭐⭐⭐<a class="headerlink" href="#512-51-attacks-and-sybil-attacks" title="Permanent link">&para;</a></h3>
+<p><strong>51% attack</strong> — if one entity controls &gt;50% of the network's hashrate (PoW) or staked value (PoS):
+- <strong>Double-spend:</strong> spend coins → get goods/services → re-mine the chain to orphan your spend → coins back.
+- <strong>Censorship:</strong> exclude chosen transactions/blocks from the chain.
+- <strong>Cannot</strong> forge signatures, steal others' coins, or mint new coins (supply is consensus-capped).
+- <em>Cost:</em> enormous electricity/hardware (Bitcoin: hundreds of millions $); attacks happen mainly on small chains (e.g. Ethereum Classic hit in 2020). Note: &gt;50% isn't even required — ~30–40% can still cause probabilistic double-spend damage.</p>
+<p><strong>Sybil attack</strong> — one attacker creates <strong>many fake nodes</strong> to out-vote honest ones or isolate victims (censorship, blocking blocks). <em>Why PoW defeats it:</em> fake nodes are free, fake <em>hash power</em> isn't. Influence is bought with electricity (PoW) or stake (PoS), not identities.</p>
+<p><strong>51% vs Sybil — exam one-liner:</strong> <em>Sybil attacks multiply your identities cheaply; 51% attacks buy majority influence expensively. Proof-of-work/stake stops the first by pricing influence; economic game theory stops the second by making attacks unprofitable.</em></p>
+<hr />
+<h2 id="52-emerging-trends">5.2 Emerging Trends<a class="headerlink" href="#52-emerging-trends" title="Permanent link">&para;</a></h2>
+<h3 id="521-decentralized-finance-defi-yield-farming-liquidity-pools">5.2.1 Decentralized Finance (DeFi): Yield Farming &amp; Liquidity Pools ⭐⭐<a class="headerlink" href="#521-decentralized-finance-defi-yield-farming-liquidity-pools" title="Permanent link">&para;</a></h3>
+<p><strong>DeFi</strong> = financial services (lending, borrowing, trading, interest) built on smart contracts, <strong>without banks or brokers</strong> — open 24/7, permissionless, auditable.</p>
+<ul>
+<li><strong>Liquidity pool (LP):</strong> users deposit token pairs (e.g. ETH/USDC) into a smart contract; traders swap against the pool (AMM — automated market maker, e.g. Uniswap). Providers earn a share of trading fees.</li>
+<li><strong>Yield farming:</strong> users <strong>lock/stake</strong> their LP tokens (or single tokens) into farms to earn extra rewards (governance tokens, extra yield) — "put your money to work."</li>
+<li><strong>The catch (study it):</strong> <strong>impermanent loss</strong> — if the token price ratio changes, liquidity providers can lose value vs simply holding; <strong>smart-contract risk</strong> — a bug means funds lost, no insurance; <strong>gas</strong> — every farm action costs transaction fees.</li>
+<li>Exam-friendly flow: <em>deposit LP → receive LP-token → stake LP-token in farm → earn rewards → compound.</em></li>
+</ul>
+<h3 id="522-nfts-the-metaverse">5.2.2 NFTs &amp; the Metaverse ⭐<a class="headerlink" href="#522-nfts-the-metaverse" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>NFT (Non-Fungible Token):</strong> a unique, non-interchangeable token (ERC-721) representing ownership of a specific digital/real asset — art, collectibles, in-game items, real estate deeds.</li>
+<li><strong>Fungible</strong> = interchangeable (1 BTC = 1 BTC); <strong>non-fungible</strong> = each is unique (your Bored Ape ≠ mine).</li>
+<li><strong>Metaverse:</strong> persistent virtual worlds (Decentraland, The Sandbox) where land/items are NFTs and economies run on crypto. Blockchain gives verifiable ownership &amp; portability across virtual worlds.</li>
+</ul>
+<h3 id="523-daos-decentralized-autonomous-organizations">5.2.3 DAOs (Decentralized Autonomous Organizations) ⭐⭐⭐<a class="headerlink" href="#523-daos-decentralized-autonomous-organizations" title="Permanent link">&para;</a></h3>
+<p><strong>DAO</strong> = an organization governed by <strong>code + token-holder voting</strong> instead of a management hierarchy. Rules are encoded in smart contracts; members propose/vote with governance tokens; treasury funds are released automatically when a vote passes.</p>
+<p><strong>DAO vs Traditional organization (W25 Q.5(b)-alt, S26 Q.5(b)):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Traditional organization</th>
+<th>DAO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Governance</td>
+<td>Board of directors / hierarchy</td>
+<td>Token-weighted voting</td>
+</tr>
+<tr>
+<td>Decision speed</td>
+<td>Slow (meetings, approvals)</td>
+<td>Fast (proposals + smart-contract execution)</td>
+</tr>
+<tr>
+<td>Trust</td>
+<td>Trust in management</td>
+<td>Trust in audited code</td>
+</tr>
+<tr>
+<td>Transparency</td>
+<td>Selective</td>
+<td>Fully open on-chain</td>
+</tr>
+<tr>
+<td>Location/legal</td>
+<td>Jurisdiction-bound</td>
+<td>Global, borderless</td>
+</tr>
+<tr>
+<td>Human error/risk</td>
+<td>Corruption, bias</td>
+<td>Smart-contract bugs (DAO hack 2016!)</td>
+</tr>
+<tr>
+<td>Coordination</td>
+<td>Salaries, hierarchy</td>
+<td>Incentives, treasury, proposals</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Steps to launch a DAO (S24/S26 Q.5(b)-alt):</strong> (1) define the mission &amp; governance model (voting rules, quorum); (2) write the smart contracts (token, treasury, voting — Snapshot/Aragon/Zodiac); (3) audit the contracts; (4) deploy on-chain and create the governance token; (5) distribute/airdrop tokens to members; (6) fund the treasury; (7) go live — members propose &amp; vote.</p>
+<p><strong>Advantages (S24 Q.5(c)-alt):</strong> transparency, trustless automation, global participation, community ownership, censorship resistance.
+<strong>Disadvantages:</strong> legal/regulatory grey zone, slow under high participation, smart-contract vulnerability (the original DAO hack), token-vote manipulation (whales), no HR/support if things break.</p>
+<hr />
+<h2 id="53-blockchain-in-green-energy">5.3 Blockchain in Green Energy<a class="headerlink" href="#53-blockchain-in-green-energy" title="Permanent link">&para;</a></h2>
+<h3 id="531-the-problem-of-greenwashing-tokenization-of-energy">5.3.1 The Problem of Greenwashing &amp; Tokenization of Energy ⭐<a class="headerlink" href="#531-the-problem-of-greenwashing-tokenization-of-energy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Greenwashing</strong> = claiming environmental friendliness without proof. Blockchain fixes this with <strong>verifiable provenance</strong>: every energy unit's origin (solar/wind/coal) is recorded immutably → claims can be audited instead of trusted.</li>
+<li><strong>Tokenization of energy:</strong> renewable energy production is split into <strong>energy tokens</strong> — 1 token = 1 kWh (or a share of a solar farm). You can trade them like commodities: buy, sell, retire (burn) to prove you used green energy. P2P energy trading (Prosumer→neighbor) becomes automatic via smart contracts.</li>
+<li>This ties to UNIT 3 practical <a href="../../practicals/writeups/P08_erc20_token/">P08</a> — a green-energy token contract.</li>
+</ul>
+<h3 id="532-the-oracle-problem-how-do-we-trust-the-data">5.3.2 The Oracle Problem: How Do We Trust the Data? ⭐⭐<a class="headerlink" href="#532-the-oracle-problem-how-do-we-trust-the-data" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>The problem:</strong> blockchains are <strong>deterministic and isolated</strong> — they cannot fetch real-world data (weather, price, temperature) by themselves. If a smart contract reads "temperature &gt; 40°C" for crop insurance, <em>who feeds it that number?</em></li>
+<li><strong>The oracle</strong> = a trusted data source that bridges off-chain data into the chain. <strong>The problem</strong> = how to trust that bridge: a single oracle is a <strong>single point of failure</strong> (hackable, bribable, wrong).</li>
+<li><strong>Solutions:</strong> (1) <strong>Decentralized oracles</strong> — multiple independent oracles + majority aggregation (Chainlink); (2) <strong>Reputation/staking</strong> — oracles stake tokens and are slashed for bad data; (3) <strong>TLS/TEE + cryptography</strong> — verifiable off-chain computation (Town Crier); (4) <strong>Direct sensors</strong> with signed hardware.</li>
+</ul>
+<h3 id="533-introduction-of-iot-oracles">5.3.3 Introduction of IoT Oracles ⭐<a class="headerlink" href="#533-introduction-of-iot-oracles" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>IoT oracle</strong> = a device (sensor, smart meter, GPS) that pushes <em>physical-world</em> measurements onto the blockchain via an oracle node.</li>
+<li><strong>Flow:</strong> IoT sensor reads data → signs it → oracle transmits → smart contract uses it → payout/action (e.g. insurance payout when rainfall crosses a threshold).</li>
+<li><strong>Challenges:</strong> sensor spoofing, connectivity, data volume vs gas cost, device key management.</li>
+<li><strong>Applications:</strong> parametric insurance (drought/flood auto-payout), cold-chain monitoring for pharma/food, renewable-energy certificate generation from smart meters, supply-chain GPS tracking.</li>
+</ul>
+<hr />
+<h2 id="deep-dive-topics">🧠 Deep-Dive Topics<a class="headerlink" href="#deep-dive-topics" title="Permanent link">&para;</a></h2>
+<h3 id="deep-dive-a-re-entrancy-the-attack-explained-in-one-solidity-story">Deep Dive A: Re-entrancy — the attack explained in one Solidity story<a class="headerlink" href="#deep-dive-a-re-entrancy-the-attack-explained-in-one-solidity-story" title="Permanent link">&para;</a></h3>
+<p>The victim:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kt">function</span><span class="w"> </span><span class="nv">withdraw</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">bal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>balances<span class="p">[</span><span class="k">msg.sender</span><span class="p">];</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">ok</span><span class="p">,)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">.</span>call<span class="p">{</span>value<span class="o">:</span><span class="w"> </span>bal<span class="p">}(</span><span class="s2">&quot;&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// external call BEFORE state update</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>ok<span class="p">)</span><span class="w"> </span>balances<span class="p">[</span><span class="k">msg.sender</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w">              </span><span class="c1">// ← too late: attacker re-entered</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">}</span>
+</code></pre></div>
+The attacker's <code>receive()</code> fires on the ETH receipt and calls <code>withdraw()</code> again. Since <code>balances[msg.sender]</code> is still the old value, the check passes again → drain. <strong>The fix:</strong> set <code>balances[msg.sender] = 0</code> <em>before</em> the call (checks-effects-interactions), or add a <code>nonReentrant</code> modifier.</p>
+<h3 id="deep-dive-b-the-dao-hack-history-that-split-a-chain">Deep Dive B: The DAO hack — history that split a chain<a class="headerlink" href="#deep-dive-b-the-dao-hack-history-that-split-a-chain" title="Permanent link">&para;</a></h3>
+<p>2016: <em>The DAO</em> raised ~$150M. Attackers exploited re-entrancy to drain ~$60M. The community split: <strong>fork Ethereum</strong> to refund victims (→ today's Ethereum) or <strong>keep the original chain</strong> (→ Ethereum Classic). Lesson: <strong>smart contracts are code, and code is law only if correct</strong> — audits matter. This single event is why "audit" appears in every DAO launch checklist.</p>
+<h3 id="deep-dive-c-yield-farming-where-returns-actually-come-from">Deep Dive C: Yield farming — where returns actually come from<a class="headerlink" href="#deep-dive-c-yield-farming-where-returns-actually-come-from" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Real returns:</strong> trading fees from the pool + incentives paid by protocols in their own token.</li>
+<li><strong>Fake returns:</strong> high APY in a token whose price is crashing = negative real return. Rule of thumb examiners love: <em>yield farmers supply liquidity; protocols buy growth by printing tokens; late entrants hold the bag.</em></li>
+<li><strong>Impermanent loss formula intuition:</strong> the pool rebalances toward the cheaper asset; when the price ratio returns to entry, loss "disappears" (it's only realized if you withdraw during divergence).</li>
+</ul>
+<h3 id="deep-dive-d-the-oracle-problem-a-7-marker-in-three-acts">Deep Dive D: The oracle problem — a 7-marker in three acts<a class="headerlink" href="#deep-dive-d-the-oracle-problem-a-7-marker-in-three-acts" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>The requirement:</strong> smart contracts are deterministic — they can't call the internet. For real-world contracts (insurance, energy, supply chain) they need external data.</li>
+<li><strong>The risk:</strong> a single data source is trustable but vulnerable — corrupt, wrong, or hacked data poisons the contract and its money. "Blockchain is trustless" fails at the data boundary.</li>
+<li><strong>The resolution:</strong> decentralize the source (many oracles + consensus, e.g. Chainlink), align incentives (staked oracles, slashing), and verify the transport (TLS-notarization, TEEs). Then "trust the network, not the source."</li>
+</ol>
+<hr />
+<h2 id="beyond-the-textbook-what-most-classes-wont-tell-you">🚀 Beyond the Textbook (what most classes won't tell you)<a class="headerlink" href="#beyond-the-textbook-what-most-classes-wont-tell-you" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>The 2016 DAO hack wasn't a "bug in Ethereum"</strong> — Ethereum worked exactly as written; the <em>contract</em> was wrong. That's the key nuance examiners respect.</li>
+<li><strong>PoW isn't the only thing that stops Sybil attacks</strong> — cost-per-influence is. PoS does it with stake; reputation systems with identity.</li>
+<li><strong>Most "51% attacks" happen on tiny chains</strong> — with ~1% of Bitcoin's hashrate you could reorg a small altcoin for a day. Bitcoin is attacked by economics, not hash power.</li>
+<li><strong>Yield farming is a marketing term, not a law of finance</strong> — "liquidity mining" pays you in the protocol's own token; APY is denominated in a token that can crash 90%.</li>
+<li><strong>Green energy + blockchain is genuinely one of the most <em>sensible</em> real-world use cases</strong> — because verification (not hype) is the actual bottleneck, and provenance is exactly what a blockchain records.</li>
+</ul>
+<hr />
+<h2 id="pyq-map-unit-5-all-available-papers">📝 PYQ Map — UNIT 5 (all available papers)<a class="headerlink" href="#pyq-map-unit-5-all-available-papers" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Paper</th>
+<th>Q.</th>
+<th>Topic</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Winter 2024</strong></td>
+<td>Q.3(b)-alt</td>
+<td>51% attack — what &amp; how it works</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)</td>
+<td>dApps in blockchain — explain &amp; working</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Short note: DAO</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Summer 2025</strong></td>
+<td>Q.3(c)-alt</td>
+<td>Short note: 51% attack</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(c)</td>
+<td>dApps — uses, advantages &amp; disadvantages</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Summer 2026</strong></td>
+<td>Q.3(c)-alt</td>
+<td>51% attack wrt blockchain</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)</td>
+<td>Differentiate Traditional org vs DAO</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Steps to launch a DAO</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Winter 2025</strong></td>
+<td>Q.3(b)</td>
+<td>Sybil attack with example</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Compare DAO and Traditional organization</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Summer 2024</strong></td>
+<td>Q.3(c)</td>
+<td>Explain 51% attack</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(c)-alt</td>
+<td>Explain Sybil attack</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Steps to launch a DAO</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(c)-alt</td>
+<td>DAO — definition, advantages &amp; disadvantages</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<h3 id="solved-pyq-answers-unit-5">✅ Solved PYQ answers (UNIT 5)<a class="headerlink" href="#solved-pyq-answers-unit-5" title="Permanent link">&para;</a></h3>
+<p><strong>S25 Q.5(c) — What are dApps used for? Advantages &amp; disadvantages (7 marks).</strong></p>
+<blockquote>
+<p><strong>dApps (Decentralized Applications)</strong> are applications whose <strong>backend runs on smart contracts</strong> instead of a centralized server — the frontend is normal, but logic, data, and money are on-chain. <strong>Uses:</strong> DeFi (Uniswap, Aave — trading/lending), gaming &amp; NFTs (Axie, CryptoKitties), DAO governance, social/communication apps, supply-chain and identity tools. <strong>Advantages:</strong> (1) <em>Open &amp; permissionless</em> — anyone can use them without an account or KYC; (2) <em>Censorship-resistant</em> — no company can shut them down or freeze your funds; (3) <em>Transparent &amp; auditable</em> — code and transactions are public; (4) <em>User-controlled assets</em> — users hold keys, not the platform; (5) <em>Interoperable</em> — contracts can compose (a lending dApp can borrow from a DEX). <strong>Disadvantages:</strong> (1) <em>Scalability &amp; speed</em> — on-chain execution is slow and costly (gas); (2) <em>Bug risk</em> — a smart-contract bug can permanently lose funds with no recovery; (3) <em>UX friction</em> — wallets, gas, seed phrases scare mainstream users; (4) <em>No customer support</em> — if you lose your key or funds, nobody can help; (5) <em>Regulatory uncertainty</em> — legal status of many dApps is unclear.</p>
+</blockquote>
+<p><strong>S26 Q.5(b) — Differentiate Traditional Organizations and DAOs (4 marks).</strong> — see §5.2.3 table (governance, speed, trust, transparency, borders, error risk, coordination). Pick any 4 rows.</p>
+<p><strong>S24 Q.5(c)-alt — What is a DAO? Advantages &amp; disadvantages (7 marks).</strong></p>
+<blockquote>
+<p><strong>Definition:</strong> A DAO (Decentralized Autonomous Organization) is an organization governed by <strong>smart contracts and token-weighted voting</strong> instead of a management hierarchy; rules are encoded in code and the treasury is released automatically when votes pass. <strong>Advantages:</strong> (1) <em>Transparency</em> — every proposal and vote is public on-chain; (2) <em>Trustless automation</em> — execution is code, not management discretion; (3) <em>Global &amp; permissionless participation</em> — anyone holding tokens can join/vote; (4) <em>Community ownership</em> — no central CEO to capture value; (5) <em>Censorship resistance</em> — no single point of failure or shutdown. <strong>Disadvantages:</strong> (1) <em>Smart-contract risk</em> — a bug can drain the treasury (the 2016 DAO hack lost ~$60M); (2) <em>Slow governance</em> — high participation can stall decisions; (3) <em>Whale dominance</em> — large token holders can control votes; (4) <em>Legal grey area</em> — DAOs have no recognized legal personality in most jurisdictions; (5) <em>No safety net</em> — errors and losses are irreversible.</p>
+</blockquote>
+<p><strong>S24 Q.3(c)-alt — Explain Sybil attack (7 marks).</strong></p>
+<blockquote>
+<p>A <strong>Sybil attack</strong> is an attack on a peer-to-peer network in which a single entity creates <strong>numerous fake identities (nodes)</strong> to gain a disproportionately large influence, appearing to be many independent participants. <strong>How it works:</strong> the attacker registers thousands of nodes, then uses them to (1) <strong>out-vote</strong> honest nodes in consensus or voting, (2) <strong>isolate</strong> a victim so all their connections route through attacker nodes (censoring blocks/transactions), (3) <strong>starve</strong> honest nodes of information, and (4) prevent double-spend detection by controlling what the victim sees. <strong>Example:</strong> in a network that counts one-vote-per-node, an attacker with 10,000 fake nodes beats 100 honest users. <strong>Why blockchains resist it:</strong> influence in Bitcoin is not per-node but <strong>per-hashpower</strong> (PoW) — creating fake nodes is free, but creating fake computational work costs real electricity. Similarly, PoS ties influence to staked value, and permissioned chains tie it to vetted identity. Thus <strong>Sybil resistance = economic cost per unit of influence.</strong></p>
+</blockquote>
+<p><strong>W25 Q.3(b) — Explain Sybil attack with example (4 marks).</strong> — condensed version of the 7-marker above (definition + mechanism + the hash-power example).</p>
+<p><strong>S26 Q.3(c)-alt — 51% attack (7 marks).</strong></p>
+<blockquote>
+<p>A <strong>51% attack</strong> occurs when a single miner/pool/entity controls <strong>more than 50% of the network's mining (hashing) power</strong> — or staked value in PoS — giving them the ability to influence consensus. <strong>Capabilities:</strong> (1) <strong>Double-spend</strong> — spend coins, receive goods, then re-mine the chain to discard the original spend, regaining the coins; (2) <strong>Transaction censorship</strong> — exclude specific addresses' transactions from being included; (3) <strong>Reordering</strong> — delay or reorder transactions. <strong>Limitations:</strong> the attacker <strong>cannot</strong> forge signatures or steal other users' coins, and <strong>cannot</strong> create coins beyond the protocol's supply cap — they can only manipulate <em>their own</em> spends. <strong>Feasibility &amp; defence:</strong> on Bitcoin, &gt;50% hashrate costs hundreds of millions of dollars and even then the attack destroys the coin's value (the attacker's own reward), so it is <strong>economically irrational</strong>; smaller chains (e.g. Ethereum Classic 2020) have suffered real attacks. Defences: high total hashrate, checkpoints, and proof-of-stake's economic finality.</p>
+</blockquote>
+<p><strong>S24 Q.5(b)-alt / S26 Q.5(b)-alt — Steps to launch a DAO (4 marks).</strong> — the 7 steps in §5.2.3 (mission → contracts → audit → deploy → tokens → treasury → go live).</p>
+<hr />
+<h2 id="practice-problems-self-test-answers-upside-down">✍️ Practice Problems (self-test — answers upside-down)<a class="headerlink" href="#practice-problems-self-test-answers-upside-down" title="Permanent link">&para;</a></h2>
+<ol>
+<li>(7) Explain the re-entrancy attack with a step-by-step example and how to fix it.</li>
+<li>(4) Differentiate a 51% attack and a Sybil attack.</li>
+<li>(7) What is yield farming? Explain liquidity pools and impermanent loss.</li>
+<li>(4) Compare DAO and traditional organization on any four points.</li>
+<li>(3) What is an NFT? How is it different from a cryptocurrency?</li>
+<li>(7) Explain the oracle problem and the role of IoT oracles in green-energy blockchain.</li>
+<li>(4) How does blockchain help prevent greenwashing?</li>
+<li>(3) Why can't a 51% attacker steal other users' coins?</li>
+</ol>
+<details>
+<summary><b>Click for answers</b></summary>
+
+1. See Deep Dive A — external call before state update lets `receive()` re-enter; fixes = checks-effects-interactions, re-entrancy guard, transfer-stipend. Cite the 2016 DAO hack.
+2. Sybil = fake identities multiply cheaply (influence via nodes); 51% = majority hashpower/stake bought expensively (influence via economic majority). PoW/PoS defeat Sybil by pricing influence; economics defeats 51%.
+3. LP = pairs deposited for traders to swap against (AMM), earning fees; yield farming = staking LP/rewards to earn more; impermanent loss = divergence loss vs holding when price ratio moves.
+4. Any 4 rows from §5.2.3 table.
+5. NFT = unique, non-fungible (ERC-721, one-of-a-kind ownership); crypto = fungible (interchangeable units).
+6. Blockchains can't fetch external data → oracles bridge it → single source = single point of failure → decentralized oracles/staking/aggregation. IoT oracles = sensors signing physical data (rainfall, kWh) into contracts for automatic payouts.
+7. Immutable provenance: every energy unit's origin is recorded and auditable, so green claims can be verified, not just asserted (fights greenwashing).
+8. Signatures are unforgeable; the attacker can only reorder their *own* spends. Others' coins require forging keys, which crypto prevents.
+
+</details>
+
+<hr />
+<h2 id="glossary-of-key-terms">📖 Glossary of Key Terms<a class="headerlink" href="#glossary-of-key-terms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>One-line meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Re-entrancy</td>
+<td>Attack where an external contract re-enters before state updates</td>
+</tr>
+<tr>
+<td>51% attack</td>
+<td>Majority-hashpower control → double-spend &amp; censorship</td>
+</tr>
+<tr>
+<td>Sybil attack</td>
+<td>One attacker impersonating many nodes</td>
+</tr>
+<tr>
+<td>DeFi</td>
+<td>Decentralized finance — bankless financial apps on smart contracts</td>
+</tr>
+<tr>
+<td>Liquidity pool</td>
+<td>Contract holding token pairs for AMM trading</td>
+</tr>
+<tr>
+<td>Yield farming</td>
+<td>Staking LP tokens to earn extra rewards</td>
+</tr>
+<tr>
+<td>Impermanent loss</td>
+<td>Value loss vs holding when pool price ratios diverge</td>
+</tr>
+<tr>
+<td>NFT</td>
+<td>Non-fungible token — unique ownership (ERC-721)</td>
+</tr>
+<tr>
+<td>Metaverse</td>
+<td>Persistent virtual worlds with crypto/NFT economies</td>
+</tr>
+<tr>
+<td>DAO</td>
+<td>Code-governed, token-voting organization</td>
+</tr>
+<tr>
+<td>Greenwashing</td>
+<td>Unverifiable environmental claims</td>
+</tr>
+<tr>
+<td>Oracle</td>
+<td>Bridge bringing off-chain data on-chain</td>
+</tr>
+<tr>
+<td>Oracle problem</td>
+<td>How to trust the data bridge</td>
+</tr>
+<tr>
+<td>IoT oracle</td>
+<td>Sensor feeding signed physical data to contracts</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="curated-resources-per-concept">🔗 Curated Resources (per concept)<a class="headerlink" href="#curated-resources-per-concept" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Re-entrancy (consensys):</strong> https://consensys.github.io/smart-contract-best-practices/attacks/reentrancy/</li>
+<li><strong>DAOs:</strong> https://ethereum.org/en/dao/ | Snapshot (voting): https://snapshot.org</li>
+<li><strong>DeFi &amp; yield farming:</strong> https://ethereum.org/en/defi/ | Uniswap AMM docs</li>
+<li><strong>NFTs:</strong> https://ethereum.org/en/nft/ | ERC-721: https://eips.ethereum.org/EIPS/eip-721</li>
+<li><strong>Oracle problem &amp; Chainlink:</strong> https://chain.link/education-hub/what-is-a-blockchain-oracle</li>
+<li><strong>IoT + blockchain (IoTex / Helium):</strong> https://www.iotex.io/</li>
+<li><strong>Green energy case study (energy web):</strong> https://www.energyweb.org/</li>
+</ul>
+<hr />
+<h2 id="video-study-guide-youtube">🎥 Video Study Guide (YouTube)<a class="headerlink" href="#video-study-guide-youtube" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Your video path for the whole unit — exact keywords to search + channels you can trust.</p>
+</blockquote>
+<h3 id="step-0-pick-your-learning-style">🧑‍🎓 Step 0 — Pick your learning style<a class="headerlink" href="#step-0-pick-your-learning-style" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>You learn best by</th>
+<th>Your path through this unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎧 <strong>Listener</strong></td>
+<td>short, clear explainers</td>
+<td>1 explainer per topic in the table below</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Builder</strong></td>
+<td>hands-on</td>
+<td>Re-run <a href="../../practicals/writeups/P08_erc20_token/">P08</a>; try a re-entrancy CTF</td>
+</tr>
+<tr>
+<td>🔧 <strong>Tinkerer</strong></td>
+<td>experimenting &amp; demos</td>
+<td>Damage Labs / Capture-the-Ether re-entrancy challenges</td>
+</tr>
+<tr>
+<td>🧠 <strong>Deep Diver</strong></td>
+<td>full theory, "why"</td>
+<td>Playlists at the bottom</td>
+</tr>
+<tr>
+<td>🧭 <strong>Explorer</strong></td>
+<td>breadth &amp; curiosity</td>
+<td>Start with DeFi/NFT explainers</td>
+</tr>
+<tr>
+<td>🎓 <strong>Academic</strong></td>
+<td>exam marks</td>
+<td>Revision videos → grind the PYQ map above</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-1-watch-by-topic-search-these-on-youtube">🎬 Step 1 — Watch by topic (search these on YouTube)<a class="headerlink" href="#step-1-watch-by-topic-search-these-on-youtube" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>YouTube search keywords (copy-paste ready)</th>
+<th>Best channels</th>
+<th>Style served</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Smart-contract security</td>
+<td><code>smart contract vulnerabilities</code> · <code>reentrancy attack explained</code> · <code>solidity security best practices</code></td>
+<td>White Hat / Secureum, RareSkills, Smart Contract Programmer</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>51% &amp; Sybil attacks</td>
+<td><code>51 percent attack explained</code> · <code>sybil attack explained with example</code> · <code>how ethereum classic was attacked</code></td>
+<td>Computerphile, Simply Explained, Coin Bureau</td>
+<td>🎓 Academic</td>
+</tr>
+<tr>
+<td>DeFi overview</td>
+<td><code>what is defi</code> · <code>decentralized finance explained</code> · <code>defi for beginners</code></td>
+<td>Finematics, Coin Bureau, Whiteboard Crypto</td>
+<td>🧭 Explorer</td>
+</tr>
+<tr>
+<td>Yield farming &amp; liquidity</td>
+<td><code>yield farming explained</code> · <code>liquidity pools explained</code> · <code>impermanent loss explained</code></td>
+<td>Finematics, Whiteboard Crypto, Coin Bureau</td>
+<td>🎓 Academic</td>
+</tr>
+<tr>
+<td>NFTs &amp; Metaverse</td>
+<td><code>what are nfts</code> · <code>nft explained 5 minutes</code> · <code>metaverse explained</code></td>
+<td>Whiteboard Crypto, Fireship, Coin Bureau</td>
+<td>🧭 Explorer</td>
+</tr>
+<tr>
+<td>DAOs</td>
+<td><code>what is a dao</code> · <code>dao explained</code> · <code>dao vs traditional company</code> · <code>how to launch a dao</code></td>
+<td>Finematics, Whiteboard Crypto, Coin Bureau</td>
+<td>🎓 Academic</td>
+</tr>
+<tr>
+<td>Oracle problem</td>
+<td><code>blockchain oracle explained</code> · <code>what is chainlink</code> · <code>oracle problem smart contracts</code></td>
+<td>Finematics, Chainlink official, Simply Explained</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>IoT + blockchain</td>
+<td><code>iot blockchain explained</code> · <code>iot oracles</code> · <code>iotex blockchain</code> · <code>sensor data on blockchain</code></td>
+<td>Helium/IoTeX channels, Simply Explained</td>
+<td>🧭 + 🎧</td>
+</tr>
+<tr>
+<td>Green energy &amp; blockchain</td>
+<td><code>blockchain green energy</code> · <code>energy tokenization explained</code> · <code>p2p solar energy trading blockchain</code></td>
+<td>Energy Web, Coin Bureau</td>
+<td>🧭 + 🎓</td>
+</tr>
+<tr>
+<td>Whole-unit revision</td>
+<td><code>blockchain security full course</code> · <code>defi nft dao full course</code> · <code>blockchain trends exam revision</code></td>
+<td>freeCodeCamp, MIT OCW, Gate Smashers, Neso Academy</td>
+<td>🎓 Academic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-full-playlists-for-deep-divers-academics">🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)<a class="headerlink" href="#step-2-full-playlists-for-deep-divers-academics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>"Finematics — DeFi, DAO &amp; oracle explainer library"</strong> — the visual backbone of this unit.</li>
+<li><strong>"Secureum / Smart Contract Programmer — smart-contract security bootcamp"</strong> — if you want to truly understand re-entrancy and more.</li>
+<li><strong>"MIT 15.S12 — security &amp; applications lectures"</strong> — exam-grade framing of DAOs, DeFi, and trust.</li>
+</ol>
+<h3 id="step-3-proof-you-got-it-5-min">🎬 Step 3 — Proof you got it (5 min)<a class="headerlink" href="#step-3-proof-you-got-it-5-min" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Re-tell the re-entrancy attack as a story (withdraw → receive → withdraw…).</li>
+<li>Say the DAO-vs-traditional table from memory.</li>
+<li>Explain to a friend why a sensor feeding a contract needs an oracle and why one oracle isn't enough.</li>
+</ul>
+<hr />
+<p><em>End of FOB notes. 🎉 Next: revisit <a href="../UNIT_1_Foundations_of_Decentralization/">UNIT 1</a> to start your revision loop.</em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../UNIT_4_Enterprise_and_Private_Blockchains/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UNIT 4 — Enterprise &amp; Private Blockchains 🏢">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                UNIT 4 — Enterprise & Private Blockchains 🏢
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-footer__link md-footer__link--next" aria-label="Next: P01 — Cryptographic Hash Functions &amp; the Avalanche Effect">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                P01 — Cryptographic Hash Functions & the Avalanche Effect
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

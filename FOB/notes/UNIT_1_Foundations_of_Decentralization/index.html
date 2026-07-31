@@ -1,0 +1,7094 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.">
+      
+      
+      
+        <link rel="canonical" href="https://aayushbankar.github.io/sem_5/FOB/notes/UNIT_1_Foundations_of_Decentralization/">
+      
+      
+        <link rel="prev" href="../../PRACTICALS/">
+      
+      
+        <link rel="next" href="../UNIT_2_Bitcoin_and_PoW/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://fav.farm/📚">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNIT 1 — Foundations of Decentralization 🏛️ - Semester 5 — GTU IT Study Kit 🎓</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-1-foundations-of-decentralization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-header__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Semester 5 — GTU IT Study Kit 🎓
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UNIT 1 — Foundations of Decentralization 🏛️
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FOB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../IOT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IOT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPD/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPD
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../CDCT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CDCT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📄 All Syllabi (PDF)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pyq/fbc/s_24.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📝 Past Papers (PYQ)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-nav__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Semester 5 — GTU IT Study Kit 🎓
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FOB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-cryptography-from-money-to-decentralization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Cryptography: From Money to Decentralization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Cryptography: From Money to Decentralization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-evolution-of-money-why-blockchain-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1 The Evolution of Money — why blockchain exists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-centralized-vs-decentralized-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2 Centralized vs Decentralized Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-cryptographic-hash-functions-the-glue-of-blockchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3 Cryptographic Hash Functions — the "glue" of blockchain ⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.3 Cryptographic Hash Functions — the &#34;glue&#34; of blockchain ⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-six-properties-memorize-these-guaranteed-exam-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The SIX properties (memorize these — guaranteed exam question) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-public-key-cryptography-digital-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4 Public-Key Cryptography &amp; Digital Signatures ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-the-cap-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.5 The CAP Theorem ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-the-anatomy-of-a-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 The Anatomy of a Block ⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 The Anatomy of a Block ⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-block-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 Block fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-merkle-trees-efficient-data-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 Merkle Trees — efficient data verification ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-distributed-ledger-technology-dlt-vs-traditional-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 Distributed Ledger Technology (DLT) vs Traditional Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-network-consensus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Network Consensus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Network Consensus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-the-byzantine-generals-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 The Byzantine Generals Problem ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-peer-to-peer-p2p-network-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2 Peer-to-Peer (P2P) Network Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-why-we-need-consensus-agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3 Why We Need Consensus (agreement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-the-full-why-does-tampering-fail-chain-of-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: The full "why does tampering fail" chain of reasoning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-merkle-proof-worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Merkle proof — worked example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-cap-theorem-applied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: CAP theorem, applied
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-1-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 1 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 1 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-upside-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers upside-down)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_2_Bitcoin_and_PoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_3_Ethereum_and_Smart_Contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Ethereum & Smart Contracts 🟣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_4_Enterprise_and_Private_Blockchains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Enterprise & Private Blockchains 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_5_Security_Emerging_Trends_Green_Energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Cryptographic Hash Functions & the Avalanche Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P02_public_private_keys_digital_signatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Public/Private Key Pair & Digital Signatures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P03_basic_blockchain_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Basic Blockchain Structure in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P04_merkle_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Simplified Merkle Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P05_nonce_mining_difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — The "Nonce" & Mining Difficulty (Proof-of-Work)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P06_wallets_mnemonic_bip39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P07_smart_contract_evm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Write, Compile & Deploy a Smart Contract on the EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P08_erc20_token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Tokenization: Deploying a Basic ERC-20 Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P09_case_study_public_vs_private_hyperledger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P10_case_study_security_green_energy_dao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DI05016051-FOB.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../IOT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IOT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IOT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_1_Introduction_to_IoT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to IoT 🌐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_3_ESP32_and_Arduino_IDE_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — IoT Communication Protocols & Networking 📡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P01_iot_architecture_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P02_compare_hardware_platforms_esp32_pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P03_arduino_ide_setup_esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P04_external_led_blink_toggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Toggle an External LED (Digital Output)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P05_pir_ldr_sensor_interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P06_dht_temperature_humidity_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — DHT11/DHT22 Temperature & Humidity Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P07_ultrasonic_distance_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P08_esp32_mqtt_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — ESP32 as MQTT Publisher (Temperature & Humidity)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P09_esp32_mqtt_subscriber_remote_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P10_thingspeak_http_temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P11_ultrasonic_thingspeak_cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Ultrasonic Distance to Cloud (ThingSpeak)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P12_blynk_two_way_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P14_mini_project_smart_agriculture_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P14 — Mini-Project: Smart Agriculture System (walkthrough guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/DI05016071-IOT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPE/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_2_Basics_of_Large_Language_Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Basics of Large Language Models (LLMs) 🧠
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Prompt Engineering Fundamentals 🎯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_4_Prompt_Engineering_Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Prompt Engineering Techniques 🧩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Generative AI Tools for Different Task Types & Applications Across Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P02_sentiment_analysis_text_classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Sentiment Analysis & Text Classification with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P03_llm_behavior_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P05_prompt_design_and_refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Design & Refine Prompts: Email Writing & Concept Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Zero-Shot, Few-Shot & Role-Based Prompting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P08_task_based_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P09_ai_tools_for_software_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P10_ai_chatbot_api_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P11_document_qa_basic_rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Document-Based Q&A (Basic RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P12_ai_study_assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Build an AI Application: Study Assistant (with design docs for 3 more)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/DI05016011-AIPE.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPD/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_1_Fundamentals_of_AI_Products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Design Thinking & Human-Centred AI 🎨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — AI Product Strategy & OpenAI Integration 🧭
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — AI in Social Media & Digital Experience 📱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — AI Threats & Mitigation Strategies 🚨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P01_product_idea_problem_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Product Idea, Problem Statement, Target Users & Core Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P02_ai_system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P03_data_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Data Components: Inventory, Classification & Risk Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P04_persona_empathy_journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — User Personas, Empathy Map & Customer Journey Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P05_interaction_flow_wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — AI Interaction Flow & Basic UI Wireframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P06_mvp_feature_prioritization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — MVP Features & Feature Prioritization Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P07_business_model_canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Business Model Canvas & AI Monetization Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P08_ai_integration_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — AI Integration Plan: API Usage, Cost Awareness & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P09_social_media_campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Social-Media Campaign & Promotional Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P10_no_code_prototype_demo_video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P11_data_protection_ethics_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Data Protection Plan & AI Ethical Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P12_ai_risk_assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — AI Risk Assessment & Mitigation Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/DI05016021-AIPD.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../CDCT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDCT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CDCT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_1_Introduction_to_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to Cloud Computing ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_2_Virtualization_and_Hypervisors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Virtualization and Hypervisors 🖥️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_3_Data_Center_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_4_Cloud_Storage_and_Database_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Cloud Storage and Database Services 💾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_5_Cloud_Security_and_Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Cloud Security and Compliance 🔐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P01_openstack_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P02_cloud_organization_rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Cloud Organization with RBAC (AWS IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P03_install_virtualbox_linux_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Install VirtualBox + Linux VM on Windows 8+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Desktop Virtualization with Chrome Remote Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P05_mininet_virtual_sdn_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Virtual SDN Lab with Mininet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P06_cloud_databases_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Cloud Databases: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P07_cloud_storage_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Cloud Storage: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P08_cloudsim_secure_file_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Simulate Secure File Sharing with CloudSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P09_minio_secure_object_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Secure Object Storage with MinIO (Access Control + SSE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/practicals/writeups/P10_docker_first_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Creating & Executing Your First Container (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../CDCT/DI05016031-CDCT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 All Syllabi (PDF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📄 All Syllabi (PDF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Cloud_and_Data_Center_Technology.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Foundation_of_Blockchain.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Hands_on_Practice_using_IoT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Skill_Based_Training.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Past Papers (PYQ)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Past Papers (PYQ)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-cryptography-from-money-to-decentralization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Cryptography: From Money to Decentralization
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Cryptography: From Money to Decentralization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-evolution-of-money-why-blockchain-exists" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.1 The Evolution of Money — why blockchain exists
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-centralized-vs-decentralized-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.2 Centralized vs Decentralized Systems
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-cryptographic-hash-functions-the-glue-of-blockchain" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.3 Cryptographic Hash Functions — the "glue" of blockchain ⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1.3 Cryptographic Hash Functions — the &#34;glue&#34; of blockchain ⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-six-properties-memorize-these-guaranteed-exam-question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The SIX properties (memorize these — guaranteed exam question) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#114-public-key-cryptography-digital-signatures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.4 Public-Key Cryptography &amp; Digital Signatures ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#115-the-cap-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1.5 The CAP Theorem ⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-the-anatomy-of-a-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 The Anatomy of a Block ⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.2 The Anatomy of a Block ⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#121-block-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.1 Block fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#122-merkle-trees-efficient-data-verification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.2 Merkle Trees — efficient data verification ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#123-distributed-ledger-technology-dlt-vs-traditional-databases" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2.3 Distributed Ledger Technology (DLT) vs Traditional Databases
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-network-consensus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Network Consensus
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Network Consensus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-the-byzantine-generals-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.1 The Byzantine Generals Problem ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-peer-to-peer-p2p-network-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.2 Peer-to-Peer (P2P) Network Architecture
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-why-we-need-consensus-agreement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3.3 Why We Need Consensus (agreement)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-the-full-why-does-tampering-fail-chain-of-reasoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: The full "why does tampering fail" chain of reasoning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-merkle-proof-worked-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: Merkle proof — worked example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-cap-theorem-applied" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: CAP theorem, applied
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook-what-most-classes-wont-tell-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook (what most classes won't tell you)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-1-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 1 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 1 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-upside-down" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers upside-down)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic-search-these-on-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic (search these on YouTube)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-for-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-1-foundations-of-decentralization">UNIT 1 — Foundations of Decentralization 🏛️<a class="headerlink" href="#unit-1-foundations-of-decentralization" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Foundation of Blockchain (DI05016051)</strong> · <strong>10 hrs · 20% weightage</strong>
+<strong>Covers syllabus sections:</strong> 1.1 Cryptography (money &amp; centralization, hash functions, digital signatures, CAP theorem) · 1.2 Anatomy of a Block · 1.3 Network Consensus
+<strong>Related practicals:</strong> <a href="../../practicals/writeups/P01_cryptographic_hash_avalanche/">P01</a>, <a href="../../practicals/writeups/P02_public_private_keys_digital_signatures/">P02</a>, <a href="../../practicals/writeups/P03_basic_blockchain_python/">P03</a>, <a href="../../practicals/writeups/P04_merkle_tree/">P04</a></p>
+</blockquote>
+<hr />
+<h2 id="chapter-roadmap">🧭 Chapter Roadmap<a class="headerlink" href="#chapter-roadmap" title="Permanent link">&para;</a></h2>
+<p>This unit is the <strong>foundation of the entire subject</strong>. Every question in later units (Bitcoin, Ethereum, DAOs) traces back to something in this chapter. If you master these ~10 concepts cold, the rest of the syllabus becomes easy.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th>Exam importance</th>
+<th>Code demo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Centralized vs Decentralized</td>
+<td>★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Cryptographic hash functions (SHA-256)</td>
+<td>★★★★★</td>
+<td>P01</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Public-key crypto &amp; digital signatures</td>
+<td>★★★★★</td>
+<td>P02</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>CAP theorem</td>
+<td>★★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Anatomy of a block</td>
+<td>★★★★</td>
+<td>P03</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>Merkle trees</td>
+<td>★★★★★</td>
+<td>P04</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td>DLT vs traditional DBs</td>
+<td>★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1.8</td>
+<td>Byzantine Generals problem</td>
+<td>★★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1.9</td>
+<td>P2P networks</td>
+<td>★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>1.10</td>
+<td>Why we need consensus</td>
+<td>★★★★</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="learning-outcomes-after-this-unit-you-can">Learning outcomes — after this unit you can:<a class="headerlink" href="#learning-outcomes-after-this-unit-you-can" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Explain <em>why</em> money moved from gold to crypto, and what "decentralization" actually means.</li>
+<li>Prove (and demonstrate in code) the six properties of a cryptographic hash.</li>
+<li>Explain how public/private keys and digital signatures give <strong>authenticity, integrity, non-repudiation</strong>.</li>
+<li>State and apply the <strong>CAP theorem</strong> to blockchains.</li>
+<li>Draw the anatomy of a block and explain the cryptographic chain link.</li>
+<li>Build and explain a <strong>Merkle tree</strong> and an O(log n) membership proof.</li>
+<li>Explain the <strong>Byzantine Generals problem</strong> and why consensus is the "magic" that makes decentralized systems work.</li>
+</ol>
+<hr />
+<h2 id="11-cryptography-from-money-to-decentralization">1.1 Cryptography: From Money to Decentralization<a class="headerlink" href="#11-cryptography-from-money-to-decentralization" title="Permanent link">&para;</a></h2>
+<h3 id="111-the-evolution-of-money-why-blockchain-exists">1.1.1 The Evolution of Money — why blockchain exists<a class="headerlink" href="#111-the-evolution-of-money-why-blockchain-exists" title="Permanent link">&para;</a></h3>
+<p>Money has gone through four revolutions, each solving a problem of the previous stage:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Barter ──► Commodity money ──► Fiat money ──► Digital (bank) money ──► Cryptocurrency
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>(goods↔goods)  (gold/silver)    (govt-issued)   (bank ledgers)        (2009, Bitcoin)
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Problem it solved</th>
+<th>New problem created</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Barter</strong></td>
+<td>—</td>
+<td>Double coincidence of wants (I have rice, you have fish — do we both want what the other has?)</td>
+</tr>
+<tr>
+<td><strong>Commodity money (gold)</strong></td>
+<td>Common store of value</td>
+<td>Heavy to carry, divisible with difficulty, centralized banks started storing it → <strong>trust</strong> required</td>
+</tr>
+<tr>
+<td><strong>Fiat money</strong></td>
+<td>No backing needed, easy to print/spend</td>
+<td>Governments/banks can <strong>inflate</strong> it, freeze accounts, exclude people; a <strong>central authority</strong> controls everything</td>
+</tr>
+<tr>
+<td><strong>Digital bank money</strong></td>
+<td>Speed, global reach</td>
+<td>Still <strong>centralized</strong> — a single bank (or SWIFT, PayPal) is a trusted third party &amp; a single point of failure</td>
+</tr>
+<tr>
+<td><strong>Cryptocurrency</strong></td>
+<td>No trusted third party; scarcity by code; permissionless</td>
+<td>Volatility, self-custody responsibility, scalability limits</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>💡 <strong>Beyond the textbook:</strong> In 2008, the global financial crisis destroyed trust in banks. Bitcoin's whitepaper ("Bitcoin: A Peer-to-Peer Electronic Cash System") by the pseudonymous <strong>Satoshi Nakamoto</strong> was published in October 2008 — the genesis block was mined on <strong>3 January 2009</strong> and contains the newspaper headline <em>"Chancellor on brink of second bailout for banks"</em> — a direct political statement against centralized banking.</p>
+</blockquote>
+<h3 id="112-centralized-vs-decentralized-systems">1.1.2 Centralized vs Decentralized Systems<a class="headerlink" href="#112-centralized-vs-decentralized-systems" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TD
+    subgraph CENTRALIZED
+        A[Client 1] --&gt; S[Single Authority&lt;br/&gt;Bank/Server]
+        B[Client 2] --&gt; S
+        C[Client 3] --&gt; S
+    end
+    subgraph DECENTRALIZED
+        D[Node 1] &lt;--&gt; E[Node 2]
+        E &lt;--&gt; F[Node 3]
+        F &lt;--&gt; G[Node 4]
+        D &lt;--&gt; F
+        E &lt;--&gt; G
+    end</code></pre>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Centralized</th>
+<th>Decentralized</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Who owns the ledger</td>
+<td>One organization</td>
+<td>Nobody / everyone (shared copies)</td>
+</tr>
+<tr>
+<td>Who writes data</td>
+<td>Admin</td>
+<td>Consensus of nodes</td>
+</tr>
+<tr>
+<td>Trust model</td>
+<td>Trust the operator ("I trust the bank")</td>
+<td>Trust the math ("I don't need to trust anyone")</td>
+</tr>
+<tr>
+<td>Failure</td>
+<td>Single point of failure</td>
+<td>Resilient — other nodes keep working</td>
+</tr>
+<tr>
+<td>Censorship</td>
+<td>Possible (bank can block you)</td>
+<td>Very hard (no single target)</td>
+</tr>
+<tr>
+<td>Efficiency</td>
+<td>Fast, cheap</td>
+<td>Slower, more overhead</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>Bank, Google, government registry</td>
+<td>Bitcoin, Ethereum, BitTorrent</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>Common misconception:</strong> <em>Decentralized</em> ≠ <em>distributed</em>.
+- <strong>Distributed</strong> = the system is spread across multiple machines (even Google's databases are distributed).
+- <strong>Decentralized</strong> = <em>control and decision-making</em> are spread across independent actors who do not trust each other.
+A system can be distributed but centralized (e.g., a big tech company's global cloud). Blockchain must be <strong>both</strong> distributed (many nodes) and decentralized (no single controller).</p>
+</blockquote>
+<h3 id="113-cryptographic-hash-functions-the-glue-of-blockchain">1.1.3 Cryptographic Hash Functions — the "glue" of blockchain ⭐<a class="headerlink" href="#113-cryptographic-hash-functions-the-glue-of-blockchain" title="Permanent link">&para;</a></h3>
+<p>A <strong>hash function</strong> takes any input (any size) and produces a fixed-size output called a <strong>digest</strong>. Cryptographic hash functions add hard-to-achieve security properties.</p>
+<p><strong>SHA-256</strong> (Secure Hash Algorithm, 256-bit) — the workhorse of Bitcoin:
+- Output: <strong>256 bits = 32 bytes = 64 hexadecimal characters</strong>
+- Based on the Merkle–Damgård structure; designed by NSA, standardized by NIST (FIPS 180-4)
+- Bitcoin actually uses <strong>double SHA-256</strong>: <code>SHA256(SHA256(x))</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">hashlib</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">print</span><span class="p">(</span><span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="sa">b</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">())</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># 2cf24dba5fb0a30e26e83b2ac5b9e29e1b161e5c1fa7425e73043362938b9824</span>
+</code></pre></div>
+<h4 id="the-six-properties-memorize-these-guaranteed-exam-question">The SIX properties (memorize these — guaranteed exam question) ⭐⭐<a class="headerlink" href="#the-six-properties-memorize-these-guaranteed-exam-question" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+<th>Why it matters in blockchain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>① <strong>Deterministic</strong></td>
+<td>Same input → same hash, always</td>
+<td>Anyone can re-verify a block's hash</td>
+</tr>
+<tr>
+<td>② <strong>Fixed output length</strong></td>
+<td>Any input → 256 bits</td>
+<td>Hashing links in a chain are all the same size</td>
+</tr>
+<tr>
+<td>③ <strong>Pre-image resistance</strong></td>
+<td>Can't find input from hash (one-way)</td>
+<td>A hash reveals nothing about the original data</td>
+</tr>
+<tr>
+<td>④ <strong>Second pre-image resistance</strong></td>
+<td>Given input &amp; hash, can't find <em>different</em> input with same hash</td>
+<td>Can't forge a fake block matching a published hash</td>
+</tr>
+<tr>
+<td>⑤ <strong>Collision resistance</strong></td>
+<td>Can't find <em>any two</em> inputs with same hash</td>
+<td>No two blocks/txs can share an identity</td>
+</tr>
+<tr>
+<td>⑥ <strong>Avalanche effect</strong></td>
+<td>1-bit change in input → ~50% of output bits flip</td>
+<td>Tampering is immediately obvious</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>🔬 <strong>See it live:</strong> <a href="../../practicals/writeups/P01_cryptographic_hash_avalanche/">P01</a> runs this in Python — changing <code>Hello, World!</code> → <code>Hello, World?</code> flips <strong>113 of 256 bits</strong>.</p>
+<p>💡 <strong>Beyond the textbook:</strong> The "birthday attack" — because of the <strong>birthday paradox</strong>, finding a collision in an <em>n</em>-bit hash requires only ~2^(n/2) tries, not 2^n. That's why we use 256-bit hashes (128-bit collision resistance) and why old 64-bit hashes (MD5) are broken.</p>
+</blockquote>
+<h3 id="114-public-key-cryptography-digital-signatures">1.1.4 Public-Key Cryptography &amp; Digital Signatures ⭐⭐<a class="headerlink" href="#114-public-key-cryptography-digital-signatures" title="Permanent link">&para;</a></h3>
+<p><strong>Symmetric crypto:</strong> one shared key encrypts and decrypts. Problem: how do two strangers <em>share</em> the key safely?</p>
+<p><strong>Asymmetric (public-key) crypto</strong> solves this — you get a mathematically-linked <strong>key pair</strong>:
+- <strong>Private key</strong> (<code>sk</code>) — secret, signs / decrypts. Never leaves your device.
+- <strong>Public key</strong> (<code>pk</code>) — derived from private, shared freely, verifies / encrypts.</p>
+<p>The relationship is <strong>one-way</strong> (a "trapdoor"): computing <code>pk</code> from <code>sk</code> is easy; the reverse requires solving the <strong>elliptic-curve discrete logarithm problem</strong>, which is computationally infeasible.</p>
+<p><strong>ECDSA</strong> (Elliptic Curve Digital Signature Algorithm) — used by Bitcoin &amp; Ethereum on curve <strong>secp256k1</strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Signing (Alice)                          Verification (Bob)
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>msg ──► hash ──► sign(sk, hash)          msg ──► hash
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>              ──► (r, s) signature      signature (r,s) ──► verify(pk, hash)
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>                                        → VALID only if Alice&#39;s sk signed it
+</code></pre></div>
+<p><strong>What a signature guarantees:</strong>
+| Property | Meaning |
+|---|---|
+| <strong>Authenticity</strong> | The message really came from the private-key holder |
+| <strong>Integrity</strong> | Tamper with the message → signature fails |
+| <strong>Non-repudiation</strong> | The signer can't deny signing (only they hold <code>sk</code>) |</p>
+<blockquote>
+<p>⚠️ <strong>Exam trap:</strong> ECDSA signatures are <strong>non-deterministic</strong> — a random nonce <code>k</code> means the same message signed twice gives <em>different</em> <code>(r,s)</code> values. If you see two identical signatures for the same message, something is wrong (a leaked <code>k</code> leaks the private key — this is how PS3's ECDSA was broken in 2010).</p>
+<p>🔬 <strong>See it live:</strong> <a href="../../practicals/writeups/P02_public_private_keys_digital_signatures/">P02</a> generates a key pair, signs, and proves tampered messages &amp; wrong keys are rejected.</p>
+</blockquote>
+<h3 id="115-the-cap-theorem">1.1.5 The CAP Theorem ⭐<a class="headerlink" href="#115-the-cap-theorem" title="Permanent link">&para;</a></h3>
+<p>In any <strong>distributed</strong> system you can have at most <strong>two of three</strong> guarantees:</p>
+<pre class="mermaid"><code>flowchart LR
+    C[Consistency&lt;br/&gt;everyone sees same data] --- A[Availability&lt;br/&gt;every request answered]
+    C --- P[Partition tolerance&lt;br/&gt;works during network splits]
+    A --- P</code></pre>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Consistency</strong></td>
+<td>Every read returns the <em>latest</em> write (all nodes agree at every instant)</td>
+</tr>
+<tr>
+<td><strong>Availability</strong></td>
+<td>Every request gets a <em>response</em> (even if it may be stale)</td>
+</tr>
+<tr>
+<td><strong>Partition tolerance</strong></td>
+<td>The system <em>keeps working</em> when nodes can't talk to each other</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The insight (Eric Brewer, 2000):</strong> Network partitions (splits) are <em>unavoidable</em> in real networks. So you must choose:</p>
+<ul>
+<li><strong>CP</strong> (consistency + partition tolerance): during a split, refuse to serve the minority side to avoid conflicting data → <strong>blockchains choose CP</strong></li>
+<li><strong>AP</strong> (availability + partition tolerance): during a split, keep answering (maybe with stale data); reconcile later → most NoSQL databases (Cassandra, DynamoDB)</li>
+</ul>
+<p><strong>Blockchain and CAP:</strong> During a partition, the two sides may produce <em>different</em> blocks (temporarily inconsistent). When the partition heals, the <strong>longest chain wins</strong> and one side's blocks are orphaned — the system sacrificed <strong>availability</strong> to preserve <strong>consistency</strong>.</p>
+<blockquote>
+<p>💡 <strong>Beyond the textbook:</strong> "Eventual consistency" (a PYQ term!) means: if no new updates arrive, all nodes <em>eventually</em> converge to the same state. Bitcoin is eventually consistent — your transaction "confirms" after ~6 blocks, i.e., the system has converged. See solved PYQ below (w_24 Q.4a).</p>
+</blockquote>
+<hr />
+<h2 id="12-the-anatomy-of-a-block">1.2 The Anatomy of a Block ⭐<a class="headerlink" href="#12-the-anatomy-of-a-block" title="Permanent link">&para;</a></h2>
+<h3 id="121-block-fields">1.2.1 Block fields<a class="headerlink" href="#121-block-fields" title="Permanent link">&para;</a></h3>
+<p>A blockchain is literally a <strong>linked list of hash-linked records</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Meaning</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Index</strong></td>
+<td>Position in the chain (0 = genesis)</td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><strong>Timestamp</strong></td>
+<td>When the block was created</td>
+<td><code>2026-07-31 10:00:00 UTC</code></td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>Transactions or payload</td>
+<td><code>"Student A sends 1 coin to B"</code></td>
+</tr>
+<tr>
+<td><strong>Previous hash</strong></td>
+<td>Hash of the previous block ← the <em>link</em></td>
+<td><code>bdb16bbff0518dcc…</code></td>
+</tr>
+<tr>
+<td><strong>Nonce</strong></td>
+<td>Number used once (for PoW — Unit 2)</td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><strong>Hash</strong></td>
+<td>SHA-256 of everything above</td>
+<td><code>00a017f696a0fdba…</code></td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    G0[Genesis&lt;br/&gt;prev: 000..0&lt;br/&gt;hash: H0] --&gt; B1[Block 1&lt;br/&gt;prev: H0&lt;br/&gt;hash: H1]
+    B1 --&gt; B2[Block 2&lt;br/&gt;prev: H1&lt;br/&gt;hash: H2]
+    B2 --&gt; B3[Block 3&lt;br/&gt;prev: H2&lt;br/&gt;hash: H3]</code></pre>
+<p><strong>Why this creates tamper-evidence (the single most important idea in this unit):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hash_n = SHA256(index + timestamp + data + prev_hash + nonce)
+</code></pre></div>
+<ol>
+<li>The <strong>previous hash is inside</strong> the current block's hash input.</li>
+<li>Change any byte of block <em>i</em> → its hash changes (avalanche).</li>
+<li>Block <em>i+1</em> still stores the <em>old</em> <code>prev_hash</code> → mismatch → whole chain flagged invalid.</li>
+<li>To "fix" it, an attacker must re-hash <strong>every subsequent block</strong>, and (in PoW) re-mine each at current difficulty. The cumulative work makes this uneconomical.</li>
+</ol>
+<blockquote>
+<p>🔬 <strong>See it live:</strong> <a href="../../practicals/writeups/P03_basic_blockchain_python/">P03</a> — change <code>"sends 1 coin"</code> → <code>"sends 100 coins"</code> in a block and the validator instantly rejects the chain.</p>
+</blockquote>
+<h3 id="122-merkle-trees-efficient-data-verification">1.2.2 Merkle Trees — efficient data verification ⭐⭐<a class="headerlink" href="#122-merkle-trees-efficient-data-verification" title="Permanent link">&para;</a></h3>
+<p>Hashing all transactions together is wasteful: to prove <em>one</em> transaction belongs, you'd need <em>all</em> transactions. A <strong>Merkle tree</strong> solves this.</p>
+<p><strong>Construction (bottom-up):</strong>
+1. <strong>Leaves</strong> = <code>SHA256(tx)</code> for each transaction
+2. <strong>Parent</strong> = <code>SHA256(left || right)</code> (sorted so <code>left &lt; right</code>)
+3. Repeat until one node remains → <strong>Merkle root</strong>
+4. Odd count? Duplicate the last leaf (Bitcoin convention)</p>
+<pre class="mermaid"><code>flowchart TB
+    R[Merkle Root = H(h01 + h23)] --&gt; h01[H01 = H(h0 + h1)]
+    R --&gt; h23[H23 = H(h2 + h3)]
+    h01 --&gt; h0[H0 = SHA256(tx0)]
+    h01 --&gt; h1[H1 = SHA256(tx1)]
+    h23 --&gt; h2[H2 = SHA256(tx2)]
+    h23 --&gt; h3[H3 = SHA256(tx3)]</code></pre>
+<p><strong>Why it's brilliant:</strong>
+- The <strong>root</strong> commits to <em>all</em> transactions in one 256-bit value (stored in the block header).
+- To prove tx2 ∈ block, you only need the <strong>sibling path</strong> <code>{h3, h01}</code> → recompute root and compare. That's <strong>log₂(n)</strong> hashes, not <em>n</em> — this is a <strong>Merkle proof</strong>.
+- Light clients (<strong>SPV wallets</strong>) download only block headers, get a short Merkle proof from a full node, and verify their transaction was included — without downloading the whole chain.</p>
+<blockquote>
+<p>🔬 <strong>See it live:</strong> <a href="../../practicals/writeups/P04_merkle_tree/">P04</a> — builds trees for 4 and 5 transactions and shows a tampered leaf changes the root.</p>
+<p>💡 <strong>Beyond the textbook:</strong> Ethereum doesn't use a plain Merkle tree — it uses a <strong>Merkle-Patricia Trie</strong> for its state, allowing efficient <em>light-client proofs of state</em> (balances, storage) in addition to transactions. Know the difference if asked "how does Ethereum store state?".</p>
+</blockquote>
+<h3 id="123-distributed-ledger-technology-dlt-vs-traditional-databases">1.2.3 Distributed Ledger Technology (DLT) vs Traditional Databases<a class="headerlink" href="#123-distributed-ledger-technology-dlt-vs-traditional-databases" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Traditional Database</th>
+<th>DLT / Blockchain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ownership</strong></td>
+<td>Single organization</td>
+<td>Shared among participants</td>
+</tr>
+<tr>
+<td><strong>Write permission</strong></td>
+<td>Admin / central authority</td>
+<td>Consensus protocol</td>
+</tr>
+<tr>
+<td><strong>History</strong></td>
+<td>Overwritable / mutable</td>
+<td><strong>Append-only</strong> (immutable)</td>
+</tr>
+<tr>
+<td><strong>Trust</strong></td>
+<td>Trust the operator</td>
+<td>Trust the protocol (crypto + consensus)</td>
+</tr>
+<tr>
+<td><strong>Failure</strong></td>
+<td>Single point of failure</td>
+<td>Fault-tolerant (n−1 nodes can fail)</td>
+</tr>
+<tr>
+<td><strong>Transparency</strong></td>
+<td>Internal</td>
+<td>Open to all participants</td>
+</tr>
+<tr>
+<td><strong>Speed</strong></td>
+<td>Very fast</td>
+<td>Slower (replicated everywhere)</td>
+</tr>
+<tr>
+<td><strong>Example</strong></td>
+<td>MySQL, Oracle</td>
+<td>Bitcoin, Ethereum, Hyperledger Fabric</td>
+</tr>
+</tbody>
+</table>
+<p><strong>When a blockchain is <em>not</em> the answer</strong> (exam "limits of blockchain"): private data is a compliance risk, extremely high transaction throughput needed, no need for a shared/trusted record, regulatory constraints.</p>
+<hr />
+<h2 id="13-network-consensus">1.3 Network Consensus<a class="headerlink" href="#13-network-consensus" title="Permanent link">&para;</a></h2>
+<h3 id="131-the-byzantine-generals-problem">1.3.1 The Byzantine Generals Problem ⭐⭐<a class="headerlink" href="#131-the-byzantine-generals-problem" title="Permanent link">&para;</a></h3>
+<p><strong>The problem (Leslie Lamport, 1982):</strong> Several divisions of the Byzantine army are camped around an enemy city. The generals must agree on a common plan — <strong>attack</strong> or <strong>retreat</strong>. They communicate only by messages, but <strong>some generals are traitors</strong> who will send conflicting messages to create chaos. How can the loyal generals reach reliable agreement?</p>
+<pre class="mermaid"><code>flowchart LR
+    G1[Loyal General 1&lt;br/&gt;says ATTACK] --&gt; COM{Communication&lt;br/&gt;must agree}
+    G2[Traitor&lt;br/&gt;tells each side&lt;br/&gt;different plans] --&gt; COM
+    G3[Loyal General 3&lt;br/&gt;says ATTACK] --&gt; COM
+    COM --&gt; DEC[All loyal generals&lt;br/&gt;must choose the SAME action]</code></pre>
+<p><strong>Key findings:</strong>
+1. If generals send only messages, agreement is impossible with <strong>3 generals and 1 traitor</strong>.
+2. In general: to tolerate <code>f</code> traitors, you need <strong>at least 3f + 1</strong> loyal parties (so 3f+1 total, with f faulty) — this is the classic result behind <strong>PBFT</strong>.
+3. Cryptographically <strong>signed</strong> messages improve this (you can't impersonate a loyal general).</p>
+<p><strong>Why it matters to blockchain:</strong> A blockchain is a bunch of "generals" (nodes) who don't trust each other and must agree on which transactions are valid and in what order — otherwise the whole system falls apart. <strong>Consensus algorithms are the solution to the Byzantine Generals problem.</strong></p>
+<h3 id="132-peer-to-peer-p2p-network-architecture">1.3.2 Peer-to-Peer (P2P) Network Architecture<a class="headerlink" href="#132-peer-to-peer-p2p-network-architecture" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Nodes connect <strong>directly to each other</strong> (a mesh), not through a central server.</li>
+<li><strong>Gossip/flooding:</strong> new transactions and blocks propagate node-to-node; each node validates before relaying.</li>
+<li><strong>Full nodes</strong> store the entire ledger and enforce all rules.</li>
+<li>Result: no single point of failure, no central target, censorship-resistant.</li>
+</ul>
+<blockquote>
+<p>💡 <strong>Beyond the textbook:</strong> Bitcoin nodes talk on port 8333 over TCP; a node connects to ~8-125 peers. The network is <em>permissionless</em> — anyone can run a node, which is what makes Bitcoin hard to kill. In permissioned chains (Unit 4, Hyperledger Fabric) the "P2P network" is restricted to approved members.</p>
+</blockquote>
+<h3 id="133-why-we-need-consensus-agreement">1.3.3 Why We Need Consensus (agreement)<a class="headerlink" href="#133-why-we-need-consensus-agreement" title="Permanent link">&para;</a></h3>
+<p>In a centralized system, the boss decides. In a decentralized one, <strong>nobody is the boss</strong> — so we need a <strong>formal agreement rule</strong> every honest node follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&quot;Which block is valid?&quot;  →  Consensus rule answers
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>&quot;Which chain is the truth?&quot;  →  The one with most accumulated work/stake
+</code></pre></div>
+<p><strong>Properties we want from consensus:</strong>
+- <strong>Safety</strong> — honest nodes never disagree on the same block (no double-spend)
+- <strong>Liveness</strong> — the network keeps making progress (new blocks keep coming)
+- <strong>Fault tolerance</strong> — works despite Byzantine/faulty nodes</p>
+<p><strong>Two big families</strong> (detail in Unit 2):
+- <strong>PoW (Proof of Work)</strong> — spend energy; probability of deciding ∝ hashrate. Used by Bitcoin.
+- <strong>PoS (Proof of Stake)</strong> — lock tokens; probability of deciding ∝ stake. Used by Ethereum (post-2022).</p>
+<hr />
+<h2 id="deep-dive-topics">🧠 Deep-Dive Topics<a class="headerlink" href="#deep-dive-topics" title="Permanent link">&para;</a></h2>
+<h3 id="deep-dive-a-the-full-why-does-tampering-fail-chain-of-reasoning">Deep Dive A: The full "why does tampering fail" chain of reasoning<a class="headerlink" href="#deep-dive-a-the-full-why-does-tampering-fail-chain-of-reasoning" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Block data is hashed → any change to data changes the hash.</li>
+<li>The new hash doesn't match the block's stored hash → invalid.</li>
+<li>Even if recomputed, the next block's <code>prev_hash</code> still points to the old hash → invalid.</li>
+<li>Fixing the whole chain requires re-mining (PoW) every block after the tampered one.</li>
+<li>The attacker would need more cumulative hashing power than the entire honest network → infeasible.<blockquote>
+<p>This is why a blockchain's security comes from <strong>hash chaining + consensus work</strong>, not from encryption of the data (blockchain data is public, not encrypted!).</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="deep-dive-b-merkle-proof-worked-example">Deep Dive B: Merkle proof — worked example<a class="headerlink" href="#deep-dive-b-merkle-proof-worked-example" title="Permanent link">&para;</a></h3>
+<p>4-tx block: <code>H0 H1 H2 H3</code> → <code>H01 = H(H0,H1)</code>, <code>H23 = H(H2,H3)</code> → <code>Root = H(H01,H23)</code>.
+To prove <strong>tx2</strong>:
+- Provide <code>tx2</code>, <code>H3</code>, <code>H01</code>.
+- Verifier computes <code>H2 = SHA256(tx2)</code>, then <code>H23 = H(H2, H3)</code>, then <code>Root' = H(H01, H23)</code>.
+- If <code>Root' == stored root</code> → tx2 is in the block. ✅
+- Only <strong>3</strong> hashes were needed for 4 txs; for 1,000,000 txs only <strong>20</strong> hashes (log₂ 10⁶ ≈ 20).</p>
+<h3 id="deep-dive-c-cap-theorem-applied">Deep Dive C: CAP theorem, applied<a class="headerlink" href="#deep-dive-c-cap-theorem-applied" title="Permanent link">&para;</a></h3>
+<p>Say the network splits into Side A and Side B (a partition). A miner on each side mines a new block → two different chains exist briefly.
+- <strong>Availability choice</strong> (AP): both sides keep accepting transactions. On heal → conflict → resolve by longest chain → transactions from the losing side are dropped/reverted.
+- <strong>Consistency choice</strong> (CP): the minority side stops accepting new writes during the partition. Blockchain picks this. Result: you might temporarily be <em>unavailable</em> to transact (nodes waiting for the split to heal), but the network never accepts two conflicting truths forever.
+- "<strong>Eventual consistency</strong>" = after the partition heals and no new blocks arrive, all nodes converge on the same chain.</p>
+<hr />
+<h2 id="beyond-the-textbook-what-most-classes-wont-tell-you">🚀 Beyond the Textbook (what most classes won't tell you)<a class="headerlink" href="#beyond-the-textbook-what-most-classes-wont-tell-you" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Hashes don't "encrypt" anything.</strong> Blockchain data is <em>public by design</em>. Privacy is a <em>separate</em> feature (zksnarks, mixers) added on top. Never write "blockchain encrypts data" in an exam — it's a common wrong answer.</li>
+<li><strong>The first-ever double-spend risk:</strong> because Bitcoin hashes are probabilistic (PoW), the "6 confirmations" rule is a <em>practical</em> heuristic, not a guarantee. It only holds while the attacker has &lt;50% hashrate.</li>
+<li><strong>Merkle roots vs "all hashes concatenated":</strong> some textbooks simplify to <code>SHA256(tx1+tx2+…)</code>. Real systems use Merkle trees specifically so <em>individual</em> transactions can be proven in O(log n) without downloading everything.</li>
+<li><strong>The genesis block's <code>prev_hash</code> is 64 zeros</strong> — it's a sentinel meaning "nothing before me." This special-case is how the chain knows where to start validating.</li>
+<li><strong>Non-deterministic signatures are a feature, not a bug.</strong> Random <code>k</code> prevents signature-reuse attacks. But if the RNG is weak (see: Android Bitcoin wallet bug, 2013), the same <code>k</code> across two signatures reveals the private key in one line of algebra.</li>
+<li><strong>Exam-hack memory aid for the 6 hash properties:</strong> "<strong>D</strong>eterministic <strong>F</strong>ixed <strong>P</strong>re-image-resistant, <strong>S</strong>econd-preimage, <strong>C</strong>ollision, <strong>A</strong>valanche" → <strong>DF PSCA</strong> → remember "<strong>D</strong>o <strong>F</strong>ind <strong>P</strong>eople <strong>S</strong>igning <strong>C</strong>ode <strong>A</strong>ll-day."</li>
+</ol>
+<hr />
+<h2 id="pyq-map-unit-1-all-available-papers">📝 PYQ Map — UNIT 1 (all available papers)<a class="headerlink" href="#pyq-map-unit-1-all-available-papers" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Paper</th>
+<th>Q#</th>
+<th>Question</th>
+<th>Weight</th>
+<th>In this unit?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>w_24</td>
+<td>Q.1(a)</td>
+<td>Short note: Distributed Ledger</td>
+<td>3</td>
+<td>✅ §1.2.3</td>
+</tr>
+<tr>
+<td>w_24</td>
+<td>Q.1(c)</td>
+<td>Explain Consistency, Availability, Partition tolerance</td>
+<td>7</td>
+<td>✅ §1.1.5</td>
+</tr>
+<tr>
+<td>w_24</td>
+<td>Q.1(c-alt)</td>
+<td>Explain Asymmetric Encryption Model with example</td>
+<td>7</td>
+<td>✅ §1.1.4</td>
+</tr>
+<tr>
+<td>w_24</td>
+<td>Q.2(a)</td>
+<td>Define: Public key, Private key, Digital Signature</td>
+<td>3</td>
+<td>✅ §1.1.4</td>
+</tr>
+<tr>
+<td>w_24</td>
+<td>Q.3(c-alt)</td>
+<td>What is SHA-256 and its use in Bitcoin?</td>
+<td>7</td>
+<td>✅ §1.1.3</td>
+</tr>
+<tr>
+<td>w_24</td>
+<td>Q.4(a)</td>
+<td>Explain Bitcoin and eventual consistency</td>
+<td>3</td>
+<td>✅ §1.1.5</td>
+</tr>
+<tr>
+<td>w_24</td>
+<td>Q.4(c)</td>
+<td>Define Merkle Tree, explain how it works</td>
+<td>7</td>
+<td>✅ §1.2.2</td>
+</tr>
+<tr>
+<td>s_24</td>
+<td>Q.1(a)</td>
+<td>Benefits of distributed ledger systems</td>
+<td>3</td>
+<td>✅ §1.2.3</td>
+</tr>
+<tr>
+<td>s_24</td>
+<td>Q.1(b)</td>
+<td>Define: 1) Blockchain 2) Distributed systems</td>
+<td>4</td>
+<td>✅ §1.1.2</td>
+</tr>
+<tr>
+<td>s_24</td>
+<td>Q.4(b)</td>
+<td>Explain classic Byzantine generals problem</td>
+<td>4</td>
+<td>✅ §1.3.1</td>
+</tr>
+<tr>
+<td>s_24</td>
+<td>Q.4(c)</td>
+<td>Process of Merkle tree creation with example</td>
+<td>7</td>
+<td>✅ §1.2.2</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.1(b)</td>
+<td>Explain Distributed Ledger in detail</td>
+<td>4</td>
+<td>✅ §1.2.3</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.1(c)</td>
+<td>Define Blockchain, describe applications &amp; limits</td>
+<td>7</td>
+<td>✅ §1.1.2</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.1(c-alt)</td>
+<td>Short note: CAP Theorem in Blockchain</td>
+<td>7</td>
+<td>✅ §1.1.5</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.2(a)</td>
+<td>Explain Data Structure of a Blockchain</td>
+<td>3</td>
+<td>✅ §1.2.1</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.2(b)</td>
+<td>Benefits of Decentralization</td>
+<td>4</td>
+<td>✅ §1.1.2</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.4(b)</td>
+<td>What is hashing? How useful in Bitcoin?</td>
+<td>4</td>
+<td>✅ §1.1.3</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.4(c)</td>
+<td>Short note: Merkle Tree</td>
+<td>7</td>
+<td>✅ §1.2.2</td>
+</tr>
+<tr>
+<td>s_25</td>
+<td>Q.4(c-alt)</td>
+<td>Byzantine generals + PBFT</td>
+<td>7</td>
+<td>✅ §1.3.1</td>
+</tr>
+<tr>
+<td>s_26</td>
+<td>Q.1(b)</td>
+<td>Define: 1) Blockchain 2) Distributed systems</td>
+<td>4</td>
+<td>✅ §1.1.2</td>
+</tr>
+<tr>
+<td>w_25</td>
+<td>Q.1(a)</td>
+<td>Define: Blockchain</td>
+<td>3</td>
+<td>✅ §1.1.2</td>
+</tr>
+<tr>
+<td>w_25</td>
+<td>Q.1(b)</td>
+<td>Explain asymmetric key encryption model</td>
+<td>4</td>
+<td>✅ §1.1.4</td>
+</tr>
+<tr>
+<td>w_25</td>
+<td>Q.1(c)</td>
+<td>Applications, limits, challenges of Blockchain</td>
+<td>7</td>
+<td>✅ §1.1.2</td>
+</tr>
+<tr>
+<td>w_25</td>
+<td>Q.1(c-alt)</td>
+<td>Consistency, Availability, Partition tolerance</td>
+<td>7</td>
+<td>✅ §1.1.5</td>
+</tr>
+<tr>
+<td>w_25</td>
+<td>Q.2(a)</td>
+<td>Define: Decentralized network, Wallet</td>
+<td>3</td>
+<td>✅ §1.1.2</td>
+</tr>
+<tr>
+<td>w_25</td>
+<td>Q.2(b)</td>
+<td>Core components of blockchain</td>
+<td>4</td>
+<td>✅ §1.2</td>
+</tr>
+<tr>
+<td>w_25</td>
+<td>Q.2(c-alt)</td>
+<td>Structure of the blockchain</td>
+<td>4</td>
+<td>✅ §1.2.1</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>📂 Papers live in <a href="../../pyq/fbc/"><code>pyq/fbc/</code></a>: <code>s_24.pdf</code>, <code>w_24.pdf</code>, <code>s_25.pdf</code>, <code>w_25.pdf</code>, <code>s_26.pdf</code>.</p>
+</blockquote>
+<h3 id="solved-pyq-answers-unit-1">✅ Solved PYQ answers (UNIT 1)<a class="headerlink" href="#solved-pyq-answers-unit-1" title="Permanent link">&para;</a></h3>
+<p><strong>Q. (w_24 Q.1a, 3 marks) — Short note: Distributed Ledger</strong></p>
+<blockquote>
+<p>A distributed ledger (DLT) is a database that is <strong>shared, replicated, and synchronized</strong> across multiple nodes in a peer-to-peer network, with <strong>no central administrator</strong>. Each participant keeps a copy of the ledger; updates are agreed via <strong>consensus</strong>. Characteristics: (1) decentralization of control, (2) immutability (append-only), (3) transparency among participants, (4) fault tolerance. Applications: cryptocurrencies, supply-chain tracking, land records, identity management. Examples: Bitcoin, Ethereum, Hyperledger Fabric.</p>
+</blockquote>
+<p><strong>Q. (w_24 Q.4a, 3 marks) — Explain Bitcoin and eventual consistency</strong></p>
+<blockquote>
+<p>Bitcoin is a decentralized cryptocurrency using a public blockchain. <strong>Eventual consistency</strong> means: if no new updates arrive, all copies of the ledger converge to the same state over time. Bitcoin achieves it because during a network partition two conflicting blocks may be created; when the partition heals, nodes adopt the <strong>longest valid chain</strong>, orphaning the other side's blocks. Transactions are considered settled only after ~<strong>6 confirmations</strong>, by which point the network has converged. Bitcoin therefore is <strong>CP</strong> (consistency + partition tolerance) and <em>eventually</em> consistent, not immediately consistent.</p>
+</blockquote>
+<p><strong>Q. (w_24 Q.2a, 3 marks) — Define: Public key, Private key, Digital signature</strong></p>
+<blockquote>
+<p><strong>Public key:</strong> the shareable half of an asymmetric key pair, derived from the private key, used to verify signatures / encrypt data. <strong>Private key:</strong> the secret half, known only to the owner, used to create signatures / decrypt data; must never be shared. <strong>Digital signature:</strong> a cryptographic value <code>(r, s)</code> produced by signing a message hash with the private key; verifiable by anyone holding the public key. It provides <strong>authenticity</strong> (sender identity), <strong>integrity</strong> (message unaltered) and <strong>non-repudiation</strong> (sender cannot deny).</p>
+</blockquote>
+<p><strong>Q. (s_25 Q.4c, 7 marks) — Short note: Merkle Tree</strong></p>
+<blockquote>
+<p>A Merkle tree is a <strong>binary hash tree</strong> where leaves are <code>SHA256(transaction)</code> and each parent is the hash of its two children concatenated, up to a single <strong>Merkle root</strong>. Construction: hash each tx → pair-and-hash repeatedly → root; odd leaves are duplicated. The root is stored in the block header and commits to every transaction. <strong>Membership proof:</strong> a verifier needs only the sibling path (log₂ n hashes) to recompute the root — used by SPV/light clients. <strong>Properties:</strong> tamper-evident (changing one tx changes the root), efficient (O(log n) proofs), compact (one 32-byte commitment for thousands of txs).</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.4b, 4 marks) — Explain classic Byzantine generals problem</strong></p>
+<blockquote>
+<p>In the Byzantine Generals problem, several generals camped around a city must agree on whether to <strong>attack or retreat</strong>. They communicate only by message, but some generals are <strong>traitors</strong> who send contradictory messages to different recipients to prevent agreement. Lamport showed that with only messages, agreement is impossible with <strong>3 generals and 1 traitor</strong>; to tolerate <code>f</code> traitors you need <strong>at least 3f+1</strong> total participants. It models the core difficulty of distributed consensus: <strong>nodes that don't trust each other must agree on one truth</strong>. Blockchains solve it with <strong>consensus algorithms</strong> (PoW/PoS/PBFT) that make dishonest behaviour expensive or impossible.</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.1b / s_26 Q.1b, 4 marks) — Define: 1) Blockchain 2) Distributed system</strong></p>
+<blockquote>
+<p><strong>(1) Blockchain:</strong> a decentralized, distributed, <strong>append-only digital ledger</strong> composed of blocks linked by cryptographic hashes. Each block stores data (transactions), a timestamp, the <strong>hash of the previous block</strong>, and a nonce. Because each block commits to the previous one, the record is <strong>immutable and tamper-evident</strong>; additions require <strong>consensus</strong> among network nodes. <strong>(2) Distributed system:</strong> a collection of independent computers (nodes) that appear to users as a single coherent system, communicating and coordinating via messages. Key challenges are consistency, fault tolerance and concurrency; examples: distributed databases, CDNs, and blockchain networks.</p>
+</blockquote>
+<hr />
+<h2 id="practice-problems-self-test-answers-upside-down">✍️ Practice Problems (self-test — answers upside-down)<a class="headerlink" href="#practice-problems-self-test-answers-upside-down" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>List</strong> the six properties of a cryptographic hash function and give a one-line blockchain use for each.</li>
+<li>Alice signs a message and sends <code>(msg, sig)</code> to Bob. Bob changes one character and forwards it to Carol with the same signature. What happens when Carol verifies? Why?</li>
+<li>A blockchain has 8,192 transactions in one block. How many hashes are needed to prove tx #5000 is in the block?</li>
+<li>During a network partition, a bank system and a blockchain both keep running. Explain which is AP and which is CP, and why.</li>
+<li>Why can't a node simply edit the data in block 3 of an existing chain and re-broadcast it?</li>
+<li>Give the key-pair generation and signing equation <em>conceptually</em>: what does a verifier compare to accept a signature?</li>
+</ol>
+<details>
+<summary>📌 Model solutions</summary>
+
+1. **Deterministic** (re-verification) · **Fixed length** (uniform linking) · **Pre-image resistance** (one-way) · **Second pre-image resistance** (no forgery) · **Collision resistance** (unique identity) · **Avalanche** (tamper detection).
+2. Carol's verification **fails**. Signatures bind to the exact message; any change to the message changes the hash, so the signature no longer matches. This demonstrates **integrity**.
+3. **13 hashes** (log₂ 8192 = 13).
+4. Blockchain: **CP** — it stops serving the minority side rather than risk two truths. Bank system (replicated DB) is typically **AP** — serves requests during partition, reconciles later.
+5. Editing block 3 changes its hash; block 4's stored `prev_hash` would no longer match, and every subsequent block becomes invalid. Re-hashing all later blocks requires re-mining them at current PoW difficulty — uneconomical for an attacker without majority hashrate.
+6. The verifier recomputes the message hash, takes the `(r, s)` signature and the public key, and runs the ECDSA verification equation; it returns "valid" iff the signature was produced by the private key corresponding to that public key over the exact message.
+</details>
+
+<hr />
+<h2 id="glossary-of-key-terms">📖 Glossary of Key Terms<a class="headerlink" href="#glossary-of-key-terms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hash / Digest</strong></td>
+<td>Fixed-size output of a hash function</td>
+</tr>
+<tr>
+<td><strong>SHA-256</strong></td>
+<td>256-bit cryptographic hash (NSA, NIST); used by Bitcoin</td>
+</tr>
+<tr>
+<td><strong>Avalanche effect</strong></td>
+<td>~50% of output bits flip when 1 input bit changes</td>
+</tr>
+<tr>
+<td><strong>Pre-image resistance</strong></td>
+<td>Cannot reverse a hash to recover input</td>
+</tr>
+<tr>
+<td><strong>Collision</strong></td>
+<td>Two different inputs producing the same hash</td>
+</tr>
+<tr>
+<td><strong>Asymmetric crypto</strong></td>
+<td>Key pair: private (sign) + public (verify)</td>
+</tr>
+<tr>
+<td><strong>ECDSA / secp256k1</strong></td>
+<td>Digital signature algorithm / curve used by Bitcoin &amp; Ethereum</td>
+</tr>
+<tr>
+<td><strong>Non-repudiation</strong></td>
+<td>Signer cannot deny having signed</td>
+</tr>
+<tr>
+<td><strong>CAP theorem</strong></td>
+<td>Consistency, Availability, Partition tolerance — choose two</td>
+</tr>
+<tr>
+<td><strong>Eventual consistency</strong></td>
+<td>System converges to the same state once updates stop</td>
+</tr>
+<tr>
+<td><strong>Genesis block</strong></td>
+<td>Block 0, hard-coded start of the chain</td>
+</tr>
+<tr>
+<td><strong>Merkle tree / root</strong></td>
+<td>Binary hash tree / its single top hash</td>
+</tr>
+<tr>
+<td><strong>Merkle proof</strong></td>
+<td>O(log n) sibling hashes proving a leaf's membership</td>
+</tr>
+<tr>
+<td><strong>SPV / Light client</strong></td>
+<td>Client storing only headers + Merkle proofs</td>
+</tr>
+<tr>
+<td><strong>DLT</strong></td>
+<td>Distributed ledger technology — shared, replicated ledger</td>
+</tr>
+<tr>
+<td><strong>Byzantine fault</strong></td>
+<td>Node that behaves arbitrarily/maliciously</td>
+</tr>
+<tr>
+<td><strong>3f+1</strong></td>
+<td>Minimum participants to tolerate f Byzantine faults</td>
+</tr>
+<tr>
+<td><strong>PBFT</strong></td>
+<td>Practical Byzantine Fault Tolerance (permissioned consensus)</td>
+</tr>
+<tr>
+<td><strong>Consensus</strong></td>
+<td>The rule by which distributed nodes agree on one state</td>
+</tr>
+<tr>
+<td><strong>P2P network</strong></td>
+<td>Nodes connect directly; no central server</td>
+</tr>
+<tr>
+<td><strong>PoW / PoS</strong></td>
+<td>Proof of Work / Proof of Stake (Unit 2 deep dive)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="curated-resources-per-concept">🔗 Curated Resources (per concept)<a class="headerlink" href="#curated-resources-per-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Hash functions &amp; SHA-256</strong>
+- hashlib docs: https://docs.python.org/3/library/hashlib.html
+- SHA-2 (NIST): https://csrc.nist.gov/pubs/fips/180-4/upd1/final
+- Visual hash playground (CyberChef): https://gchq.github.io/CyberChef/
+- 3Blue1Brown "how hashing works": search <em>3blue1brown bitcoin</em></p>
+<p><strong>Keys &amp; signatures</strong>
+- <code>cryptography</code> ECDSA docs: https://cryptography.io/en/latest/hazmat/primitives/asymmetric/ec/
+- <em>Mastering Bitcoin</em> Ch. 4 (free): https://github.com/bitcoinbook/bitcoinbook
+- ECDSA article: https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm</p>
+<p><strong>CAP theorem</strong>
+- Original explanation (Brewer): https://mwhittaker.github.io/blog/an_illustrated_proof_of_the_cap_theorem/
+- Good visual primer: https://en.wikipedia.org/wiki/CAP_theorem</p>
+<p><strong>Blocks &amp; Merkle trees</strong>
+- <em>Mastering Bitcoin</em> Ch. 9: https://github.com/bitcoinbook/bitcoinbook/blob/develop/ch09.asciidoc
+- Interactive blockchain (Anders Brownworth): https://andersbrownworth.com/blockchain/
+- Merkle tree article: https://en.wikipedia.org/wiki/Merkle_tree</p>
+<p><strong>Byzantine generals &amp; consensus</strong>
+- Original Lamport paper: https://lamport.azurewebsites.net/pubs/byz.pdf
+- Illustrated Byzantine fault: https://en.wikipedia.org/wiki/Byzantine_fault</p>
+<p><strong>Videos (high yield)</strong>
+- <em>But how does bitcoin actually work?</em> — 3Blue1Brown
+- <em>How does a blockchain work?</em> — Simply Explained
+- <em>Proof of Work vs Proof of Stake</em> — Finematics</p>
+<hr />
+<h2 id="video-study-guide-youtube">🎥 Video Study Guide (YouTube)<a class="headerlink" href="#video-study-guide-youtube" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Don't like reading? Me neither. This is your <strong>structured video path</strong> for the whole unit — better than the syllabus because it tells you <em>exactly what to search</em> and <em>what to watch first</em>, in a sensible order. Everything below is search keywords (they never rot like links do) + channels you can trust.</p>
+</blockquote>
+<h3 id="step-0-pick-your-learning-style">🧑‍🎓 Step 0 — Pick your learning style<a class="headerlink" href="#step-0-pick-your-learning-style" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>You learn best by</th>
+<th>Your path through this unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎧 <strong>Listener</strong></td>
+<td>short, clear explainers</td>
+<td>Watch 1 explainer per topic from the table below (3–8 min each)</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Builder</strong></td>
+<td>writing code yourself</td>
+<td>Watch the build-along video → then run <a href="../../">P01–P04</a> code and break them</td>
+</tr>
+<tr>
+<td>🔧 <strong>Tinkerer</strong></td>
+<td>experimenting &amp; demos</td>
+<td>Watch demo videos → change a bit/letter and re-run the Python practicals</td>
+</tr>
+<tr>
+<td>🧠 <strong>Deep Diver</strong></td>
+<td>full theory, "why"</td>
+<td>Watch the whole-unit playlists at the bottom (university-level depth)</td>
+</tr>
+<tr>
+<td>🧭 <strong>Explorer</strong></td>
+<td>breadth &amp; curiosity</td>
+<td>Watch the classic "how it works" explainers first, then follow your curiosity</td>
+</tr>
+<tr>
+<td>🎓 <strong>Academic</strong></td>
+<td>exam marks</td>
+<td>Watch the revision/GTU-style videos, then grind the PYQ map above</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-1-watch-by-topic-search-these-on-youtube">🎬 Step 1 — Watch by topic (search these on YouTube)<a class="headerlink" href="#step-1-watch-by-topic-search-these-on-youtube" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>YouTube search keywords (copy-paste ready)</th>
+<th>Best channels</th>
+<th>Style served</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Why money → crypto &amp; decentralization</td>
+<td><code>evolution of money bitcoin</code> · <code>why bitcoin was created 2008 crisis</code> · <code>centralized vs decentralized systems explained</code></td>
+<td>Real Vision, TED-Ed, 99% Invisible</td>
+<td>🧭 Explorer</td>
+</tr>
+<tr>
+<td>What is a blockchain (30-sec mental model)</td>
+<td><code>how does a blockchain work simply explained</code> · <code>blockchain explained in 5 minutes</code></td>
+<td>Simply Explained, Fireship</td>
+<td>🧭 + 🎧</td>
+</tr>
+<tr>
+<td>Cryptographic hashes &amp; SHA-256</td>
+<td><code>sha-256 explained</code> · <code>what is a cryptographic hash</code> · <code>hash avalanche effect demo</code></td>
+<td>Computerphile, Simply Explained</td>
+<td>🎧 Deep Diver</td>
+</tr>
+<tr>
+<td>Public-key crypto &amp; digital signatures</td>
+<td><code>public key cryptography explained</code> · <code>digital signatures explained with example</code> · <code>ecdsa elliptic curve explained</code></td>
+<td>Computerphile, Art of the Problem, 3Blue1Brown</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>CAP theorem</td>
+<td><code>cap theorem explained</code> · <code>cap theorem database</code> · <code>cap theorem blockchain eventual consistency</code></td>
+<td>ByteByteGo, System Design Primer</td>
+<td>🎓 Academic</td>
+</tr>
+<tr>
+<td>Block structure &amp; tamper-evidence</td>
+<td><code>blockchain block structure</code> · <code>what is a genesis block</code> · <code>why is blockchain tamper proof</code></td>
+<td>Simply Explained, Blockgeeks</td>
+<td>🎧</td>
+</tr>
+<tr>
+<td>Build your own blockchain (hands-on)</td>
+<td><code>build a blockchain in python tutorial</code> · <code>blockchain from scratch python</code></td>
+<td>freeCodeCamp, "build-your-own" devs (e.g., David Gerard style tutorials)</td>
+<td>🛠️ Builder</td>
+</tr>
+<tr>
+<td>Merkle trees</td>
+<td><code>merkle tree explained</code> · <code>merkle tree bitcoin spv light client</code> · <code>build merkle tree python</code></td>
+<td>Simply Explained, Computerphile, Coding Train (visual)</td>
+<td>🔧 + 🛠️</td>
+</tr>
+<tr>
+<td>Byzantine generals &amp; fault tolerance</td>
+<td><code>byzantine generals problem explained</code> · <code>byzantine fault tolerance bft</code> · <code>distributed consensus explained</code></td>
+<td>Computerphile, Fireship, Martin Kleppmann</td>
+<td>🧠 Deep Diver</td>
+</tr>
+<tr>
+<td>Why we need consensus</td>
+<td><code>proof of work vs proof of stake</code> · <code>what is consensus in blockchain</code> · <code>how bitcoin mining works</code></td>
+<td>Finematics, 3Blue1Brown, Simply Explained</td>
+<td>🧠 + 🎓</td>
+</tr>
+<tr>
+<td>Whole-unit revision (exam mode)</td>
+<td><code>blockchain fundamentals full course</code> · <code>blockchain unit 1 for beginners diploma</code> · <code>blockchain 10 minute recap</code></td>
+<td>MIT OCW, freeCodeCamp, Gate Smashers, Neso Academy</td>
+<td>🎓 Academic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-full-playlists-for-deep-divers-academics">🎬 Step 2 — Full playlists (for Deep Divers &amp; Academics)<a class="headerlink" href="#step-2-full-playlists-for-deep-divers-academics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>"MIT 15.S12 Blockchain and Money — full course"</strong> (Prof. Gary Gensler) — the single best structured course; watch the lectures matching this unit's topics.</li>
+<li><strong>"Andreas Antonopoulos bitcoin lectures / meetups"</strong> — deep, intuitive developer-level explanations of hashing, keys, and decentralization.</li>
+<li><strong>"CryptoZombies"</strong> — interactive/gamified; perfect if you're a Tinkerer who wants to learn by building.</li>
+</ol>
+<h3 id="step-3-proof-you-got-it-5-min">🎬 Step 3 — Proof you got it (5 min)<a class="headerlink" href="#step-3-proof-you-got-it-5-min" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Can you explain the avalanche effect to a friend using the word "flip"? (Use the P01 demo if stuck.)</li>
+<li>Run <a href="../../practicals/writeups/P02_public_private_keys_digital_signatures/">P02</a> and predict which verification fails when you tamper with the message.</li>
+<li>Re-tell the Byzantine Generals story in your own words — if you can, the concept is yours.</li>
+</ul>
+<hr />
+<p><em>Next: <a href="../UNIT_2_Bitcoin_and_PoW/">UNIT 2 — Bitcoin &amp; The Proof-of-Work Era</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../PRACTICALS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Practical Tracker">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Practical Tracker
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../UNIT_2_Bitcoin_and_PoW/" class="md-footer__link md-footer__link--next" aria-label="Next: UNIT 2 — Bitcoin &amp; The Proof-of-Work Era ⛏️">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

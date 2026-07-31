@@ -1,0 +1,6567 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.">
+      
+      
+      
+        <link rel="canonical" href="https://aayushbankar.github.io/sem_5/CDCT/notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing/">
+      
+      
+        <link rel="prev" href="../UNIT_5_Cloud_Security_and_Compliance/">
+      
+      
+        <link rel="next" href="../../practicals/writeups/P01_openstack_architecture/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="https://fav.farm/📚">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>UNIT 6 — Emerging Technologies with Cloud Computing 🚀 - Semester 5 — GTU IT Study Kit 🎓</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unit-6-emerging-technologies-with-cloud-computing" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-header__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Semester 5 — GTU IT Study Kit 🎓
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../FOB/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  FOB
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../IOT/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  IOT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPE/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPE
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../AIPD/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  AIPD
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  CDCT
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📄 All Syllabi (PDF)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../pyq/fbc/s_24.pdf" class="md-tabs__link">
+          
+  
+  
+    
+  
+  📝 Past Papers (PYQ)
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Semester 5 — GTU IT Study Kit 🎓" class="md-nav__button md-logo" aria-label="Semester 5 — GTU IT Study Kit 🎓" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"/></svg>
+
+    </a>
+    Semester 5 — GTU IT Study Kit 🎓
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Aayushbankar/sem_5" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Aayushbankar/sem_5
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../FOB/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FOB
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FOB
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_1_Foundations_of_Decentralization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Decentralization 🏛️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_2_Bitcoin_and_PoW/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_3_Ethereum_and_Smart_Contracts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Ethereum & Smart Contracts 🟣
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_4_Enterprise_and_Private_Blockchains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Enterprise & Private Blockchains 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/UNIT_5_Security_Emerging_Trends_Green_Energy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P01_cryptographic_hash_avalanche/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Cryptographic Hash Functions & the Avalanche Effect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P02_public_private_keys_digital_signatures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Public/Private Key Pair & Digital Signatures
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P03_basic_blockchain_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Basic Blockchain Structure in Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P04_merkle_tree/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Simplified Merkle Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P05_nonce_mining_difficulty/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — The "Nonce" & Mining Difficulty (Proof-of-Work)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P06_wallets_mnemonic_bip39/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P07_smart_contract_evm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Write, Compile & Deploy a Smart Contract on the EVM
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P08_erc20_token/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Tokenization: Deploying a Basic ERC-20 Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P09_case_study_public_vs_private_hyperledger/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/practicals/writeups/P10_case_study_security_green_energy_dao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../FOB/DI05016051-FOB.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../IOT/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IOT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    IOT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_1_Introduction_to_IoT/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to IoT 🌐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_3_ESP32_and_Arduino_IDE_Development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_4_IoT_Communication_Protocols_and_Networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — IoT Communication Protocols & Networking 📡
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P01_iot_architecture_layers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Study: 4-Layer IoT Architecture & Real-World Applications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P02_compare_hardware_platforms_esp32_pinout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P03_arduino_ide_setup_esp32/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P04_external_led_blink_toggle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Toggle an External LED (Digital Output)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P05_pir_ldr_sensor_interface/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P06_dht_temperature_humidity_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — DHT11/DHT22 Temperature & Humidity Sensor
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P07_ultrasonic_distance_sensor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P08_esp32_mqtt_publisher/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — ESP32 as MQTT Publisher (Temperature & Humidity)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P09_esp32_mqtt_subscriber_remote_control/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P10_thingspeak_http_temperature/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P11_ultrasonic_thingspeak_cloud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Ultrasonic Distance to Cloud (ThingSpeak)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P12_blynk_two_way_dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P13_soil_moisture_dht_cloud_thresholds/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/practicals/writeups/P14_mini_project_smart_agriculture_guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P14 — Mini-Project: Smart Agriculture System (walkthrough guide)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../IOT/DI05016071-IOT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPE/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPE
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPE
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_2_Basics_of_Large_Language_Models/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Basics of Large Language Models (LLMs) 🧠
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Prompt Engineering Fundamentals 🎯
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_4_Prompt_Engineering_Techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Prompt Engineering Techniques 🧩
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Generative AI Tools for Different Task Types & Applications Across Domains
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P02_sentiment_analysis_text_classification/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Sentiment Analysis & Text Classification with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P03_llm_behavior_analysis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P05_prompt_design_and_refinement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Design & Refine Prompts: Email Writing & Concept Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Zero-Shot, Few-Shot & Role-Based Prompting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P08_task_based_prompt_engineering/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P09_ai_tools_for_software_development/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P10_ai_chatbot_api_python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P11_document_qa_basic_rag/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Document-Based Q&A (Basic RAG)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/practicals/writeups/P12_ai_study_assistant/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — Build an AI Application: Study Assistant (with design docs for 3 more)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPE/DI05016011-AIPE.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../AIPD/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIPD
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AIPD
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_1_Fundamentals_of_AI_Products/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_2_Design_Thinking_and_Human_Centred_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Design Thinking & Human-Centred AI 🎨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — AI Product Strategy & OpenAI Integration 🧭
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_4_AI_in_Social_Media_and_Digital_Experience/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — AI in Social Media & Digital Experience 📱
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/UNIT_6_AI_Threats_and_Mitigation_Strategies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — AI Threats & Mitigation Strategies 🚨
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P01_product_idea_problem_statement/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Product Idea, Problem Statement, Target Users & Core Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P02_ai_system_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P03_data_components/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Data Components: Inventory, Classification & Risk Identification
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P04_persona_empathy_journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — User Personas, Empathy Map & Customer Journey Map
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P05_interaction_flow_wireframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — AI Interaction Flow & Basic UI Wireframes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P06_mvp_feature_prioritization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — MVP Features & Feature Prioritization Matrix
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P07_business_model_canvas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Business Model Canvas & AI Monetization Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P08_ai_integration_plan/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — AI Integration Plan: API Usage, Cost Awareness & Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P09_social_media_campaign/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — AI Social-Media Campaign & Promotional Content
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P10_no_code_prototype_demo_video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P11_data_protection_ethics_policy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P11 — Data Protection Plan & AI Ethical Usage Policy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/practicals/writeups/P12_ai_risk_assessment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P12 — AI Risk Assessment & Mitigation Strategy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/notes/RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AIPD/DI05016021-AIPD.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CDCT
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CDCT
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../PRACTICALS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Practical Tracker
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📚 Notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📚 Notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_1_Introduction_to_Cloud_Computing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 1 — Introduction to Cloud Computing ☁️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_2_Virtualization_and_Hypervisors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 2 — Virtualization and Hypervisors 🖥️
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_3_Data_Center_Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 3 — Data Center Architecture 🏢
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_4_Cloud_Storage_and_Database_Services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 4 — Cloud Storage and Database Services 💾
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIT_5_Cloud_Security_and_Compliance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 5 — Cloud Security and Compliance 🔐
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UNIT 6 — Emerging Technologies with Cloud Computing 🚀
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-mobile-cloud-computing-mcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Mobile Cloud Computing (MCC) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-sensor-and-iot-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Sensor and IoT Cloud ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-serverless-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Serverless Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-edge-and-fog-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Edge and Fog Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Edge and Fog Computing ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edge-vs-fog-s_24-q1c-w_24-q5b-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge vs Fog (s_24 Q.1c / w_24 Q.5b-alt) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-ai-and-machine-learning-with-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 AI and Machine Learning with Cloud Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-distributed-ledger-technology-dlt-with-cloud-s_24-q1c-alt-w_25-q5b-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Distributed Ledger Technology (DLT) with Cloud (s_24 Q.1c-alt, w_25 Q.5b-alt) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-5g-and-cloud-native-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 5G and Cloud-Native Networking ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-kubernetes-and-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8 Kubernetes and Containers ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-steps-to-create-an-image-and-run-a-docker-container-w_24-q5c-alt-7-marks-p10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Steps to create an image and run a Docker container (w_24 Q.5c-alt, 7 marks — P10!)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-fog-computing-how-does-it-work-s_26-q1c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: "Fog computing — how does it work?" (s_26 Q.1c)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-serverless-vs-containers-exam-favourite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Serverless vs containers (exam favourite)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-d-the-three-layer-latency-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive D: The three-layer latency story
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-6-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 6 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 6 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧪 Practicals
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🧪 Practicals
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P01_openstack_architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P02_cloud_organization_rbac/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P02 — Cloud Organization with RBAC (AWS IAM)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P03_install_virtualbox_linux_vm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P03 — Install VirtualBox + Linux VM on Windows 8+
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P04 — Desktop Virtualization with Chrome Remote Desktop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P05_mininet_virtual_sdn_lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P05 — Virtual SDN Lab with Mininet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P06_cloud_databases_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P06 — Cloud Databases: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P07_cloud_storage_comparison/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P07 — Cloud Storage: Study & Comparison
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P08_cloudsim_secure_file_sharing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P08 — Simulate Secure File Sharing with CloudSim
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P09_minio_secure_object_storage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P09 — Secure Object Storage with MinIO (Access Control + SSE)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../practicals/writeups/P10_docker_first_container/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    P10 — Creating & Executing Your First Container (Docker)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../RESOURCES/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🔗 Resources
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DI05016031-CDCT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 Syllabus (PDF)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📄 All Syllabi (PDF)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📄 All Syllabi (PDF)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/AI_Product_Design.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Cloud_and_Data_Center_Technology.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Foundation_of_Blockchain.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Hands_on_Practice_using_IoT.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/selected/Skill_Based_Training.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📝 Past Papers (PYQ)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    📝 Past Papers (PYQ)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/fbc/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/s_26.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_24.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pyq/cdct/w_25.pdf" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    None
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chapter-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Chapter Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧭 Chapter Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#learning-outcomes-after-this-unit-you-can" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning outcomes — after this unit you can:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-mobile-cloud-computing-mcc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 Mobile Cloud Computing (MCC) ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-sensor-and-iot-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 Sensor and IoT Cloud ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-serverless-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.3 Serverless Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-edge-and-fog-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.4 Edge and Fog Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 Edge and Fog Computing ⭐⭐">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edge-vs-fog-s_24-q1c-w_24-q5b-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edge vs Fog (s_24 Q.1c / w_24 Q.5b-alt) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-ai-and-machine-learning-with-cloud-computing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.5 AI and Machine Learning with Cloud Computing ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-distributed-ledger-technology-dlt-with-cloud-s_24-q1c-alt-w_25-q5b-alt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.6 Distributed Ledger Technology (DLT) with Cloud (s_24 Q.1c-alt, w_25 Q.5b-alt) ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-5g-and-cloud-native-networking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.7 5G and Cloud-Native Networking ⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-kubernetes-and-containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.8 Kubernetes and Containers ⭐⭐
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deep-dive-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Deep-Dive Topics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Deep-Dive Topics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-a-steps-to-create-an-image-and-run-a-docker-container-w_24-q5c-alt-7-marks-p10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive A: Steps to create an image and run a Docker container (w_24 Q.5c-alt, 7 marks — P10!)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-b-fog-computing-how-does-it-work-s_26-q1c" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive B: "Fog computing — how does it work?" (s_26 Q.1c)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-c-serverless-vs-containers-exam-favourite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive C: Serverless vs containers (exam favourite)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-dive-d-the-three-layer-latency-story" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Dive D: The three-layer latency story
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#beyond-the-textbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚀 Beyond the Textbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pyq-map-unit-6-all-available-papers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📝 PYQ Map — UNIT 6 (all available papers)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📝 PYQ Map — UNIT 6 (all available papers)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solved-pyq-answers-unit-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✅ Solved PYQ answers (UNIT 6)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#practice-problems-self-test-answers-hidden" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ✍️ Practice Problems (self-test — answers hidden)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#glossary-of-key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📖 Glossary of Key Terms
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#curated-resources-per-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Curated Resources (per concept)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#video-study-guide-youtube" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎥 Video Study Guide (YouTube)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🎥 Video Study Guide (YouTube)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-0-pick-your-learning-style" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧑‍🎓 Step 0 — Pick your learning style
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-watch-by-topic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 1 — Watch by topic
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-full-playlists-deep-divers-academics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 2 — Full playlists (Deep Divers &amp; Academics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-proof-you-got-it-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎬 Step 3 — Proof you got it (5 min)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="unit-6-emerging-technologies-with-cloud-computing">UNIT 6 — Emerging Technologies with Cloud Computing 🚀<a class="headerlink" href="#unit-6-emerging-technologies-with-cloud-computing" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Cloud and Data Center Technology (DI05016031)</strong> · <strong>8 hrs · 18% weightage</strong>
+<strong>Covers syllabus sections:</strong> 6.1 Mobile cloud computing (MCC) · 6.2 Sensor and IoT cloud · 6.3 Serverless Computing · 6.4 Edge and Fog Computing · 6.5 AI &amp; ML with Cloud Computing · 6.6 Distributed Ledger Technology (DLT) · 6.7 5G and Cloud-Native Networking · 6.8 Kubernetes and Containers
+<strong>Related practicals:</strong> <a href="../../practicals/writeups/P10_docker_first_container/">P10</a> (Docker image + container — RAN for real), <a href="../../practicals/writeups/P05_mininet_virtual_sdn_lab/">P05</a>, <a href="../../practicals/writeups/P08_cloudsim_secure_file_sharing/">P08</a></p>
+</blockquote>
+<hr />
+<h2 id="chapter-roadmap">🧭 Chapter Roadmap<a class="headerlink" href="#chapter-roadmap" title="Permanent link">&para;</a></h2>
+<p>Unit 6 (18%) is the "<strong>everything new</strong>" chapter — the exam's favourite 7-markers are <strong>Edge vs Fog</strong>, <strong>Serverless</strong>, <strong>Containers/Docker</strong> (your P10, which ran for real!), and <strong>DLT</strong>, plus 4-markers on <strong>Kubernetes</strong> and <strong>Edge importance</strong>. MCC, IoT and 5G have not appeared <em>yet</em> — expect them in future papers. Containers/Kubernetes is the single most repeated practical-to-exam bridge (P10).</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Concept</th>
+<th>Exam importance</th>
+<th>Related</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>6.1</td>
+<td>Mobile Cloud Computing (MCC)</td>
+<td>★★★ (not yet asked)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.2</td>
+<td>Sensor &amp; IoT cloud</td>
+<td>★★★ (not yet asked)</td>
+<td>P05 (SDN)</td>
+</tr>
+<tr>
+<td>6.3</td>
+<td>Serverless computing</td>
+<td>★★★★★</td>
+<td>P10</td>
+</tr>
+<tr>
+<td>6.4</td>
+<td>Edge &amp; Fog computing</td>
+<td>★★★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.5</td>
+<td>AI/ML with cloud</td>
+<td>★★★★</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6.6</td>
+<td>DLT with cloud</td>
+<td>★★★★</td>
+<td>P09 (append-only logs)</td>
+</tr>
+<tr>
+<td>6.7</td>
+<td>5G &amp; cloud-native networking</td>
+<td>★★★</td>
+<td>P05</td>
+</tr>
+<tr>
+<td>6.8</td>
+<td>Kubernetes &amp; Containers</td>
+<td>★★★★★</td>
+<td>P10</td>
+</tr>
+</tbody>
+</table>
+<h3 id="learning-outcomes-after-this-unit-you-can">Learning outcomes — after this unit you can:<a class="headerlink" href="#learning-outcomes-after-this-unit-you-can" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Define <strong>MCC</strong> and explain how mobile + cloud combine.</li>
+<li>Explain the <strong>sensor/IoT cloud</strong> architecture and its value.</li>
+<li>Define <strong>serverless computing</strong> and list its advantages.</li>
+<li>Differentiate <strong>edge vs fog computing</strong> and explain how fog works.</li>
+<li>Explain AI/ML's role in the cloud.</li>
+<li>Explain <strong>DLT/blockchain with cloud computing</strong>.</li>
+<li>Explain 5G + cloud-native networking at a conceptual level.</li>
+<li>Define <strong>containers</strong> and <strong>Kubernetes</strong>, and recall the Docker image→container steps (P10).</li>
+</ol>
+<hr />
+<h2 id="61-mobile-cloud-computing-mcc">6.1 Mobile Cloud Computing (MCC) ⭐<a class="headerlink" href="#61-mobile-cloud-computing-mcc" title="Permanent link">&para;</a></h2>
+<p><strong>MCC</strong> = delivering cloud services (compute, storage, apps) to <strong>mobile devices</strong> over the network, pushing heavy processing off the device into the cloud.
+- <strong>Benefits:</strong> mobile devices lack battery/compute/storage → offload work; universal access; scalability; app stores as SaaS distribution; pay-per-use.
+- <strong>Challenges:</strong> wireless <strong>latency &amp; bandwidth</strong>, battery drain of wireless radios, weak connectivity, security/privacy, heterogeneity of devices.
+- <strong>Examples:</strong> Google Drive/Photos backup &amp; processing, Siri/Alexa (speech → cloud AI), mobile banking, Flutter/web apps.</p>
+<h2 id="62-sensor-and-iot-cloud">6.2 Sensor and IoT Cloud ⭐<a class="headerlink" href="#62-sensor-and-iot-cloud" title="Permanent link">&para;</a></h2>
+<p>An <strong>IoT cloud</strong> ingests data from huge numbers of sensors/devices, stores and analyzes it, and returns control decisions.</p>
+<pre class="mermaid"><code>flowchart LR
+    S[Sensors/Devices&lt;br/&gt;temperature, GPS, cameras] --&gt; G[Gateways/Edge]
+    G --&gt; ING[Cloud ingest&lt;br/&gt;message queue]
+    ING --&gt; ST[(Cloud storage&lt;br/&gt;time-series DB)]
+    ST --&gt; AN[Analytics / AI&lt;br/&gt;in the cloud]
+    AN --&gt; C[Control actions&lt;br/&gt;push to actuators]
+    ING --&gt; V[Streaming dashboards]</code></pre>
+<p><strong>Why cloud?</strong> sensors generate massive, continuous data that can't be stored on-device; the cloud gives <strong>elastic storage, stream processing, ML analytics and global dashboards</strong>. Examples: smart meters, smart parking, vehicle telematics, agriculture monitoring (soil sensors → cloud advisory).</p>
+<h2 id="63-serverless-computing">6.3 Serverless Computing ⭐⭐<a class="headerlink" href="#63-serverless-computing" title="Permanent link">&para;</a></h2>
+<p><strong>Serverless</strong> = run code <strong>without provisioning or managing servers</strong>; the cloud provider runs containers on demand, <strong>auto-scales to zero</strong>, and you <strong>pay only for execution time</strong> (per invocation, GB-seconds).
+- <strong>Event-driven:</strong> function triggers on HTTP call, file upload, message, timer.
+- <strong>FaaS examples:</strong> AWS Lambda, Google Cloud Functions, Azure Functions.
+- <strong>Advantages (w_24 Q.5a-alt):</strong> no server management; <strong>auto-scaling</strong> (even to zero); <strong>pay-per-use</strong> (cheap for sporadic load); faster deployment; built-in HA; focus on code not infra.
+- <strong>Limitations:</strong> cold starts, stateless functions, execution timeouts, vendor lock-in.</p>
+<pre class="mermaid"><code>sequenceDiagram
+    participant App as Client App
+    participant F as Cloud Functions
+    participant DB as Backend services
+    App-&gt;&gt;F: HTTP event (no server pre-provisioned)
+    F-&gt;&gt;F: Function starts on demand (cold/warm)
+    F-&gt;&gt;DB: Process + store
+    F--&gt;&gt;App: Response; instance scales to zero</code></pre>
+<h2 id="64-edge-and-fog-computing">6.4 Edge and Fog Computing ⭐⭐<a class="headerlink" href="#64-edge-and-fog-computing" title="Permanent link">&para;</a></h2>
+<p><strong>Edge computing</strong> = processing data <strong>near the source</strong> (on the device or a nearby edge server) to cut <strong>latency</strong> and bandwidth.
+<strong>Fog computing</strong> = an <strong>intermediate layer</strong> between edge devices and the cloud — a distributed set of fog nodes (routers, gateways, mini-servers) that aggregate, filter and pre-process before forwarding to the cloud.</p>
+<pre class="mermaid"><code>flowchart TB
+    DEV[Edge devices / sensors&lt;br/&gt;lowest latency, limited power]
+    EDGE[Edge nodes&lt;br/&gt;device-adjacent compute]
+    FOG[Fog layer&lt;br/&gt;gateways, routers, local servers]
+    CLOUD[Cloud data center&lt;br/&gt;deep analytics, long-term storage]
+    DEV --&gt; EDGE --&gt; FOG --&gt; CLOUD</code></pre>
+<h3 id="edge-vs-fog-s_24-q1c-w_24-q5b-alt">Edge vs Fog (s_24 Q.1c / w_24 Q.5b-alt) ⭐⭐<a class="headerlink" href="#edge-vs-fog-s_24-q1c-w_24-q5b-alt" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Edge computing</th>
+<th>Fog computing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Where processing happens</td>
+<td>On/near the <strong>device</strong> (edge node)</td>
+<td>In an <strong>intermediate layer</strong> between edge and cloud</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Lowest (device-local)</td>
+<td>Low (network edge, not device)</td>
+</tr>
+<tr>
+<td>Scale</td>
+<td>Per-device/local</td>
+<td>Distributed across many nodes</td>
+</tr>
+<tr>
+<td>Relation to cloud</td>
+<td>Can work standalone</td>
+<td>Always bridges edge → cloud</td>
+</tr>
+<tr>
+<td>Analogy</td>
+<td>Thinking in your head</td>
+<td>A middleman who filters and forwards</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why Edge is important (s_25 Q.3a / s_26 Q.5b):</strong> real-time decisions (autonomous vehicles, surgery, AR) can't wait for a round-trip to a far data center; saves bandwidth (only send anomalies); privacy (sensitive data stays local); works offline; cheaper than streaming everything to cloud.</p>
+<h2 id="65-ai-and-machine-learning-with-cloud-computing">6.5 AI and Machine Learning with Cloud Computing ⭐⭐<a class="headerlink" href="#65-ai-and-machine-learning-with-cloud-computing" title="Permanent link">&para;</a></h2>
+<p><strong>Role of ML in the cloud (s_24 Q.5b / s_25 Q.3a-alt):</strong> ML needs huge <strong>data + massive compute</strong>, exactly what cloud provides:
+- <strong>On-demand GPU/TPU clusters</strong> for training models.
+- <strong>Managed AI/ML services</strong> (SageMaker, Vertex AI, Azure ML) — no infra setup.
+- <strong>Elastic data storage</strong> for datasets; <strong>serverless inference</strong> endpoints.
+- Ready-made AI: speech/text (chatbots), vision, translation, recommendation.
+<strong>Justification that cloud aids ML:</strong> a small team can rent 8 GPUs for a weekend to train a model, then scale inference to a million users — buying that hardware would cost lakhs and sit idle. Cloud turns ML into a pay-per-use utility (matches Unit 1 utility-computing roots).</p>
+<h2 id="66-distributed-ledger-technology-dlt-with-cloud-s_24-q1c-alt-w_25-q5b-alt">6.6 Distributed Ledger Technology (DLT) with Cloud (s_24 Q.1c-alt, w_25 Q.5b-alt) ⭐⭐<a class="headerlink" href="#66-distributed-ledger-technology-dlt-with-cloud-s_24-q1c-alt-w_25-q5b-alt" title="Permanent link">&para;</a></h2>
+<p><strong>DLT</strong> = a decentralized database replicated across many nodes, where records (blocks/transactions) are <strong>append-only, tamper-evident and agreed by consensus</strong> — no single authority. <strong>Blockchain</strong> is the best-known DLT (a chain of cryptographically linked blocks).
+<strong>How it combines with cloud:</strong>
+- <strong>Blockchain-as-a-Service (BaaS):</strong> Azure Blockchain, AWS Managed Blockchain, Oracle Blockchain — provider hosts the DLT network.
+- <strong>Cloud hosts DLT nodes</strong> — cheap elastic storage/compute; multi-region for node distribution.
+- <strong>Use cases:</strong> <strong>auditable logs &amp; provenance</strong> (recall P09's append-only style object storage and audit!), supply-chain tracking, digital identity, <strong>immutable compliance records</strong>, smart contracts (insurance claims).
+- <strong>Why together?</strong> DLT guarantees tamper-evidence; cloud guarantees scalability, availability and managed ops.</p>
+<h2 id="67-5g-and-cloud-native-networking">6.7 5G and Cloud-Native Networking ⭐<a class="headerlink" href="#67-5g-and-cloud-native-networking" title="Permanent link">&para;</a></h2>
+<p><strong>5G</strong> = fifth-gen mobile network: very high bandwidth (multi-Gbps), <strong>ultra-low latency (&lt;5–10 ms)</strong>, massive device density — the connectivity substrate for IoT, edge and autonomous systems. <strong>Cloud-native networking</strong> = networking built as software on cloud principles (SDN/NFV — recall Unit 3): virtualized, automated, API-driven, service-meshes, Kubernetes CNI. Together: 5G connects the devices, the cloud runs the intelligence, SDN (P05) manages the fabric programmatically.</p>
+<h2 id="68-kubernetes-and-containers">6.8 Kubernetes and Containers ⭐⭐<a class="headerlink" href="#68-kubernetes-and-containers" title="Permanent link">&para;</a></h2>
+<p><strong>Container (w_24 Q.5c-alt):</strong> a <strong>lightweight, isolated, portable runtime</strong> that packages an application <strong>with its dependencies</strong> (code, runtime, libraries, config) into one image; shares the host OS kernel (OS-level virtualization, Unit 2); starts in seconds. Build with a <strong>Dockerfile → image → run</strong> (your P10, real output).</p>
+<p><strong>Kubernetes (k8s)</strong> = the open-source <strong>container-orchestration platform</strong>: deploys, scales, heals and load-balances containers across a cluster.
+- <strong>Pods</strong> (smallest unit, one+ containers), <strong>Nodes</strong> (worker machines), <strong>Deployments</strong> (desired state), <strong>Services</strong> (stable network access), <strong>auto-scaling &amp; self-healing</strong>, <strong>rolling updates</strong>.
+- <strong>Justify: Kubernetes is essential (s_24/s_25 Q.4b):</strong> containers alone give portability but not management; k8s automates deployment, scaling, failover and updates of hundreds of containers — essential for real cloud-native production workloads (and Docker Desktop/Compose is only the single-host start, P10).</p>
+<pre class="mermaid"><code>flowchart TB
+    CF[Developer: Dockerfile] --&gt; BI[Build image&lt;br/&gt;P10]
+    BI --&gt; REG[Container registry]
+    REG --&gt; P[Pod]
+    P --&gt; K8S[Kubernetes cluster&lt;br/&gt;schedules, scales, heals]
+    K8S --&gt; N1[Node 1]
+    K8S --&gt; N2[Node 2]
+    K8S --&gt; N3[Node 3]</code></pre>
+<hr />
+<h2 id="deep-dive-topics">🧠 Deep-Dive Topics<a class="headerlink" href="#deep-dive-topics" title="Permanent link">&para;</a></h2>
+<h3 id="deep-dive-a-steps-to-create-an-image-and-run-a-docker-container-w_24-q5c-alt-7-marks-p10">Deep Dive A: Steps to create an image and run a Docker container (w_24 Q.5c-alt, 7 marks — P10!)<a class="headerlink" href="#deep-dive-a-steps-to-create-an-image-and-run-a-docker-container-w_24-q5c-alt-7-marks-p10" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Write the <code>Dockerfile</code></strong> — e.g., <code>FROM nginx:alpine</code> + <code>COPY p10_site/index.html /usr/share/nginx/html/index.html</code> (P10's actual Dockerfile).</li>
+<li><strong>Build the image:</strong> <code>docker build -t p10-cdct-site .</code> → layers are cached, reproducible.</li>
+<li><strong>Verify:</strong> <code>docker images</code> shows <code>p10-cdct-site</code>.</li>
+<li><strong>Run a container:</strong> <code>docker run -d --name p10-cdct-site-run -p 8081:80 p10-cdct-site</code>.</li>
+<li><strong>Verify it works:</strong> <code>curl -I localhost:8081</code> → <strong>HTTP/1.1 200 OK</strong> (real captured output).</li>
+<li><strong>Manage:</strong> <code>docker ps</code>, <code>docker logs</code>, <code>docker stop</code>, <code>docker rm</code>.</li>
+<li><strong>Tear down</strong> after testing. ✅ <em>This exact flow was executed for real in <a href="../../practicals/writeups/P10_docker_first_container/">P10</a>.</em></li>
+</ol>
+<h3 id="deep-dive-b-fog-computing-how-does-it-work-s_26-q1c">Deep Dive B: "Fog computing — how does it work?" (s_26 Q.1c)<a class="headerlink" href="#deep-dive-b-fog-computing-how-does-it-work-s_26-q1c" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Sensors/devices generate data continuously.</li>
+<li>A <strong>fog node</strong> (router/gateway/mini-server) receives data, applies <strong>local rules</strong> — filters noise, aggregates, triggers immediate low-latency actions (e.g., shut valve on pressure spike).</li>
+<li>Only <strong>summarized/anomalous data</strong> is forwarded to the cloud.</li>
+<li>Cloud runs <strong>deep analytics</strong>, learns policies, and <strong>updates fog node rules</strong>.</li>
+<li>Result: latency for urgent decisions ≈ local; analytics capacity ≈ cloud; bandwidth cost low.</li>
+</ol>
+<h3 id="deep-dive-c-serverless-vs-containers-exam-favourite">Deep Dive C: Serverless vs containers (exam favourite)<a class="headerlink" href="#deep-dive-c-serverless-vs-containers-exam-favourite" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Serverless (FaaS)</th>
+<th>Containers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit</td>
+<td>Function</td>
+<td>Container (image)</td>
+</tr>
+<tr>
+<td>Scaling</td>
+<td><strong>To zero</strong> when idle</td>
+<td>Manual or via k8s (min &gt; 0)</td>
+</tr>
+<tr>
+<td>Management</td>
+<td>Fully managed</td>
+<td>You manage cluster (or use k8s)</td>
+</tr>
+<tr>
+<td>State</td>
+<td>Stateless by design</td>
+<td>Can be stateful (volumes)</td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>Pay per invocation</td>
+<td>Pay per running VM/instance</td>
+</tr>
+<tr>
+<td>Best for</td>
+<td>Event-driven, sporadic</td>
+<td>Long-running services</td>
+</tr>
+</tbody>
+</table>
+<h3 id="deep-dive-d-the-three-layer-latency-story">Deep Dive D: The three-layer latency story<a class="headerlink" href="#deep-dive-d-the-three-layer-latency-story" title="Permanent link">&para;</a></h3>
+<p>Cloud-only = 100 ms+ round trip → bad for autonomous braking. Add <strong>edge</strong> = device-local &lt;5 ms → emergency decisions. Add <strong>fog</strong> = filter/aggregate in the middle → only meaningful data hits the cloud. This is the entire rationale of 6.4, and pairs with 6.7 (5G makes low-latency wireless practical).</p>
+<hr />
+<h2 id="beyond-the-textbook">🚀 Beyond the Textbook<a class="headerlink" href="#beyond-the-textbook" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Containers ≠ VMs (link to Unit 2):</strong> VMs each carry a guest OS (GBs); containers share the host kernel (MBs) — that's why 30 containers boot in seconds where 30 VMs take minutes. P10 proved image size and instant start.</li>
+<li><strong>Kubernetes is the "Linux of the cloud"</strong> — the industry standard every cloud sells as managed service (EKS/GKE/AKS); knowing <code>docker build/run</code> (P10) is the correct first step toward it.</li>
+<li><strong>Serverless functions are still containers underneath</strong> — Lambda/Functions run your code inside managed containers; serverless just hides the plumbing.</li>
+<li><strong>Edge + 5G + IoT are one story, not three topics</strong> — devices (IoT) + low-latency network (5G) + near-source compute (edge/fog) + cloud brain = smart city/industry 4.0. Examiners love this "connect the units" answer.</li>
+<li><strong>DLT in cloud ≠ crypto hype</strong> — the syllabus's angle is auditable ledgers + BaaS for compliance, supply chain and identity. P09's immutable audit-style object store is a relatable 1-to-1 analogy.</li>
+<li><strong>MCC &amp; IoT cloud: not yet asked</strong> — define + one diagram + one example each; they're easy 3-mark insurance for future papers.</li>
+</ol>
+<hr />
+<h2 id="pyq-map-unit-6-all-available-papers">📝 PYQ Map — UNIT 6 (all available papers)<a class="headerlink" href="#pyq-map-unit-6-all-available-papers" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Paper</th>
+<th>Q.</th>
+<th>Topic</th>
+<th>Marks</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Summer 2024</strong></td>
+<td>Q.1(c)</td>
+<td>Differentiate between edge and fog computing</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.1(c)-alt</td>
+<td>Explain distributed ledger technology in cloud computing</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)</td>
+<td>Role of ML in the cloud; justify cloud aids ML</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Define Kubernetes; justify it's essential for cloud computing</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Winter 2024</strong></td>
+<td>Q.5(a)-alt</td>
+<td>Define serverless computing; advantages</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Differentiate edge and fog computing</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(c)-alt</td>
+<td>Define containers; steps to build image + run docker container</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>Summer 2025</strong></td>
+<td>Q.3(a)</td>
+<td>Why is Edge Computing important?</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.3(a)-alt</td>
+<td>Role of Machine Learning in Cloud Computing</td>
+<td>3</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.4(b)</td>
+<td>Define Kubernetes; justify it's essential</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.4(b)-alt</td>
+<td>Explain Serverless Computing</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Winter 2025</strong></td>
+<td>Q.1(c)</td>
+<td>Explain Fog computing in cloud computing</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)</td>
+<td>Explain Serverless Computing</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Explain DLT with Cloud Computing</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Summer 2026</strong></td>
+<td>Q.1(c)</td>
+<td>Explain fog computing; how does it work?</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.1(c)-alt</td>
+<td>Explain serverless computing technology</td>
+<td>7</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)</td>
+<td>Define Edge Computing; explain its importance</td>
+<td>4</td>
+</tr>
+<tr>
+<td></td>
+<td>Q.5(b)-alt</td>
+<td>Define and explain Kubernetes</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<h3 id="solved-pyq-answers-unit-6">✅ Solved PYQ answers (UNIT 6)<a class="headerlink" href="#solved-pyq-answers-unit-6" title="Permanent link">&para;</a></h3>
+<p><strong>Q. (w_24 Q.5a-alt, 3 marks) — Define serverless computing. List advantages.</strong></p>
+<blockquote>
+<p>Serverless computing is a cloud execution model where <strong>developers run code without provisioning or managing servers</strong> — the provider dynamically runs the code in managed containers on <strong>events</strong> (HTTP, upload, timer), scaling up <strong>or to zero</strong> automatically, and you <strong>pay only for the execution time consumed</strong>. Advantages: no server management, automatic elasticity (even to zero), pay-per-use (ideal for unpredictable/sporadic traffic), faster deployment, built-in availability, and developer focus on code rather than infrastructure. Examples: AWS Lambda, Azure Functions, Google Cloud Functions.</p>
+</blockquote>
+<p><strong>Q. (s_26 Q.1c, 7 marks) — Explain fog computing. How does it work?</strong></p>
+<blockquote>
+<p>Fog computing is a <strong>distributed intermediate layer between edge devices and the cloud</strong> — a network of fog nodes (routers, gateways, local mini-servers) that provide compute, storage and networking close to the data source. <strong>How it works:</strong> (1) sensors/devices stream data; (2) fog nodes apply <strong>local intelligence</strong> — filter noise, aggregate, run immediate low-latency rules (e.g., trip a valve on a pressure spike); (3) only <strong>summarized/anomalous data</strong> is forwarded to the cloud; (4) the cloud does deep analytics and <strong>pushes updated policies back</strong> to fog nodes. <strong>Why:</strong> urgent decisions don't wait for a distant data center (lower latency), bandwidth cost drops, and the cloud stays uncluttered — it complements (not replaces) edge and cloud in a three-tier architecture (see Unit 6 diagram).</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.1c, 7 marks) — Differentiate between edge and fog computing.</strong></p>
+<blockquote>
+<p><strong>Edge computing</strong> processes data <strong>on or right beside the device</strong> producing it — lowest latency, works even offline, per-device/local scale. <strong>Fog computing</strong> is a <strong>middle layer</strong>: a distributed set of fog nodes (gateways, routers, local servers) that sit <em>between</em> the devices and the cloud, filtering/aggregating data before forwarding. | Edge = device-adjacent processing; Fog = network-edge processing layer. | Edge latency is lowest; fog latency is low but it adds one hop. | Edge can function standalone; fog's purpose is to <strong>bridge</strong> edge → cloud. | Analogy: edge = thinking in your head; fog = a local manager who summarizes before reporting to headquarters. | Both reduce latency/bandwidth; edge is the closest layer, fog the connective tissue, cloud the analytics brain (Deep Dive B).</p>
+</blockquote>
+<p><strong>Q. (s_26 Q.5b, 4 marks) — Define Edge Computing and explain its importance.</strong></p>
+<blockquote>
+<p>Edge computing = processing data <strong>near its source</strong> (on the device or a nearby edge server) rather than sending everything to a central cloud. <strong>Importance:</strong> (1) <strong>ultra-low latency</strong> for real-time decisions — autonomous vehicles, industrial control, AR; (2) <strong>bandwidth savings</strong> — only anomalies travel to the cloud; (3) <strong>privacy</strong> — sensitive data stays local; (4) <strong>offline resilience</strong> — keeps working without connectivity; (5) cost reduction by cutting cloud egress/processing. It does not replace the cloud — it feeds it the interesting data.</p>
+</blockquote>
+<p><strong>Q. (w_24 Q.5c-alt, 7 marks) — Define Containers. Steps to create an image and execute a Docker container (with example).</strong></p>
+<blockquote>
+<p>A <strong>container</strong> is a lightweight, isolated, portable runtime that packages an application <strong>with all its dependencies</strong> (code, runtime, libraries, config) as an <strong>image</strong>, sharing the host OS kernel (OS-level virtualization). <strong>Steps (as done for real in P10):</strong> (1) Write a <strong>Dockerfile</strong> — <code>FROM nginx:alpine</code> and <code>COPY p10_site/index.html /usr/share/nginx/html/</code>; (2) <code>docker build -t p10-cdct-site .</code> builds the image from layers; (3) <code>docker images</code> lists it; (4) <strong>execute a container</strong> with <code>docker run -d --name p10-cdct-site-run -p 8081:80 p10-cdct-site</code>; (5) verify with <code>curl -I localhost:8081</code> → <strong>HTTP/1.1 200 OK</strong>; (6) manage with <code>docker ps</code>, <code>docker logs</code>, <code>docker stop</code>, <code>docker rm</code>. <strong>Result:</strong> the site runs in an isolated container on port 8081, portable to any machine with Docker.</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.5b-alt, 4 marks) — Define Kubernetes. Justify: it is an essential component of cloud computing.</strong></p>
+<blockquote>
+<p><strong>Kubernetes</strong> is the open-source <strong>container-orchestration platform</strong> that automates deployment, scaling, networking and management of containerized applications across a cluster (nodes). <strong>Justification:</strong> containers (P10) give portability but nothing manages them at scale — Kubernetes provides <strong>self-healing</strong> (restarts failed containers), <strong>auto-scaling</strong> (based on load), <strong>rolling updates</strong> (zero-downtime), <strong>service discovery/load balancing</strong>, and <strong>declarative desired-state</strong> management. In modern cloud-native production, hundreds of containers run across many machines — no human can manage that; Kubernetes is what makes large-scale containerized clouds operable, hence essential.</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.1c-alt, 7 marks) — Explain Distributed Ledger Technology in cloud computing.</strong></p>
+<blockquote>
+<p><strong>DLT</strong> is a decentralized database replicated across many nodes where records are <strong>append-only, tamper-evident and agreed by consensus</strong> (no single authority); <strong>blockchain</strong> is its most famous form (cryptographically chained blocks). <strong>With cloud computing:</strong> (1) <strong>Blockchain-as-a-Service (BaaS)</strong> — AWS Managed Blockchain, Azure Blockchain, Oracle — the provider hosts/operates the DLT network; (2) clouds give cheap elastic nodes and multi-region distribution for the ledger; (3) cloud storage complements on-chain data. <strong>Use cases:</strong> immutable audit/compliance logs, supply-chain provenance, digital identity, smart contracts (auto-executing insurance/escrow). <strong>Why together:</strong> DLT guarantees trust/integrity; the cloud guarantees scale, availability and managed ops — a tamper-proof ledger that is still elastic and always-on.</p>
+</blockquote>
+<p><strong>Q. (s_24 Q.5b, 4 marks) — Role of ML in the cloud; justify cloud aids ML.</strong></p>
+<blockquote>
+<p>ML needs <strong>massive data and massive compute</strong> — the cloud supplies both on demand. <strong>Role:</strong> on-demand <strong>GPU/TPU clusters</strong> for training, <strong>managed ML services</strong> (SageMaker, Vertex AI, Azure ML), elastic storage for datasets, serverless inference endpoints, and ready-made AI (chatbots, vision, translation, recommendation). <strong>Justification:</strong> a small team can rent a GPU cluster for a weekend to train a model, then scale inference to a million users — buying equivalent hardware costs crores and sits idle; the cloud turns ML into a <strong>pay-per-use utility</strong> (the same utility-computing idea from Unit 1). Without elastic cloud resources, ML would stay confined to big corporations.</p>
+</blockquote>
+<hr />
+<h2 id="practice-problems-self-test-answers-hidden">✍️ Practice Problems (self-test — answers hidden)<a class="headerlink" href="#practice-problems-self-test-answers-hidden" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Define MCC; give two challenges.</li>
+<li>Draw the IoT-cloud pipeline (sensor → cloud → action).</li>
+<li>List 4 serverless advantages; when is serverless NOT a good fit?</li>
+<li>Edge vs Fog: give one sentence each + one analogy.</li>
+<li>"5G + edge + cloud" — explain how the three cooperate in a smart city.</li>
+<li>Write the exact Docker commands (P10) from Dockerfile to running container.</li>
+<li>Why is Kubernetes essential if we already have containers?</li>
+<li>DLT + cloud: give two use cases; what does each side contribute?</li>
+</ol>
+<details>
+<summary>📌 Model solutions</summary>
+
+1. MCC = mobile devices using cloud compute/storage. Challenges: wireless latency/bandwidth, battery drain, connectivity, security.
+2. Sensors → gateway/edge → cloud ingest (queue) → storage → analytics/ML → control to actuators + dashboards.
+3. No server mgmt, auto-scale-to-zero, pay-per-use, fast deploy. Not for: long-running heavy workloads, strict cold-start latency, stateful apps.
+4. Edge = device-adjacent compute (thinking in your head). Fog = intermediate layer that filters/forwards (a middleman manager).
+5. 5G gives low-latency wireless; edge does instant local decisions; cloud does deep analytics/control loops (and fog aggregates between).
+6. `docker build -t p10-cdct-site .` → `docker images` → `docker run -d --name p10-cdct-site-run -p 8081:80 p10-cdct-site` → `curl -I localhost:8081` → `docker stop/rm`.
+7. Containers need management at scale — k8s automates scheduling, scaling, self-healing, rolling updates, service discovery.
+8. Use cases: supply-chain provenance, immutable compliance/audit logs. DLT gives tamper-evidence/trust; cloud gives scale/availability/managed BaaS.
+</details>
+
+<hr />
+<h2 id="glossary-of-key-terms">📖 Glossary of Key Terms<a class="headerlink" href="#glossary-of-key-terms" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MCC</strong></td>
+<td>Mobile cloud computing: mobile devices offload compute/storage to the cloud</td>
+</tr>
+<tr>
+<td><strong>IoT cloud</strong></td>
+<td>Cloud backend ingesting/analyzing sensor data and driving actuators</td>
+</tr>
+<tr>
+<td><strong>Serverless / FaaS</strong></td>
+<td>Run code without servers; scale to zero; pay per invocation</td>
+</tr>
+<tr>
+<td><strong>Cold start</strong></td>
+<td>First-invocation latency when a function instance spins up</td>
+</tr>
+<tr>
+<td><strong>Edge computing</strong></td>
+<td>Processing at/near the data source</td>
+</tr>
+<tr>
+<td><strong>Fog computing</strong></td>
+<td>Intermediate layer between edge and cloud (gateways/nodes)</td>
+</tr>
+<tr>
+<td><strong>DLT</strong></td>
+<td>Decentralized append-only tamper-evident ledger</td>
+</tr>
+<tr>
+<td><strong>Blockchain</strong></td>
+<td>Chain of cryptographically linked blocks (a DLT)</td>
+</tr>
+<tr>
+<td><strong>BaaS</strong></td>
+<td>Blockchain-as-a-Service (managed DLT in the cloud)</td>
+</tr>
+<tr>
+<td><strong>5G</strong></td>
+<td>High-bandwidth ultra-low-latency mobile network</td>
+</tr>
+<tr>
+<td><strong>Cloud-native</strong></td>
+<td>Apps/networks built on cloud principles (SDN/NFV, containers)</td>
+</tr>
+<tr>
+<td><strong>Container</strong></td>
+<td>Lightweight isolated app + dependencies, shares host kernel</td>
+</tr>
+<tr>
+<td><strong>Image</strong></td>
+<td>Immutable template built from a Dockerfile</td>
+</tr>
+<tr>
+<td><strong>Kubernetes (k8s)</strong></td>
+<td>Container orchestration: deploy/scale/heal</td>
+</tr>
+<tr>
+<td><strong>Pod / Node</strong></td>
+<td>Smallest k8s unit / worker machine</td>
+</tr>
+<tr>
+<td><strong>Smart contract</strong></td>
+<td>Self-executing program on a DLT</td>
+</tr>
+<tr>
+<td><strong>GPU/TPU cluster</strong></td>
+<td>Cloud-provided accelerator for ML training</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="curated-resources-per-concept">🔗 Curated Resources (per concept)<a class="headerlink" href="#curated-resources-per-concept" title="Permanent link">&para;</a></h2>
+<p><strong>Serverless</strong>
+- AWS Lambda: https://aws.amazon.com/lambda/ · serverlessland.com</p>
+<p><strong>Edge &amp; Fog</strong>
+- OpenFog Consortium / IEEE fog computing: https://www.iiconsortium.org/vertical-markets/fog-computing/
+- Cloudflare edge glossary: https://www.cloudflare.com/learning/serverless/glossary/what-is-edge-computing/</p>
+<p><strong>Containers &amp; Kubernetes</strong>
+- Docker docs (getting started): https://docs.docker.com/get-started/
+- Kubernetes docs: https://kubernetes.io/docs/concepts/overview/
+- K8s essentials (why orchestration): https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/</p>
+<p><strong>DLT / Blockchain</strong>
+- AWS Managed Blockchain: https://aws.amazon.com/managed-blockchain/</p>
+<p><strong>IoT / 5G</strong>
+- AWS IoT: https://aws.amazon.com/iot/ · 5G explained (Wikipedia): https://en.wikipedia.org/wiki/5G</p>
+<p><strong>ML on cloud</strong>
+- Amazon SageMaker: https://aws.amazon.com/sagemaker/ · Google Vertex AI: https://cloud.google.com/vertex-ai</p>
+<p><strong>Books (GTU syllabus)</strong>
+- Sosinsky, <em>Cloud Computing Bible</em> (Wiley) — emerging tech chapter
+- Buyya et al., <em>Mastering Cloud Computing</em> — IoT + edge chapters</p>
+<p><strong>Videos (high yield)</strong>
+- <em>Serverless vs containers</em> — IBM Technology
+- <em>Edge vs Fog computing</em> — IBM Technology
+- <em>Kubernetes in 10 minutes</em> — TechWorld with Nana</p>
+<hr />
+<h2 id="video-study-guide-youtube">🎥 Video Study Guide (YouTube)<a class="headerlink" href="#video-study-guide-youtube" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Search keywords + trusted channels, in watching order.</p>
+</blockquote>
+<h3 id="step-0-pick-your-learning-style">🧑‍🎓 Step 0 — Pick your learning style<a class="headerlink" href="#step-0-pick-your-learning-style" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>You learn best by</th>
+<th>Your path through this unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🎧 <strong>Listener</strong></td>
+<td>short explainers</td>
+<td>1 video per topic (5–10 min each)</td>
+</tr>
+<tr>
+<td>🛠️ <strong>Builder</strong></td>
+<td>doing it</td>
+<td>Rebuild + rerun <a href="../../practicals/writeups/P10_docker_first_container/">P10</a> (it ran for real!)</td>
+</tr>
+<tr>
+<td>🧠 <strong>Deep Diver</strong></td>
+<td>the "why"</td>
+<td>Edge-vs-fog + DLT-cloud deep dives</td>
+</tr>
+<tr>
+<td>🎓 <strong>Academic</strong></td>
+<td>exam marks</td>
+<td>Master serverless, edge/fog, containers, DLT from the PYQ map</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-1-watch-by-topic">🎬 Step 1 — Watch by topic<a class="headerlink" href="#step-1-watch-by-topic" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>YouTube search keywords</th>
+<th>Best channels</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MCC</td>
+<td><code>mobile cloud computing</code></td>
+<td>Simplilearn, Gate Smashers</td>
+</tr>
+<tr>
+<td>IoT cloud</td>
+<td><code>iot cloud architecture</code> · <code>aws iot core</code></td>
+<td>IBM Technology, AWS</td>
+</tr>
+<tr>
+<td>Serverless</td>
+<td><code>serverless computing explained</code> · <code>faas vs containers</code></td>
+<td>IBM Technology, TechWorld with Nana</td>
+</tr>
+<tr>
+<td>Edge &amp; Fog</td>
+<td><code>edge vs fog computing</code> · <code>what is fog computing</code></td>
+<td>IBM Technology, Simplilearn</td>
+</tr>
+<tr>
+<td>ML in cloud</td>
+<td><code>cloud computing machine learning</code></td>
+<td>Google Cloud Tech, IBM Technology</td>
+</tr>
+<tr>
+<td>DLT / blockchain cloud</td>
+<td><code>distributed ledger technology</code> · <code>blockchain as a service</code></td>
+<td>IBM Technology, Simply Explained</td>
+</tr>
+<tr>
+<td>5G &amp; cloud-native</td>
+<td><code>5g and edge computing</code> · <code>cloud native networking</code></td>
+<td>IBM Technology</td>
+</tr>
+<tr>
+<td>Docker (P10)</td>
+<td><code>docker build dockerfile nginx</code> · <code>docker for beginners</code></td>
+<td>TechWorld with Nana, freeCodeCamp</td>
+</tr>
+<tr>
+<td>Kubernetes</td>
+<td><code>kubernetes explained in 10 minutes</code></td>
+<td>TechWorld with Nana, IBM Technology</td>
+</tr>
+<tr>
+<td>Revision</td>
+<td><code>cloud unit 6 serverless edge fog containers</code></td>
+<td>Gate Smashers, Neso Academy</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-2-full-playlists-deep-divers-academics">🎬 Step 2 — Full playlists (Deep Divers &amp; Academics)<a class="headerlink" href="#step-2-full-playlists-deep-divers-academics" title="Permanent link">&para;</a></h3>
+<ol>
+<li><em>Docker for Beginners</em> — TechWorld with Nana (builds on your real P10).</li>
+<li><em>Kubernetes 101</em> — TechWorld with Nana / freeCodeCamp.</li>
+<li>NPTEL <em>Cloud Computing</em> (emerging tech unit): https://archive.nptel.ac.in/courses/106/105/106105167/</li>
+</ol>
+<h3 id="step-3-proof-you-got-it-5-min">🎬 Step 3 — Proof you got it (5 min)<a class="headerlink" href="#step-3-proof-you-got-it-5-min" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Re-type the P10 commands from memory (build → run → curl → stop).</li>
+<li>Edge vs Fog: one analogy, one difference, one shared benefit.</li>
+<li>Serverless: 3 advantages + 1 limitation.</li>
+<li>DLT: what it guarantees + what the cloud adds.</li>
+</ul>
+<hr />
+<p><em>End of notes. Next: <a href="../../">README</a> + <a href="../RESOURCES/">RESOURCES</a></em></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../UNIT_5_Cloud_Security_and_Compliance/" class="md-footer__link md-footer__link--prev" aria-label="Previous: UNIT 5 — Cloud Security and Compliance 🔐">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                UNIT 5 — Cloud Security and Compliance 🔐
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../practicals/writeups/P01_openstack_architecture/" class="md-footer__link md-footer__link--next" aria-label="Next: P01 — Architecture Study: OpenStack (IaaS Cloud Platform)">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                P01 — Architecture Study: OpenStack (IaaS Cloud Platform)
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script>
+      
+        <script src="../../../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

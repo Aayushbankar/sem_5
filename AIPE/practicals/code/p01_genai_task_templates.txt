@@ -1,0 +1,67 @@
+# GENERIC PROMPT TEMPLATES BY TASK TYPE (P01)
+
+Copy, fill the [brackets], and send to any GenAI tool (ChatGPT / Gemini / Claude).
+
+## 1. Text — email / essay / summary
+```
+You are an expert [role, e.g., business communication coach].
+Write a [formal | neutral | casual] email to [recipient] about [topic].
+Length: [x] sentences. Tone: [polite | direct].
+Important points to include:
+- [point 1]
+- [point 2]
+```
+
+## 2. Image — text-to-image
+```
+Generate an image of [subject] in [style, e.g., flat vector / watercolor / photorealistic].
+Mood: [calm | energetic]. Colour palette: [colours]. No text on the image.
+```
+Refine with: "make it [simpler | more detailed]", "change background to …", "try again with a different composition".
+
+## 3. Code — generation
+```
+Write a Python function named [name] that [behaviour].
+Input: [example input]. Output: [example output].
+Handle edge cases: [empty input, wrong types]. Add a docstring and type hints.
+```
+Follow-up: "add tests for the edge cases", "explain each line", "rewrite without loops".
+
+## 4. Audio — text-to-speech (ElevenLabs, Edge, etc.)
+```
+Convert the following text to speech in a [calm | energetic | professional] voice:
+[text]
+```
+Add SSML/delays for narration. (Prompt = the text + voice/style settings in the tool.)
+
+## 5. Video — short clips (Runway, Pika, Sora)
+```
+Generate a [duration] video of [scene description].
+Camera: [slow pan | static]. Style: [cinematic | cartoon]. No text overlays.
+```
+Then edit/assemble in CapCut/Premiere — GenAI produces clips, humans assemble the story.
+
+## 6. Analysis — classify / summarize / extract
+```
+Act as a data analyst. Given the data below:
+1. [classify each item into labels: ...]
+2. Summarise the main trend in 2 sentences.
+3. List any anomalies.
+DATA:
+[item 1 | ... ]
+```
+Ask it to "show reasoning", "output as a table", "check for errors".
+
+## 7. Universal refinement loop (works for every task)
+```
+Your previous output was [too long / too formal / missing X].
+Revise it to [specific fix]. Keep everything else unchanged.
+```
+
+## Checklist before sending any prompt
+- [ ] Role defined ("act as …")
+- [ ] Task verb clear ("write", "fix", "classify", "summarise")
+- [ ] Context + constraints included (length, tone, format)
+- [ ] Example input/output given
+- [ ] Edge cases mentioned
+- [ ] Output format specified (table, bullets, code block, JSON)
