@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { BookOpen, Cpu, Shield, Brain, Network, ArrowRight } from 'lucide-react';
 import { clsx, type ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
@@ -12,6 +12,7 @@ const SUBJECTS = [
   {
     id: 'CDCT',
     title: 'Cloud & Data Center',
+    link: '/sem_5/docs/cdct/notes/unit-1-introduction-to-cloud-computing',
     icon: Network,
     color: 'from-blue-500 to-cyan-500',
     description: 'Virtualization, Cloud Storage, and Security.',
@@ -19,6 +20,7 @@ const SUBJECTS = [
   {
     id: 'FOB',
     title: 'Foundation of Blockchain',
+    link: '/sem_5/docs/fob/notes/unit-1-foundations-of-decentralization',
     icon: Shield,
     color: 'from-amber-500 to-orange-600',
     description: 'Decentralization, Crypto, and Smart Contracts.',
@@ -26,6 +28,7 @@ const SUBJECTS = [
   {
     id: 'IOT',
     title: 'Hands on IoT',
+    link: '/sem_5/docs/iot/notes/unit-1-introduction-to-iot',
     icon: Cpu,
     color: 'from-emerald-400 to-teal-500',
     description: 'Sensors, Actuators, and Cloud Platforms.',
@@ -33,6 +36,7 @@ const SUBJECTS = [
   {
     id: 'AIPD',
     title: 'AI Product Design',
+    link: '/sem_5/docs/aipd/notes/unit-1-fundamentals-of-ai-products',
     icon: Brain,
     color: 'from-purple-500 to-pink-500',
     description: 'Human-Centered AI and Strategy.',
@@ -40,6 +44,7 @@ const SUBJECTS = [
   {
     id: 'AIPE',
     title: 'AI Prompt Engineering',
+    link: '/sem_5/docs/aipe/notes/unit-1-foundations-of-ai-and-generative-ai',
     icon: BookOpen,
     color: 'from-indigo-400 to-violet-600',
     description: 'LLMs, RAG, and Agentic AI.',
@@ -58,26 +63,25 @@ export const HeroSection = () => {
         className="text-center mb-16"
       >
         <div className="inline-block mb-4 px-3 py-1 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-sm text-gray-300 font-medium">
-          Igloo.inc Academy
+          Academic Engineering Archive
         </div>
         <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight mb-6">
           Semester 5 <br />
-          <span className="text-gradient">Premium Archive</span>
+          <span className="text-gradient">Complete Curriculum</span>
         </h1>
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto font-sans">
-          Elevate your engineering knowledge. Explore curated textbook notes, practicals, and deep dives.
+          Curated textbook notes, practical implementations, and comprehensive study material.
         </p>
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {SUBJECTS.map((subject, idx) => {
           const Icon = subject.icon;
-          const isHovered = hoveredId === subject.id;
           
           return (
             <motion.a
               key={subject.id}
-              href={`/sem_5/docs/${subject.id}/notes`}
+              href={subject.link}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
@@ -111,7 +115,7 @@ export const HeroSection = () => {
                 </p>
 
                 <div className="flex items-center text-sm font-medium text-white/60 group-hover:text-white transition-colors">
-                  Explore Module <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                  Open Unit 1 <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </motion.a>
