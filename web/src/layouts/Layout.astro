@@ -16,13 +16,57 @@ const { title, description = "A premium academic platform" } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-background text-gray-100 font-sans antialiased overflow-x-hidden selection:bg-accent/30">
-    <div class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
+  <body class="bg-[#030712] text-gray-100 font-sans antialiased overflow-x-hidden">
+    <div class="fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(59,130,246,0.15),rgba(255,255,255,0))] pointer-events-none"></div>
     <slot />
+
+    <!-- Client-side Mermaid Diagram Rendering Engine -->
+    <script is:inline src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <script is:inline>
+      document.addEventListener('DOMContentLoaded', () => {
+        mermaid.initialize({ 
+          startOnLoad: false, 
+          theme: 'dark',
+          themeVariables: {
+            darkMode: true,
+            background: '#0f172a',
+            primaryColor: '#3b82f6',
+            secondaryColor: '#8b5cf6',
+            tertiaryColor: '#1e293b',
+            primaryTextColor: '#f8fafc',
+            lineColor: '#60a5fa'
+          }
+        });
+
+        const blocks = document.querySelectorAll('pre code, pre');
+        blocks.forEach((el) => {
+          const text = el.textContent || '';
+          const isMermaidCode = el.classList.contains('language-mermaid') || 
+                                text.trim().startsWith('flowchart') || 
+                                text.trim().startsWith('graph') || 
+                                text.trim().startsWith('sequenceDiagram') || 
+                                text.trim().startsWith('gantt') ||
+                                text.trim().startsWith('classDiagram');
+
+          if (isMermaidCode) {
+            const parent = el.closest('pre') || el;
+            const container = document.createElement('div');
+            container.className = 'mermaid my-8 p-6 bg-[#0f172a]/90 rounded-xl border border-blue-500/20 shadow-2xl flex justify-center overflow-x-auto';
+            container.textContent = text;
+            parent.replaceWith(container);
+          }
+        });
+
+        mermaid.run({
+          querySelector: '.mermaid'
+        });
+      });
+    </script>
   </body>
 </html>
