@@ -1,0 +1,204 @@
+site_name: Semester 5 — GTU IT Study Kit 🎓
+site_url: https://aayushbankar.github.io/sem_5/
+site_description: 'Complete gold-standard study kit for Semester 5 GTU Diploma IT: notes, solved practicals, PYQs.'
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  language: en
+  features:
+  - navigation.tabs
+  - navigation.top
+  - navigation.indexes
+  - navigation.footer
+  - toc.follow
+  - search.suggest
+  - search.highlight
+  - content.code.copy
+  - content.code.annotate
+  palette:
+  - media: '(prefers-color-scheme: light)'
+    scheme: default
+    toggle:
+      icon: material/brightness-7
+      name: Switch to dark mode
+  - media: '(prefers-color-scheme: dark)'
+    scheme: slate
+    toggle:
+      icon: material/brightness-4
+      name: Switch to light mode
+  icon:
+    logo: material/school
+    repo: fontawesome/brands/github
+  favicon: https://fav.farm/📚
+repo_url: https://github.com/Aayushbankar/sem_5
+repo_name: Aayushbankar/sem_5
+plugins:
+- search
+markdown_extensions:
+- tables
+- attr_list
+- admonition
+- footnotes
+- toc:
+    permalink: true
+- pymdownx.details
+- pymdownx.tabbed:
+    alternate_style: true
+- pymdownx.superfences:
+    custom_fences:
+    - name: mermaid
+      class: mermaid
+      format: !!python/name:pymdownx.superfences.fence_code_format
+- pymdownx.highlight:
+    anchor_linenums: true
+- pymdownx.inlinehilite
+- pymdownx.snippets
+- pymdownx.emoji
+extra_javascript:
+- https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js
+- javascripts/mermaid-init.js
+extra_css:
+- stylesheets/extra.css
+exclude_docs: |
+  /pyq/cc/
+nav:
+- Home: index.md
+- FOB:
+  - Overview: FOB/README.md
+  - Practical Tracker: FOB/PRACTICALS.md
+  - 📚 Notes:
+    - UNIT 1 — Foundations of Decentralization 🏛️: FOB/notes/UNIT_1_Foundations_of_Decentralization.md
+    - UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️: FOB/notes/UNIT_2_Bitcoin_and_PoW.md
+    - UNIT 3 — Ethereum & Smart Contracts 🟣: FOB/notes/UNIT_3_Ethereum_and_Smart_Contracts.md
+    - UNIT 4 — Enterprise & Private Blockchains 🏢: FOB/notes/UNIT_4_Enterprise_and_Private_Blockchains.md
+    - UNIT 5 — Security, Emerging Trends & Green Energy 🔐🌱: FOB/notes/UNIT_5_Security_Emerging_Trends_Green_Energy.md
+  - 🧪 Practicals:
+    - P01 — Cryptographic Hash Functions & the Avalanche Effect: FOB/practicals/writeups/P01_cryptographic_hash_avalanche.md
+    - P02 — Public/Private Key Pair & Digital Signatures: FOB/practicals/writeups/P02_public_private_keys_digital_signatures.md
+    - P03 — Basic Blockchain Structure in Python: FOB/practicals/writeups/P03_basic_blockchain_python.md
+    - P04 — Simplified Merkle Tree: FOB/practicals/writeups/P04_merkle_tree.md
+    - P05 — The "Nonce" & Mining Difficulty (Proof-of-Work): FOB/practicals/writeups/P05_nonce_mining_difficulty.md
+    - 'P06 — Wallets: Keys from Mnemonic Seed Phrases (BIP39)': FOB/practicals/writeups/P06_wallets_mnemonic_bip39.md
+    - P07 — Write, Compile & Deploy a Smart Contract on the EVM: FOB/practicals/writeups/P07_smart_contract_evm.md
+    - 'P08 — Tokenization: Deploying a Basic ERC-20 Token': FOB/practicals/writeups/P08_erc20_token.md
+    - 'P09 — Case Study: Public vs Private Blockchains (Hyperledger Fabric)': FOB/practicals/writeups/P09_case_study_public_vs_private_hyperledger.md
+    - 'P10 — Case Study: Smart Contract Vulnerability + Green Energy DAO/Token': FOB/practicals/writeups/P10_case_study_security_green_energy_dao.md
+  - 🔗 Resources: FOB/notes/RESOURCES.md
+  - 📄 Syllabus (PDF): FOB/DI05016051-FOB.pdf
+- IOT:
+  - Overview: IOT/README.md
+  - Practical Tracker: IOT/PRACTICALS.md
+  - 📚 Notes:
+    - UNIT 1 — Introduction to IoT 🌐: IOT/notes/UNIT_1_Introduction_to_IoT.md
+    - UNIT 2 — IoT Sensors, Actuators and Hardware Platforms 🔧: IOT/notes/UNIT_2_IoT_Sensors_Actuators_Hardware_Platforms.md
+    - UNIT 3 — Introduction to ESP32 & Development with Arduino IDE ⚡: IOT/notes/UNIT_3_ESP32_and_Arduino_IDE_Development.md
+    - UNIT 4 — IoT Communication Protocols & Networking 📡: IOT/notes/UNIT_4_IoT_Communication_Protocols_and_Networking.md
+    - UNIT 5 — IoT Cloud Platforms & Applications of IoT ☁️: IOT/notes/UNIT_5_IoT_Cloud_Platforms_and_Applications.md
+  - 🧪 Practicals:
+    - 'P01 — Study: 4-Layer IoT Architecture & Real-World Applications': IOT/practicals/writeups/P01_iot_architecture_layers.md
+    - P02 — Compare Hardware Platforms & ESP32 Pinout / Dual-Core Architecture: IOT/practicals/writeups/P02_compare_hardware_platforms_esp32_pinout.md
+    - 'P03 — Study: Arduino IDE Setup for ESP32 & Driver Installation': IOT/practicals/writeups/P03_arduino_ide_setup_esp32.md
+    - P04 — Toggle an External LED (Digital Output): IOT/practicals/writeups/P04_external_led_blink_toggle.md
+    - P05 — PIR Motion Sensor (Digital Input) + LDR (Analog Input): IOT/practicals/writeups/P05_pir_ldr_sensor_interface.md
+    - P06 — DHT11/DHT22 Temperature & Humidity Sensor: IOT/practicals/writeups/P06_dht_temperature_humidity_sensor.md
+    - P07 — Ultrasonic Sensor (HC-SR04) Distance Measurement: IOT/practicals/writeups/P07_ultrasonic_distance_sensor.md
+    - P08 — ESP32 as MQTT Publisher (Temperature & Humidity): IOT/practicals/writeups/P08_esp32_mqtt_publisher.md
+    - 'P09 — ESP32 as MQTT Subscriber: Remote LED/Relay Control': IOT/practicals/writeups/P09_esp32_mqtt_subscriber_remote_control.md
+    - P10 — HTTP GET/POST to ThingSpeak (Temperature Data to Cloud): IOT/practicals/writeups/P10_thingspeak_http_temperature.md
+    - P11 — Ultrasonic Distance to Cloud (ThingSpeak): IOT/practicals/writeups/P11_ultrasonic_thingspeak_cloud.md
+    - 'P12 — Two-Way Mobile Dashboard (Blynk): Monitor & Control': IOT/practicals/writeups/P12_blynk_two_way_dashboard.md
+    - 'P13 — Soil Moisture + DHT: Serial (a) and Cloud with Thresholds (b)': IOT/practicals/writeups/P13_soil_moisture_dht_cloud_thresholds.md
+    - 'P14 — Mini-Project: Smart Agriculture System (walkthrough guide)': IOT/practicals/writeups/P14_mini_project_smart_agriculture_guide.md
+  - 🔗 Resources: IOT/notes/RESOURCES.md
+  - 📄 Syllabus (PDF): IOT/DI05016071-IOT.pdf
+- AIPE:
+  - Overview: AIPE/README.md
+  - Practical Tracker: AIPE/PRACTICALS.md
+  - 📚 Notes:
+    - UNIT 1 — Foundations of Artificial Intelligence & Generative AI 🤖: AIPE/notes/UNIT_1_Foundations_of_AI_and_Generative_AI.md
+    - UNIT 2 — Basics of Large Language Models (LLMs) 🧠: AIPE/notes/UNIT_2_Basics_of_Large_Language_Models.md
+    - UNIT 3 — Prompt Engineering Fundamentals 🎯: AIPE/notes/UNIT_3_Prompt_Engineering_Fundamentals.md
+    - UNIT 4 — Prompt Engineering Techniques 🧩: AIPE/notes/UNIT_4_Prompt_Engineering_Techniques.md
+    - 'UNIT 5 — AI Application Development: Generative AI & Agentic AI 🚀': AIPE/notes/UNIT_5_AI_Application_Development_Agentic_AI.md
+  - 🧪 Practicals:
+    - P01 — Generative AI Tools for Different Task Types & Applications Across Domains: AIPE/practicals/writeups/P01_genai_tools_tasks_and_domains.md
+    - P02 — Sentiment Analysis & Text Classification with Python: AIPE/practicals/writeups/P02_sentiment_analysis_text_classification.md
+    - 'P03 — LLM Behavior Analysis: Prompt Variation, Context Understanding, Response Consistency': AIPE/practicals/writeups/P03_llm_behavior_analysis.md
+    - 'P04 — LLM Capabilities & Limitations: Factual, Logical, Ambiguous Queries & Hallucination': AIPE/practicals/writeups/P04_llm_capabilities_limitations_hallucinations.md
+    - 'P05 — Design & Refine Prompts: Email Writing & Concept Explanation': AIPE/practicals/writeups/P05_prompt_design_and_refinement.md
+    - P06 — Zero-Shot, Few-Shot & Role-Based Prompting: AIPE/practicals/writeups/P06_zero_shot_few_shot_role_based.md
+    - P07 — Chain-of-Thought & Prompt Chaining for Multi-Step Problems: AIPE/practicals/writeups/P07_chain_of_thought_prompt_chaining.md
+    - 'P08 — Task-Based Prompt Engineering: Summarization, Blog Generation, Code Generation': AIPE/practicals/writeups/P08_task_based_prompt_engineering.md
+    - 'P09 — AI Tools for Software Development: Code Generation, Debugging, Explanation': AIPE/practicals/writeups/P09_ai_tools_for_software_development.md
+    - P10 — Simple AI Chatbot via API (OpenAI/Gemini) with Python: AIPE/practicals/writeups/P10_ai_chatbot_api_python.md
+    - P11 — Document-Based Q&A (Basic RAG): AIPE/practicals/writeups/P11_document_qa_basic_rag.md
+    - 'P12 — Build an AI Application: Study Assistant (with design docs for 3 more)': AIPE/practicals/writeups/P12_ai_study_assistant.md
+  - 🔗 Resources: AIPE/notes/RESOURCES.md
+  - 📄 Syllabus (PDF): AIPE/DI05016011-AIPE.pdf
+- AIPD:
+  - Overview: AIPD/README.md
+  - Practical Tracker: AIPD/PRACTICALS.md
+  - 📚 Notes:
+    - UNIT 1 — Fundamentals of AI Products & Emerging AI Systems 🤖: AIPD/notes/UNIT_1_Fundamentals_of_AI_Products.md
+    - UNIT 2 — Design Thinking & Human-Centred AI 🎨: AIPD/notes/UNIT_2_Design_Thinking_and_Human_Centred_AI.md
+    - UNIT 3 — AI Product Strategy & OpenAI Integration 🧭: AIPD/notes/UNIT_3_AI_Product_Strategy_and_OpenAI_Integration.md
+    - UNIT 4 — AI in Social Media & Digital Experience 📱: AIPD/notes/UNIT_4_AI_in_Social_Media_and_Digital_Experience.md
+    - UNIT 5 — Privacy, Data Governance & Responsible AI 🛡️: AIPD/notes/UNIT_5_Privacy_Data_Governance_and_Responsible_AI.md
+    - UNIT 6 — AI Threats & Mitigation Strategies 🚨: AIPD/notes/UNIT_6_AI_Threats_and_Mitigation_Strategies.md
+  - 🧪 Practicals:
+    - P01 — Product Idea, Problem Statement, Target Users & Core Features: AIPD/practicals/writeups/P01_product_idea_problem_statement.md
+    - P02 — Conceptual AI System Architecture (Data → Model → Interface → Feedback): AIPD/practicals/writeups/P02_ai_system_architecture.md
+    - 'P03 — Data Components: Inventory, Classification & Risk Identification': AIPD/practicals/writeups/P03_data_components.md
+    - P04 — User Personas, Empathy Map & Customer Journey Map: AIPD/practicals/writeups/P04_persona_empathy_journey.md
+    - P05 — AI Interaction Flow & Basic UI Wireframes: AIPD/practicals/writeups/P05_interaction_flow_wireframe.md
+    - P06 — MVP Features & Feature Prioritization Matrix: AIPD/practicals/writeups/P06_mvp_feature_prioritization.md
+    - P07 — Business Model Canvas & AI Monetization Strategy: AIPD/practicals/writeups/P07_business_model_canvas.md
+    - 'P08 — AI Integration Plan: API Usage, Cost Awareness & Security': AIPD/practicals/writeups/P08_ai_integration_plan.md
+    - P09 — AI Social-Media Campaign & Promotional Content: AIPD/practicals/writeups/P09_social_media_campaign.md
+    - P10 — No-Code Prototype (Glide) & 2–3 Minute Demo Video: AIPD/practicals/writeups/P10_no_code_prototype_demo_video.md
+    - P11 — Data Protection Plan & AI Ethical Usage Policy: AIPD/practicals/writeups/P11_data_protection_ethics_policy.md
+    - P12 — AI Risk Assessment & Mitigation Strategy: AIPD/practicals/writeups/P12_ai_risk_assessment.md
+  - 🔗 Resources: AIPD/notes/RESOURCES.md
+  - 📄 Syllabus (PDF): AIPD/DI05016021-AIPD.pdf
+- CDCT:
+  - Overview: CDCT/README.md
+  - Practical Tracker: CDCT/PRACTICALS.md
+  - 📚 Notes:
+    - UNIT 1 — Introduction to Cloud Computing ☁️: CDCT/notes/UNIT_1_Introduction_to_Cloud_Computing.md
+    - UNIT 2 — Virtualization and Hypervisors 🖥️: CDCT/notes/UNIT_2_Virtualization_and_Hypervisors.md
+    - UNIT 3 — Data Center Architecture 🏢: CDCT/notes/UNIT_3_Data_Center_Architecture.md
+    - UNIT 4 — Cloud Storage and Database Services 💾: CDCT/notes/UNIT_4_Cloud_Storage_and_Database_Services.md
+    - UNIT 5 — Cloud Security and Compliance 🔐: CDCT/notes/UNIT_5_Cloud_Security_and_Compliance.md
+    - UNIT 6 — Emerging Technologies with Cloud Computing 🚀: CDCT/notes/UNIT_6_Emerging_Technologies_with_Cloud_Computing.md
+  - 🧪 Practicals:
+    - 'P01 — Architecture Study: OpenStack (IaaS Cloud Platform)': CDCT/practicals/writeups/P01_openstack_architecture.md
+    - P02 — Cloud Organization with RBAC (AWS IAM): CDCT/practicals/writeups/P02_cloud_organization_rbac.md
+    - P03 — Install VirtualBox + Linux VM on Windows 8+: CDCT/practicals/writeups/P03_install_virtualbox_linux_vm.md
+    - P04 — Desktop Virtualization with Chrome Remote Desktop: CDCT/practicals/writeups/P04_desktop_virtualization_chrome_remote_desktop.md
+    - P05 — Virtual SDN Lab with Mininet: CDCT/practicals/writeups/P05_mininet_virtual_sdn_lab.md
+    - 'P06 — Cloud Databases: Study & Comparison': CDCT/practicals/writeups/P06_cloud_databases_comparison.md
+    - 'P07 — Cloud Storage: Study & Comparison': CDCT/practicals/writeups/P07_cloud_storage_comparison.md
+    - P08 — Simulate Secure File Sharing with CloudSim: CDCT/practicals/writeups/P08_cloudsim_secure_file_sharing.md
+    - P09 — Secure Object Storage with MinIO (Access Control + SSE): CDCT/practicals/writeups/P09_minio_secure_object_storage.md
+    - P10 — Creating & Executing Your First Container (Docker): CDCT/practicals/writeups/P10_docker_first_container.md
+  - 🔗 Resources: CDCT/notes/RESOURCES.md
+  - 📄 Syllabus (PDF): CDCT/DI05016031-CDCT.pdf
+- 📄 All Syllabi (PDF):
+  - syllabus/selected/AI_Product_Design.pdf
+  - syllabus/selected/Artificial_Intelligence_with_Prompt_Engineering.pdf
+  - syllabus/selected/Cloud_and_Data_Center_Technology.pdf
+  - syllabus/selected/Foundation_of_Blockchain.pdf
+  - syllabus/selected/Hands_on_Practice_using_IoT.pdf
+  - syllabus/selected/Skill_Based_Training.pdf
+- 📝 Past Papers (PYQ):
+  - pyq/fbc/s_24.pdf
+  - pyq/fbc/s_25.pdf
+  - pyq/fbc/s_26.pdf
+  - pyq/fbc/w_24.pdf
+  - pyq/fbc/w_25.pdf
+  - pyq/cdct/s_24.pdf
+  - pyq/cdct/s_25.pdf
+  - pyq/cdct/s_26.pdf
+  - pyq/cdct/w_24.pdf
+  - pyq/cdct/w_25.pdf

@@ -1,6 +1,6 @@
 # UNIT 3 — Ethereum & Smart Contracts 🟣
 
-**Syllabus weightage:** 12 hrs / **30%** — the biggest unit. | **Related practicals:** [P07](../practicals/writeups/P07_hello_world_smart_contract_remix.md), [P08](../practicals/writeups/P08_erc20_green_energy_token.md)
+**Syllabus weightage:** 12 hrs / **30%** — the biggest unit. | **Related practicals:** [P07](../practicals/writeups/P07_smart_contract_evm.md), [P08](../practicals/writeups/P08_erc20_token.md)
 **Star guide:** ⭐ = likely · ⭐⭐ = very likely · ⭐⭐⭐ = practically guaranteed in some form
 
 ---
@@ -58,7 +58,7 @@ UNIT 3: Ethereum & Smart Contracts  (30% — biggest marks chunk)
 | Transfer | Native transfer opcode | Function call `transfer(to, amount)` |
 
 **ERC-20** = the standard interface every token contract must implement so wallets/exchanges handle it uniformly:
-`totalSupply()`, `balanceOf()`, `transfer()`, `transferFrom()`, `approve()`, `allowance()` + events `Transfer`, `Approval`. (See [P08](../practicals/writeups/P08_erc20_green_energy_token.md).)
+`totalSupply()`, `balanceOf()`, `transfer()`, `transferFrom()`, `approve()`, `allowance()` + events `Transfer`, `Approval`. (See [P08](../practicals/writeups/P08_erc20_token.md).)
 
 **Advantages of ERC-20 (S24 Q.5(a), S26 Q.4(b)-alt, S25 Q.5(b)):**
 1. **Interoperability** — standard interface works in every wallet/exchange instantly.
@@ -125,7 +125,7 @@ contract HelloWorld {
     }
 }
 ```
-Deployed in Remix → a `setMessage` call costs gas; `message()` reads are free. Full walkthrough with screenshots in [P07](../practicals/writeups/P07_hello_world_smart_contract_remix.md).
+Deployed in Remix → a `setMessage` call costs gas; `message()` reads are free. Full walkthrough with screenshots in [P07](../practicals/writeups/P07_smart_contract_evm.md).
 
 ### 3.2.3 Compiling & Deploying on a Testnet (Remix IDE) ⭐
 
@@ -309,7 +309,7 @@ Deployed in Remix → a `setMessage` call costs gas; `message()` reads are free.
 | Style | You learn best by | Your path through this unit |
 |---|---|---|
 | 🎧 **Listener** | short, clear explainers | 1 explainer per topic in the table below |
-| 🛠️ **Builder** | writing code yourself | Watch the build-along → deploy [P07](../practicals/writeups/P07_hello_world_smart_contract_remix.md) & [P08](../practicals/writeups/P08_erc20_green_energy_token.md) in Remix |
+| 🛠️ **Builder** | writing code yourself | Watch the build-along → deploy [P07](../practicals/writeups/P07_smart_contract_evm.md) & [P08](../practicals/writeups/P08_erc20_token.md) in Remix |
 | 🔧 **Tinkerer** | experimenting & demos | Deploy on Sepolia with a faucet; break the token contract and watch reverts |
 | 🧠 **Deep Diver** | full theory, "why" | Playlists at the bottom |
 | 🧭 **Explorer** | breadth & curiosity | Start with "how ethereum works" explainers |
@@ -339,7 +339,7 @@ Deployed in Remix → a `setMessage` call costs gas; `message()` reads are free.
 
 ### 🎬 Step 3 — Proof you got it (5 min)
 
-- Deploy the [P08 token](../practicals/writeups/P08_erc20_green_energy_token.md) on Sepolia and mint/transfer to yourself.
+- Deploy the [P08 token](../practicals/writeups/P08_erc20_token.md) on Sepolia and mint/transfer to yourself.
 - Explain to a friend why a failed transaction still costs gas.
 - Say the 6 rows of the Bitcoin vs Ethereum table from memory.
 

@@ -37,7 +37,6 @@ Fill in for TWO tasks (email writing and concept explanation). 3 iterations each
 *(same 3-iteration structure)*
 
 ## Which refinement gave the biggest quality jump, and why?
-```
 
 ## Refinement moves checklist
 - [ ] Added a role ("act as …")

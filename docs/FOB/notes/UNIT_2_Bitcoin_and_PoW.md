@@ -1,6 +1,6 @@
 # UNIT 2 — Bitcoin & The Proof-of-Work Era ⛏️
 
-**Syllabus weightage:** 8 hrs / 15% | **Related practicals:** [P05](../practicals/writeups/P05_proof_of_work_mining_simulation.md), [P06](../practicals/writeups/P06_bip39_seed_phrase_generator.md)
+**Syllabus weightage:** 8 hrs / 15% | **Related practicals:** [P05](../practicals/writeups/P05_nonce_mining_difficulty.md), [P06](../practicals/writeups/P06_wallets_mnemonic_bip39.md)
 **Star guide:** ⭐ = likely asked · ⭐⭐ = very likely · ⭐⭐⭐ = practically guaranteed in some form
 
 ---
@@ -78,7 +78,7 @@ A wallet is **a collection of keys** — it never "contains" coins; it contains 
 
 **Seed phrase (BIP39):** A wallet derives all its keys deterministically from a **12 or 24-word seed phrase** (e.g. `abandon … about`). 
 - One phrase → one deterministic tree of addresses.
-- **Anyone who knows the phrase controls every derived address** — write it on paper, never type it into a website. See [P06](../practicals/writeups/P06_bip39_seed_phrase_generator.md) to build one yourself.
+- **Anyone who knows the phrase controls every derived address** — write it on paper, never type it into a website. See [P06](../practicals/writeups/P06_wallets_mnemonic_bip39.md) to build one yourself.
 - Mnemonic → entropy → `HMAC-SHA512` (passphrase "mnemonic") → 512-bit seed → master key → child keys (BIP32/44 derivation paths).
 
 ---
@@ -99,7 +99,7 @@ Smaller target  ⇒  more leading zeros required  ⇒  exponentially harder
 - **Difficulty** = how much harder mining is now vs the easiest-ever target.
 - The network **re-targets difficulty every 2016 blocks** (~2 weeks) so that blocks arrive roughly every **10 minutes** regardless of total hashrate.
 - If miners add machines → blocks arrive faster → difficulty rises; if miners leave → difficulty falls.
-- Because hashing is one-way, miners can't "cheat" by predicting a winning nonce — expected work = `Target/2²⁵⁶` hashes. (Try it in [P05](../practicals/writeups/P05_proof_of_work_mining_simulation.md).)
+- Because hashing is one-way, miners can't "cheat" by predicting a winning nonce — expected work = `Target/2²⁵⁶` hashes. (Try it in [P05](../practicals/writeups/P05_nonce_mining_difficulty.md).)
 
 ### 2.2.2 The Life Cycle of a Transaction (Mempool → Block) ⭐⭐⭐
 
@@ -374,7 +374,7 @@ In pure PoS, a validator could theoretically vote on **every** competing chain f
 | Style | You learn best by | Your path through this unit |
 |---|---|---|
 | 🎧 **Listener** | short, clear explainers | 1 explainer per topic in the table below |
-| 🛠️ **Builder** | writing code yourself | Watch the build-along → run [P05](../practicals/writeups/P05_proof_of_work_mining_simulation.md) & [P06](../practicals/writeups/P06_bip39_seed_phrase_generator.md), then break them |
+| 🛠️ **Builder** | writing code yourself | Watch the build-along → run [P05](../practicals/writeups/P05_nonce_mining_difficulty.md) & [P06](../practicals/writeups/P06_wallets_mnemonic_bip39.md), then break them |
 | 🔧 **Tinkerer** | experimenting & demos | Watch demo videos → change the difficulty/halving constants in P05 and watch blocks slow/speed |
 | 🧠 **Deep Diver** | full theory, "why" | Playlists at the bottom (university-level depth) |
 | 🧭 **Explorer** | breadth & curiosity | Classic "how bitcoin works" explainers first |
@@ -405,7 +405,7 @@ In pure PoS, a validator could theoretically vote on **every** competing chain f
 
 ### 🎬 Step 3 — Proof you got it (5 min)
 
-- Run [P05](../practicals/writeups/P05_proof_of_work_mining_simulation.md), crank the difficulty up, and watch the mining time explode — that's the 10-minute-block idea in miniature.
+- Run [P05](../practicals/writeups/P05_nonce_mining_difficulty.md), crank the difficulty up, and watch the mining time explode — that's the 10-minute-block idea in miniature.
 - Re-draw the mempool → block → confirmations diagram from memory.
 - Explain to a friend why a 51% attacker can double-spend *their own* coins but can't steal yours.
 
