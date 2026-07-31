@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@400;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  /* Igloo.inc / Hyper-Modern Premium Theme */
+  --sl-font: 'Inter', sans-serif;
+  --sl-font-headings: 'Outfit', sans-serif;
+  --sl-font-mono: 'Fira Code', monospace;
+
+  /* Force Dark Mode Colors */
+  --sl-color-white: #ffffff;
+  --sl-color-gray-1: #e1e7ef;
+  --sl-color-gray-2: #94a3b8;
+  --sl-color-gray-3: #64748b;
+  --sl-color-gray-4: #334155;
+  --sl-color-gray-5: #1e293b;
+  --sl-color-gray-6: #0f172a;
+  --sl-color-black: #020617;
+
+  /* Vivid Glowing Accents (Electric Cyan / Royal Blue) */
+  --sl-color-accent-low: #001a33;
+  --sl-color-accent: #0070f3;
+  --sl-color-accent-high: #00f0ff;
+  --sl-color-text-accent: #00f0ff;
+
+  /* Backgrounds: Deep space with glassmorphism */
+  --sl-color-bg: #020617;
+  --sl-color-bg-nav: rgba(2, 6, 23, 0.7);
+  --sl-color-bg-sidebar: rgba(2, 6, 23, 0.4);
+  
+  --sl-border-radius: 12px;
+}
+
+/* Force dark mode to avoid light mode flashes */
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--sl-color-bg);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(0, 112, 243, 0.15), transparent 25%),
+    radial-gradient(circle at 85% 30%, rgba(0, 240, 255, 0.15), transparent 25%);
+  background-attachment: fixed;
+  color: var(--sl-color-gray-1);
+}
+
+/* Glassmorphism Header and Sidebar */
+header.header {
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-pane {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Typography and Layout */
+.sl-markdown-content {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.sl-markdown-content h1,
+.sl-markdown-content h2,
+.sl-markdown-content h3 {
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #ffffff 0%, #00f0ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+
+/* Hover effects for links */
+a {
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  text-shadow: 0 0 12px rgba(0, 240, 255, 0.8);
+}
+
+/* Code blocks glowing effect */
+.sl-markdown-content pre {
+  background: rgba(15, 23, 42, 0.6) !important;
+  border: 1px solid rgba(0, 240, 255, 0.2);
+  border-radius: var(--sl-border-radius) !important;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset, 0 0 10px rgba(0, 240, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Beautiful Mermaid Diagram Container */
+.mermaid, .rehype-mermaid {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: var(--sl-border-radius);
+  padding: 1.5rem;
+  box-shadow: 0 0 30px rgba(0, 240, 255, 0.2);
+  margin: 2rem 0;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mermaid:hover, .rehype-mermaid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 40px rgba(0, 240, 255, 0.4);
+}
