@@ -24,40 +24,40 @@ export default defineConfig({
 					items: [
 						{
 							label: 'Textbook Notes',
-							autogenerate: { directory: 'CDCT/Notes' }
+							items: [{ autogenerate: { directory: 'CDCT/Notes' } }]
 						},
 						{
 							label: 'Engineering Practicals',
-							autogenerate: { directory: 'CDCT/Practicals' }
+							items: [{ autogenerate: { directory: 'CDCT/Practicals' } }]
 						}
 					],
 				},
 				{
 					label: 'Foundation of Blockchain (FOB)',
 					items: [
-						{ label: 'Textbook Notes', autogenerate: { directory: 'FOB/Notes' } },
-						{ label: 'Engineering Practicals', autogenerate: { directory: 'FOB/Practicals' } }
+						{ label: 'Textbook Notes', items: [{ autogenerate: { directory: 'FOB/Notes' } }] },
+						{ label: 'Engineering Practicals', items: [{ autogenerate: { directory: 'FOB/Practicals' } }] }
 					],
 				},
 				{
 					label: 'Hands on Practice using IoT (IOT)',
 					items: [
-						{ label: 'Textbook Notes', autogenerate: { directory: 'IOT/Notes' } },
-						{ label: 'Engineering Practicals', autogenerate: { directory: 'IOT/Practicals' } }
+						{ label: 'Textbook Notes', items: [{ autogenerate: { directory: 'IOT/Notes' } }] },
+						{ label: 'Engineering Practicals', items: [{ autogenerate: { directory: 'IOT/Practicals' } }] }
 					],
 				},
 				{
 					label: 'AI Product Design (AIPD)',
 					items: [
-						{ label: 'Textbook Notes', autogenerate: { directory: 'AIPD/Notes' } },
-						{ label: 'Engineering Practicals', autogenerate: { directory: 'AIPD/Practicals' } }
+						{ label: 'Textbook Notes', items: [{ autogenerate: { directory: 'AIPD/Notes' } }] },
+						{ label: 'Engineering Practicals', items: [{ autogenerate: { directory: 'AIPD/Practicals' } }] }
 					],
 				},
 				{
 					label: 'AI with Prompt Engineering (AIPE)',
 					items: [
-						{ label: 'Textbook Notes', autogenerate: { directory: 'AIPE/Notes' } },
-						{ label: 'Engineering Practicals', autogenerate: { directory: 'AIPE/Practicals' } }
+						{ label: 'Textbook Notes', items: [{ autogenerate: { directory: 'AIPE/Notes' } }] },
+						{ label: 'Engineering Practicals', items: [{ autogenerate: { directory: 'AIPE/Practicals' } }] }
 					],
 				},
 			],
