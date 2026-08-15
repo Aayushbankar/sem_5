@@ -1,0 +1,119 @@
+\documentclass[a4paper,12.5pt]{article}
+\usepackage{fontspec}
+\setmainfont{TeX Gyre Termes}[
+  Path=/usr/share/texmf-dist/fonts/opentype/public/tex-gyre/,
+  Extension=.otf,
+  UprightFont=texgyretermes-regular,
+  BoldFont=texgyretermes-bold,
+  ItalicFont=texgyretermes-italic,
+  BoldItalicFont=texgyretermes-bolditalic
+]
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{xcolor}
+\definecolor{sectioncolor}{RGB}{0,51,102}
+\definecolor{linkcolor}{RGB}{0,51,102}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor,
+    citecolor=linkcolor,
+    pdftitle={Case Study: Digital Rupee (e��) — RBI's Central Bank Digital Currency},
+    pdfauthor={Group Assignment},
+    pdfsubject={Fundamentals of Blockchain},
+    pdfkeywords={CBDC, Digital Rupee, Blockchain, RBI, e��}
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\leftmark}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+\usepackage{titlesec}
+\titleformat{\section}{\Large\bfseries\color{sectioncolor}}{Section \thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\color{sectioncolor}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\color{sectioncolor}}{\thesubsubsection}{1em}{}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{listings}
+\usepackage{listingsutf8}
+\lstset{
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    frame=single,
+    numbers=left,
+    numberstyle=\tiny,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    tabsize=4,
+    inputencoding=utf8,
+    extendedchars=true,
+    literate={��}{{\textrupee}}1 {��}{{\textrupee}}1
+}
+\usepackage{parskip}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}}
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{textcomp}
+\newcommand{\textrupee}{\symbol{"20B9}}
+% Title page command
+\newcommand{\maketitlepage}{
+    \thispagestyle{empty}
+    \begin{center}
+        \vspace*{2cm}
+        {\LARGE \bfseries GOVERNMENT POLYTECHNIC GANDHINAGAR\par}
+        \vspace{1.5cm}
+        {\Large \bfseries FUNDAMENTALS OF BLOCKCHAIN\par}
+        \vspace{0.5cm}
+        {\Large CASE STUDY\par}
+        \vspace{1cm}
+        {\LARGE \bfseries Digital Rupee (e��) — RBI's Central Bank Digital Currency\par}
+        \vspace{2cm}
+        \begin{tabular}{@{}cc@{}}
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                Name: \underline{\hspace{4cm}}\par\vspace{0.5cm}
+                Enrollment: \underline{\hspace{4cm}}
+            \end{minipage}
+            &
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                Name: \underline{\hspace{4cm}}\par\vspace{0.5cm}
+                Enrollment: \underline{\hspace{4cm}}
+            \end{minipage}
+            \\
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                Name: \underline{\hspace{4cm}}\par\vspace{0.5cm}
+                Enrollment: \underline{\hspace{4cm}}
+            \end{minipage}
+            &
+            \begin{minipage}{0.45\textwidth}
+                \centering
+                Name: \underline{\hspace{4cm}}\par\vspace{0.5cm}
+                Enrollment: \underline{\hspace{4cm}}
+            \end{minipage}
+        \end{tabular}
+        \vspace{2cm}
+        {\large August 14, 2026\par}
+        \vfill
+    \end{center}
+    \newpage
+}
+\begin{document}
+\maketitlepage
+\tableofcontents
+\newpage
+$body$
+\end{document}

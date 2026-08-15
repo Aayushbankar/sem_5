@@ -1,0 +1,64 @@
+# P10 — Docker First Container: Lab Report Checklist
+# Tick each item as you capture it. All screenshots should be clear, readable, and annotated if needed.
+
+## 1. Environment Evidence
+- [ ] `docker version` output — shows **Client** and **Server** (Engine) versions
+- [ ] Screenshot of Docker Desktop dashboard (optional) — shows "Engine running"
+
+## 2. Hello World
+- [ ] Terminal screenshot: `docker run --rm hello-world` **full output**
+- [ ] Annotate: "Image pulled from Docker Hub → Container created → Ran → Exited"
+
+## 3. Nginx Web Server
+- [ ] Terminal: `docker run -d -p 8080:80 --name p10-nginx nginx` → container ID
+- [ ] Terminal: `docker ps` — shows **p10-nginx**, STATUS **Up**, PORTS **0.0.0.0:8080->80/tcp**
+- [ ] Browser: `http://localhost:8080` — **"Welcome to nginx!"** page (full window)
+- [ ] Terminal: `curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/` → **200**
+- [ ] Explain in 2 lines: **Port mapping** `-p 8080:80` = host 8080 → container 80
+
+## 4. Custom Image Build
+- [ ] File Explorer / Terminal: show `Desktop/p10/` folder with `Dockerfile` and `p10_site/index.html`
+- [ ] **Dockerfile content** (screenshot or copy-paste with syntax highlighting)
+- [ ] Terminal: `docker build -t p10-cdct-site .` — **full build log** (show layers)
+- [ ] Highlight final line: `naming to docker.io/library/p10-cdct-site:latest done`
+
+## 5. Custom Container Run
+- [ ] Terminal: `docker run -d -p 8081:80 --name p10-cdct-site p10-cdct-site`
+- [ ] Terminal: `docker ps` — shows **p10-cdct-site**, PORTS **0.0.0.0:8081->80/tcp**
+- [ ] Browser: `http://localhost:8081` — **custom page** ("Hello, Docker! 🚀")
+- [ ] Terminal: `curl -s http://localhost:8081/ | head -5` — HTML snippet
+
+## 6. Image vs Container — Written Explanation (½ page)
+- [ ] **Image** = read-only template (layers), created by `docker build`
+- [ ] **Container** = running instance of an image, created by `docker run`
+- [ ] **Layered build** = each Dockerfile instruction adds a layer; cached on rebuild
+- [ ] **Port publishing** = `-p HOST:CONTAINER` maps host port to container port
+
+## 7. Cleanup Evidence
+- [ ] Terminal: `docker stop ... && docker rm ...` commands
+- [ ] Terminal: `docker ps -a` — **no containers** (or only exited ones)
+- [ ] Terminal: `docker images` — only base images remain (or clean)
+
+## 8. Key Commands Reference (appendix in report)
+- [ ] `docker version`
+- [ ] `docker run --rm hello-world`
+- [ ] `docker run -d -p 8080:80 --name name image`
+- [ ] `docker ps` / `docker ps -a`
+- [ ] `docker build -t tag .`
+- [ ] `docker images`
+- [ ] `docker logs <container>`
+- [ ] `docker exec -it <container> sh`
+- [ ] `docker stop <container> && docker rm <container>`
+- [ ] `docker rmi <image>`
+
+## 9. Viva Prep Notes (personal)
+- [ ] Image vs Container difference
+- [ ] VM vs Container (kernel sharing)
+- [ ] What `-p 8080:80` does
+- [ ] What a Dockerfile is (FROM, COPY, CMD, EXPOSE, WORKDIR)
+- [ ] Why `python:3-alpine` (small, fast, minimal attack surface)
+
+---
+
+**Deliverable Format:** PDF with screenshots + explanations.  
+**File naming:** `P10_<RollNo>_<Name>.pdf`

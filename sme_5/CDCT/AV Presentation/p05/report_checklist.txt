@@ -1,0 +1,88 @@
+# P05 — Mininet Virtual SDN Lab: Lab Report Checklist
+# Tick each item as you capture it. All screenshots should be clear, readable, and annotated.
+
+## 1. Environment Evidence
+- [ ] Screenshot: Mininet VM booted in VirtualBox (login screen or terminal)
+- [ ] Terminal: `sudo mn --version` — shows **Mininet 2.3.x** (or similar)
+- [ ] Note: "Run on Mininet VM (OVA) in VirtualBox on Windows 10/11 host"
+
+## 2. Topology Script
+- [ ] **Script content** — copy of `p05_mininet_2switch_4host.py` (or GitHub link)
+- [ ] Brief explanation (2-3 lines each):
+  - `TwoSwitchFourHostTopo.build()` — adds 2 switches, 4 hosts, links
+  - `run()` — creates Mininet net, adds controller, starts, runs pingAll, enters CLI
+
+## 3. Topology Build + PingAll (KEY DELIVERABLE)
+- [ ] Screenshot: **Full topology creation output** — from `*** Creating network` through `*** Starting 2 switches`
+- [ ] Screenshot: **`pingAll` result** — must show:
+  ```
+  h1 -> h2 h3 h4
+  h2 -> h1 h3 h4
+  h3 -> h1 h2 h4
+  h4 -> h1 h2 h3
+  *** Results: 0% dropped (12/12 received)
+  ```
+- [ ] Screenshot: **`h1 -> h4` ping** — 3 packets, 0% loss, crosses `s1 → s2`
+- [ ] Annotate: "12/12 = full mesh connectivity; h1→h4 uses inter-switch link"
+
+## 4. CLI Exploration — Flow Table (KEY DELIVERABLE)
+- [ ] Screenshot: `mininet> s1 dpctl dump-flows` — **full output**
+- [ ] Annotate **one flow entry** with explanation:
+  ```
+  cookie=0x0, duration=12.345s, table=0, n_packets=6, n_bytes=504,
+  idle_age=2, priority=32768, icmp, in_port=1 actions=output:2
+  ```
+  → "ICMP packet arriving on port 1 (from h1) forwarded to port 2 (to s2)"
+- [ ] Written explanation (½ page):
+  - First packet: controller sees packet-in, computes path, installs flow rule
+  - Subsequent packets: switch matches flow, forwards **without controller** (learned)
+  - This demonstrates **SDN control/data plane separation**
+
+## 5. Additional CLI Screenshots (pick 2+)
+- [ ] `mininet> nodes` — lists h1 h2 h3 h4 s1 s2
+- [ ] `mininet> net` — shows topology with interfaces
+- [ ] `mininet> links` — shows veth pairs
+- [ ] `mininet> h1 ping -c 3 h4` — manual ping
+- [ ] `mininet> h2 traceroute h3` — shows path through s1 → s2
+
+## 6. Conclusion / Analysis (1 page)
+- [ ] **What Mininet is** — network emulator using Linux namespaces + veth pairs
+- [ ] **What SDN is** — control plane (controller) separated from data plane (switches)
+- [ ] **OpenFlow role** — southbound protocol between controller and switches
+- [ ] **Namespaces purpose** — each host gets isolated network stack (own IP, routes)
+- [ ] **What `pingAll` proves** — end-to-end L2/L3 connectivity across emulated SDN fabric
+- [ ] **Controller vs Switch** — controller = brain (computes paths), switches = dumb forwarders per flow rules
+- [ ] **Learned flow significance** — first packet triggers controller; rest use installed flow = SDN in action
+
+## 7. Key Commands Reference (appendix)
+- [ ] `sudo mn --version`
+- [ ] `sudo python3 p05_mininet_2switch_4host.py`
+- [ ] `mininet> nodes`
+- [ ] `mininet> net`
+- [ ] `mininet> links`
+- [ ] `mininet> h1 ping -c 3 h4`
+- [ ] `mininet> s1 dpctl dump-flows`
+- [ ] `mininet> exit`
+
+## 8. Viva Prep Notes (personal)
+- [ ] What is Mininet? (emulator, namespaces, veth)
+- [ ] What is SDN? (control/data plane separation, OpenFlow)
+- [ ] Why namespaces? (isolated stacks on one kernel)
+- [ ] What does `pingAll` prove? (full connectivity)
+- [ ] Controller vs switch in SDN? (logic vs forwarding)
+- [ ] What is a flow entry? (match + action, installed by controller)
+- [ ] How does `dpctl dump-flows` show learning? (entries appear after first packet)
+
+---
+
+**Deliverable Format:** PDF with screenshots + explanations + script.  
+**File naming:** `P05_<RollNo>_<Name>.pdf`
+
+---
+
+## Screenshot Tips
+- Use **VirtualBox View → Virtual Screen 1 → Take Screenshot** (Host+E)
+- Or inside VM: `gnome-screenshot` / `scrot` / `Print Screen`
+- Annotate with arrows/text (Flameshot, Greenshot, or PowerPoint)
+- Keep terminal font readable (14+ pt) — increase in VM terminal preferences before recording
+- Capture **full width** of terminal so commands + output both visible

@@ -1,0 +1,54 @@
+# P10 — Docker First Container: Commands in Recording Order
+# Run each command in Windows Terminal (PowerShell) after Docker Desktop is running.
+# Folder: Desktop\p10  (contains Dockerfile + p10_site\index.html)
+
+# 0. Prerequisites check
+docker version
+# Expect: Client + Server both show version → Docker daemon running
+
+# 1. Hello World (test Docker works)
+docker run --rm hello-world
+# Observe: pull → create → run → exit → message
+
+# 2. Nginx web server on port 8080
+docker run -d -p 8080:80 --name p10-nginx nginx
+docker ps
+# Observe: STATUS Up, PORTS 0.0.0.0:8080->80/tcp
+curl -s -o /dev/null -w "%{http_code}\n" http://localhost:8080/
+# Expect: 200
+# Open browser: http://localhost:8080 → "Welcome to nginx!"
+
+# 3. Cleanup nginx (optional, before custom build)
+docker stop p10-nginx
+docker rm p10-nginx
+
+# 4. Build custom image (run from Desktop\p10 folder)
+cd ~/Desktop/p10
+docker build -t p10-cdct-site .
+# Observe: layers → "naming to docker.io/library/p10-cdct-site:latest done"
+
+# 5. Run custom container on port 8081
+docker run -d -p 8081:80 --name p10-cdct-site p10-cdct-site
+docker ps
+# Observe: two containers if nginx still running, PORTS 0.0.0.0:8081->80/tcp
+curl -s http://localhost:8081/ | head -5
+# Expect: HTML content with "Hello, Docker!"
+# Open browser: http://localhost:8081 → custom page
+
+# 6. Inspect images & containers
+docker images
+docker ps -a
+
+# 7. Useful inspection commands (for report screenshots)
+docker logs p10-cdct-site
+docker exec -it p10-cdct-site sh
+# Inside container: ls /usr/share/app/p10_site/  → exit
+
+# 8. Cleanup everything
+docker stop p10-nginx p10-cdct-site 2>$null
+docker rm p10-nginx p10-cdct-site 2>$null
+docker rmi p10-cdct-site nginx hello-world 2>$null
+
+# 9. Verify cleanup
+docker ps -a
+docker images

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello from CDCT — My First Container</title>
+  <style>
+    body {
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #e8f6f3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 3rem 4rem;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    h1 { font-size: 2.4rem; margin-bottom: 0.5rem; }
+    .emoji { font-size: 3rem; margin-bottom: 1rem; display: block; }
+    p { font-size: 1.1rem; opacity: 0.9; line-height: 1.6; }
+    code {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.95em;
+    }
+    .footer { margin-top: 2rem; font-size: 0.85rem; opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="emoji">🚀</span>
+    <h1>Hello, Docker!</h1>
+    <p>This page is served from <strong>inside a container</strong> — built with a custom <code>Dockerfile</code> using <code>python:3-alpine</code>.</p>
+    <p>Port <code>8081</code> on host → <code>80</code> in container.</p>
+    <div class="footer">CDCT Practical 10 — Docker First Container</div>
+  </div>
+</body>
+</html>

@@ -16,7 +16,8 @@ Suggested Course Practical List from GTU syllabus (DI05016031, w.e.f. 2026-27).
 | 8 | Simulate secure file sharing using CloudSim | V | 2 | [x] | [P08](./practicals/writeups/P08_cloudsim_secure_file_sharing.md) | [p08_cloudsim_secure_file_sharing.java](./practicals/code/p08_cloudsim_secure_file_sharing.java) | Documented — requires cloudsim-3.0.3.jar (`javac -cp cloudsim-3.0.3.jar`) |
 | 9 | Implement secure object storage with access control and encryption | V | 2 | [x] | [P09](./practicals/writeups/P09_minio_secure_object_storage.md) | [compose + policies + setup.sh](./practicals/code/p09_docker-compose.yml) | ✅ **RAN for real** — MinIO + SSE-S3 + IAM users |
 | 10 | Create and execute your first container using Docker | VI | 4 | [x] | [P10](./practicals/writeups/P10_docker_first_container.md) | [p10_Dockerfile](./practicals/code/p10_Dockerfile) + [site](./practicals/code/p10_site/index.html) | ✅ **RAN for real** — build → run → HTTP 200 |
-| | **Total** | | **30** | **10/10** | | | |
+| 11 | Simulate and analyze realistic multi-service traffic flow in an emulated SDN data center network with router, switches, and application servers; capture and analyze packets at each hop using Wireshark. | III, VI | 4 | [x] | [P11](./practicals/writeups/P11_mininet_realistic_traffic_flow.md) | [topology + 4 scripts](./practicals/code/) | Advanced SDN lab — requires Mininet + Wireshark |
+| | **Total** | | **34** | **11/11** | | | |
 
 > Note: More Practical Exercises can be designed and offered by the respective course teacher to develop the industry relevant skills/outcomes to match the COs. The above table is only a suggestive list.
 >

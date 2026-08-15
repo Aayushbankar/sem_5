@@ -6,18 +6,16 @@ Topology:
             h1 ---- s1 ---- s2 ---- h4
             h2 ----/        \---- h3
 
-Run with Mininet installed (lab VM):
+Run with Mininet installed (Mininet VM):
     sudo python3 p05_mininet_2switch_4host.py
 
-Requirements: Mininet (http://mininet.org) - install into an Ubuntu VM:
-    sudo apt update && sudo apt install -y mininet
+Requirements: Mininet (http://mininet.org) — use the official Mininet VM (OVA) in VirtualBox.
 """
 from mininet.topo import Topo
 from mininet.net import Mininet
 from mininet.link import TCLink
 from mininet.cli import CLI
 from mininet.log import setLogLevel
-from mininet.node import Controller
 
 
 class TwoSwitchFourHostTopo(Topo):
@@ -28,7 +26,7 @@ class TwoSwitchFourHostTopo(Topo):
         s1 = self.addSwitch("s1")
         s2 = self.addSwitch("s2")
 
-        # Four hosts
+        # Four hosts with static IPs
         h1 = self.addHost("h1", ip="10.0.0.1/24")
         h2 = self.addHost("h2", ip="10.0.0.2/24")
         h3 = self.addHost("h3", ip="10.0.0.3/24")
@@ -47,7 +45,9 @@ class TwoSwitchFourHostTopo(Topo):
 def run():
     setLogLevel("info")
     topo = TwoSwitchFourHostTopo()
-    net = Mininet(topo=topo, link=TCLink, controller=Controller)
+    # TCLink enables bandwidth/delay emulation; controller=None adds default later
+    net = Mininet(topo=topo, link=TCLink, controller=None)
+    net.addController("c0")  # default reference controller (OVS controller)
     net.start()
 
     print(">>> Node list:")
@@ -57,10 +57,10 @@ def run():
     print("\n>>> Ping test: every host pings every other host (full mesh)")
     print(net.pingAll())
 
-    print("\n>>> Connectivity check from h1")
+    print("\n>>> Connectivity check from h1 to h4 (crosses s1 -> s2)")
     print(net["h1"].cmd("ping -c 3 10.0.0.4"))
 
-    # Interactive CLI so you can run extra commands, e.g.  s1 ifconfig, h2 ping
+    # Interactive CLI so you can run extra commands
     CLI(net)
     net.stop()
 

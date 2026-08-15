@@ -1,0 +1,19 @@
+flowchart TD
+    subgraph T1["TIER 1 — Issuance & Wholesale (permissioned DLT: Hyperledger Fabric)"]
+        RBI["RBI — mints & destroys e�� tokens\n(sole issuer, central-bank liability)"]
+        B1["Bank A node"] & B2["Bank B node"] & B3["Bank C node"]
+        RBI -- "e��-W issuance / interbank settlement" --> B1
+        RBI -- "e��-W issuance / interbank settlement" --> B2
+        RBI -- "e��-W issuance / interbank settlement" --> B3
+        B1 <--> B2 <--> B3
+    end
+    subgraph T2["TIER 2 — Retail Distribution (API-based layer, off DLT)"]
+        W1["e�� wallet — User A"] & W2["e�� wallet — User B"] & M["Merchant QR / PoS"]
+        B1 -- "e��-R tokens via APIs" --> W1
+        B2 -- "e��-R tokens via APIs" --> W2
+        B2 -- "e��-R acquisition / UPI QR" --> M
+        W1 -- "P2P transfer" --> W2
+        W1 -- "P2M QR payment" --> M
+    end
+    B3 -- "offline token issuance" --> OFF["Offline NFC wallet"]
+    OFF -. "deferred sync & balance reconciliation on reconnection" .-> B3
