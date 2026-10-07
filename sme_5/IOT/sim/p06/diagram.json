@@ -1,0 +1,33 @@
+{
+ "version": 1,
+ "parts": [
+  {
+   "type": "wokwi-esp32-s3-devkitc",
+   "id": "esp"
+  },
+  {
+   "type": "wokwi-dht22",
+   "id": "dht"
+  }
+ ],
+ "connections": [
+  [
+   "esp:13",
+   "dht:SDA",
+   "green",
+   []
+  ],
+  [
+   "esp:3V3",
+   "dht:VCC",
+   "red",
+   []
+  ],
+  [
+   "esp:GND.1",
+   "dht:GND",
+   "black",
+   []
+  ]
+ ]
+}

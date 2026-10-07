@@ -1,0 +1,39 @@
+{
+ "version": 1,
+ "parts": [
+  {
+   "type": "wokwi-esp32-s3-devkitc",
+   "id": "esp"
+  },
+  {
+   "type": "wokwi-hc-sr04",
+   "id": "sonar"
+  }
+ ],
+ "connections": [
+  [
+   "esp:35",
+   "sonar:TRIG",
+   "orange",
+   []
+  ],
+  [
+   "esp:36",
+   "sonar:ECHO",
+   "yellow",
+   []
+  ],
+  [
+   "esp:5V",
+   "sonar:VCC",
+   "red",
+   []
+  ],
+  [
+   "esp:GND.1",
+   "sonar:GND",
+   "black",
+   []
+  ]
+ ]
+}

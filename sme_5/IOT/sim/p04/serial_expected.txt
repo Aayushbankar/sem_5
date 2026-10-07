@@ -1,0 +1,4 @@
+P04 — manual code has no Serial output (LED is the output).
+Copy into manual:
+The external LED on GPIO4 blinks 1s ON / 1s OFF.
+(Code/ GPIO26 variant prints LED ON / LED OFF @115200 baud.)

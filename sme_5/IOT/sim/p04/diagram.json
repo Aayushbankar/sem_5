@@ -1,0 +1,43 @@
+{
+ "version": 1,
+ "parts": [
+  {
+   "type": "wokwi-esp32-s3-devkitc",
+   "id": "esp"
+  },
+  {
+   "type": "wokwi-led",
+   "id": "led1",
+   "attrs": {
+    "color": "red"
+   }
+  },
+  {
+   "type": "wokwi-resistor",
+   "id": "r1",
+   "attrs": {
+    "value": "220"
+   }
+  }
+ ],
+ "connections": [
+  [
+   "esp:4",
+   "r1:1",
+   "green",
+   []
+  ],
+  [
+   "r1:2",
+   "led1:A",
+   "green",
+   []
+  ],
+  [
+   "led1:C",
+   "esp:GND.1",
+   "black",
+   []
+  ]
+ ]
+}

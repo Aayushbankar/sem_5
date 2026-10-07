@@ -1,0 +1,57 @@
+{
+ "version": 1,
+ "author": "sme5-local",
+ "editor": "wokwi",
+ "parts": [
+  {
+   "type": "wokwi-esp32-devkit-v1",
+   "id": "esp"
+  },
+  {
+   "type": "wokwi-pir-motion-sensor",
+   "id": "pir"
+  },
+  {
+   "type": "wokwi-photoresistor-sensor",
+   "id": "ldr"
+  }
+ ],
+ "connections": [
+  [
+   "esp:25",
+   "pir:D",
+   "yellow",
+   []
+  ],
+  [
+   "esp:34",
+   "ldr:AO",
+   "blue",
+   []
+  ],
+  [
+   "esp:3V3",
+   "pir:VCC",
+   "red",
+   []
+  ],
+  [
+   "esp:3V3",
+   "ldr:VCC",
+   "red",
+   []
+  ],
+  [
+   "esp:GND.1",
+   "pir:GND",
+   "black",
+   []
+  ],
+  [
+   "esp:GND.1",
+   "ldr:GND",
+   "black",
+   []
+  ]
+ ]
+}

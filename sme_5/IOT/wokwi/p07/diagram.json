@@ -1,0 +1,41 @@
+{
+ "version": 1,
+ "author": "sme5-local",
+ "editor": "wokwi",
+ "parts": [
+  {
+   "type": "wokwi-esp32-devkit-v1",
+   "id": "esp"
+  },
+  {
+   "type": "wokwi-hc-sr04",
+   "id": "sonar"
+  }
+ ],
+ "connections": [
+  [
+   "esp:5",
+   "sonar:TRIG",
+   "orange",
+   []
+  ],
+  [
+   "esp:18",
+   "sonar:ECHO",
+   "yellow",
+   []
+  ],
+  [
+   "esp:5V",
+   "sonar:VCC",
+   "red",
+   []
+  ],
+  [
+   "esp:GND.1",
+   "sonar:GND",
+   "black",
+   []
+  ]
+ ]
+}

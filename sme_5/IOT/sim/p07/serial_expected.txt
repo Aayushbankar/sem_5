@@ -1,0 +1,6 @@
+Distance: 85.20 cm
+Distance: 42.10 cm
+Distance: 15.35 cm
+Distance: 8.02 cm
+Distance: out of range
+-- 115200 baud, TRIG=35 ECHO=36, 500ms; >400cm -> out of range --

@@ -1,0 +1,13 @@
+=== P08 real run 2026-10-07 11:34 ===
+subscribed cit2026/246230316006/p08/# on broker.emqx.io:1883
+PUB cit2026/246230316006/p08/temperature = 27.50
+PUB cit2026/246230316006/p08/humidity = 55.4
+PUB cit2026/246230316006/p08/temperature = 27.60
+PUB cit2026/246230316006/p08/humidity = 55.1
+VERIFY: broker echoed 4 msgs
+  SUB cit2026/246230316006/p08/temperature = 27.50
+  SUB cit2026/246230316006/p08/humidity = 55.4
+  SUB cit2026/246230316006/p08/temperature = 27.60
+  SUB cit2026/246230316006/p08/humidity = 55.1
+RESULT: PASS - real broker round-trip, paste run.log into manual Output.
+screenshot: /home/legion/projects/sem_5/sme_5/IOT/sim/p08/run.png (56KB) chrome_rc=0

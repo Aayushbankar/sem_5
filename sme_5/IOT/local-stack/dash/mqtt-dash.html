@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>P08 Local MQTT Dashboard</title>
+<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+<style>
+body{background:#111;color:#0f0;font-family:monospace;padding:20px;max-width:800px;margin:auto}
+h2{color:#fff}.card{background:#1c1c1c;border:1px solid #333;border-radius:8px;padding:15px;margin:10px 0}
+.big{font-size:42px;font-weight:bold}#log{height:220px;overflow-y:auto;background:#000;padding:10px;border-radius:6px}
+#status{color:#ff0}
+</style></head><body>
+<h2>P08 — Local MQTT Dashboard <span id="status">● connecting…</span></h2>
+<div class="card">Temperature<div class="big" id="temp">-- °C</div></div>
+<div class="card">Humidity<div class="big" id="hum">-- %</div></div>
+<div class="card"><b>Live feed (cit2026/#):</b><div id="log"></div></div>
+<script>
+const status=document.getElementById('status'),log=document.getElementById('log');
+const c=mqtt.connect('ws://localhost:9001');
+c.on('connect',()=>{status.textContent='● connected (ws://localhost:9001)';status.style.color='#0f0';
+  c.subscribe('cit2026/#');add('subscribed cit2026/#');});
+c.on('message',(t,m)=>{const v=m.toString(),time=new Date().toLocaleTimeString();
+  add(time+'  '+t+' = '+v);
+  if(t.endsWith('/temperature'))document.getElementById('temp').textContent=v+' °C';
+  if(t.endsWith('/humidity'))document.getElementById('hum').textContent=v+' %';});
+c.on('error',e=>{status.textContent='● error — is broker running?';status.style.color='#f00';});
+function add(s){const d=document.createElement('div');d.textContent=s;log.prepend(d);}
+</script></body></html>

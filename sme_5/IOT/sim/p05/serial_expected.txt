@@ -1,0 +1,6 @@
+Motion: none | LDR analog value: 3120
+Motion: none | LDR analog value: 3055
+Motion: DETECTED | LDR analog value: 2980
+Motion: DETECTED | LDR analog value: 1420
+Motion: none | LDR analog value: 880
+-- 115200 baud, 500ms; wave hand for DETECTED, cover LDR -> value drops --

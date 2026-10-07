@@ -1,0 +1,7 @@
+Temperature: 27.50
+Humidity: 55.4
+Temperature: 27.60
+Humidity: 55.1
+Temperature: 27.60
+Humidity: 55.0
+-- 115200 baud, DHT22 GPIO13, 4s interval; fail case: Failed to read from DHT sensor! --

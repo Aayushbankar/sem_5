@@ -1,0 +1,55 @@
+{
+ "version": 1,
+ "parts": [
+  {
+   "type": "wokwi-esp32-s3-devkitc",
+   "id": "esp"
+  },
+  {
+   "type": "wokwi-pir-motion-sensor",
+   "id": "pir"
+  },
+  {
+   "type": "wokwi-photoresistor-sensor",
+   "id": "ldr"
+  }
+ ],
+ "connections": [
+  [
+   "esp:4",
+   "pir:D",
+   "yellow",
+   []
+  ],
+  [
+   "esp:5",
+   "ldr:AO",
+   "blue",
+   []
+  ],
+  [
+   "esp:3V3",
+   "pir:+",
+   "red",
+   []
+  ],
+  [
+   "esp:3V3",
+   "ldr:VCC",
+   "red",
+   []
+  ],
+  [
+   "esp:GND.1",
+   "pir:-",
+   "black",
+   []
+  ],
+  [
+   "esp:GND.1",
+   "ldr:GND",
+   "black",
+   []
+  ]
+ ]
+}
