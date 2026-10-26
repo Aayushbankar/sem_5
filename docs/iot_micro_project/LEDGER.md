@@ -159,7 +159,13 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
 ## 10. Open items (priority order, deadline 2026-10-28)
 
 0. **Straight-line defect (reported 26th):** car veers because the third
-   (caster) wheel doesn't stay straight. Fixes to try in order:
+   (caster) wheel doesn't stay straight. **User measurement 26th eve
+   (`Tubfront.jpeg`: pen = drive-axle line): caster pivot is NOT exactly
+   90° off that line — confirmed off-centerline as suspected.**
+   Also flagged: side view (`Tubback.jpeg`) shows a **blue 5-spoke wheel**
+   while top view shows black-knobby wheels — verify BOTH drive wheels are
+   identical diameter (mismatch = curve even after caster fix).
+   Fixes to try in order:
    a) caster must **swivel freely** (binding glue/bearing = drags & twists);
    b) mount it **on the centerline**, ideally **trailing behind** the drive
    axle (re-casting the caster to the rear self-aligns — cheapest fix);
@@ -184,24 +190,22 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
 
 | # | Photo | What it shows |
 |---|---|---|
-| 1 | `bottomview.jpeg` | chassis underside/side: clear round tub + steel plate, BO motors through the rims (hot glue), **front swivel caster at plate edge**, laptop for scale |
+| 1 | `bottomview.jpeg` | chassis: clear round tub, BO motors through the rims (hot glue), **front swivel caster at rim edge**, laptop for scale — **no steel plate** (user correction 26th) |
 | 2 | `topviewwithlid.jpeg` | **drive box = grey translucent round tub WITH lid**; both wheels pass through wall slots; already a closed unit |
 | 3 | `topviewwithoutlid.jpeg` | inside drive box: NodeMCU (corner), red L298N, **OS 3200 mAh 18650 ×~3 + switch**, motor wires — electronics already boxed |
 | 4 | `Vaccumebkxbottom.jpeg` | **vacuum box bottom**: square translucent tub (taped rim, 2 screw holes), **small DC motor body hot-glued through floor centre** (shaft points into box) |
 | 5 | `Vaccumebkxtop.jpeg` | **vacuum box interior**: **orange 4-blade propeller** on the motor shaft at floor centre — suction unit partially built |
 
-**Packaging target:** the round tub (drive box) already contains power+drive+
-control; the vacuum box must be mated to it so the finished robot is one unit
-of this size or slightly bigger: drive wheels + caster stay outboard, HC-SR04
-behind a front window (unobstructed), vacuum inlet reaching the floor.
+**Packaging target (user, 26th):** one big box = the round tub; it contains
+ALL components **plus the small vacuum box nested inside it**. Drive wheels +
+caster outboard, HC-SR04 behind a front window (unobstructed).
 
-**Proposed vacuum design (pending user confirm — see §10 items):**
-- Vacuum box becomes the **belly**: mounted under the steel plate, its own
-  floor gets the **inlet cutout** (slot/hole 5–10 mm above ground or with a
-  brush skirt); fan inside blows **out through side/top exhaust holes** →
-  low pressure at inlet → debris settles in box before air exits.
-- Box must be **sealed from the electronics tub** (own closed volume; only
-  electrical wires pass through).
+**Proposed vacuum design (DRAFT — inlet/exhaust strategy TBD; user wants
+straight-line driving solved FIRST):**
+- Vacuum box **nests inside the big round box** among the components (user's
+  plan — no external belly); inlet path from floor into that inner box is the
+  open design question (slot in big-box floor + duct to inner box, or outer
+  wall inlet) — decide AFTER driving is correct.
 - Fan power: **own rail from motor pack via MOSFET on a spare GPIO** — NEVER
   the NodeMCU 5V pin. Fan turns ON with AUTO mode.
 - Airflow must not wash over the HC-SR04 transducers.
