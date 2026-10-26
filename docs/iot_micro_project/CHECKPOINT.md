@@ -108,10 +108,11 @@ root-caused (documented, fix pending).**
 
 ## Current state & Next
 
+- **END GOAL:** autonomous vacuum cleaner (all parts boxed, self-driving,
+  cleaning) — **complete before 2026-10-28**.
 - **On board now:** `rc_motor_fwd_rev_patels` (CP-02 control + CP-03 network).
-- **Authoritative open-items list:** [`LEDGER.md`](LEDGER.md) §10 — phone reach
-  test on current hotspot, floor-stall fixes (buck/TB6612), reflash
-  `rc_car_wifi` for 4-way tank control, then HC-SR04 phase 3.
+- **Authoritative plan:** [`LEDGER.md`](LEDGER.md) §10 (open items incl.
+  straight-line/caster fix) and §11 (vacuum build + 2-day schedule).
 
 ## Full sketch inventory
 | Sketch | Status |

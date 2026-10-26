@@ -9,13 +9,20 @@
 
 ## 1. Goal & current phase
 
-Remote-controlled differential robot car on **NodeMCU V3 (ESP8266)**: web UI
-hosted on the device, L298N drive, HC-SR04 in phase 3.
+**END GOAL (the thing this project must become): an autonomous vacuum-cleaner
+robot** — all electronics + drive + suction/vacuum parts packed inside a box
+(of the current steel-plate base size, or a similar/bigger box), driving
+itself and cleaning. Remote web control is the control/telemetry layer and
+the demo interface; HC-SR04 autonomy is the navigation core.
 
-**Phase:** bring-up of network control + power diagnostics.
+**DEADLINE: complete before 2026-10-28** (today = 2026-10-26 → ~2 days).
+
+**Phase:** bring-up of network control + power diagnostics; mechanical
+straight-line defect open; vacuum packaging not started.
 **CP-01** (forward move) and **CP-02** (FWD/REV) are verified (see CHECKPOINT).
-Current blocker: **robot stalls on the floor under load** (works in the air)
-— root-cause analysis done, fix pending (§6).
+Current blockers: (a) **robot won't track straight — third (caster) wheel not
+staying straight** (§10.0), (b) **stalls on the floor under load** (works in
+the air) — root-caused, fix pending (§6), (c) box + suction build (§11).
 
 ## 2. Firmware currently on the board
 
@@ -149,11 +156,57 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
   rotating that home Wi-Fi password; keep GP-MAIN/Patel's/vivo variants and
   all future passwords **out of the public repo** (docs never contain passwords).
 
-## 10. Open items (priority order)
+## 10. Open items (priority order, deadline 2026-10-28)
 
+0. **Straight-line defect (reported 26th):** car veers because the third
+   (caster) wheel doesn't stay straight. Fixes to try in order:
+   a) caster must **swivel freely** (binding glue/bearing = drags & twists);
+   b) mount it **on the centerline**, ideally **trailing behind** the drive
+   axle (re-casting the caster to the rear self-aligns — cheapest fix);
+   c) verify drive **axle ⟂ to travel**: measure wheel→body distance both
+      sides, equalize; hot-glue gearboxes can creep at an angle — re-square;
+   d) both wheels identical + firmly seated on motor shafts;
+   e) fallback: software trim (per-motor speed bias) once PWM exists.
 1. Phone-browser test of `http://10.197.7.58` on Patel's F15 (IP reachable from laptop?).
 2. Floor-stall fix: confirm thermal → rigid mounting → buck (§6B) → TB6612 (§6C).
 3. Reflash `rc_car_wifi` for 4-direction tank control (§7 pins ready).
-4. Phase 3: HC-SR04 hard-STOP override + distance telemetry in HTTP reply.
-5. PWM arc turns (shunt removal) — after driver upgrade.
-6. Optional: D7 10 kΩ pull-down (boot twitch); push pending sem_5 commit.
+4. **Autonomous mode firmware** (vacuum core): AUTO toggle on the web page —
+   loop: HC-SR04 every 100 ms; >20 cm → FWD; <20 cm → STOP + timed pivot
+   (random L/R, 0.4–1.2 s); watchdog: periodic random turn every ~8 s to break
+   stuck cycles; STOP always wins (manual buttons override AUTO).
+5. **Suction + box build** (§11) — parallel track, needs parts inventory.
+6. PWM arc turns (shunt removal) — after driver upgrade.
+7. Optional: D7 10 kΩ pull-down (boot twitch); push pending sem_5 commits.
+
+## 11. End goal — autonomous vacuum build (deadline 26→28 Oct)
+
+**Chassis today (image, 26th):** steel plate/tin base ("ALL-ROUNDER 201"),
+2× BO motors hot-glued at left/right rims with wheels outboard, swivel caster
+at front, NodeMCU+breadboard+3×18650+L298N loose inside a clear bowl shell.
+Laptop for scale; plate ≈ dinner-plate size.
+
+**Target packaging:** one box (this size or bigger) containing: drive +
+battery + L298N/buck + NodeMCU + HC-SR04 (front-facing through a cutout,
+unobstructed) + **vacuum module** (fan + dust chamber + inlet) + filter.
+Nothing may hang outside except the wheels (and HC-SR04 behind a window).
+
+**Vacuum module (to confirm parts on hand — ASK USER):**
+- Suction source: small DC fan (5 V/12 V blower or salvaged handheld-vac
+  turbine) — mounted **inside** box, exhaust out the back/top.
+- Path: inlet hole at box **bottom** (or front-bottom) → dust chamber →
+  filter (foam/mesh) → fan → exhaust. Airflow must not blow over the
+  HC-SR04 face.
+- Power: fan on its own rail (motor pack + switch/MOSFET via spare GPIO),
+  **never** off the NodeMCU 5V pin.
+- Clean-mode UX: fan ON whenever AUTO is active (one spare GPIO → gate
+  driver/transistor; if fan ≤~200 mA a logic-level MOSFET is fine).
+
+**2-day plan:**
+- **Day 1 (26th):** fix caster/straight line (item 0) → confirm FWD track;
+  reflash `rc_car_wifi` (item 3); inventory fan/box/filter (ASK);
+  wire fan + AUTO loop (item 4) if parts present.
+- **Day 2 (27th):** box cutouts (drive clearance, sensor window, inlet,
+  exhaust), mount everything rigidly, floor-stall mitigation (§6 items
+  that fit: rigid battery, caster squareness), full clean-run demo +
+  checkpoint CP-04 (autonomous + vacuum) + report photos.
+- **28th:** buffer for failures + submission.
