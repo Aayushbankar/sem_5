@@ -180,33 +180,41 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
 
 ## 11. End goal — autonomous vacuum build (deadline 26→28 Oct)
 
-**Chassis today (image, 26th):** steel plate/tin base ("ALL-ROUNDER 201"),
-2× BO motors hot-glued at left/right rims with wheels outboard, swivel caster
-at front, NodeMCU+breadboard+3×18650+L298N loose inside a clear bowl shell.
-Laptop for scale; plate ≈ dinner-plate size.
+**Hardware inventory (photos saved in [`photos/`](photos/), 26 Oct):**
 
-**Target packaging:** one box (this size or bigger) containing: drive +
-battery + L298N/buck + NodeMCU + HC-SR04 (front-facing through a cutout,
-unobstructed) + **vacuum module** (fan + dust chamber + inlet) + filter.
-Nothing may hang outside except the wheels (and HC-SR04 behind a window).
+| # | Photo | What it shows |
+|---|---|---|
+| 1 | `bottomview.jpeg` | chassis underside/side: clear round tub + steel plate, BO motors through the rims (hot glue), **front swivel caster at plate edge**, laptop for scale |
+| 2 | `topviewwithlid.jpeg` | **drive box = grey translucent round tub WITH lid**; both wheels pass through wall slots; already a closed unit |
+| 3 | `topviewwithoutlid.jpeg` | inside drive box: NodeMCU (corner), red L298N, **OS 3200 mAh 18650 ×~3 + switch**, motor wires — electronics already boxed |
+| 4 | `Vaccumebkxbottom.jpeg` | **vacuum box bottom**: square translucent tub (taped rim, 2 screw holes), **small DC motor body hot-glued through floor centre** (shaft points into box) |
+| 5 | `Vaccumebkxtop.jpeg` | **vacuum box interior**: **orange 4-blade propeller** on the motor shaft at floor centre — suction unit partially built |
 
-**Vacuum module (to confirm parts on hand — ASK USER):**
-- Suction source: small DC fan (5 V/12 V blower or salvaged handheld-vac
-  turbine) — mounted **inside** box, exhaust out the back/top.
-- Path: inlet hole at box **bottom** (or front-bottom) → dust chamber →
-  filter (foam/mesh) → fan → exhaust. Airflow must not blow over the
-  HC-SR04 face.
-- Power: fan on its own rail (motor pack + switch/MOSFET via spare GPIO),
-  **never** off the NodeMCU 5V pin.
-- Clean-mode UX: fan ON whenever AUTO is active (one spare GPIO → gate
-  driver/transistor; if fan ≤~200 mA a logic-level MOSFET is fine).
+**Packaging target:** the round tub (drive box) already contains power+drive+
+control; the vacuum box must be mated to it so the finished robot is one unit
+of this size or slightly bigger: drive wheels + caster stay outboard, HC-SR04
+behind a front window (unobstructed), vacuum inlet reaching the floor.
+
+**Proposed vacuum design (pending user confirm — see §10 items):**
+- Vacuum box becomes the **belly**: mounted under the steel plate, its own
+  floor gets the **inlet cutout** (slot/hole 5–10 mm above ground or with a
+  brush skirt); fan inside blows **out through side/top exhaust holes** →
+  low pressure at inlet → debris settles in box before air exits.
+- Box must be **sealed from the electronics tub** (own closed volume; only
+  electrical wires pass through).
+- Fan power: **own rail from motor pack via MOSFET on a spare GPIO** — NEVER
+  the NodeMCU 5V pin. Fan turns ON with AUTO mode.
+- Airflow must not wash over the HC-SR04 transducers.
+- ⚠️ OPEN: fan **motor voltage/current unknown** (no label visible — ask user
+  how it was powered before); inlet cutout not yet made; exhaust holes not
+  yet made; mounting method TBD (tape/screws through plate).
 
 **2-day plan:**
-- **Day 1 (26th):** fix caster/straight line (item 0) → confirm FWD track;
-  reflash `rc_car_wifi` (item 3); inventory fan/box/filter (ASK);
-  wire fan + AUTO loop (item 4) if parts present.
-- **Day 2 (27th):** box cutouts (drive clearance, sensor window, inlet,
-  exhaust), mount everything rigidly, floor-stall mitigation (§6 items
-  that fit: rigid battery, caster squareness), full clean-run demo +
-  checkpoint CP-04 (autonomous + vacuum) + report photos.
+- **Day 1 (26th):** fix caster/straight line (§10.0) → confirm FWD track;
+  reflash `rc_car_wifi`; **confirm fan voltage + vacuum box mating**;
+  wire fan + AUTO loop (§10.4) if power known.
+- **Day 2 (27th):** cut inlet/exhaust + HC-SR04 window + wheel clearance,
+  mount vacuum box to chassis rigidly, floor-stall mitigation that fits
+  (rigid battery, caster squareness), full clean-run demo → **CP-04**
+  (autonomous + vacuum) + report photos.
 - **28th:** buffer for failures + submission.
