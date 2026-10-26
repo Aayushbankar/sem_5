@@ -2,6 +2,8 @@
 
 Protocol: each checkpoint = verified milestone, evidence, docs touched.
 Keep this file updated on every new milestone (documentation is mandatory).
+**Session continuity: read [`LEDGER.md`](LEDGER.md) first** — full operating
+context (board state, network history, power analysis, tooling, repos).
 
 ---
 
@@ -73,13 +75,43 @@ on hardware.**
 
 ---
 
+## CP-03 — Multi-network bring-up + power diagnosis (2026-10-26) ✅
+
+**Milestone: control page reachable from three different networks; floor-stall
+root-caused (documented, fix pending).**
+
+### Docs / artifacts
+- Full context: [`LEDGER.md`](LEDGER.md) (§4 network journey, §6 power, §7 turns)
+- Sketches: `rc_motor_fwd_rev_wifi/` (vivo — unusable, 5 GHz),
+  `rc_motor_fwd_rev_gpmain/` (college — verified HTTP 200 cross-VLAN),
+  `rc_motor_fwd_rev_patels/` (**current on board**)
+- Network rules derived: ESP8266 = 2.4 GHz only, WPA2-PSK only;
+  portals don't block LAN HTTP; use raw IP outside home LAN.
+
+### What is verified working
+- `GP-MAIN` join → IP 192.168.18.224, laptop→ESP ping + **HTTP 200 (0.1 s)**
+  across VLANs; captive-portal probes clean (`generate_204` → 204).
+- `Patel's F15` (2.4 GHz) join → IP **10.197.7.58** (current firmware).
+- Serial workflow proven for IP recovery (DTR-pulse reset script, §8 LEDGER).
+
+### Power diagnosis (findings, fix open)
+- On-floor stall while in-air runs fine + ESP alive → ranked: L298N thermal
+  shutdown > mechanical load > shared-rail sag. Options A (separate battery),
+  B (buck → VIN, recommended), C (TB6612 swap, real fix) analyzed in
+  [`LEDGER.md`](LEDGER.md) §6. Next: blocks-test, rigid mounting, buck, TB6612.
+
+### Turn theory (ready for firmware)
+- LEFT pivot = L rev + R fwd (`L H H L`); RIGHT = mirror (`H L L H`);
+  PWM arc turns need ENA/ENB shunts removed. Details: LEDGER §7.
+
+---
+
 ## Current state & Next
 
-- **On board now:** `rc_motor_fwd_rev` (CP-02).
-- **Next up:**
-  1. Re-flash `rc_car_wifi` for full tank control (pivots + back).
-  2. Phase 3: HC-SR04 hard-STOP override + distance telemetry in HTTP reply.
-  3. Optional: 10 kΩ pull-down on D7 to kill power-on right-motor twitch.
+- **On board now:** `rc_motor_fwd_rev_patels` (CP-02 control + CP-03 network).
+- **Authoritative open-items list:** [`LEDGER.md`](LEDGER.md) §10 — phone reach
+  test on current hotspot, floor-stall fixes (buck/TB6612), reflash
+  `rc_car_wifi` for 4-way tank control, then HC-SR04 phase 3.
 
 ## Full sketch inventory
 | Sketch | Status |

@@ -9,10 +9,11 @@ ultrasonic + differential (tank) drive on 2× BO motors, powered by 2×18650
 | CP | Milestone | State |
 |---|---|---|
 | CP-01 | Simple forward move (hold-to-drive over Wi-Fi) | ✅ verified |
-| CP-02 | FWD/REV direction control | ✅ verified, **on board** |
+| CP-02 | FWD/REV direction control | ✅ verified |
+| CP-03 | Multi-network bring-up + power diagnosis | ✅ verified (fix pending) |
 
-Full evidence, bug post-mortems and rules: **[CHECKPOINT.md](CHECKPOINT.md)**
-(updated at every milestone).
+Full evidence, bug post-mortems and rules: **[CHECKPOINT.md](CHECKPOINT.md)**.
+Session/operating context for continuing work: **[LEDGER.md](LEDGER.md)**.
 
 ## Hardware
 
