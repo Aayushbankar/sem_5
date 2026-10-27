@@ -106,21 +106,23 @@ root-caused (documented, fix pending).**
 
 ---
 
-## CP-04 — Straight-line fix + power-rail split (2026-10-27) ✅
+## CP-04 — Straight-line fix (2026-10-27) ✅
 
-**Milestone: drive mechanics corrected and power domains isolated.**
+**Milestone: drive mechanics corrected — robot tracks straight.**
 
 ### Docs / artifacts
 - Evidence: pen test `photos/Tubfront.jpeg` (user), analysis in
-  [`LEDGER.md`](LEDGER.md) §10.0 + §6 + §12.
+  [`LEDGER.md`](LEDGER.md) §10.0 + §12.
 
 ### What is verified working
 - **Caster repositioned to the true centerline** (user, 27th) — straight-line
   defect closed; residual: powered-drift test + wheel-diameter check if any
   curve remains.
-- **Power-rail split done (user, 27th):** NodeMCU and L298N on separate
-  supply rails, linked only by D5–D8 **+ common GND** (mandatory reference) —
-  kills motor-load ESP reboots. Floor-load validation pending.
+
+### Power-rail split — NOT done (attempted → rolled back)
+- Tried once (27th), **user not satisfied → rolled back to the original
+  wiring**. **Retry planned 28th with a better redesign** (§6 of LEDGER;
+  rule unchanged: separate rails, D5–D8 + **common GND** only).
 
 ### Parked (not a failure — documented in LEDGER §12)
 - Spare-ESP dedicated AP (`esp_softap/` written, compiled): **flash blocked
@@ -136,7 +138,8 @@ root-caused (documented, fix pending).**
 
 - **END GOAL:** autonomous vacuum cleaner (all parts boxed, self-driving,
   cleaning) — **complete before 2026-10-28**.
-- **Milestones:** CP-01 · CP-02 · CP-03 · **CP-04 (caster + power split)**.
+- **Milestones:** CP-01 · CP-02 · CP-03 · **CP-04 (caster fix)**.
+- **Power split:** attempted 27th → **rolled back**; redesign retry 28th.
 - **On board:** `rc_motor_fwd_rev_patels` — control via **mobile hotspot
   (Patel's F15)**; get IP from serial after power-up.
 - **Authoritative plan:** [`LEDGER.md`](LEDGER.md) §10 (open items),

@@ -21,9 +21,10 @@ and the demo interface; HC-SR04 autonomy is the navigation core.
 spare ESP **failed (board electrical — blocked, faculty help 28th)**; vacuum
 packaging not started.
 **Done:** CP-01 forward · CP-02 FWD/REV · CP-03 network bring-up ·
-**CP-04 caster/squareness fix + power-rail split (27th)**.
-**Open:** stable control LAN (spare-AP or mobile hotspot), floor-stall
-mitigation check under load, AUTO loop, vacuum build (§11).
+**CP-04 caster/squareness fix (27th)**.
+**Open:** **power-rail split — tried 27th, rolled back, redesign retry 28th
+(§6)**, stable control LAN (spare-AP or mobile hotspot), floor-stall
+mitigation under load, AUTO loop, vacuum build (§11).
 
 ## 2. Firmware currently on the board
 
@@ -93,10 +94,12 @@ in a bowl), (2) mechanical overload (weight/caster drag/bowl scrape),
 (3) rail sag on the shared 5V (L298N 78M05 feeding NodeMCU).
 3-cell upgrade didn't help because limit is **current/heat, not voltage**.
 
-**✅ POWER SPLIT DONE (user, 27th):** controller (NodeMCU) and motor driver
-now on separate power rails; only D5–D8 **+ common GND** link them (per the
-corrected design — GND tie is mandatory for signal reference). Validate under
-floor load next; buck vs second pack details as wired by user.
+**❌ POWER SPLIT — attempted (user, 27th), NOT satisfied → ROLLED BACK to
+original wiring.** One attempt with the planned topology (separate rails,
+D5–D8 + common GND) wasn't good enough — redesign planned for **28th**
+(better wiring/routing, per §8-style discipline; GND tie remains mandatory
+for signal reference). Until then: original shared-rail wiring stands, so
+motor-load ESP reboots may persist on floor runs.
 
 **Options that were on the table (history):**
 - A) Separate ESP battery — works, **must common-ground** both supplies.
@@ -104,8 +107,9 @@ floor load next; buck vs second pack details as wired by user.
 - C) **Replace L298N with TB6612FNG** — the real fix (MOSFET, cool, no 2 V
   Darlington drop, PWM for free). Fixing ESP rail does NOT stop driver thermal cutoff.
 
-**Next actions:** floor-load run to confirm no more ESP reboots → mount
-battery/breadboard rigidly → plan TB6612 (C) when time allows.
+**Next actions:** **28th power-split redesign (first try rolled back)** →
+floor-load run to confirm no more ESP reboots → mount battery/breadboard
+rigidly → plan TB6612 (C) when time allows.
 
 ## 7. Turn control (next firmware feature)
 
@@ -175,8 +179,9 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
    but flashing the spare board failed on electrical grounds (see §12) —
    faculty help morning of 28th; fallback = flash it using the car NodeMCU
    as USB-serial (cross TX/RX/EN) or replace board.
-2. Floor-load validation of the **power split (§6)** — no more ESP reboots
-   under motor load; rigid battery/breadboard mounting.
+2. **Power-rail split REDESIGN + re-attempt (28th)** — first attempt rolled
+   back (§6); implement cleanly, then floor-load validation (no more ESP
+   reboots); rigid battery/breadboard mounting.
 3. Reflash `rc_car_wifi` for 4-direction tank control (§7 pins ready) —
    fold into the AUTO firmware below if time-boxed.
 4. **Autonomous mode firmware** (vacuum core): AUTO toggle on the web page —
@@ -218,8 +223,8 @@ straight-line driving solved FIRST):**
   yet made; mounting method TBD (tape/screws through plate).
 
 **Plan status (revised 27th eve):**
-- ✅ Done: caster/straight-line fix (§10.0), power-rail split (§6),
-  `esp_softap` code written (flash blocked).
+- ✅ Done: caster/straight-line fix (§10.0), `esp_softap` code written
+  (flash blocked). ⚠️ Power split: attempted, rolled back — redesign 28th.
 - **28th (final day):** faculty help → spare-AP flash (or fall back to
   mobile hotspot §10.1); floor-load validation; AUTO loop firmware (§10.4);
   vacuum box cuts + fan (voltage first!) → demo run → **CP-05** photos.
@@ -235,7 +240,8 @@ F15 (current); power problem analyzed (§6); end goal + deadline captured;
 photos inventoried; pen test proved caster off-centerline.
 
 **27 Oct:** user **fixed the caster** (wheel) → straight-line defect closed.
-Power-rail **split implemented** (controller vs driver + GND tie). Idea review:
+Power-rail **split attempted once → user not satisfied → rolled back to
+original wiring; redesign planned for 28th.** Idea review:
 spare-ESP softAP = good plan; power separation = correct with common-GND rule.
 `esp_softap/` written (SSID `CLEANBOT-NET`, status page @192.168.4.1),
 compiled clean. **Flashing the spare HW-306 mini board FAILED end-to-end:**
