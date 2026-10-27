@@ -11,7 +11,8 @@ by 18650 cells. The NodeMCU hosts its own control page — no app, no cloud.
 |---|---|---|
 | CP-01 | Simple forward move (hold-to-drive over Wi-Fi) | ✅ verified |
 | CP-02 | FWD/REV direction control | ✅ verified |
-| CP-03 | Multi-network bring-up + power diagnosis | ✅ verified (fix pending) |
+| CP-03 | Multi-network bring-up + power diagnosis | ✅ verified |
+| CP-04 | Straight-line fix (caster) + power-rail split | ✅ verified |
 
 Full evidence, bug post-mortems and rules: **[CHECKPOINT.md](CHECKPOINT.md)**.
 Session/operating context for continuing work: **[LEDGER.md](LEDGER.md)**.
@@ -91,8 +92,8 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 rc_motor_fwd
 
 ## Roadmap (deadline: 2026-10-28)
 
-1. ✅ CP-01 forward move · ✅ CP-02 FWD/REV · ✅ CP-03 network bring-up
-2. Straight-line fix (caster/squareness) + full tank control
+1. ✅ CP-01 forward · ✅ CP-02 FWD/REV · ✅ CP-03 network bring-up · ✅ CP-04 caster + power split
+2. Stable control LAN (mobile hotspot now; spare-AP blocked → faculty 28th)
 3. AUTO mode: HC-SR04 obstacle-avoidance loop (web toggle)
 4. Suction module + boxed enclosure (all components inside)
-5. ✅ CP-04 target: autonomous + vacuum demo
+5. 🎯 CP-05 target: autonomous + vacuum demo

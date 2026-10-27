@@ -10,19 +10,20 @@
 ## 1. Goal & current phase
 
 **END GOAL (the thing this project must become): an autonomous vacuum-cleaner
-robot** — all electronics + drive + suction/vacuum parts packed inside a box
-(of the current steel-plate base size, or a similar/bigger box), driving
-itself and cleaning. Remote web control is the control/telemetry layer and
-the demo interface; HC-SR04 autonomy is the navigation core.
+robot** — all electronics + drive + suction/vacuum parts packed inside ONE box
+(the round tub; the small vacuum box nests INSIDE it with the components),
+driving itself and cleaning. Remote web control is the control/telemetry layer
+and the demo interface; HC-SR04 autonomy is the navigation core.
 
-**DEADLINE: complete before 2026-10-28** (today = 2026-10-26 → ~2 days).
+**DEADLINE: complete before 2026-10-28 (tomorrow as of 27th eve).**
 
-**Phase:** bring-up of network control + power diagnostics; mechanical
-straight-line defect open; vacuum packaging not started.
-**CP-01** (forward move) and **CP-02** (FWD/REV) are verified (see CHECKPOINT).
-Current blockers: (a) **robot won't track straight — third (caster) wheel not
-staying straight** (§10.0), (b) **stalls on the floor under load** (works in
-the air) — root-caused, fix pending (§6), (c) box + suction build (§11).
+**Phase (27th eve):** mechanics + power hardened; stable-LAN attempt on the
+spare ESP **failed (board electrical — blocked, faculty help 28th)**; vacuum
+packaging not started.
+**Done:** CP-01 forward · CP-02 FWD/REV · CP-03 network bring-up ·
+**CP-04 caster/squareness fix + power-rail split (27th)**.
+**Open:** stable control LAN (spare-AP or mobile hotspot), floor-stall
+mitigation check under load, AUTO loop, vacuum build (§11).
 
 ## 2. Firmware currently on the board
 
@@ -92,14 +93,19 @@ in a bowl), (2) mechanical overload (weight/caster drag/bowl scrape),
 (3) rail sag on the shared 5V (L298N 78M05 feeding NodeMCU).
 3-cell upgrade didn't help because limit is **current/heat, not voltage**.
 
-**Decoupling options discussed (user asked):**
+**✅ POWER SPLIT DONE (user, 27th):** controller (NodeMCU) and motor driver
+now on separate power rails; only D5–D8 **+ common GND** link them (per the
+corrected design — GND tie is mandatory for signal reference). Validate under
+floor load next; buck vs second pack details as wired by user.
+
+**Options that were on the table (history):**
 - A) Separate ESP battery — works, **must common-ground** both supplies.
 - B) **One battery + buck converter (MP1584/mini360) → 5V → VIN** — recommended.
 - C) **Replace L298N with TB6612FNG** — the real fix (MOSFET, cool, no 2 V
   Darlington drop, PWM for free). Fixing ESP rail does NOT stop driver thermal cutoff.
 
-**Next actions:** blocks-test to confirm thermal (hot driver after stall) →
-mount battery/breadboard rigidly → buck for ESP (B) → plan TB6612 (C).
+**Next actions:** floor-load run to confirm no more ESP reboots → mount
+battery/breadboard rigidly → plan TB6612 (C) when time allows.
 
 ## 7. Turn control (next firmware feature)
 
@@ -158,31 +164,29 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
 
 ## 10. Open items (priority order, deadline 2026-10-28)
 
-0. **Straight-line defect (reported 26th):** car veers because the third
-   (caster) wheel doesn't stay straight. **User measurement 26th eve
-   (`Tubfront.jpeg`: pen = drive-axle line): caster pivot is NOT exactly
-   90° off that line — confirmed off-centerline as suspected.**
-   Also flagged: side view (`Tubback.jpeg`) shows a **blue 5-spoke wheel**
-   while top view shows black-knobby wheels — verify BOTH drive wheels are
-   identical diameter (mismatch = curve even after caster fix).
-   Fixes to try in order:
-   a) caster must **swivel freely** (binding glue/bearing = drags & twists);
-   b) mount it **on the centerline**, ideally **trailing behind** the drive
-   axle (re-casting the caster to the rear self-aligns — cheapest fix);
-   c) verify drive **axle ⟂ to travel**: measure wheel→body distance both
-      sides, equalize; hot-glue gearboxes can creep at an angle — re-square;
-   d) both wheels identical + firmly seated on motor shafts;
-   e) fallback: software trim (per-motor speed bias) once PWM exists.
-1. Phone-browser test of `http://10.197.7.58` on Patel's F15 (IP reachable from laptop?).
-2. Floor-stall fix: confirm thermal → rigid mounting → buck (§6B) → TB6612 (§6C).
-3. Reflash `rc_car_wifi` for 4-direction tank control (§7 pins ready).
+0. ✅ **Straight-line defect FIXED (user, 27th)** — caster repositioned per
+   the pen/centerline procedure (`Tubfront.jpeg` finding: pivot was off 90°).
+   Residual check pending: powered FWD drift test; wheel-diameter check
+   (blue vs black wheel) if any curve remains → then software trim (e).
+1. **Control LAN (user directive 27th eve): back to the mobile hotspot**
+   (Patel's F15) for driving — `rc_motor_fwd_rev_patels` already on the
+   board; get IP from serial (§8) after power-up.
+   Spare-ESP dedicated-AP track **parked**: `esp_softap/` written + compiled
+   but flashing the spare board failed on electrical grounds (see §12) —
+   faculty help morning of 28th; fallback = flash it using the car NodeMCU
+   as USB-serial (cross TX/RX/EN) or replace board.
+2. Floor-load validation of the **power split (§6)** — no more ESP reboots
+   under motor load; rigid battery/breadboard mounting.
+3. Reflash `rc_car_wifi` for 4-direction tank control (§7 pins ready) —
+   fold into the AUTO firmware below if time-boxed.
 4. **Autonomous mode firmware** (vacuum core): AUTO toggle on the web page —
    loop: HC-SR04 every 100 ms; >20 cm → FWD; <20 cm → STOP + timed pivot
    (random L/R, 0.4–1.2 s); watchdog: periodic random turn every ~8 s to break
    stuck cycles; STOP always wins (manual buttons override AUTO).
-5. **Suction + box build** (§11) — parallel track, needs parts inventory.
+5. **Suction + box build** (§11) — parallel track (fan voltage still unknown).
 6. PWM arc turns (shunt removal) — after driver upgrade.
-7. Optional: D7 10 kΩ pull-down (boot twitch); push pending sem_5 commits.
+7. Optional: D7 10 kΩ pull-down (boot twitch); push pending sem_5 commits
+   (ahead 4-5 local).
 
 ## 11. End goal — autonomous vacuum build (deadline 26→28 Oct)
 
@@ -213,12 +217,34 @@ straight-line driving solved FIRST):**
   how it was powered before); inlet cutout not yet made; exhaust holes not
   yet made; mounting method TBD (tape/screws through plate).
 
-**2-day plan:**
-- **Day 1 (26th):** fix caster/straight line (§10.0) → confirm FWD track;
-  reflash `rc_car_wifi`; **confirm fan voltage + vacuum box mating**;
-  wire fan + AUTO loop (§10.4) if power known.
-- **Day 2 (27th):** cut inlet/exhaust + HC-SR04 window + wheel clearance,
-  mount vacuum box to chassis rigidly, floor-stall mitigation that fits
-  (rigid battery, caster squareness), full clean-run demo → **CP-04**
-  (autonomous + vacuum) + report photos.
-- **28th:** buffer for failures + submission.
+**Plan status (revised 27th eve):**
+- ✅ Done: caster/straight-line fix (§10.0), power-rail split (§6),
+  `esp_softap` code written (flash blocked).
+- **28th (final day):** faculty help → spare-AP flash (or fall back to
+  mobile hotspot §10.1); floor-load validation; AUTO loop firmware (§10.4);
+  vacuum box cuts + fan (voltage first!) → demo run → **CP-05** photos.
+- Submission buffer: rest of 28th.
+
+---
+
+## 12. Session log
+
+**26 Oct:** CP-01 lesson closed (60 ms refresh + 500 ms failsafe); CP-02
+fwd/rev built; Wi-Fi journey home→vivo(5 GHz fail)→GP-MAIN(verified)→Patel's
+F15 (current); power problem analyzed (§6); end goal + deadline captured;
+photos inventoried; pen test proved caster off-centerline.
+
+**27 Oct:** user **fixed the caster** (wheel) → straight-line defect closed.
+Power-rail **split implemented** (controller vs driver + GND tie). Idea review:
+spare-ESP softAP = good plan; power separation = correct with common-GND rule.
+`esp_softap/` written (SSID `CLEANBOT-NET`, status page @192.168.4.1),
+compiled clean. **Flashing the spare HW-306 mini board FAILED end-to-end:**
+cable#1 marginal (partial writes, "Timed out waiting for packet header"),
+cable#2 charge-only (no enumeration), cable#3 = same random mid-session
+deaths; manual download mode (D3→GND + RST, `--before no_reset`) tried —
+ROM and stub paths BOTH still die after handshake; kernel log clean (no USB
+errors) → board-side electrical (UART/power/auto-reset marginality).
+**Decision (user): park the AP effort, faculty help 28th; fallbacks:
+flash spare via car NodeMCU as USB-serial, or replace board.** Control LAN:
+back to mobile hotspot (Patel's F15, firmware already on car).
+Cost: ~2 h lost to flashing; `esp_softap.ino` itself is fine and ready.

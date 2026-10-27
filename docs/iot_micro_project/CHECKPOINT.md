@@ -106,13 +106,41 @@ root-caused (documented, fix pending).**
 
 ---
 
+## CP-04 — Straight-line fix + power-rail split (2026-10-27) ✅
+
+**Milestone: drive mechanics corrected and power domains isolated.**
+
+### Docs / artifacts
+- Evidence: pen test `photos/Tubfront.jpeg` (user), analysis in
+  [`LEDGER.md`](LEDGER.md) §10.0 + §6 + §12.
+
+### What is verified working
+- **Caster repositioned to the true centerline** (user, 27th) — straight-line
+  defect closed; residual: powered-drift test + wheel-diameter check if any
+  curve remains.
+- **Power-rail split done (user, 27th):** NodeMCU and L298N on separate
+  supply rails, linked only by D5–D8 **+ common GND** (mandatory reference) —
+  kills motor-load ESP reboots. Floor-load validation pending.
+
+### Parked (not a failure — documented in LEDGER §12)
+- Spare-ESP dedicated AP (`esp_softap/` written, compiled): **flash blocked
+  by a marginal spare board** (random mid-session timeouts on ROM+stub,
+  both cables tried, manual D3/RST download mode tried). Faculty help 28th;
+  fallbacks: flash via car NodeMCU as USB-serial, or replace board.
+- Control returns to the mobile hotspot (firmware `rc_motor_fwd_rev_patels`
+  already on the car).
+
+---
+
 ## Current state & Next
 
 - **END GOAL:** autonomous vacuum cleaner (all parts boxed, self-driving,
   cleaning) — **complete before 2026-10-28**.
-- **On board now:** `rc_motor_fwd_rev_patels` (CP-02 control + CP-03 network).
-- **Authoritative plan:** [`LEDGER.md`](LEDGER.md) §10 (open items incl.
-  straight-line/caster fix) and §11 (vacuum build + 2-day schedule).
+- **Milestones:** CP-01 · CP-02 · CP-03 · **CP-04 (caster + power split)**.
+- **On board:** `rc_motor_fwd_rev_patels` — control via **mobile hotspot
+  (Patel's F15)**; get IP from serial after power-up.
+- **Authoritative plan:** [`LEDGER.md`](LEDGER.md) §10 (open items),
+  §11 (vacuum build), §12 (session log — incl. spare-AP flash block).
 
 ## Full sketch inventory
 | Sketch | Status |
