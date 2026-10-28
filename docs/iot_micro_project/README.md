@@ -97,3 +97,4 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 rc_motor_fwd
 3. AUTO mode: HC-SR04 obstacle-avoidance loop (web toggle)
 4. Suction module + boxed enclosure (all components inside)
 5. 🎯 CP-05 target: autonomous + vacuum demo
+6. 🎥 **ESP32-CAM track:** video stream + object detection on laptop dashboard, wired to Arduino Uno programmer

@@ -142,8 +142,10 @@ root-caused (documented, fix pending).**
 - **Power split:** attempted 27th → **rolled back**; redesign retry 28th.
 - **On board:** `rc_motor_fwd_rev_patels` — control via **mobile hotspot
   (Patel's F15)**; get IP from serial after power-up.
+- **New parallel track:** ESP32-CAM video + object detection (wired to
+  Arduino Uno as programmer) → dashboard with video + drive controls.
 - **Authoritative plan:** [`LEDGER.md`](LEDGER.md) §10 (open items),
-  §11 (vacuum build), §12 (session log — incl. spare-AP flash block).
+  §11 (vacuum build), §12 (session log), §13 (ESP32-CAM track).
 
 ## Full sketch inventory
 | Sketch | Status |

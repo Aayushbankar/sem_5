@@ -193,7 +193,26 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
 7. Optional: D7 10 kΩ pull-down (boot twitch); push pending sem_5 commits
    (ahead 4-5 local).
 
-## 11. End goal — autonomous vacuum build (deadline 26→28 Oct)
+## 13. ESP32-CAM — video feed + object detection (next task)
+
+**Objective:** stream video from ESP32-CAM on robot body → laptop dashboard; run object detection on laptop; integrate with NodeMCU control so the dashboard shows video + robot drive buttons.
+
+**Hardware:** AI-Thinker ESP32-CAM (OV2640) — bare, no USB. Programmer: **Arduino Uno as USB-TTL** (wire TX→U0T, RX→U0R, GND, 3V3; ESP32-CAM GPIO0→GND + EN pulse for boot mode).
+
+**Software plan:**
+1. Firmware: ESP32 Arduino `CameraWebServer` example (AI-Thinker pins, OV2640, MJPEG at `:81/stream`, control page on 80).
+2. Dashboard (laptop): single HTML page — `<img src="http://cam-ip:81/stream">` + robot drive buttons (fetch to NodeMCU `/drive`). Both devices on same hotspot (Patel's F15).
+3. Object detection (laptop): Python + OpenCV consuming MJPEG stream → start with built-in Haar face/person detector (no model download); overlay boxes on dashboard video; later upgrade to YOLO-nano if compute allows.
+4. Integration: dashboard buttons hit NodeMCU `/drive?c=FWD|REV|STOP` (same API); camera and robot share hotspot (Patel's F15 works).
+
+**Next step (immediate):** wire Arduino Uno as USB-TTL per above, flash `CameraWebServer` (select AI-Thinker board, OV2640), verify stream at `http://<cam-ip>:81/stream`.
+
+**Hardware wiring reference (Arduino Uno → ESP32-CAM):**
+- Uno TX (pin 1) → ESP32-CAM U0T (TX)
+- Uno RX (pin 0) → ESP32-CAM U0R (RX)  (crossed)
+- Uno GND → ESP32-CAM GND
+- Uno 3V3 → ESP32-CAM 3V3 (or 5V pin if using 5V input)
+- ESP32-CAM GPIO0 → GND (hold for download mode), EN pulsed to enter download
 
 **Hardware inventory (photos saved in [`photos/`](photos/), 26 Oct):**
 
