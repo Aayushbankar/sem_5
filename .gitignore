@@ -3,3 +3,8 @@ private-docs/
 site/
 .cache/
 __pycache__/
+docs/AIPE/second_student_extracted/
+docs/AIPE/submission/checkpoint_v1/
+docs/AIPE/submission/meet_patel/
+docs/AIPE/submission/generate_all_manuals_v1_backup.py
+

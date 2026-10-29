@@ -1,0 +1,14 @@
+Don't take print of lab manual. 
+
+In each practical write:
+
+1. Aim
+2. Process or Program code or Prompt used to achieve goal or output
+3. Screen shot of output where you name and roll number is printed in output. 
+4. Application of what you learn in respective practical like in which kind of project you required such a AI functionality (e.g. in practical 3, you have to write in which kind of projects you will use sentiment analysis?) 
+
+
+Keep index stating practical number and aim at first page. 
+
+
+All have to submit print and soft copy of above generated solution file, and practicalwise generated code/prompt file.

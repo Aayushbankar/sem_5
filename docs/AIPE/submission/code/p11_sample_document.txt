@@ -1,0 +1,60 @@
+Introduction to Large Language Models
+
+A Large Language Model, or LLM, is a deep neural network trained on very large
+amounts of text data. LLMs are the technology behind tools such as ChatGPT,
+Claude, and Gemini. They can generate text, answer questions, summarize
+documents, translate languages, and write code. Because they are trained on
+billions of words, they capture statistical patterns of human language.
+
+How LLMs work
+
+An LLM works with tokens rather than full words. Text is first split into
+tokens, which are pieces of words or punctuation. Each token is converted into
+an embedding, which is a vector of numbers that captures its meaning. The model
+uses the transformer architecture to predict the next token in a sequence. The
+transformer uses a mechanism called attention, which lets the model weigh which
+words in the input matter most for the next word. Training adjusts billions of
+parameters so that the predicted next token matches the real text in the
+training data.
+
+Transformers and attention
+
+The transformer architecture was introduced in 2017 in the paper "Attention is
+All You Need". It has two main parts: an encoder and a decoder. The encoder
+reads the input, and the decoder generates the output. Attention allows every
+token to look at every other token in the sequence. Because of this, the model
+understands long-range relationships between words, such as a pronoun referring
+to a subject several sentences earlier. Scaling up the number of parameters and
+the size of the training corpus leads to dramatic improvements in language
+ability, which is why larger models often behave much better than smaller ones.
+
+What is prompt engineering?
+
+Prompt engineering is the practice of designing the instruction given to an LLM
+so that the output is accurate, useful, and correctly formatted. A good prompt
+has a clear instruction, enough context, the input data, and a specified output
+format. Techniques such as few-shot prompting, role-based prompting, and
+chain-of-thought prompting help the model reason better. Because LLMs do not
+truly understand like humans, the quality of the prompt directly controls the
+quality of the answer.
+
+Limitations of LLMs
+
+LLMs have several known limitations. They sometimes produce confident but
+wrong statements, which is called hallucination. Their knowledge is limited to
+their training data and to the size of the context window. They can also
+reflect biases present in the training data. Prompt engineers design careful
+prompts to reduce these problems, and systems such as Retrieval Augmented
+Generation, or RAG, connect the model to external documents so answers are
+grounded in real facts.
+
+Retrieval Augmented Generation
+
+Retrieval Augmented Generation, RAG, is a technique that improves answers by
+retrieving relevant passages from an external knowledge source before the model
+generates a response. The pipeline has three steps. First, the document is
+split into chunks. Second, each chunk is converted into a vector embedding and
+stored in an index. Third, when a user asks a question, the system computes the
+embedding of the question, finds the most similar chunks, and passes them to
+the LLM as context. RAG reduces hallucination and lets a chatbot answer
+questions about documents it has never seen during training.
