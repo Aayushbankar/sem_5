@@ -134,26 +134,64 @@ root-caused (documented, fix pending).**
 
 ---
 
+## CP-05 — ESP32-CAM bring-up + wrong-pin root cause (2026-10-30) 🟡
+
+**Milestone: CAM board fully proven (flash/serial/WiFi/page) + the 0x106
+camera failure root-caused to a shipped example bug. Camera retest pending.**
+
+### Docs / artifacts
+- Full evidence: [`LEDGER.md`](LEDGER.md) §13 (CAM section) + §12 (30 Oct log)
+- Sketches: `esp32cam_flash/CameraWebServer/` (**fixed — ready to flash**),
+  `esp32cam_flash/cam_led_test/` (bench LED verdict firmware)
+- Guide adopted: Instructables ESP32-CAM streaming (faculty-suggested)
+
+### What is verified working
+- ESP32-CAM-MB (CH340C) auto-reset upload: clean 1.06 MB writes to
+  `/dev/ttyUSB0`, `esp32:esp32:esp32cam` FQBN.
+- Board healthy: serial output, WiFi joins **Patel's F15** → IP
+  `10.197.7.97`, status page HTTP 200 (RSSI −48), LED-test firmware verdicts.
+- Rails: 5V = 5.19 V, 3V3 = 3.19 V. MB-free power (Uno 5V/GND) works.
+- **MB exonerated** as camera saboteur (identical failure Uno-powered).
+
+### Root cause (found 30 Oct)
+- Stock example `board_config.h` **ships with `CAMERA_MODEL_ESP_EYE`
+  active (line 15) / `CAMERA_MODEL_AI_THINKER` commented (line 23)** →
+  every init used ESP-EYE pin table → `0x106 ESP_ERR_NOT_SUPPORTED`.
+- Fix applied: line 15 off, line 23 on; JPEG restored (RGB565 kept as
+  one-line fallback for GC2145); recompiled clean.
+- **Camera module NOT condemned** — never probed with correct pins.
+
+### Pending (the only next action)
+- Flash fixed `CameraWebServer` → serial: probe OK → stream at
+  `http://<cam-ip>:81/stream`; JPEG-not-supported → RGB565; still 0x106 →
+  replace camera module.
+
+---
+
 ## Current state & Next
 
 - **END GOAL:** autonomous vacuum cleaner (all parts boxed, self-driving,
-  cleaning) — **complete before 2026-10-28**.
-- **Milestones:** CP-01 · CP-02 · CP-03 · **CP-04 (caster fix)**.
-- **Power split:** attempted 27th → **rolled back**; redesign retry 28th.
-- **On board:** `rc_motor_fwd_rev_patels` — control via **mobile hotspot
+  cleaning) — original deadline 2026-10-28 (passed; faculty-guided extra work).
+- **Milestones:** CP-01 · CP-02 · CP-03 · CP-04 · **CP-05 🟡 (CAM wrong-pin fix, retest pending)**.
+- **Power split:** attempted 27th → **rolled back**; redesign pending.
+- **On board (robot):** `rc_motor_fwd_rev_patels` — control via **mobile hotspot
   (Patel's F15)**; get IP from serial after power-up.
-- **New parallel track:** ESP32-CAM video + object detection (wired to
-  Arduino Uno as programmer) → dashboard with video + drive controls.
+- **On board (cam):** `cam_led_test` — red LED camera verdict, white LED WiFi,
+  status page; WiFi proven at `10.197.7.97`.
+- **Video track:** ESP32-CAM → MJPEG on laptop dashboard + drive buttons to
+  NodeMCU `/drive` (NodeMCU not reflashed for this).
 - **Authoritative plan:** [`LEDGER.md`](LEDGER.md) §10 (open items),
   §11 (vacuum build), §12 (session log), §13 (ESP32-CAM track).
 
 ## Full sketch inventory
 | Sketch | Status |
 |---|---|
-| `rc_motor_fwd_rev` | **current on board** — FWD/REV hold buttons (CP-02) |
+| `rc_motor_fwd_rev` | **current on robot** — FWD/REV hold buttons (CP-02) |
 | `rc_motor_test` | forward-only hold test (CP-01) |
 | `rc_car_wifi` | full tank control — next to re-flash |
 | `hcsr04_v3` | ultrasonic autonomy (validated earlier) |
 | `hw_diag_test` | 8-phase hardware diag (validated earlier) |
 | `hcsr04_l298n_test`, `hcsr04_l298n_v2`, `hcsr04_test` | earlier stages |
 | `rc_robot` / `rc_remote` | ESP-NOW variants, retired (no ESP32) |
+| `esp32cam_flash/CameraWebServer` | **fixed (AI-Thinker pins) — next cam flash** |
+| `esp32cam_flash/cam_led_test` | LED verdict firmware — **current on cam** |

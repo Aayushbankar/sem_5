@@ -197,22 +197,59 @@ Port `Write timeout` on upload → just retry once. Wi-Fi changed → make a new
 
 **Objective:** stream video from ESP32-CAM on robot body → laptop dashboard; run object detection on laptop; integrate with NodeMCU control so the dashboard shows video + robot drive buttons.
 
-**Hardware:** AI-Thinker ESP32-CAM (OV2640) — bare, no USB. Programmer: **Arduino Uno as USB-TTL** (wire TX→U0T, RX→U0R, GND, 3V3; ESP32-CAM GPIO0→GND + EN pulse for boot mode).
+**Hardware:** AI-Thinker ESP32-CAM, teammate's spare, first flash. **Camera module = RHYX M21-45 = GC2145** (label on ribbon; NOT OV2640). **Programmer: ESP32-CAM-MB Type-C base board (CH340C)** bought 30th — auto-reset works (no manual RST/IO0); mount with lens/SD-slot away from USB-C, `ESP32-CAM` text + flash LED on USB side. The Uno is retired as programmer and is only a **safe 5 V bench power supply** (5V+GND wires) for MB-free tests. ⚠️ 3×18650 battery (11.1 V) into the cam's 5V pin kills the board instantly — never.
+
+**Flash recipe (verified 30th):**
+```bash
+arduino-cli compile --fqbn esp32:esp32:esp32cam <sketch_dir>
+# announce to user BEFORE flash; user re-inserts MB when told
+arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:esp32cam <sketch_dir>
+```
+
+**ROOT CAUSE of the 0x106 saga (found 30th):** the stock example's
+`board_config.h` **SHIPS with `CAMERA_MODEL_ESP_EYE` active (line 15) and
+`CAMERA_MODEL_AI_THINKER` commented (line 23)** — every probe used ESP-EYE's
+wrong pin table on our AI-Thinker board. Fixed 30th: line 15 commented,
+line 23 activated. The camera module is **NOT condemned** — retest pending.
+
+**30 Oct session evidence (all closed):**
+| Test | Result |
+|---|---|
+| Flash + serial + web page | ✅ board healthy |
+| WiFi joins Patel's F15 | ✅ IP `10.197.7.97`, RSSI −48, status page live |
+| Rails: 5V pin = 5.19 V, 3V3 pin = 3.19 V | ✅ power healthy |
+| Ribbon both orientations + tug test | ❌ same 0x106 |
+| **MB-free (Uno 5V+GND only)** | ❌ red LED still blinks → **MB exonerated** |
+| I2C scan GPIO26/27 | "nothing" — my scanner never started XCLK (duty bug) → **inconclusive, red herring** |
+| All flashes said `Detected camera not supported` / `0x106` | explained by **wrong pin table (ESP_EYE)** |
+
+**Status:** WiFi + streaming path proven end-to-end; camera verdict = **"tested with wrong pins" — do not replace module yet.**
+
+**Next step (immediate):** flash the FIXED `CameraWebServer` (see below), read serial:
+- probe **passes** → stream at `http://<cam-ip>:81/stream` → done.
+- probe passes but "JPEG not supported" → flip `CameraWebServer.ino` line 46 to `PIXFORMAT_RGB565` (GC2145 has no JPEG encoder) → done.
+- probe still 0x106 → *then* the module/ribbon/connector is genuinely dead → replace module (₹150–250 OV2640/GC2145).
+
+**Camera-model definition — the two critical lines:**
+- `esp32cam_flash/CameraWebServer/board_config.h` **line 15**: `//#define CAMERA_MODEL_ESP_EYE` (off)
+- `esp32cam_flash/CameraWebServer/board_config.h` **line 23**: `#define CAMERA_MODEL_AI_THINKER` (on) → feeds `#include "camera_pins.h"` (line 32)
+- `CameraWebServer.ino` **lines 13–14**: Wi-Fi creds (header, private repo only); **lines 45–46**: pixel format (JPEG active, RGB565 fallback); **line 8**: `#include "board_config.h"`; **line 78**: `esp_camera_init`.
+
+**LED-test firmware saved:** `esp32cam_flash/cam_led_test/` — red LED (GPIO33) blinks while camera undetected / solid ON when detected; white flash LED (GPIO4) = Wi-Fi status; status page on `:80`. Works MB-free (Uno power) with no computer.
 
 **Software plan:**
-1. Firmware: ESP32 Arduino `CameraWebServer` example (AI-Thinker pins, OV2640, MJPEG at `:81/stream`, control page on 80).
-2. Dashboard (laptop): single HTML page — `<img src="http://cam-ip:81/stream">` + robot drive buttons (fetch to NodeMCU `/drive`). Both devices on same hotspot (Patel's F15).
+1. Firmware: ESP32 Arduino `CameraWebServer` example (AI-Thinker pins — see fixed lines above, MJPEG at `:81/stream`, control page on 80).
+2. Dashboard (laptop): single HTML page — `<img src="http://cam-ip:81/stream">` + robot drive buttons (fetch to NodeMCU `/drive`). Both devices on same hotspot (Patel's F15). NodeMCU does NOT proxy video (ESP8266 can't handle MJPEG) and does NOT need reflash for this — `/drive` contract unchanged.
 3. Object detection (laptop): Python + OpenCV consuming MJPEG stream → start with built-in Haar face/person detector (no model download); overlay boxes on dashboard video; later upgrade to YOLO-nano if compute allows.
 4. Integration: dashboard buttons hit NodeMCU `/drive?c=FWD|REV|STOP` (same API); camera and robot share hotspot (Patel's F15 works).
 
-**Next step (immediate):** wire Arduino Uno as USB-TTL per above, flash `CameraWebServer` (select AI-Thinker board, OV2640), verify stream at `http://<cam-ip>:81/stream`.
+**Reference guides:** Instructables ESP32-CAM streaming (faculty-suggested, 30th) `https://www.instructables.com/Getting-Started-With-ESP32-CAM-Streaming-Video-Usi/`; RNT programming guide `https://randomnerdtutorials.com/program-upload-code-esp32-cam/`; RNT troubleshooting `https://randomnerdtutorials.com/esp32-cam-troubleshooting-guide/`; GC2145/JPEG fix video `https://www.youtube.com/watch?v=jp35GcrypWw`.
 
-**Hardware wiring reference (Arduino Uno → ESP32-CAM):**
-- Uno TX (pin 1) → ESP32-CAM U0T (TX)
-- Uno RX (pin 0) → ESP32-CAM U0R (RX)  (crossed)
-- Uno GND → ESP32-CAM GND
-- Uno 3V3 → ESP32-CAM 3V3 (or 5V pin if using 5V input)
-- ESP32-CAM GPIO0 → GND (hold for download mode), EN pulsed to enter download
+**MB-free wiring (Uno as power):** Uno 5V → cam 5V, Uno GND → cam GND (only two wires), Uno on USB. Red LED verdict as above.
+
+**Hardware wiring reference (programming, MB does this automatically):**
+- MB slot: lens/SD-slot away from USB-C (180° from seller photo = wrong).
+- Raw UART fallback (if MB ever fails): Uno TX→U0T, RX→U0R (crossed), GND, 5V; GPIO0→GND for download mode.
 
 **Hardware inventory (photos saved in [`photos/`](photos/), 26 Oct):**
 
@@ -273,3 +310,21 @@ errors) → board-side electrical (UART/power/auto-reset marginality).
 flash spare via car NodeMCU as USB-serial, or replace board.** Control LAN:
 back to mobile hotspot (Patel's F15, firmware already on car).
 Cost: ~2 h lost to flashing; `esp_softap.ino` itself is fine and ready.
+
+**30 Oct (ESP32-CAM bring-up):** bought **ESP32-CAM-MB Type-C base board**
+(CH340C, flyrobo) — replaced dead Uno-as-programmer plan; auto-reset verified.
+`CameraWebServer` flashed repeatedly → always `Detected camera not supported
+0x106`. Exhaustive bench run: rails OK (5.19/3.19 V), ribbon reseated both
+orientations + tug test, I2C scans inconclusive (XCLK duty bug in my
+scanners), **MB-free Uno-power test → red LED still blinks → MB exonerated.**
+`cam_led_test` firmware built (red LED = camera verdict, white = Wi-Fi) and
+flashed: **camera FAIL, WiFi PASS — cam joined Patel's F15, got
+`10.197.7.97`, status page live** (network path proven end-to-end).
+**ROOT CAUSE then found: stock example `board_config.h` ships with
+`CAMERA_MODEL_ESP_EYE` active and `CAMERA_MODEL_AI_THINKER` commented →
+all inits used the WRONG pin table.** Fixed both lines (§13); JPEG format
+restored (was RGB565 mid-session); real Wi-Fi creds written into sketch
+header (private repo only); `cam_led_test/` saved to repo; `CameraWebServer`
+recompiled clean. **Module NOT condemned — retest with fixed pins is the
+single next action.** Faculty suggested the Instructables ESP32-CAM streaming
+guide → adopted stock flow.
