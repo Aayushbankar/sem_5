@@ -134,37 +134,70 @@ root-caused (documented, fix pending).**
 
 ---
 
-## CP-05 — ESP32-CAM bring-up + wrong-pin root cause (2026-10-30) 🟡
+## CP-05 — ESP32-CAM bring-up + wrong-pin root cause (2026-10-30) ✅
 
-**Milestone: CAM board fully proven (flash/serial/WiFi/page) + the 0x106
-camera failure root-caused to a shipped example bug. Camera retest pending.**
+**Milestone: CAM board proven (flash/serial/WiFi/page) + 0x106 root-caused to
+a shipped example bug + **camera PASS on retest** — MJPEG stream live
+(`10.164.40.97:81/stream`, ~4 FPS 240×240).**
 
 ### Docs / artifacts
-- Full evidence: [`LEDGER.md`](LEDGER.md) §13 (CAM section) + §12 (30 Oct log)
-- Sketches: `esp32cam_flash/CameraWebServer/` (**fixed — ready to flash**),
-  `esp32cam_flash/cam_led_test/` (bench LED verdict firmware)
+- Full evidence: [`LEDGER.md`](LEDGER.md) §13 (CAM section, incl. full retest
+  log) + §12 (30 Oct log) + §4 (vivo band change)
+- Sketches: `esp32cam_flash/CameraWebServer/` (**current on cam — verified
+  streaming**), `esp32cam_flash/cam_led_test/` (bench LED verdict firmware)
 - Guide adopted: Instructables ESP32-CAM streaming (faculty-suggested)
 
 ### What is verified working
-- ESP32-CAM-MB (CH340C) auto-reset upload: clean 1.06 MB writes to
+- ESP32-CAM-MB (CH340C) auto-reset upload: clean writes to
   `/dev/ttyUSB0`, `esp32:esp32:esp32cam` FQBN.
-- Board healthy: serial output, WiFi joins **Patel's F15** → IP
-  `10.197.7.97`, status page HTTP 200 (RSSI −48), LED-test firmware verdicts.
+- Board healthy: serial output, WiFi joins (Patel's F15 earlier →
+  **`vivo Y28 5G` now, IP `10.164.40.97`**), status page HTTP 200.
 - Rails: 5V = 5.19 V, 3V3 = 3.19 V. MB-free power (Uno 5V/GND) works.
 - **MB exonerated** as camera saboteur (identical failure Uno-powered).
+- **Camera probe PASSES with correct AI-Thinker pins** (root cause fix
+  validated) — GC2145 confirmed: rejects JPEG → RGB565 works.
+- **Stream live:** root `:80` HTTP 200; `:81/stream` HTTP 200
+  `multipart/x-mixed-replace`; 6-s capture = 23 complete 240×240 JPEG
+  frames (~4 FPS), extracted frame decodes clean (`file`/ImageMagick).
+  RGB565→JPEG conversion is software (`frame2jpg` in `stream_handler`).
 
-### Root cause (found 30 Oct)
+### Root cause (found + validated 30 Oct)
 - Stock example `board_config.h` **ships with `CAMERA_MODEL_ESP_EYE`
   active (line 15) / `CAMERA_MODEL_AI_THINKER` commented (line 23)** →
   every init used ESP-EYE pin table → `0x106 ESP_ERR_NOT_SUPPORTED`.
-- Fix applied: line 15 off, line 23 on; JPEG restored (RGB565 kept as
-  one-line fallback for GC2145); recompiled clean.
-- **Camera module NOT condemned** — never probed with correct pins.
+- Fix: line 15 off, line 23 on → **retest passed on first flash.**
+- Second finding: GC2145 has **no JPEG encoder** → `PIXFORMAT_RGB565`
+  in `CameraWebServer.ino` L45/46 (one-line revert to JPEG if an OV2640
+  module ever lands).
+- **Camera module healthy — never replace it.**
 
-### Pending (the only next action)
-- Flash fixed `CameraWebServer` → serial: probe OK → stream at
-  `http://<cam-ip>:81/stream`; JPEG-not-supported → RGB565; still 0x106 →
-  replace camera module.
+### Gotchas documented (do not regress)
+- `arduino-cli upload` does **NOT** recompile — always `compile` first;
+  `No changed sectors found` + stale cache `.ino.bin` = you just flashed
+  an old build (bit us once with old Patel's creds).
+- Wi-Fi passwords live only in sketch headers (private repo) — never docs.
+
+### Next action (start of dashboard phase)
+- Reflash robot NodeMCU with `rc_motor_fwd_rev_wifi` (`vivo Y28 5G` creds
+  in header) → cam + robot + laptop on one LAN → build dashboard
+  (`<img src="http://10.164.40.97:81/stream">` + `/drive` buttons).
+
+---
+
+## CP-06 — Autonomous cleaner + vision autonomy (target, 🟡 research done 2026-10-31)
+
+**Goal:** self-driving cleaning demo — manual dashboard drive, AI
+(dumb-follower) control, ultrasonic AUTO patrol, suction. Research complete,
+implementation not started.
+
+- **Full research doc (read before building):**
+  [`CP06_RESEARCH.md`](CP06_RESEARCH.md) — parts inventory, LEFT/RIGHT
+  steering plan (firmware-only, incl. the one-PWM-pin constraint), 2026
+  vision-model benchmarks (YOLO26n vs MediaPipe BlazeFace vs Haar — all
+  faster than our 4 FPS stream), streaming-protocol verdict (keep MJPEG),
+  10 designs with pros/cons, build order.
+- Prereq chain: NodeMCU → same hotspot → turn firmware → dashboard →
+  YOLO26n follower → AUTO → power split → vacuum.
 
 ---
 
@@ -172,14 +205,17 @@ camera failure root-caused to a shipped example bug. Camera retest pending.**
 
 - **END GOAL:** autonomous vacuum cleaner (all parts boxed, self-driving,
   cleaning) — original deadline 2026-10-28 (passed; faculty-guided extra work).
-- **Milestones:** CP-01 · CP-02 · CP-03 · CP-04 · **CP-05 🟡 (CAM wrong-pin fix, retest pending)**.
+- **Milestones:** CP-01 · CP-02 · CP-03 · CP-04 · CP-05 ✅ (CAM streaming live) · **CP-06 🟡 (research done — see [`CP06_RESEARCH.md`](CP06_RESEARCH.md))**.
 - **Power split:** attempted 27th → **rolled back**; redesign pending.
-- **On board (robot):** `rc_motor_fwd_rev_patels` — control via **mobile hotspot
-  (Patel's F15)**; get IP from serial after power-up.
-- **On board (cam):** `cam_led_test` — red LED camera verdict, white LED WiFi,
-  status page; WiFi proven at `10.197.7.97`.
+- **On board (robot):** `rc_motor_fwd_rev_patels` — joins **Patel's F15**;
+  get IP from serial after power-up. **Must move to `vivo Y28 5G`** (reflash
+  `rc_motor_fwd_rev_wifi`) for same-LAN dashboard.
+- **On board (cam):** `CameraWebServer` (RGB565) — joins **`vivo Y28 5G`**,
+  IP **10.164.40.97** (DHCP — re-read from serial on reboot); live MJPEG at
+  `http://10.164.40.97:81/stream`, control page `:80`.
 - **Video track:** ESP32-CAM → MJPEG on laptop dashboard + drive buttons to
-  NodeMCU `/drive` (NodeMCU not reflashed for this).
+  NodeMCU `/drive` — **camera half DONE (CP-05)**; NodeMCU does not proxy
+  video; robot needs the vivo-creds reflash for one LAN.
 - **Authoritative plan:** [`LEDGER.md`](LEDGER.md) §10 (open items),
   §11 (vacuum build), §12 (session log), §13 (ESP32-CAM track).
 
@@ -193,5 +229,5 @@ camera failure root-caused to a shipped example bug. Camera retest pending.**
 | `hw_diag_test` | 8-phase hardware diag (validated earlier) |
 | `hcsr04_l298n_test`, `hcsr04_l298n_v2`, `hcsr04_test` | earlier stages |
 | `rc_robot` / `rc_remote` | ESP-NOW variants, retired (no ESP32) |
-| `esp32cam_flash/CameraWebServer` | **fixed (AI-Thinker pins) — next cam flash** |
-| `esp32cam_flash/cam_led_test` | LED verdict firmware — **current on cam** |
+| `esp32cam_flash/CameraWebServer` | **current on cam — stream verified live (`10.164.40.97:81/stream`, CP-05)** |
+| `esp32cam_flash/cam_led_test` | LED verdict firmware — archived bench tool |

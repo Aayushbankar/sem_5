@@ -10,8 +10,8 @@
 // ===========================
 // Enter your WiFi credentials
 // ===========================
-const char *ssid = "Patel's F15";
-const char *password = "123456890";
+const char *ssid = "vivo Y28 5G";
+const char *password = "8980943545";
 
 void startCameraServer();
 void setupLedFlash();
@@ -42,8 +42,8 @@ void setup() {
   config.pin_reset = RESET_GPIO_NUM;
   config.xclk_freq_hz = 20000000;
   config.frame_size = FRAMESIZE_UXGA;
-  config.pixel_format = PIXFORMAT_JPEG;  // for streaming (stock Instructables flow; flip to RGB565 ONLY if probe passes but JPEG fails)
-  //config.pixel_format = PIXFORMAT_RGB565; // fallback if GC2145 (RHYX M21-45) has no JPEG encoder
+  //config.pixel_format = PIXFORMAT_JPEG;  // GC2145 (RHYX M21-45) has no JPEG encoder - probe passed but JPEG rejected (30 Oct)
+  config.pixel_format = PIXFORMAT_RGB565; // GC2145 native format; stream_handler converts to MJPEG in software
   config.grab_mode = CAMERA_GRAB_WHEN_EMPTY;
   config.fb_location = CAMERA_FB_IN_PSRAM;
   config.jpeg_quality = 12;

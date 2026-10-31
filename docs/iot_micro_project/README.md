@@ -92,9 +92,9 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn esp8266:esp8266:nodemcuv2 rc_motor_fwd
 
 ## Roadmap (deadline: 2026-10-28 — passed; faculty-guided continuation 30 Oct)
 
-1. ✅ CP-01 forward · ✅ CP-02 FWD/REV · ✅ CP-03 network bring-up · ✅ CP-04 caster fix · 🟡 CP-05 ESP32-CAM bring-up (wrong-pin root cause fixed 30 Oct — retest pending)
+1. ✅ CP-01 forward · ✅ CP-02 FWD/REV · ✅ CP-03 network bring-up · ✅ CP-04 caster fix · ✅ CP-05 ESP32-CAM bring-up (root cause fixed + camera PASS 30 Oct — MJPEG live at `10.164.40.97:81/stream`)
 2. Stable control LAN (mobile hotspot now; spare-AP blocked → faculty) + power-split redesign
 3. AUTO mode: HC-SR04 obstacle-avoidance loop (web toggle)
 4. Suction module + boxed enclosure (all components inside)
-5. 🎯 CP-06 target: autonomous + vacuum demo
-6. 🎥 **ESP32-CAM track:** video stream + object detection on laptop dashboard; programmer = **ESP32-CAM-MB Type-C board** (Uno retired — now only a 5V bench supply); camera pins fixed to `CAMERA_MODEL_AI_THINKER` in `board_config.h` (stock example ships ESP-EYE — the 0x106 root cause)
+5. 🎯 CP-06 target: autonomous + vacuum demo — **researched 31 Oct: [`CP06_RESEARCH.md`](CP06_RESEARCH.md)** (left/right steering plan, 2026 vision-model benchmarks, 10 possible designs + build order)
+6. 🎥 **ESP32-CAM track:** video stream + object detection on laptop dashboard; programmer = **ESP32-CAM-MB Type-C board** (Uno retired — now only a 5V bench supply); camera pins fixed to `CAMERA_MODEL_AI_THINKER` in `board_config.h` (stock example ships ESP-EYE — the 0x106 root cause); **stream verified live 30 Oct** (GC2145 is RGB565-only — software JPEG in `stream_handler`)

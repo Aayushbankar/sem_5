@@ -40,6 +40,11 @@ Control contract (all variants share it):
 - LED_BUILTIN (active LOW): blinks = joining Wi-Fi, fast-blinks = driving, off = idle.
 - No `delay()` in loop; `delayMicroseconds(10)` only for ultrasonic trigger.
 
+**ESP32-CAM board (separate MCU):** `esp32cam_flash/CameraWebServer/` — MJPEG
+stream at `http://<cam-ip>:81/stream`, control page `:80`; joins **`vivo Y28 5G`**
+(last IP **10.164.40.97**). For the dashboard, robot must move to the same
+hotspot (reflash `rc_motor_fwd_rev_wifi`, creds in its header) — §13.
+
 ## 3. Hardware & pinout (final)
 
 | NodeMCU | GPIO | Function |
@@ -69,7 +74,7 @@ ENA/ENB shunts currently **ON** (full speed; PWM turns later need them OFF + EN 
 | Network | Band/Sec | Result | Artifact |
 |---|---|---|---|
 | Home `Airtel_akas_0733` | 2.4 WPA2 | ✅ CP-01/02 proven here (IP 192.168.1.12, mDNS worked) | `rc_motor_test`, `rc_motor_fwd_rev` |
-| `vivo Y28 5G` hotspot | **5 GHz only** | ❌ ESP can't see 5 GHz — band change never took; two rescans confirmed 5180 MHz only | `rc_motor_fwd_rev_wifi` |
+| `vivo Y28 5G` hotspot | 26th: 5 GHz only → **30th: 2.4 GHz (2462 MHz)** | 26th: ❌ ESP can't see 5 GHz. **30th: band changed → ✅ ESP32-CAM joined, IP `10.164.40.97`** (stream proven). Robot NodeMCU still on Patel's F15 — same-LAN dashboard needs robot moved here too | `rc_motor_fwd_rev_wifi`, cam `CameraWebServer` |
 | College `GP-MAIN` | 2.4+5 WPA2-PSK | ✅ joined (IP **192.168.18.224**), **laptop↔ESP HTTP 200** across VLANs (laptop 172.16.201.x) — portal only gates internet, LAN link fine | `rc_motor_fwd_rev_gpmain` |
 | `Patel's F15` hotspot | 2.4 GHz ch6, WPA2 | ✅ joined (IP **10.197.7.58**) — **current** | `rc_motor_fwd_rev_patels` |
 
@@ -84,6 +89,13 @@ works on home LAN, unreliable elsewhere → use the raw IP.
   (CP-01: RTT 134 ms > 200 ms failsafe). Fix is 60 ms refresh + 500 ms failsafe — keep both.
 - Boot-time right-motor twitch: GPIO13 floats until `setup()`; optional 10 kΩ pull-down on D7.
 - L298N power LED is rail-only — never treat it as command feedback; NodeMCU LED is the indicator.
+- **ESP32-CAM `0x106 "camera not supported"` = probe failure, NOT a dead
+  camera.** Cause: stock example ships wrong board profile in `board_config.h`
+  (ESP_EYE active) → wrong pins → sensor never answers I2C. Second trap:
+  `JPEG format not supported` = GC2145 has no JPEG encoder → RGB565.
+  Full decision flow + pin table: **§13 "0x106 debugging walkthrough"**.
+  Also: I2C scanner without XCLK = invalid; `upload` without `compile` =
+  stale binary.
 
 ## 6. Power problem — floor stall (open)
 
@@ -212,6 +224,48 @@ arduino-cli upload -p /dev/ttyUSB0 --fqbn esp32:esp32:esp32cam <sketch_dir>
 wrong pin table on our AI-Thinker board. Fixed 30th: line 15 commented,
 line 23 activated. The camera module is **NOT condemned** — retest pending.
 
+### 0x106 debugging walkthrough (keep this — reuse if camera fails again)
+
+**Morning symptom (all flashes):** `Detected camera not supported` /
+`Camera probe failed with error 0x106` / `Camera init failed 0x106`.
+
+**What actually happens during `esp_camera_init` (2 phases):**
+1. **Probe:** start XCLK, then read the sensor's ID over the I2C/SCCB wires
+   (`SDA`/`SCL`). Wrong pins = the driver literally knocks on the wrong
+   pins → sensor never ACKs → returns `ESP_ERR_NOT_SUPPORTED` = **0x106**.
+2. **Init:** only if probe succeeds, load the sensor driver.
+
+So **0x106 = probe failure, NOT a dead camera.** The message "Detected
+camera not supported" is misleading — it detected *nothing*.
+
+**Why morning used the wrong pins:** the example supports ~20 boards; the
+`#define` picks the pin table. Ours shipped with the ESP-EYE profile active:
+
+| Signal | AI-Thinker (ours, correct) | ESP-EYE (morning, wrong) |
+|---|---|---|
+| SDA / SCL | 26 / 27 | 18 / 23 |
+| XCLK | 0 | 4 |
+| PWDN | 32 | −1 (no pin) |
+
+**There were TWO stacked problems — fix one at a time and re-flash:**
+
+| # | Error text after flash | Meaning | Fix |
+|---|---|---|---|
+| 1 | `probe failed 0x106` / `not supported` | wrong pin table | `board_config.h`: ESP_EYE off (L15), AI_THINKER on (L23) |
+| 2 | `JPEG format is not supported on this sensor` | probe PASSED; sensor has no JPEG encoder (GC2145 ≠ OV2640) | `CameraWebServer.ino` L45/46: `PIXFORMAT_RGB565` |
+
+**Decision flow for ANY future camera error:**
+- `not supported` / `0x106` → check the board-model `#define` FIRST (pins).
+- `JPEG format not supported` → pins are right; sensor is JPEG-less → RGB565.
+- Still `0x106` with the CORRECT pin table → only now suspect hardware
+  (ribbon/connector/module) → replacement (₹150–250).
+- Stream FPS low after RGB565 → expected: software `frame2jpg`, ~4 FPS.
+
+**Two red herrings from this saga (never trust these again):**
+- I2C scanner that doesn't start XCLK first → "no devices" is meaningless.
+- `arduino-cli upload` does not recompile → "No changed sectors found"
+  means you just flashed a STALE binary (always `compile` first).
+
 **30 Oct session evidence (all closed):**
 | Test | Result |
 |---|---|
@@ -223,25 +277,67 @@ line 23 activated. The camera module is **NOT condemned** — retest pending.
 | I2C scan GPIO26/27 | "nothing" — my scanner never started XCLK (duty bug) → **inconclusive, red herring** |
 | All flashes said `Detected camera not supported` / `0x106` | explained by **wrong pin table (ESP_EYE)** |
 
-**Status:** WiFi + streaming path proven end-to-end; camera verdict = **"tested with wrong pins" — do not replace module yet.**
+**RETEST RESULT (30 Oct evening) — CAMERA PASSES, stream live end-to-end:**
 
-**Next step (immediate):** flash the FIXED `CameraWebServer` (see below), read serial:
-- probe **passes** → stream at `http://<cam-ip>:81/stream` → done.
-- probe passes but "JPEG not supported" → flip `CameraWebServer.ino` line 46 to `PIXFORMAT_RGB565` (GC2145 has no JPEG encoder) → done.
-- probe still 0x106 → *then* the module/ribbon/connector is genuinely dead → replace module (₹150–250 OV2640/GC2145).
+Execution steps, in order:
+1. Flash fixed `CameraWebServer` (`board_config.h` = AI-Thinker pins, JPEG on)
+   → serial: probe **PASSED** (sensor detected + SCCB-probed) but init failed
+   with `E (467) camera: JPEG format is not supported on this sensor` →
+   **the 0x106 wrong-pin saga is closed; root-cause fix validated.**
+2. That error = decision branch 2 → flipped `CameraWebServer.ino` lines 45/46
+   (JPEG off, `PIXFORMAT_RGB565` on — GC2145 has no JPEG encoder).
+3. ⚠️ **Stale-binary trap hit:** `arduino-cli upload` does NOT recompile —
+   it re-uploaded the 15:33 build (old Patel's F15 creds, no RGB565) and
+   esptool printed `No changed sectors found`. Caught by checking the cache
+   `.ino.bin` mtime/strings. **Rule: always run `arduino-cli compile`
+   explicitly before `upload`; if you see "No changed sectors found", verify
+   the build is newer than the source.**
+4. Patel's F15 unavailable → switched Wi-Fi to **`vivo Y28 5G`** (laptop's
+   network; SSID says "5G" but it broadcasts **2462 MHz = 2.4 GHz**, so the
+   ESP32-CAM accepts it). Creds written in sketch header (private repo only).
+5. Fresh compile + flash → serial boot log:
+   ```
+   WiFi connecting...
+   WiFi connected
+   Camera Ready! Use 'http://10.164.40.97' to connect
+   ```
+6. Stream verification (laptop, same hotspot):
+   - root `http://10.164.40.97/` → **HTTP 200**
+   - `http://10.164.40.97:81/stream` → **HTTP 200**,
+     `Content-Type: multipart/x-mixed-replace;boundary=...`
+   - 6 s capture = 192 KB → **23 complete JPEG frames (~4 FPS)**
+   - extracted frame: valid **240×240 baseline JPEG, 8011 B** (`file` +
+     ImageMagick both decode it).
+
+**RGB565 note:** the stock `stream_handler` (`app_httpd.cpp` ~L246) converts
+each RGB565 frame to JPEG in software via `frame2jpg()` before sending — so
+`/stream` is still MJPEG and the dashboard `<img>` needs no changes; FPS is
+CPU-bound (~4 at 240×240) which is fine for the dashboard.
+
+**Status:** camera + Wi-Fi + web + MJPEG stream **fully proven end-to-end**.
+GC2145 confirmed as the sensor (RGB565-only). Module healthy — never replace.
+Original decision branches 1 and 2 resolved as: probe PASS + JPEG rejected →
+RGB565 → PASS.
+
+**Remaining next step:** dashboard integration —
+1. Reflash robot NodeMCU with `rc_motor_fwd_rev_wifi` (its header already has
+   `vivo Y28 5G` creds) so cam + robot + laptop share ONE LAN.
+2. Build the dashboard HTML: `<img src="http://10.164.40.97:81/stream">` +
+   drive buttons (fetch → NodeMCU `/drive?c=FWD|REV|STOP`).
+3. Then the §10 roadmap: AUTO loop, power-split, vacuum box.
 
 **Camera-model definition — the two critical lines:**
 - `esp32cam_flash/CameraWebServer/board_config.h` **line 15**: `//#define CAMERA_MODEL_ESP_EYE` (off)
 - `esp32cam_flash/CameraWebServer/board_config.h` **line 23**: `#define CAMERA_MODEL_AI_THINKER` (on) → feeds `#include "camera_pins.h"` (line 32)
-- `CameraWebServer.ino` **lines 13–14**: Wi-Fi creds (header, private repo only); **lines 45–46**: pixel format (JPEG active, RGB565 fallback); **line 8**: `#include "board_config.h"`; **line 78**: `esp_camera_init`.
+- `CameraWebServer.ino` **lines 13–14**: Wi-Fi creds = `vivo Y28 5G` (header, private repo only — no passwords in these docs); **lines 45–46**: pixel format (**RGB565 active** — GC2145 rejected JPEG 30th; JPEG commented); **line 8**: `#include "board_config.h"`; **line 78**: `esp_camera_init`.
 
 **LED-test firmware saved:** `esp32cam_flash/cam_led_test/` — red LED (GPIO33) blinks while camera undetected / solid ON when detected; white flash LED (GPIO4) = Wi-Fi status; status page on `:80`. Works MB-free (Uno power) with no computer.
 
 **Software plan:**
 1. Firmware: ESP32 Arduino `CameraWebServer` example (AI-Thinker pins — see fixed lines above, MJPEG at `:81/stream`, control page on 80).
-2. Dashboard (laptop): single HTML page — `<img src="http://cam-ip:81/stream">` + robot drive buttons (fetch to NodeMCU `/drive`). Both devices on same hotspot (Patel's F15). NodeMCU does NOT proxy video (ESP8266 can't handle MJPEG) and does NOT need reflash for this — `/drive` contract unchanged.
+2. Dashboard (laptop): single HTML page — `<img src="http://cam-ip:81/stream">` + robot drive buttons (fetch to NodeMCU `/drive`). All three (laptop, cam, robot) on the SAME hotspot — **now `vivo Y28 5G`** (switched 30th; requires NodeMCU reflash with `rc_motor_fwd_rev_wifi`). NodeMCU does NOT proxy video (ESP8266 can't handle MJPEG); `/drive` contract unchanged.
 3. Object detection (laptop): Python + OpenCV consuming MJPEG stream → start with built-in Haar face/person detector (no model download); overlay boxes on dashboard video; later upgrade to YOLO-nano if compute allows.
-4. Integration: dashboard buttons hit NodeMCU `/drive?c=FWD|REV|STOP` (same API); camera and robot share hotspot (Patel's F15 works).
+4. Integration: dashboard buttons hit NodeMCU `/drive?c=FWD|REV|STOP` (same API); camera and robot share hotspot (`vivo Y28 5G` — NodeMCU creds already in `rc_motor_fwd_rev_wifi.ino`).
 
 **Reference guides:** Instructables ESP32-CAM streaming (faculty-suggested, 30th) `https://www.instructables.com/Getting-Started-With-ESP32-CAM-Streaming-Video-Usi/`; RNT programming guide `https://randomnerdtutorials.com/program-upload-code-esp32-cam/`; RNT troubleshooting `https://randomnerdtutorials.com/esp32-cam-troubleshooting-guide/`; GC2145/JPEG fix video `https://www.youtube.com/watch?v=jp35GcrypWw`.
 
@@ -328,3 +424,41 @@ header (private repo only); `cam_led_test/` saved to repo; `CameraWebServer`
 recompiled clean. **Module NOT condemned — retest with fixed pins is the
 single next action.** Faculty suggested the Instructables ESP32-CAM streaming
 guide → adopted stock flow.
+
+**30 Oct evening (CAM retest → SUCCESS, camera fully working):** flashed the
+fixed `CameraWebServer` → **probe passed first try with correct AI-Thinker
+pins** (0x106 saga closed) → sensor then returned
+`JPEG format is not supported on this sensor` = **GC2145 confirmed (no JPEG
+encoder)** → flipped `CameraWebServer.ino` L45/46 to `PIXFORMAT_RGB565`.
+Hit the **stale-binary trap** (`arduino-cli upload` doesn't recompile; it
+re-sent the 15:33 build with old Patel's F15 creds — caught via
+`No changed sectors found` + cache mtime/strings check) → explicit
+`compile` → `upload`. Patel's F15 offline → **moved cam to `vivo Y28 5G`**
+(SSID says "5G" but broadcasts 2462 MHz = 2.4 GHz — ESP32-CAM-compatible;
+creds in sketch header only). Boot log: `WiFi connected` /
+`Camera Ready! Use 'http://10.164.40.97' to connect`. **Verification:**
+root page HTTP 200; `:81/stream` HTTP 200 multipart MJPEG; 6-s capture =
+**23 valid 240×240 JPEG frames (~4 FPS)**; extracted frame decodes clean
+(`file` + ImageMagick). RGB565→JPEG is done in software by stock
+`stream_handler` (`frame2jpg`) so the dashboard needs no changes.
+**Next: reflash NodeMCU to vivo creds (`rc_motor_fwd_rev_wifi`) → build
+dashboard (video + `/drive` buttons).**
+
+**31 Oct (CP-06 research session):** no flashing — pure research + docs.
+Reviewed drive firmware (`rc_motor_fwd_rev_patels`: clean, but **no turn
+commands** — both wheels always get the same value, so no LEFT/RIGHT exists
+yet; hard prereq for AI + AUTO). Confirmed **LEFT/RIGHT = firmware-only**
+(L298N dual channel already wired; pivots/arcs table in `CP06_RESEARCH.md`
+§2) with constraints: full-speed shunts → use timed pulses v1; true PWM needs
+ENA/ENB GPIOs and only **D0 is safely free** (D3/D4 boot-strap, A0
+input-only, serial on GPIO1/3) — v1 = bang-bang turns. Web-researched 2026
+vision landscape: **YOLO26** (Ultralytics, Jan 2026) = current SOTA, 38.9 ms
+CPU ONNX nano ≈ 25 FPS, 43% faster than YOLO11n; MediaPipe BlazeFace 2.94 ms
+CPU (face); Haar ~78 FPS zero-install; **all beat our 4-FPS stream — the cam
+is the bottleneck, not the model**. Validated dumb-follower architecture
+against three live 2026 precedent repos (ESP32-CAM → laptop YOLO/MediaPipe →
+HTTP `/drive`). Streaming verdict: **MJPEG stays** (WebRTC impractical on
+classic ESP32 — Espressif targets S3/P4). Wrote **[`CP06_RESEARCH.md`](CP06_RESEARCH.md)**
+(inventory, turn plan, model benchmarks, 10 designs with goal/pros/cons,
+build order, sources); CHECKPOINT CP-06 stub (🟡) + README roadmap updated.
+No passwords in any doc (verified).
